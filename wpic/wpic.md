@@ -1,6 +1,6 @@
 # World Peace Impossibility Conjecture
 *Knowledge-space partitioning under Occam's razor*  
-*v0.3*
+*v0.3.1*
 
 ### Abstract
 
@@ -103,106 +103,134 @@ Q_0[g(D_c)-b_0-\lambda(1-D_c)]>2H_2,
 
 with common \(g,b_0,\lambda\). Monotonicity then yields (5) for \(D_q>D_c\).
 
-### 3. Parochialism
+### 3. Belief spaces
 
-**Definition 2 (Parochialism).** A parochial instance admits a modal partition \(P_M=\{M_1,\ldots,M_k\}\), \(k\ge2\), and \(\eta,\varepsilon\ge0\), \(\eta+\varepsilon<1\), such that, \(\mu^2\)-almost everywhere,
+Let \(Y=(\mathcal B,\mu,\rho,q)\in\mathfrak B\) denote a belief-space instance satisfying the assumptions of §1. Define \(N_Y^{(0)}\), \(D_q(Y)\), and admissible partitions by replacing \(\mathcal O\) with \(\mathcal B\) in (1)–(2). No incompatibility assumption is necessary. Definition 1, Proposition 1, and Corollary 1 apply to \(\mathfrak B\) under the same hypotheses, with \(D^*_{\mathfrak B}:=\sup_{Y\in\mathfrak B}D_q(Y)\). The Parochialism Corollary also carries over unchanged.
+
+An optional incompatibility kernel \(r:\mathcal B^2\to[0,1]\), measurable and symmetric, yields the enriched instance \(\widetilde Y=(\mathcal B,\mu,\rho,q,r)\). Similarity does not determine incompatibility. Put
+
+\[
+R_\circ(P):=\iint_{A_P^c}qr\,d\mu^2,\qquad
+R_\times(P):=\iint_{A_P}qr\,d\mu^2.
+\]
+
+For a residual cross-boundary incompatibility coefficient \(0\le\alpha<1\), the enriched complexity and partition advantage are
+
+\[
+\boxed{\begin{aligned}
+N_{\widetilde Y}(P)
+&=N_Y^{(0)}(P)+R_\circ(P)+\alpha R_\times(P),\\
+\Delta_{\widetilde Y}(P)
+&=\Delta_Y^{(0)}(P)+(1-\alpha)R_\times(P)
+\ge\Delta_Y^{(0)}(P).
+\end{aligned}}
+\tag{7}
+\]
+
+Thus (5) remains sufficient for order-one nonparsimony when the binary partitions required by Proposition 1 remain admissible. Additional coherence restrictions can instead exclude those partitions. Incompatibility changes the admissible set or the complexity landscape, not the underlying argument of WPIC.
+
+### 4. Parochialism
+
+**Definition 2 (Parochialism).** A knowledge or belief-space instance admits a modal partition \(P_M=\{M_1,\ldots,M_k\}\), \(k\ge2\), and \(\eta,\varepsilon\ge0\), \(\eta+\varepsilon<1\), such that, \(\mu^2\)-almost everywhere,
 
 \[
 \rho(x,y)\ge1-\eta\quad\text{within modes},
 \qquad
 \rho(x,y)\le\varepsilon\quad\text{between modes}.
-\tag{7}
+\tag{8}
 \]
 
 Low-density boundaries and steep concentration gradients are possible geometric realizations, not necessary conditions. Let \(Q_\times:=\iint_{A_{P_M}}q\,d\mu^2\) and \(Q_\circ:=Q-Q_\times\).
 
-**Proposition 2 (Parochialism Corollary).** For an admissible modal partition,
+**Proposition 2 (Parochialism Corollary).** For an admissible modal partition in the unaugmented model,
 
 \[
 \boxed{
-N_X(P_M)\le N_0+Q_\circ g(\eta)
+N(P_M)\le N_0+Q_\circ g(\eta)
 +Q_\times(b_0+\lambda\varepsilon)+h(k),
-}
-\tag{8}
-\]
-
-\[
-\boxed{
-\Delta_X(P_M)\ge
-Q_\times[g(1-\varepsilon)-b_0-\lambda\varepsilon]-h(k).
 }
 \tag{9}
 \]
 
-*Proof.* Apply monotonicity of \(g\) to intramodal and intermodal dissimilarity, then apply the bound on \(b(\rho)\) to cross-modal interfaces. \(\square\)
-
-For fixed cross-modal demand and overhead, smaller \(\varepsilon\) reduces interface cost and increases the lower bound on the net advantage of modal partitioning. The result is conditional, not a universal ordering of modal and nonmodal knowledge spaces.
-
-### 4. Partition frustration
-
-Extend the model to a belief space \(Y=(\mathcal B,\mu,\rho,q,r)\), where \(r:\mathcal B^2\to[0,1]\) is a measurable symmetric incompatibility kernel independent of similarity \(\rho\). Define *internal strife* \(T_Y(P)\), *boundary conflict* \(B_Y(P)\), and *partition frustration* \(\mathfrak F_Y(P)\), with \(0\le\alpha<1\):
-
 \[
-\boxed{\begin{aligned}
-T_Y(P)&:=\iint_{A_P^c}qr\,d\mu^2,\\
-B_Y(P)&:=\iint_{A_P}q(\alpha r+\lambda\rho)\,d\mu^2,\\
-\mathfrak F_Y(P)&:=T_Y(P)+B_Y(P).
-\end{aligned}}
+\boxed{
+\Delta(P_M)\ge
+Q_\times[g(1-\varepsilon)-b_0-\lambda\varepsilon]-h(k).
+}
 \tag{10}
 \]
 
-Incompatibility retained within components generates internal strife. Cross-boundary incompatibility and severed epistemic cohesion generate boundary conflict. To avoid counting the \(\lambda\rho\) interface term twice, the extended total complexity is
+*Proof.* Apply monotonicity of \(g\) to intramodal and intermodal dissimilarity, then the bound on \(b(\rho)\) to cross-modal interfaces. \(\square\)
+
+For the enriched belief model, add \(R_\circ(P_M)+\alpha R_\times(P_M)\) to the right-hand side of (9), and \((1-\alpha)R_\times(P_M)\) to the right-hand side of (10). The modal bounds therefore survive the extension, conditional on admissibility. Lower cross-modal similarity reduces interface cost for fixed cross-modal demand and overhead. It does not guarantee alignment with incompatibility.
+
+### 5. Internal strife vs boundary conflict
+
+For an enriched belief space, define *internal strife* \(T(P)\), *boundary conflict* \(B(P)\), and *partition frustration* \(\mathfrak F(P)\):
 
 \[
-N_Y(P)=N_0+\iint_{A_P^c}qg(d)\,d\mu^2
-+b_0\iint_{A_P}q\,d\mu^2+h(|P|)+\mathfrak F_Y(P).
+\boxed{\begin{aligned}
+T(P)&:=R_\circ(P),\\
+B(P)&:=\alpha R_\times(P)+\lambda\iint_{A_P}q\rho\,d\mu^2,\\
+\mathfrak F(P)&:=T(P)+B(P).
+\end{aligned}}
 \tag{11}
 \]
 
-For any refinement \(P'\succeq P\), writing \(R=A_{P'}\setminus A_P\),
+Internal strife is incompatibility retained within components. Boundary conflict combines residual cross-boundary incompatibility with severed epistemic cohesion. The \(\lambda\rho\) term already appears in the interface cost. Consequently,
 
 \[
-\boxed{
-\mathfrak F_Y(P')-\mathfrak F_Y(P)
-=\iint_R q[\lambda\rho-(1-\alpha)r]d\mu^2.
-}
+N_{\widetilde Y}(P)=N_0+\iint_{A_P^c}qg(d)\,d\mu^2
++b_0\iint_{A_P}q\,d\mu^2+h(|P|)+\mathfrak F(P).
 \tag{12}
 \]
 
-**Proposition 3 (Partition Frustration).** Refinement weakly reduces internal strife and weakly increases boundary conflict. Net frustration decreases exactly when the incompatibility relieved exceeds the cohesion severed on the newly separated pairs. Thus a partition required by incompatibility need not coincide with an economical partition.
-
-Let \(\tau\ge0\) denote an internal-coherence tolerance. For order \(k\), define
+For any refinement \(P'\succeq P\), let \(R=A_{P'}\setminus A_P\). Then
 
 \[
-\Pi_k^\tau:=\{P\in\Pi_k(\mathcal B):T_Y(P)\le\tau\},
-\qquad
-k_{\mathrm{coh}}:=\inf\{k:\Pi_k^\tau\ne\varnothing\}.
-\]
-
-The *incongruence premium* at order \(k\) is
-
-\[
-\boxed{
-\mathfrak M_k:=\inf_{P\in\Pi_k^\tau}\mathfrak F_Y(P)
--\inf_{P\in\Pi_k(\mathcal B)}\mathfrak F_Y(P)\ge0,
-}
+\boxed{\begin{aligned}
+T(P')-T(P)&=-\iint_Rqr\,d\mu^2\le0,\\
+B(P')-B(P)&=\iint_Rq(\alpha r+\lambda\rho)\,d\mu^2\ge0,\\
+\mathfrak F(P')-\mathfrak F(P)
+&=\iint_Rq[\lambda\rho-(1-\alpha)r]\,d\mu^2.
+\end{aligned}}
 \tag{13}
 \]
 
-where \(\inf\varnothing=+\infty\). Partition necessity constrains order through \(r\) and \(\tau\). Partition economy depends on \((\rho,q)\) as well as \(r\). Nonalignment can generate a strictly positive premium. Parochial modes are inexpensive only when their boundaries are compatible with required separation.
+**Proposition 3 (Partition Frustration).** Refinement trades internal strife against boundary conflict. Net frustration falls precisely when relieved incompatibility exceeds newly incurred boundary conflict in (13). Required separation need not follow economical boundaries.
 
-### 5. Summary
+For internal-coherence tolerance \(\tau\ge0\) and fixed partition order \(k\), define
 
-WPIC states an impossibility of *parsimonious* order-one integration, not of order-one feasibility. Proposition 1 supplies an instance-level sufficient condition. Corollary 1 makes the heterogeneity threshold uniform across a class of instances. The Parochialism Corollary bounds the cost of modal decomposition.
+\[
+\Pi_k^\tau:=\{P\in\Pi_k(\mathcal B):T(P)\le\tau\},\qquad
+k_{\mathrm{coh}}:=\inf\{k:\Pi_k^\tau\ne\varnothing\}.
+\]
 
-The belief-space extension separates the **need for partitioning** from the **possibility of economical partitioning**. Incompatibility constrains coherence and partition order. Similarity and coordination demand constrain economical boundaries. Incongruence produces partition frustration, comprising boundary conflict and internal strife. Partitioning may therefore be necessary yet intrinsically costly.
+The *incongruence premium* is the cost of imposing coherence on otherwise economical partitioning:
+
+\[
+\boxed{
+\mathfrak M_k:=
+\inf_{P\in\Pi_k^\tau}N_{\widetilde Y}(P)
+-\inf_{P\in\Pi_k(\mathcal B)}N_{\widetilde Y}(P)\ge0,
+}
+\tag{14}
+\]
+
+where \(\mathfrak M_k=+\infty\) if \(\Pi_k^\tau=\varnothing\) and the unrestricted infimum is finite. It may be positive where incompatibility demands separation across strongly cohesive modes. Parochialism alone does not ensure coherence-compatible boundaries.
+
+### 6. Summary
+
+WPIC concerns nonparsimony of order-one integration, not logical infeasibility. The sufficient condition becomes a uniform impossibility claim under a common heterogeneity threshold. Belief spaces inherit WPIC and the Parochialism Corollary without requiring incompatibility. An incompatibility kernel adds an independent source of separation pressure.
+
+Partition necessity, partition geometry, and residual friction are distinct. Refinement decreases internal strife and increases boundary conflict. Their incongruence may impose an additional complexity premium. Partitioning may be necessary without being inexpensive and inexpensive without being sufficient.
 
 \[
 \boxed{\begin{gathered}
-\text{Heterogeneity}\Rightarrow\text{partition necessity under (5)–(6)},\\
-\text{Parochialism}\Rightarrow\text{economical modal boundaries under (7)–(9)},\\
-\text{Incompatibility}\not\cong\text{partition geometry}
-\Rightarrow\text{frustration under (10)–(13)}.
+\text{Heterogeneity}\Rightarrow\text{nontrivial optimal order under (5)–(6)},\\
+\text{Parochialism}\Rightarrow\text{economical modal cuts under (8)–(10)},\\
+\text{Incompatibility}\not\cong\text{modal geometry}
+\Rightarrow\text{frustration and possible premium under (11)–(14)}.
 \end{gathered}}
 \]
 
