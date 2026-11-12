@@ -2,7 +2,11 @@
 
 Paper 1, Consciousness as Translation. Version 0.2, 12 November 2026. Register level: Paper, about 13 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Items marked [open] need a ruling.
 
-Headline contribution: consciousness is the allocation of metabolic resources to the synchronization of map and territory, per instance, to the degree that divergence and its consequence for navigation warrant.
+Headline contribution: consciousness is adaptive recalibration in runtime.
+
+- Recalibration: bringing the map back in step with the territory at an instance. It covers watching for divergence and repairing it.
+- In runtime: while a policy trajectory is under way, in a world that changes and in which steps commit.
+- Adaptive: selective and graded. Each instance receives resources in proportion to its divergence and to the consequence of that divergence for the route, under a budget.
 
 ## Abstract (0.25 page)
 
