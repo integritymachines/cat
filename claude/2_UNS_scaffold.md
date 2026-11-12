@@ -22,9 +22,8 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 
 - Claim: unsurveyable is literal. The agent cannot stand above the search space and inspect it.
 - Claim: intractability is the reason. Arranging even a few options in an order, when they interact, yields more arrangements than any agent can enumerate.
-- Claim: reality is mixed combinatorial in the sense that matters. Four features make it so: high dimensionality, objects that differ in kind, strong interaction between objects, and the need for arrangements (policy trajectories) in place of isolated decisions.
-- Claim: the mixed part consists of options that differ in degree only, with gradients given. It requires no translation. Environments made up of that part alone are rare.
 - Claim: almost all environments present the obstacles of combinatorial search, which are intractability, opacity, contingency and transience. The territory is presented as combinatorial for that reason.
+- Footnote: reality is mixed combinatorial. It has high dimensionality, objects that differ in kind, strong interaction between objects, and the need for arrangements (policy trajectories) in place of isolated decisions. The mixed part, where options differ in degree and the local gradient is aligned with the global one, needs no translation and rarely makes up a whole environment.
 - Consequence: exhaustive search gives way to local search on local information.
 - Claim: intractability acts at each translation. It makes sampling parochial, compression lossy, and navigation a linear sequence of local steps. Each is an economy under the same resource constraint.
 - Claim: navigation is the mediation of local steps under a global goal. The goal may be loose.
@@ -34,12 +33,13 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 
 ## 3. Three Obstructions (3 pages)
 
-Lead: the obstructions a navigating agent can meet. Each comes in degrees. Each forces the agent to manufacture something.
+Lead: the obstructions a navigating agent can meet. They are the dimensions in which the mediation between the global goal and the local step can be obscured. Each comes in degrees, and the degrees vary with the environment and from place to place within it. Any of them can be near zero: gradients can be aligned, choices can leave every option open, and an environment can be almost static. Each forces the agent to manufacture something where it is present.
 
 ### 3.1 Opacity
 
 - Claim: the territory gives no gradient, or one unrelated to the global goal.
 - Degree: how well the local gradient tracks the global one. With full tracking the obstruction reduces to noise. [assumed]
+- Support: hill climbing. It has a gradient at every point and succeeds only where local and global gradients agree. A given gradient does not remove opacity.
 - Claim: a combinatorial space differs from a continuous one in kind. It has no differentiable structure and therefore no gradient to give.
 - Answer: the agent manufactures a gradient. To do so it builds a continuous map, in which proximity stands for similarity.
 - Ordering assigned: comes with. No order.

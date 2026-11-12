@@ -18,7 +18,7 @@ Rule: one meaning per symbol. Every symbol is in the registry. A case pair denot
 | $\Gamma_e, \operatorname{lift}$ | supported alternatives to $e$, lift functional |
 | $U, I, N$ | Unsurveyability, Intractability, Intransigence |
 | $O, C, T$ | Opacity, Contingency, Transience |
-| $o, c, \vartheta$ | degrees of $O$, $C$, $T$ |
+| $o, c, \vartheta$ | degrees of $O$, $C$, $T$. Each varies with the environment and within it |
 | $\nu, \lambda$ | count of relevant distinctions, scale |
 | $d_e, \bar{d}_e, d_{\mathcal{SM}}$ | divergence at $e$, its expectation, total divergence |
 | $s_e, \rho_e, q_e$ | consequence, use by $\gamma$, warrant |
@@ -55,7 +55,9 @@ $I$ acts at each stage. Each translation is an economy under the same metabolic 
 | $\pi: \mathcal{S} \to \mathcal{M}$ | combinatorial to continuous | lossy compression | distinctions | orderings |
 | $\gamma: \mathcal{M} \to \mathcal{N}$ | continuous to sequential | a linear sequence of local steps | the routes not taken | commitment |
 
-Combinatorial and continuous. This pair is the central stand-in of Papers 1 and 2. $\mathcal{S}$ is combinatorial: discrete options under interaction, every distinction kept, no gradient, enumeration cost explosive. $\mathcal{L}$ is mixed combinatorial in the sense that matters here: high dimensionality, objects that differ in kind, strong interaction between objects, and tasks that call for arrangements (policy trajectories) in place of isolated decisions. Where options differ in degree only and gradients are given, no translation is required. Environments made up of that part alone are rare. Almost all present $I$, $O$, $C$ and $T$, the obstacles of combinatorial search. $\mathcal{M}$ is continuous: proximity stands for similarity, gradients exist, interpolation is possible, and following a gradient is cheap. The pair says why the two models cannot coincide. They differ in kind, so no translation between them is exact, and divergence concentrates where discrete structure (branch points, conflicting constraints) has no continuous image. Papers 3 and 4 refine the pair and keep its function: $K_S$ carries relations only ($\Lambda_S$), and $K_M$ carries weights, potential and flow ($G$, $\phi$, $j$).
+Combinatorial and continuous. This pair is the central stand-in of Papers 1 and 2. $\mathcal{S}$ is combinatorial: discrete options under interaction, every distinction kept, no gradient, enumeration cost explosive. Almost all environments present $I$, $O$, $C$ and $T$, the obstacles of combinatorial search. $\mathcal{M}$ is continuous: proximity stands for similarity, gradients exist, interpolation is possible, and following a gradient is cheap. The pair says why the two models cannot coincide. They differ in kind, so no translation between them is exact, and divergence concentrates where discrete structure (branch points, conflicting constraints) has no continuous image. Papers 3 and 4 refine the pair and keep its function: $K_S$ carries relations only ($\Lambda_S$), and $K_M$ carries weights, potential and flow ($G$, $\phi$, $j$).
+
+Footnote. $\mathcal{L}$ is mixed combinatorial: high dimensionality, objects that differ in kind, strong interaction between objects, and tasks that call for arrangements (policy trajectories) in place of isolated decisions. The mixed part, in which options differ in degree and the local gradient is aligned with the global one, needs no translation. It rarely makes up a whole environment. A given gradient is not enough. Hill climbing has one everywhere and works only where local and global gradients agree.
 
 $U = I + N$, $N = (O, C, T)$.
 
@@ -107,6 +109,8 @@ The condition is stated at $\pi$. $I$ acts equally at $\sigma$ and at $\gamma$ (
 | $O$ | local gradient absent or unrelated to global | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ [assumed] | flow $j$ | comes with (none) | relations |
 | $C$ | steps foreclose options | $c \in [0,1]$, cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
 | $T$ | $X$ varies in $t$ | $\vartheta \ge 0$, rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
+
+$O$, $C$ and $T$ are the dimensions in which the mediation between the global goal and the local step can be obscured. Their degrees vary with the environment and from place to place within it. Any of them can be near zero.
 
 Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $\beta(t) - \beta(t')$ is not restored. Information: $\dot{\iota} = -r(\vartheta)\, \iota$, $r(0) = 0$, $r$ increasing [open].
 

@@ -10,7 +10,7 @@ Status: **kept**, **revised** (by ruling), **moved**, **proposed removal** (not 
 |---|---|---|---|
 | Epigraph | states the central pair and the claim | kept | Section 1, Section 10 |
 | Combinatorial territory, continuous map | shows that the two models differ in kind, so translation is never exact | kept | Sections 1, 2, 5. Central stand-in |
-| Footnote 1: reality is not combinatorial | limits the claim to a formal expression of unsurveyability | revised | Section 1. Reality is mixed combinatorial. The part with given gradients needs no translation. Chain extended to four stages |
+| Footnote 1: reality is not combinatorial | limits the claim to a formal expression of unsurveyability | kept as a footnote, reworded | Section 1. Reality is mixed combinatorial. The part with aligned gradients needs no translation. Chain extended to four stages |
 | Compression, distortion, friction (§1) | motivates the need for control | kept | Sections 1, 3 |
 | Four dimensions and causal hierarchy (§2) | restates Paper 2 inside Paper 1 | not carried | Scaffold has only a pointer to Paper 2. Restate briefly in Section 2? |
 | Unsurveyability condition (eq. 2) | formal statement of intractability | moved | Paper 2, kernel §2 |
