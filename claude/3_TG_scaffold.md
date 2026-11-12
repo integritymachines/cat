@@ -1,114 +1,84 @@
-# 3 TG Scaffold
+# Translation Geometry: Scaffold
 
-Paper 3, Translation Geometry. Version 0.1, 12 November 2026. Register level: Paper, about 14 pages. Scientific paper. Kernel: `0_LSMN_kernel.md` §3 and §5. Source: Research Note, Paper 3. Items marked [assumed] or [open] need a ruling.
+Version 0.2, 12 November 2026. Baseline: the research note for Paper 3. Kernel: `0_LSMN_kernel.md` §3. Tags as in the kernel.
 
-Headline contribution: every construct of Papers 1 and 2 is given an operator on two finite complexes, so that consequence, divergence, the critical level and the three regimes can be computed. One small case is computed in full.
+Headline. The stand-ins of Papers 1 and 2 have exact counterparts on a pair of discrete complexes. Manufactured gradients, the virtual test of a route, the distortion between territory and map, and the deformation of the map under revision are each computed by one operator. Curvature against its critical level becomes a condition on the spectral gap and on the lift of routes.
 
-## Abstract (0.25 page)
+Status of the paper. Scientific. Every statement is a definition, a proposition with stated assumptions, or a computation. The paper contains no neuroscience. Empirical models belong to Paper 4.
 
-- Claim: the stand-ins of Paper 1 are replaced by operators on a territory complex and a map complex.
-- Claim: drift ends at a critical level that depends on the divergence found. Control and remap are separated by a lift test.
-- Shape of support: definitions, their properties, and one worked case in which all operators act on the same agent.
+## 1. Introduction
 
-## 1. Introduction (1.25 pages)
+- Claim: Papers 1 and 2 argue with stand-ins. This paper retires them.
+- Table: each stand-in and its operator (kernel §3, Regimes).
+- Claim: the operators are unified by their roles along the chain landscape, territory, map, navigation. No scalar summary statistic is assumed.
+- Dependency: Paper 1 for the regimes, Paper 2 for the obstructions and primitives.
 
-- Context: Papers 1 and 2 state the account in words and one smooth picture. A scientific theory needs quantities that can be computed and can come out wrong.
-- Contribution: operators for the manufactured gradient, for consequence and use, for divergence, for support by the territory, and for change of the map.
-- Novelty: the critical level is not a constant. It is the divergence divided by a tolerance. The second regime boundary is a reachability test and not a level.
-- Scope: no neural data. Measurement is Paper 4.
-- Depends on: Papers 1 and 2.
+## 2. Two Complexes
 
-## 2. From Picture to Operator (2 pages)
+- Territory $K_S$: a relational complex with adjacency $\Lambda_S$. A parochially sampled record of encounters. Relations may be symmetric or asymmetric. It has no potential and no gradient.
+- Map $K_M$: a simplicial complex with edge weights $G$. It does not create options. It orders them.
+- Projection $\pi$: surjective on vertices, non-injective.
+- Navigation: a policy trajectory on $K_M$, executed in the territory.
+- Table (note): role, gradients, reversibility and structure of the two complexes.
 
-- Claim: Papers 1 and 2 present a combinatorial territory and a continuous map. The pair shows that the two models differ in kind. This paper refines the pair and keeps that function.
-- Claim: territory and map are finite complexes joined by a compression that is many-to-one. The territory complex carries relations only and has no potential. The map complex carries weights, a potential and a flow, which are the discrete counterparts of continuous structure.
-- Claim: the smooth manifold itself is given up. Steps are path-dependent, the map changes, and curvature cannot be computed from data.
-- Support: the correspondence table. Each element of the picture, the operator that replaces it, and what the replacement makes computable.
-- Claim: an instance is an edge of the map, together with the territory vertices that the compression sends to its ends.
-- Kernel: §0.1, §5.
-- Depends on: Section 1.
+## 3. Identification
 
-## 3. Manufactured Direction (1.25 pages)
+- Operator: $\Delta_0$, potential $\phi$, flow $j$.
+- Proposition 3.1: connectivity gives no direction. A goal vector does. Potential and flow are unique.
+- Claim: collapse of the spectral gap, $\lambda_2 \le \epsilon^\ast$, makes the potential sensitive to perturbation and slows relaxation. Drift stalls.
+- Dependency: answers opacity (Paper 2). Replaces the Fisher metric and the natural gradient (Paper 1).
 
-- Claim: connectivity alone gives no direction. Direction appears when a goal is posed on the map.
-- Operator: the graph Laplacian with a goal vector gives a potential and a flow.
-- Claim: the flow is the agent's manufactured gradient. Its magnitude on an edge is the use of that instance.
-- Degree of opacity: how far the manufactured flow departs from the flow the landscape would give. [assumed] The reference flow is not available to the agent.
-- Kernel: gradient, use.
-- Depends on: Section 2. Answers opacity. Operator form of identification.
+## 4. Composition
 
-## 4. Consequence (1.25 pages)
+- Operator: $\Delta_1$ with Hodge decomposition into gradient, rotational and harmonic parts. $\beta_1$ counts independent cycles.
+- Claim (note): a harmonic cycle is a feature of the map. It is not by itself a contradiction.
+- Operator: the lift functional. A map route is executable iff its lift is positive.
+- Claim: zero lift means that compression has joined disconnected parts of the territory. The virtual test rejects the route before execution.
+- Dependency: answers contingency. Replaces the singularities of Paper 1.
 
-- Claim: the consequence of a divergence at an instance is the inverse of its effective conductance.
-- Support: a bridge edge has the lowest conductance its weight allows. A door is a bridge. A handle is not an edge of the route at all.
-- Claim: the spectral gap is a summary over the whole map. It does not locate an instance and cannot serve as the local quantity.
-- Kernel: conductance, consequence.
-- Depends on: Section 3.
+## 5. Persistence
 
-## 5. Divergence (1.25 pages)
+- Operator: Ray-Singer torsion and its variation.
+- Proposition 3.4: the rate of change of log torsion at constant rank. At a change of rank a discrete jump is added.
+- Operator: anchored distortion $d_{\mathcal{SM}}$ between an agent's own territory and map.
+- Operator: unconstrained distance $d_{\mathrm{GW}}$ between maps without shared registration (two agents, agent and observer, wake and sleep).
+- Claim [ruled]: log torsion is a signed observable of deformation. It is not identified with control work.
+- Dependency: answers transience. Replaces metric decay and the metric shift of Paper 1.
 
-- Claim: divergence at an instance is the distortion of territory distances under compression, restricted to that instance.
-- Claim: total divergence is the same sum over the whole territory.
-- Claim: compression is always lossy and mostly benign. Divergence matters when weighted by consequence.
-- Kernel: divergence, total divergence, warrant.
-- Depends on: Sections 2 and 4.
+## 6. Regimes
 
-## 6. Support and Alternatives (1.5 pages)
+- Drift: spectral gap above its critical level and the planned route lifts. Positive distortion is then benign.
+- Trigger: collapse of the gap, or zero lift of the planned route.
+- Control: a supported alternative exists. The control field is nonzero. Reconciliation of weights follows.
+- Remap: no supported alternative. The complex or the projection is revised.
+- Confidence (note): low-cost correction of minor divergence inside drift.
+- Envelope of assured navigation: pairs of start and goal joined by a supported route within budget [ruled: drift and control].
+- Open: the discrete form of the control field and of control work.
 
-- Claim: a route on the map is supported by the territory when a connected path in the territory projects onto it. The lift functional counts such paths.
-- Claim: a failed lift is the strongest divergence. The compression has joined territory regions that are not connected.
-- Claim: the set of supported alternatives decides between control and remap.
-- Claim: a virtual trajectory is a route whose lift is computed before the step. This is the operator form of trying conjectures.
-- Reversion cost on the territory relation: [open].
-- Kernel: lift, alternatives.
-- Depends on: Sections 3 and 5. Answers contingency. Operator form of composition.
+## 7. Viability
 
-## 7. The Critical Level (1.25 pages)
+- Claim (note): the full engine pays iff the expected physical loss avoided exceeds the expected cost of virtual search, reconciliation and maintenance.
+- Claim (note): the return rises with the number of mutually exclusive alternatives and with the irreversible cost of untested execution.
+- Dependency: lower bound of consciousness, Paper 4 and a satellite note.
 
-- Claim: drift holds while conductance stays at or above the divergence divided by the tolerance.
-- Consequence: with no divergence, no bottleneck ends drift. With larger divergence, wider passages end it.
-- Claim: the three regimes are fixed by this level and the lift test.
-- Claim: the tolerance is the one free parameter. Paper 4 estimates it.
-- Kernel: critical level, regime table.
-- Depends on: Sections 4, 5, 6.
+## 8. Propositions
 
-## 8. Change of the Map (1.25 pages)
+- 3.1 Gradient manufacture. Proved.
+- 3.2 Control-work necessity. Part A proved from the definitions. Part B, the identification with conscious engagement, is the postulate of Paper 1 and is not proved.
+- 3.3 Perspective asymmetry. Argued under a genericity condition. Formal support for the position on the hard problem in Paper 1.
+- 3.4 Torsion variation. Proved at constant rank.
+- Outside the series [ruled]: the impossibility and partition theorems of the note.
 
-- Claim: when the territory changes and the map does not, total divergence grows. This is transience in operator form.
-- Claim: remap changes weights, the complex, or the compression.
-- Observable: the rate of change of analytic torsion follows the change of the Laplacians at constant rank. It is signed.
-- Claim: control work is the integrated squared control. It is nonnegative. Torsion is not control work.
-- Form of control on the complex: [open].
-- Kernel: update, torsion, control work.
-- Depends on: Sections 5 and 7. Answers transience. Operator form of persistence.
+## 9. Worked Case
 
-## 9. A Worked Case (1.75 pages)
+- One system on which all operators run: a path of four territory states compressed onto a triangle.
+- Steps: flow, lift failure of the preferred shortcut, distortion before and after reconciliation, torsion shift, change of $\beta_1$, flow after reconciliation, split of the aliased vertex.
+- Claim: the operators cohere on a single agent.
 
-- Setup: a four-vertex territory path compressed onto a three-vertex map, with two territory vertices sent to one map vertex.
-- Step: the manufactured flow prefers the short route.
-- Step: the short route has no lift from the agent's position. The long route has one.
-- Step: the alternative set is not empty, so the regime is control.
-- Step: lowering the weight of the false edge removes the divergence on the active part. Torsion falls.
-- Finding: the harmonic part of a route does not tell supported from unsupported routes. The lift test does.
-- Kernel: Worked case 3.1.
-- Depends on: Sections 3 to 8.
+## 10. Open Points and Conclusion
 
-## 10. What Is Fixed and What Is Open (1 page)
-
-- Fixed: the inputs to allocation. Use, consequence, divergence, the regime.
-- Open: the forms of the monitoring and recalibration functions. Expected divergence as a function of the rate of change. Control on the complex. The role of the higher Laplacian beyond the lift test.
-- Hand-off: estimators and tests in Paper 4.
-- Depends on: all sections.
-
-## 11. Conclusion (0.25 page)
-
-- One paragraph.
-
-## Not in this paper
-
-- The four propositions of the research note (partition, parochial charts, zero-work agents, perspective). Outside the series unless a later ruling requires one.
-- Thresholds given as numbers. Neural correlates. Clinical cases. The determinant-line material.
-
-## References to check
-
-- Spectral graph theory. Effective resistance. Hodge Laplacians on graphs. Ray and Singer on torsion. Gromov-Wasserstein distance, credited to Mémoli. All through the fact-check pass.
+- Discrete control field and control work.
+- Whether reconciliation of weights under an existing alternative belongs to control.
+- The critical level $\epsilon^\ast$: how it is set by the agent's costs.
+- Exploratory (note, kept as a remark): determinant-line geometry as a possible unifying structure.
+- Hands over to Paper 4.

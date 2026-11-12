@@ -1,208 +1,206 @@
 # LSMN Kernel
 
-Version 0.10, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
+Version 0.11, 12 November 2026. One kernel for Papers 1 to 4. Baseline: the 2025 Papers 1 and 2 and the research notes for Papers 3 and 4. A departure from the baseline carries one of three tags. [ruled]: decided by the authors. [inference]: proposed here, not ruled. [open]: form not fixed. Numbers taken from the notes are unchecked.
 
-Rule: one meaning per symbol. Every symbol is in the registry. A case pair denotes related objects only: $(O, o)$, $(C, c)$, $(G, g)$, $(w, \mathcal{W})$, $(X, x)$. Regimes, results and tests carry words or section numbers, never single letters.
+Rule: one meaning per symbol. Every symbol is in the registry. Regimes, results and tests carry words or section numbers, never single letters.
 
 ## 0. Registry
 
 | Symbol | Meaning |
 |---|---|
-| $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape, Territory, Map, Navigation |
+| $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape (unsurveyable reality), Territory, Map, Navigation |
 | $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, policy trajectory $\mathcal{M} \to \mathcal{N}$ |
 | $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, sampling density |
-| $K_M, V_M, m, E_M, e, G, \partial_1, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, edge (instance), edge weights, incidence, metric |
-| $\Delta_i$ | Hodge Laplacian of degree $i$ on $K_M$ |
-| $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector of $m$ or $z$, all-ones vector |
-| $\zeta, \phi, j, j_{\mathcal{L}}$ | goal vector, potential, manufactured flow, flow under the potential of $\mathcal{L}$ |
-| $\Gamma_e, \operatorname{lift}$ | supported alternatives to $e$, lift functional |
+| $K_M, V_M, m, E_M, e, G, \partial_1, \partial_2, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, edge, edge weights, boundary operators, metric |
+| $\Delta_i, \lambda_2, \beta_1$ | Hodge Laplacian of degree $i$ on $K_M$, second eigenvalue of $\Delta_0$, $\dim \ker \Delta_1$ |
+| $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector, all-ones vector |
+| $\zeta, \phi, j$ | goal vector, potential, manufactured flow |
+| $u, v, h$ | Hodge components of a flow: gradient, rotational, harmonic |
+| $\operatorname{lift}, \Gamma(\gamma)$ | lift functional, supported alternatives to $\gamma$ |
 | $U, I, N$ | Unsurveyability, Intractability, Intransigence |
 | $O, C, T$ | Opacity, Contingency, Transience |
-| $o, c, \vartheta$ | degrees of $O$, $C$, $T$. Each varies with the environment and within it |
-| $\nu, \lambda$ | count of relevant distinctions, scale |
-| $d_e, \bar{d}_e, d_{\mathcal{SM}}$ | divergence at $e$, its expectation, total divergence |
-| $s_e, \rho_e, q_e$ | consequence, use by $\gamma$, warrant |
-| $g_e$ | effective conductance at $e$ |
-| $\tau$ | tolerance |
-| $\epsilon^\ast, \kappa^\ast$ | critical level: measurable, conceptual |
-| $\kappa, y, d(y)$ | smooth stand-in: curvature, point, divergence at $y$ |
-| $a^\circ_e, a_e, B$ | demand at $e$, allocation to $e$, allocation budget |
-| $f, h$ | monitoring function, recalibration function |
-| $\operatorname{reg}(e)$ | regime at $e$: drift, control or remap |
-| $w, \mathcal{W}$ | control, control work |
+| $R, F, D$ | relations, functions, dynamics |
+| $\operatorname{sig}$ | structural signature in $\{0,1\}^3$ |
+| $o, c, \vartheta$ | degrees of $O$, $C$, $T$ |
+| $\nu, \alpha$ | count of relevant distinctions, scale |
+| $y, g_F, p(\cdot \mid y), \operatorname{Ric}$ | smooth stand-in: point of $\mathcal{M}$, Fisher metric, response distribution, Ricci curvature |
+| $\kappa, \kappa^\ast$ | curvature, its critical level (Papers 1 and 2) |
+| $\epsilon^\ast, t_{\mathrm{rel}}$ | critical level of $\lambda_2$ (Papers 3 and 4), relaxation time |
+| $w, \mathcal{W}$ | control field, control work |
+| $a, a_{\mathrm{base}}, \Delta a_e, B$ | metabolic allocation, its waking baseline, its surge at instance $e$, budget |
+| $\eta$ | conversion efficiency $\mathcal{W} / a$ |
+| $\operatorname{reg}$ | regime: drift, control or remap |
+| $\mathcal{E}$ | envelope of assured navigation |
 | $\operatorname{Tor}$ | Ray-Singer torsion of $K_M$ |
-| $X, x_t, k, \operatorname{val}, \operatorname{Nbr}$ | search space, state at $t$, number of options, objective, neighborhood |
-| $\Omega_t, \beta(t), \iota, r$ | options reachable, budget spent, information held, decay rate function |
-| $\ell_C, \ell_T$ | loss from $C$, loss from $T$ |
-| $B_{\mathrm{tot}}, B_O, B_C, B_T, B_{\mathrm{step}}$ | navigation budget and its parts |
-| $\operatorname{met}_e, \eta$ | metabolic expenditure at $e$, efficiency |
-| $\hat{\ }$ | estimator |
-| $t$ | time |
+| $d_{\mathcal{SM}}, d_{\mathrm{GW}}$ | anchored distortion between $\mathcal{S}$ and $\mathcal{M}$, unconstrained transport distance |
+| $X, x_t, k, \operatorname{val}, \operatorname{Nbr}, \Omega_t$ | search space, state, number of options, objective, neighborhood, options reachable |
+| $B_R, B_F, B_D, B_w, B_0$ | budgets: guidance, virtual search, physical execution, reconciliation, engine maintenance |
+| $\ell, \ell_C, \ell_T$ | loss from a failed physical conjecture, expected loss from $C$, from $T$ |
+| $\operatorname{err}_i, \operatorname{rate}$ | misalignment after step $i$, its growth rate |
+| $\kappa_e, L_{\mathrm{decay}}, \delta g$ | curvature at instance $e$, external change, metric shift |
+| $c_0, c_1, c_2, t_0$ | positive constants |
+| $\delta_{\mathrm{lo}}, \delta_{\mathrm{hi}}, \delta^\ast$ | band of offline deformation, critical distance between agents |
+| $\operatorname{bnd}, \operatorname{PR}$ | decision boundary, participation ratio |
+| $\hat{\ }$, $t$ | estimator, time |
 
-## 0.1 Model
+Notation against the sources: $\pi$ for the 2025 $\phi$, $\phi$ for $V$, $w$ for $U$, $\mathcal{W}$ for $\mathcal{C}_U$, $\kappa$ for $K$, $y$ for $x$, $G$ for $W$, $\partial_1$ for $B_1$, $\zeta$ for $b$, $\Lambda_S$ for $A_S$, $B_w$ for $B_C$, $\epsilon^\ast$ for $\epsilon_c$, $\kappa^\ast$ for $\kappa_c$, $\delta^\ast$ for $\delta_c$. The changes remove collisions.
 
-$\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N}$
+## 0.1 Chain
 
-$\pi: V_S \twoheadrightarrow V_M$, non-injective. $\gamma = (m_0, m_1, \dots)$, finite, toward $\zeta$, $\mathbf{1}^\top \zeta = 0$. Cognitive agent: $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$.
+$$\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N}, \qquad U = I + N, \quad N = (O, C, T)$$
 
-$\mu_S$ is multimodal, with modes of different heights. The modes are the habitats. $\lvert V_S \rvert \ll \lvert \mathcal{L} \rvert$. For an instance, $\mu_S(e) := \sum_{z \in \pi^{-1}(e)} \mu_S(z)$.
+Order of the argument [ruled]. (i) $\mathcal{L}$ is unsurveyable. (ii) Navigation in $\mathcal{L}$ has to be conjectural: the agent sends conjectures to their deaths in its stead. (iii) Virtual conjectures require a central conjecturing engine, which costs metabolic resources. (iv) The engine cannot run on the experienced habitat as recorded, so the record $\mathcal{S}$ is compressed into a travel guide $\mathcal{M}$. The two models follow from the engine. (v) $\mathcal{M}$ is lossy, and curvature marks where the loss matters. (vi) Consciousness arises out of the mediation between the two models and the need to allocate metabolic resources to it.
 
-$I$ acts at each stage. Each translation is an economy under the same metabolic constraint.
-
-| Translation | Change of kind | $I$ forces | Discards | Imposes |
-|---|---|---|---|---|
-| $\sigma: \mathcal{L} \to \mathcal{S}$ | unsurveyable to combinatorial | parochial sampling | most of $\mathcal{L}$ outside the habitats | the modal density $\mu_S$ |
-| $\pi: \mathcal{S} \to \mathcal{M}$ | combinatorial to continuous | lossy compression | distinctions | orderings |
-| $\gamma: \mathcal{M} \to \mathcal{N}$ | continuous to sequential | a linear sequence of local steps | the routes not taken | commitment |
-
-Combinatorial and continuous. This pair is the central stand-in of Papers 1 and 2. $\mathcal{S}$ is combinatorial: discrete options under interaction, every distinction kept, no gradient, enumeration cost explosive. Almost all environments present $I$, $O$, $C$ and $T$, the obstacles of combinatorial search. $\mathcal{M}$ is continuous: proximity stands for similarity, gradients exist, interpolation is possible, and following a gradient is cheap. The pair says why the two models cannot coincide. They differ in kind, so no translation between them is exact, and divergence concentrates where discrete structure (branch points, conflicting constraints) has no continuous image. Papers 3 and 4 refine the pair and keep its function: $K_S$ carries relations only ($\Lambda_S$), and $K_M$ carries weights, potential and flow ($G$, $\phi$, $j$).
-
-Footnote. $\mathcal{L}$ is mixed combinatorial: high dimensionality, objects that differ in kind, strong interaction between objects, and tasks that call for arrangements (policy trajectories) in place of isolated decisions. The mixed part, in which options differ in degree and the local gradient is aligned with the global one, needs no translation. It rarely makes up a whole environment. A given gradient is not enough. Hill climbing has one everywhere and works only where local and global gradients agree.
-
-$U = I + N$, $N = (O, C, T)$.
+Combinatorial and continuous. This pair is the central stand-in of Papers 1 and 2. The territory is combinatorial, the map is continuous. Papers 3 and 4 replace the pair with $K_S$ (relations only) and $K_M$ (weights, potential, flow). Footnote level: reality is mixed combinatorial, and the part with aligned local and global gradients needs no translation.
 
 ## 1. CAT
 
-Two models. $\mathcal{S}$ is comprehensive: it keeps the distinctions and gives no order. $\mathcal{M}$ is comprehensible: it gives order and loses distinctions. A cognitive agent that navigates an unsurveyable reality $\mathcal{L}$ requires both and a mediation between them. The mediation compares $\mathcal{M}$ with $\mathcal{S}$ at instances and repairs divergence. It costs metabolic resources and $B$ is finite, so the agent has to allocate. Consciousness arises out of the mediation and this allocation. $a_e$ is the allocation at $e$.
+**Reality.** $I \iff \lim_{\alpha \to \infty} \log \nu(\mathcal{S}_\alpha) / \dim \mathcal{M} = \infty$. $O$: no local signal with an assured relation to the global path. $C$: steps foreclose options. $T$: reality and map drift apart in time. Stated in full in §2. Paper 1 restates them without reference to Paper 2.
 
-$$a^\circ_e = f(\rho_e s_e \bar{d}_e) + h_{\operatorname{reg}(e)}(q_e), \qquad q_e = d_e s_e$$
+**Engine.** A conjecture is a candidate $\gamma$. Physical test: execute $\gamma$ in $\mathcal{L}$ and bear $\ell$ on failure. Virtual test: run $\gamma$ against $\mathcal{S}$ at cost $B_F$ and discard it on failure. The engine is the capacity for virtual tests. Navigation with the engine is conjectural. Navigation without it is random, passive or myopic.
 
-$f$, $h$ nondecreasing, zero at zero, positive elsewhere. $f$ continuous at zero. $h_{\text{drift}} < h_{\text{control}} < h_{\text{remap}}$ on $q_e > 0$. Forms [open].
+**Two models.** $\mathcal{S}$: unordered accumulation of impressions, sampled with density $\mu_S$ around habitats, comprehensive. $\mathcal{M} = \pi(\mathcal{S})$, $\pi$ non-injective: a rank offering of the available choices by their connection to $\zeta$, comprehensible. On the smooth stand-in, $\mathcal{M}$ is a manifold with Fisher metric
 
-Rationing [assumed]: instances are served in descending order of $a^\circ_e$ until $B$ is spent. $0 \le a_e \le a^\circ_e$, $\sum_e a_e = \min(B, \sum_e a^\circ_e)$.
+$$g_F(y)_{ik} = \mathbb{E}\big[\partial_i \log p(\cdot \mid y)\, \partial_k \log p(\cdot \mid y)\big], \qquad \dot{y} = -g_F^{-1} \nabla \phi(y) + w(y)$$
 
-Expected divergence [assumed]: $\vartheta > 0 \Rightarrow \bar{d}_e > 0$ for every $e$ not checked at the current $t$. $\bar{d}_e$ is decreasing in $\mu_S(e)$: $\mathcal{M}$ interpolates where sampling is dense and extrapolates where it is sparse.
+**Curvature.** $\kappa(y)$: scalar curvature of $g_F$. Compression produces distortion, distortion produces curvature. $\kappa$ is large where small moves in $\mathcal{M}$ correspond to large changes in $\mathcal{L}$, and where the continuous $\mathcal{M}$ misrepresents the combinatorial $\mathcal{S}$ (branch points, conflicting constraints). $\kappa$ carries both the divergence of $\mathcal{M}$ from $\mathcal{S}$ and its consequence for navigation [ruled]. $\kappa^\ast$ is specific to the agent. It balances the cost of control against the cost of error. $\operatorname{JND}(y) \propto \kappa(y)^{-1/2}$.
 
-$$\text{conscious}(e) \iff a_e > 0, \qquad \text{conscious}(\text{agent}) \iff \textstyle\sum_e a_e > 0, \qquad \text{intensity}(e) = a_e$$
+$C$ appears in $\mathcal{M}$ as singularities, where $\kappa$ diverges. $T$ appears as decay of the metric: $\partial_t g_F = -2 \operatorname{Ric} + L_{\mathrm{decay}}$.
 
-$\Gamma_e = \{\gamma' : e \notin \gamma',\ \gamma' \text{ reaches } \zeta,\ \gamma' \text{ supported by } \mathcal{S}\}$.
+**Regimes.**
 
-| $\operatorname{reg}(e)$ | Condition | Repair acts on |
+| $\operatorname{reg}$ | Condition | Dynamics |
 |---|---|---|
-| drift | $q_e \le \tau$ | $\gamma$ |
-| control | $q_e > \tau$, $\Gamma_e \ne \emptyset$ | choice in $\Gamma_e$, $w \ne 0$ |
-| remap | $q_e > \tau$, $\Gamma_e = \emptyset$ | $(\mathcal{M}, \pi)$ |
+| drift | $\kappa < \kappa^\ast$ | $w \approx 0$. The agent follows $\mathcal{M}$ |
+| control | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) \ne \emptyset$ | $w \ne 0$. Competing conjectures are tested virtually and one is chosen |
+| remap | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$. The map changes |
 
-Result 1.1. Not $I$, with survey of $\mathcal{L}$ at every $t$, $\Rightarrow \pi$ isometric $\Rightarrow d_e = \bar{d}_e = 0\ \forall e \Rightarrow a_e = 0\ \forall e$.
-Result 1.2. $\vartheta > 0$, $B > 0$, and $\rho_e s_e > 0$ for some unchecked $e$ $\Rightarrow \sum_e a_e > 0$, also when $q_e = 0\ \forall e$.
-Result 1.3. $a_e = 0$ if $\rho_e s_e \bar{d}_e = 0$ and $d_e = 0$, or if $e$ is reached after $B$ is spent. Processing at $e$ is not excluded.
-Result 1.4. $B = 0 \Rightarrow a_e = 0\ \forall e$.
-Result 1.5. There are $e, e'$ with $q_e = q_{e'} > \tau$, $s_e > s_{e'}$, $\Gamma_e \ne \emptyset$, $\Gamma_{e'} = \emptyset$ and $h_{\operatorname{reg}(e)}(q_e) < h_{\operatorname{reg}(e')}(q_{e'})$.
-Result 1.6. $d_e = 0$ and $\bar{d}_e \to 0 \Rightarrow a_e \to 0$.
+The 2025 paper separates control from remap by $\kappa \approx \kappa^\ast$ against $\kappa \gg \kappa^\ast$. The test on $\Gamma(\gamma)$ replaces that [ruled]. $\mathcal{E}$: the states from which $\zeta$ is reached under drift or control. Remap lies outside $\mathcal{E}$ [ruled].
 
-Postulate 1.7. $\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e)$. $\text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e)$. Identification, not derived.
+**Consciousness.** $\mathcal{W} = \int \lVert w \rVert^2_{g_F}\, dt = \eta\, a$.
 
-Result 1.9 [assumed]. At fixed $\rho_e s_e$, monitoring demand $f(\rho_e s_e \bar{d}_e)$ is decreasing in $\mu_S(e)$. $\Pr(\Gamma_e = \emptyset)$ is decreasing in $\mu_S(e)$. Habitats draw little allocation and repair by control. The frontier draws much and repairs by remap.
+$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \qquad \text{conscious}(t) \iff a(t) > 0$$
 
-Stand-in 1.8. Develops the continuous side of the pair in §0.1. $\kappa$ is large where the continuous $\mathcal{M}$ misrepresents the combinatorial $\mathcal{S}$. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa^\ast(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa^\ast$.
+$a_{\mathrm{base}} > 0$ during wake: the live map is maintained against $T$. $\Delta a_e > 0 \iff \kappa_e \ge \kappa^\ast$, nondecreasing in $\kappa_e$, larger under remap than under control at equal $\kappa_e$. Degree at $e$: $\Delta a_e$. Rationing [inference]: $a \le B$, surges served in descending order of $\kappa_e$. Sampling [inference]: $\kappa_e$ is decreasing in $\mu_S(e)$, so habitats drift and the frontier draws allocation.
+
+Result 1.1. Not $I$ $\Rightarrow$ no compression, no $\mathcal{M}$, no mediation, $a \equiv 0$. A perfectly rational agent needs zero models and is not conscious.
+Result 1.2. Wake and $\vartheta > 0$ $\Rightarrow a > 0$ with no conflict present.
+Result 1.3. $\kappa_e < \kappa^\ast \Rightarrow \Delta a_e = 0$. Processing at $e$ proceeds under drift.
+Result 1.4. $w \equiv 0$ (dreamless sleep, anesthesia) $\Rightarrow a = 0$.
+Result 1.5. Practice lowers $\kappa$ on the practiced domain and moves it from control to drift.
+
+Conjectural control. A homeostat corrects against a fixed reference and tests nothing virtually. Control in the sense of the table decides between conjectures before commitment. This separates consciousness from control in general.
+
+**Experience.** Identifications, not derived. Effort: the rate $\lVert w \rVert^2_{g_F}$. Salience: information density, high where $\kappa$ is high. Meaning: criticality, $\kappa$ near $\kappa^\ast$. Intensity: $\lVert \nabla \kappa \rVert_{g_F}$ along trajectories with $w \ne 0$. Hard problem [ruled]: not dissolved. Science regularizes observations from without and can only triangulate experience within. Consciousness is a work effort, and work leaves traces observable from without. Different histories give different $\mathcal{M}$ for the same stimuli (§3, Proposition 3.3).
+
+**Offline.** Dreaming: conjectures enacted with actuators gated, at no physical risk. It tests far-fetched conjectures and removes singularities of $\mathcal{M}$.
+
+**Bound.** Three requirements (2025): representations rich enough for compression to distort, detection of failure of the gradient, capacity for corrective control. Current LLMs fail on two counts [ruled]: no adaptive recalibration in runtime, and no parochialism ($\mu_S$ without habitats). The second makes them the nearest known case of Result 1.1. Motility plays no role in Paper 1 [ruled].
 
 ## 2. UNS
 
-$X$: arrangements of $k$ interacting options, $\lvert X \rvert \ge k!$. $\operatorname{val}: X \to \mathbb{R}$.
+**Translation problem.** $\mathcal{S}$ alone: no $j$, paralysis. $\mathcal{M}$ alone: $j$ never tested, hallucination. The map proposes, the territory disposes.
 
-$$I \iff \lim_{\lambda \to \infty} \frac{\log \nu(\mathcal{S}_\lambda)}{\dim \mathcal{M}} = \infty, \qquad I \Rightarrow x_{t+1} \in \operatorname{Nbr}(x_t)$$
+**Intractability.** $X$: arrangements of $k$ interacting options, $\lvert X \rvert \ge k!$. $\operatorname{val}: X \to \mathbb{R}$.
 
-The condition is stated at $\pi$. $I$ acts equally at $\sigma$ and at $\gamma$ (§0.1). Its statement at those stages is [open].
+$$I \iff \lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}} = \infty, \qquad I \Rightarrow x_{t+1} \in \operatorname{Nbr}(x_t)$$
 
-| | Obstruction | Problem posed | Degree | Agent manufactures | Ordering | Primitive |
-|---|---|---|---|---|---|---|
-| $O$ | no local signal, or a local signal with no assured relation to the global path | identification: what is available in the immediate environment | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ | flow $j$ | comes with (none) | relations |
-| $C$ | steps foreclose options | composition: how it connects to the overall objective | $c \in [0,1]$, cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
-| $T$ | $X$ varies in $t$ | persistence: how long it will be available | $\vartheta \ge 0$, rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
+$I$ acts at $\sigma$ (parochial sampling), at $\pi$ (lossy compression) and at $\gamma$ (a linear sequence of local steps) [ruled].
 
-$O$, $C$ and $T$ are the dimensions in which the mediation between the global goal and the local step can be obscured. Each poses one problem that the mediation has to solve: identification, composition, persistence. Their degrees vary with the environment and from place to place within it. Any of them can be near zero.
+**Obstructions.**
 
-Resolution of $O$: establish that the local signal correlates with the global path, deterministically ($o = 0$) or stochastically ($0 < o < 1$). For $o < 1$ following the signal beats ignoring it. For $0 < o < 1$ noise added to the choice can improve on strict following. The noise vanishes as $o \to 0$.
+| | Obstruction | Problem posed | Degree | Ordering | Primitive |
+|---|---|---|---|---|---|
+| $O$ | no local information that reliably indicates the direction of global improvement | identification: what is available in the immediate environment | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ | comes with (none) | $R$ |
+| $C$ | transitions are not freely reversible | composition: how it connects to the overall objective | $c \in [0,1]$, cost of reversion | follows from (logical, negotiable) | $F$ |
+| $T$ | structure changes in time, or the map decays absent maintenance | persistence: how long it will be available | $\vartheta \ge 0$ | follows after (temporal, non-negotiable) | $D$ |
 
-Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $\beta(t) - \beta(t')$ is not restored. Information: $\dot{\iota} = -r(\vartheta)\, \iota$, $r(0) = 0$, $r$ increasing [open].
+Degrees vary with the environment and within it. Any can be near zero [ruled]. Resolution of $O$: establish that the local signal correlates with the global path. For $0 < o < 1$ noise added to the choice can improve on strict following. Coupling [ruled]: $C$ binds in proportion to $o$. $T$ binds given a committed $\gamma$. Form [inference]: $\ell_C = \ell_C(o \cdot c)$, $\ell_T = \ell_T(\vartheta, \lvert \gamma \rvert)$. Completeness of $(I, O, C, T)$ is conjectured.
 
-Opacity and sampling: $o$ is lower where $\mu_S$ is high. Modal sampling inside a habitat serves to reduce opacity.
+**Orderings.** $R$, $F$, $D$ are the mathematical primitives that capture the three orderings. The agent assigns orderings. It does not make up mathematics [ruled].
 
-Coupling: $\ell_C = \ell_C(o \cdot c)$, $\ell_C(0) = 0$. $\ell_T = \ell_T(\vartheta, \lvert \gamma \rvert)$, $\ell_T(0, \cdot) = \ell_T(\cdot, 0) = 0$. Both increasing.
+**Conjectures.** Cycle: $j \to \gamma \to \operatorname{lift}(\gamma) \to \text{step} \to \text{update}$. A conjecture that fails the virtual test dies in the agent's stead.
 
-Cycle: $j \to \gamma \to \text{step} \to \text{update}$.
+**Trajectory.** The endpoint of translation is $\gamma$, a sequence of dependent steps. Error compounds along $\gamma$ under $O$, $C$ and $T$: $\operatorname{err}_{i+1} = (1 + \operatorname{rate}(o, c, \vartheta)) \operatorname{err}_i$ [open]. $U$ is a property of paths under bounded representation.
 
-Heuristic: $B_{\mathrm{tot}} = B_O + B_C + B_T + B_{\mathrm{step}}$. The heuristic is the $\gamma$ returned by the cycle under $B_{\mathrm{tot}}$, revised at each $t$. Stop when the expected gain in $\operatorname{val}$ of one more pass is below its cost. Not $I$ $\Rightarrow B_O = B_C = B_T = 0$ and $\gamma$ is optimal.
+**Heuristic.** $B = B_R + B_F + B_D + B_w + B_0$. The heuristic is the $\gamma$ returned by the cycle under $B$. Search stops when the expected gain of one more pass falls below its cost. This stopping point is $\kappa^\ast$. Not $I$ $\Rightarrow$ $\gamma$ optimal at $B_R = B_F = B_w = 0$.
 
-Link to §1: $B \le B_{\mathrm{tot}} - B_{\mathrm{step}}$. Which of $B_O, B_C, B_T$ count toward $B$ is [open].
+**Cube.** $\operatorname{sig} = (R, F, D) \in \{0,1\}^3$. Eight signatures. Coordinates of a translation problem: $(I, \operatorname{sig})$. Corners are extreme types [ruled]. Environments have graded $(o, c, \vartheta)$.
 
-Cube: $([o > 0], [c > 0], [\vartheta > 0]) \in \{0,1\}^3$ are extreme types. Environments lie in $[0,1]^2 \times \mathbb{R}_{\ge 0}$. That $O, C, T$ exhaust $N$ is conjectured.
+**Parsimony.** $\pi^\ast = \arg\min_\pi d_{\mathcal{SM}}$ subject to $\dim \mathcal{M}$ within capacity: the most faithful searchable representation.
 
 ## 3. TG
 
-$$\Delta_0 = \partial_1 G\, \partial_1^\top, \qquad \Delta_0 \phi = \zeta, \qquad j = -G\, \partial_1^\top \phi$$
+**Complexes.** $K_S$ with $\Lambda_S$, symmetric or asymmetric, no potential. $K_M$ with $G$. $\pi: V_S \twoheadrightarrow V_M$.
 
-For $e = (m, m') \in E_M$, with $\pi^{-1}(e) := \pi^{-1}(m) \cup \pi^{-1}(m')$:
+**Identification.** $\Delta_0 = \partial_1 G\, \partial_1^\top$, $\Delta_0 \phi = \zeta$, $\mathbf{1}^\top \zeta = 0$, $j = -G\, \partial_1^\top \phi$. $\lambda_2 > 0$ gives connectivity and no direction. Collapse: $\lambda_2 \le \epsilon^\ast \Rightarrow \lVert \Delta_0^\dagger \rVert_2 = \lambda_2^{-1}$ large, $t_{\mathrm{rel}} \propto \lambda_2^{-1}$.
 
-$$\rho_e = \lvert j_e \rvert, \qquad s_e = g_e^{-1}, \qquad g_e = \big[(\mathbf{1}_m - \mathbf{1}_{m'})^\top \Delta_0^\dagger (\mathbf{1}_m - \mathbf{1}_{m'})\big]^{-1}$$
+**Composition.** $\Delta_1 = \partial_1^\top \partial_1 + \partial_2 \partial_2^\top$. $j = \partial_1^\top u + \partial_2 v + h$, $h \in \ker \Delta_1$, $\beta_1 = \dim \ker \Delta_1$.
 
-$$d_e = \sum_{z, z' \in \pi^{-1}(e)} \mu_S(z) \mu_S(z')\, \lvert \operatorname{dist}_S(z,z') - \operatorname{dist}_M(\pi z, \pi z') \rvert^2$$
+$$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i \ge 1} \big(\Lambda_S P_{m_i}\big) \mathbf{1}, \qquad \Gamma(\gamma) = \{\gamma' \ne \gamma : \gamma' \text{ reaches } \zeta,\ \operatorname{lift}(\gamma' \mid z_0) > 0\}$$
+
+**Persistence.** $\log \operatorname{Tor} = \tfrac12 \sum_i (-1)^{i+1}\, i \log \det{}' \Delta_i$. At constant rank, $\tfrac{d}{dt} \log \operatorname{Tor} = \tfrac12 \sum_i (-1)^{i+1}\, i \operatorname{Tr}(\Delta_i^\dagger \dot{\Delta}_i)$.
 
 $$d_{\mathcal{SM}} = \sum_{z, z' \in V_S} \mu_S(z) \mu_S(z')\, \lvert \operatorname{dist}_S(z,z') - \operatorname{dist}_M(\pi z, \pi z') \rvert^2$$
 
-$$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i \ge 1} \big(\Lambda_S P_{m_i}\big) \mathbf{1}, \qquad \gamma \text{ supported by } \mathcal{S} \iff \operatorname{lift}(\gamma \mid z_0) > 0$$
+$d_{\mathrm{GW}}$: the same integrand, minimized over couplings, for maps without shared registration.
 
-$\operatorname{lift}(\gamma \mid z_0) = 0 \Rightarrow d_e := \infty$ at the first failing edge.
+**Regimes.** Curvature made operational.
 
-$$\epsilon^\ast(e) = d_e / \tau, \qquad q_e \le \tau \iff g_e \ge \epsilon^\ast(e), \qquad d_e = 0 \Rightarrow \epsilon^\ast(e) = 0 \Rightarrow \operatorname{reg}(e) = \text{drift}$$
+| Papers 1, 2 | Paper 3 |
+|---|---|
+| $\kappa < \kappa^\ast$ | $\lambda_2 > \epsilon^\ast$ and $\operatorname{lift}(\gamma \mid z_0) > 0$. $d_{\mathcal{SM}} > 0$ is then benign |
+| $\kappa \ge \kappa^\ast$ | $\lambda_2 \le \epsilon^\ast$, or $\operatorname{lift}(\gamma \mid z_0) = 0$ |
+| control | $\Gamma(\gamma) \ne \emptyset$, $w \ne 0$, then reconciliation of $G$ |
+| remap | $\Gamma(\gamma) = \emptyset$, revision of $K_M$ or $\pi$ |
+| Fisher metric, natural gradient | $\Delta_0$, $\lambda_2$, $\phi$, $j$ |
+| singularities | $\Delta_1$, $\beta_1$, $\operatorname{lift}$ |
+| metric decay, $\delta g$ | $\operatorname{Tor}$, $d_{\mathcal{SM}}$, $d_{\mathrm{GW}}$ |
 
-$o = 1 - \operatorname{corr}(j, j_{\mathcal{L}})$, with $j_{\mathcal{L}}$ the flow under the potential of $\mathcal{L}$ [assumed]. $\vartheta$: $\dot{d}_{\mathcal{SM}} > 0$ absent update. $\bar{d}_e$ as a function of $\vartheta$, time since last check and $\mu_S(e)$ [open]. $c$ on $\Lambda_S$ [open]. $w$ on $K_M$ [open].
+$\log \operatorname{Tor}$ is a signed observable of deformation. It is not identified with $\mathcal{W}$ [ruled].
 
-Remap, signed observable at constant rank: $\frac{d}{dt} \log \operatorname{Tor} = \frac{1}{2} \sum_i (-1)^{i+1}\, i \operatorname{Tr}(\Delta_i^\dagger \dot{\Delta}_i)$. $\mathcal{W} = \int \lVert w \rVert^2 dt \ge 0$. $\log \operatorname{Tor} \ne \mathcal{W}$.
+**Envelope.** $\mathcal{E} = \{(z_0, \zeta) : \exists \gamma,\ \operatorname{lift}(\gamma \mid z_0) > 0,\ \gamma \text{ reaches } \zeta \text{ within } B\}$. Confidence: low-cost correction of minor divergence inside drift.
 
-Worked case 3.1. $V_S = \{z_1, z_2, z_3, z_4\}$, path. $\pi: z_1, z_4 \mapsto m_1$, $z_2 \mapsto m_2$, $z_3 \mapsto m_3$. $K_M$ is a triangle with unit weights. Goal: $m_1$ to $m_3$, from $z_1$.
-$\phi = (\tfrac13, 0, -\tfrac13)$. $j = (\tfrac13, \tfrac13, -\tfrac23)$ on $(m_1 m_2, m_2 m_3, m_3 m_1)$.
-$\operatorname{lift}((m_1, m_3) \mid z_1) = 0$. $\operatorname{lift}((m_1, m_2, m_3) \mid z_1) = 1$. Hence $\Gamma_e \ne \emptyset$ and $\operatorname{reg}(e) = \text{control}$ at $e = m_3 m_1$.
-$d_{\mathcal{SM}} = \tfrac{22}{16}$. On $\{z_1, z_2, z_3\}$: $\tfrac29$, and $0$ as $G_{m_3 m_1} \to 0$.
-$\det{}' \Delta_1 = 3(1 + 2 G_{m_3 m_1})$. $\log \operatorname{Tor}$ changes by $-\tfrac12 \ln 3$ as $G_{m_3 m_1}$ goes from $1$ to $0$.
-Harmonic component: $\tfrac13$ for $(m_1, m_3)$, $\tfrac23$ for $(m_1, m_2, m_3)$. It does not separate supported from unsupported routes.
+**Viability.** The engine pays iff $\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0]$.
+
+**Propositions.** 3.1 Gradient manufacture: $K_M$ connected $\Rightarrow$ $\phi = \Delta_0^\dagger \zeta$ and $j$ unique. 3.2 Control-work necessity: if the route selected by $j$ has $\operatorname{lift} = 0$, then reaching $\zeta$ requires $w \ne 0$ or $\dot{G} \ne 0$. 3.3 Perspective asymmetry: $\sigma_{\mathrm{int}} \ne \sigma_{\mathrm{ext}}$ with non-injective compression $\Rightarrow d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{int}}, \mathcal{M}_{\mathrm{ext}}) > 0$, under stated conditions. 3.4 Torsion variation at constant rank. The partition and impossibility theorems of the note are outside the series [ruled].
+
+**Worked case 3.5.** $V_S = \{z_1, \dots, z_4\}$, path. $\pi: z_1, z_4 \mapsto m_1$, $z_2 \mapsto m_2$, $z_3 \mapsto m_3$. $K_M$ a triangle, unit weights. Goal $m_1$ to $m_3$ from $z_1$. $\phi = (\tfrac13, 0, -\tfrac13)$, $j = (\tfrac13, \tfrac13, -\tfrac23)$. $\operatorname{lift}((m_1, m_3) \mid z_1) = 0$, $\operatorname{lift}((m_1, m_2, m_3) \mid z_1) = 1$: control. $d_{\mathcal{SM}} = \tfrac{22}{16}$, and $\tfrac29$ on $\{z_1, z_2, z_3\}$. With $G_{m_3 m_1} \to 0$: $\det{}' \Delta_1 = 3(1 + 2 G_{m_3 m_1})$, $\Delta \log \operatorname{Tor} = -\tfrac12 \ln 3$, $\beta_1: 1 \to 0$, $j = (1, 1, 0)$, distortion on $\{z_1, z_2, z_3\}$ equal to $0$.
 
 ## 4. MC
 
-$a_e$ is not observed. Traces: $\operatorname{met}_e \ge 0$ and $\mathcal{W}$ at $e$. $\eta = \mathcal{W} / \operatorname{met} \in (0, 1]$.
+**Thesis.** Scientific observation is a second translation: $d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{int}}, \mathcal{M}_{\mathrm{ext}}) > 0$. Control at a critical limit consumes $a$ and produces $\mathcal{W}$. Both leave traces.
 
-Assumption 4.1. $\operatorname{met}_e$ is increasing in $a_e$.
-Assumption 4.2. $\mathcal{W} > 0$ at $e$ $\Rightarrow \operatorname{reg}(e) = \text{control}$.
-Estimators $\hat{\Delta}_0, \hat{g}_e, \hat{\rho}_e, \hat{d}_e, \hat{\tau}$ [open]. No effect size is stated before the fact-check pass.
+**Traces.** $\hat{a}$: metabolic. $\hat{\mathcal{W}}$: spectral and kinematic. $\eta = \mathcal{W} / a \in (0, 1]$. Assumption 4.1: $\hat{a}$ is increasing in $a$. Assumption 4.2 [from the note]: $\mathcal{W} \ge c_0\, \lvert \Delta \log \operatorname{Tor} \rvert$, $c_0 > 0$.
 
-Presence: $a_e > 0$ against $a_e = 0$.
-Test 4.3. Same input at $e$, reported against unreported: $\operatorname{met}_e$ differs, and only at $e$.
-Test 4.4. $\rho_e s_e \bar{d}_e \to 0$: report and $\operatorname{met}_e$ decline together.
-Test 4.5. $\Pr(\text{change at } e \text{ detected})$ is increasing in $\rho_e s_e$ at fixed physical change.
-Test 4.6. Anesthesia, dreamless sleep: $\operatorname{met}_e$ does not depend on $d_e$ or $\rho_e s_e$, for all $e$.
+**Dictionary.** $\hat{\Delta}_0$ from connectivity among recording channels. $\hat{\beta}_1$ from persistent cohomology of population states. $\hat{d}_{\mathrm{GW}}$ from dissimilarity matrices across epochs or agents. Forms [open].
 
-Degree: size of $a_e$.
-Test 4.7. At $d_e = 0$: $\operatorname{met}_e$ is increasing in $\hat{\rho}_e \hat{s}_e$.
-Test 4.8. Control begins at $\hat{g}_e < \hat{d}_e / \hat{\tau}$. At $\hat{d}_e = 0$ no $\hat{g}_e$ triggers it.
-Test 4.9. Response time near the transition is increasing in $\hat{s}_e$.
-Test 4.10. At matched $q_e$: $\operatorname{met}_e$ is larger for $\Gamma_e = \emptyset$ than for $\Gamma_e \ne \emptyset$.
-Test 4.11. Degraded input lowers evidence for $d_e$. It does not raise $h$.
+**Presence.** Boundary test, all three required: (i) compression $\pi$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, (ii) a discontinuity measurable from without at the critical limit, (iii) offline conjecturing in high-intensity REM, $\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}}$. Only organisms that dream can be conscious [ruled]. Motility and sessility give the first dividing line: a sessile agent can afford physical conjectures, a motile agent cannot. Test 4.3: under anesthesia and in dreamless sleep, $\hat{a}$ and $\hat{\mathcal{W}}$ do not respond to $\hat{\lambda}_2$.
 
-| Dissociation | Behavior | Prediction |
+**Degree.**
+Test 4.4. Graded ambiguity produces a step drop of $\hat{\lambda}_2$ at a critical value, followed by a nonlinear rise of control markers.
+Test 4.5. $\mathbb{E}[\text{response time}] = t_0 + c_1 \lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2}$.
+Test 4.6. $\Delta \operatorname{bnd} = c_2\, [\lambda_2 \le \epsilon^\ast]\, \log \operatorname{Tor}$.
+Test 4.7. $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ with slope proportional to $\eta^{-1}$.
+
+**States.**
+
+| State | Papers 1, 2 | Signature |
 |---|---|---|
-| Ketamine, dreaming | absent | $a_e > 0$ on internal instances, actuators uncoupled |
-| Automatism | present | $a_e = 0$ on the driving instances |
-| Masked stop signal | braking | brake at $a_e = 0$. The brake marks conflict, not presence |
-| Flow | high | $\eta$ high |
+| drift | $\kappa < \kappa^\ast$ | $\lambda_2 > \epsilon^\ast$, $\beta_1 = 0$, $a = a_{\mathrm{base}}$ |
+| overload | $\kappa \ge \kappa^\ast$ sustained | $\lambda_2 \le \epsilon^\ast$, $\beta_1 > 0$, $\eta$ low |
+| flow | $\kappa$ just below $\kappa^\ast$ | $\lambda_2$ just above $\epsilon^\ast$, $\eta$ maximal |
+| meditation | $\kappa$ lowered, $\kappa^\ast$ raised | baseline $\lambda_2$ raised, $\mathcal{E}$ larger |
+| psychedelics | variance of $\kappa$ raised | $\operatorname{PR}$ raised, large $d_{\mathrm{GW}}$ from baseline, remap after |
+| propofol | $w \equiv 0$ | long-range $\lambda_2 \to 0$, $\mathcal{W} \to 0$, $a$ suppressed |
+| ketamine, REM | control without actuators | $\mathcal{W} > 0$ internally, input and output gated |
 
-Refutation 4.12. Presence varies at fixed $(d_e, \rho_e s_e, \bar{d}_e)$ with $B > 0$. Or Tests 4.5, 4.8 or 4.10 fail under valid estimators.
+**Agents.** Two agents coordinate under drift while $d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast$ and require explicit translation above it.
 
-## 5. Correspondence
+**Refutation.** The series fails if an organism passes the boundary test without any of Tests 4.4 to 4.7, if $\hat{a}$ and $\hat{\mathcal{W}}$ respond to $\hat{\lambda}_2$ under Test 4.3, or if control markers scale linearly through the critical value in Test 4.4.
 
-| Construct | Papers 1, 2 | Paper 3 | Paper 4 |
-|---|---|---|---|
-| comprehensive model | combinatorial territory | $K_S$ with $\Lambda_S$, no potential | [open] |
-| comprehensible model | continuous map | $K_M$ with $G$, $\phi$, $j$ | $\hat{\Delta}_0$ |
-| consequence | $\kappa(y)$ | $s_e = g_e^{-1}$ | $\hat{s}_e$ |
-| use | route through $y$ | $\rho_e = \lvert j_e \rvert$ | $\hat{\rho}_e$ |
-| divergence | map off at $y$ | $d_e$, $\operatorname{lift} = 0$ | $\hat{d}_e$ |
-| critical level | $\kappa^\ast(y) = \tau / d(y)$ | $\epsilon^\ast(e) = d_e / \tau$ | $\hat{\tau}$, Test 4.8 |
-| alternatives | map holds another route | $\Gamma_e$ | Test 4.10 |
-| sampling | habitat and frontier | $\mu_S(e)$ | [open] |
-| allocation | $a_e$ | $a_e$ | $\operatorname{met}_e$ under 4.1 |
-| control | $w$, $\mathcal{W}$ | $w$ on $K_M$ [open] | $\mathcal{W}$ under 4.2 |
-| Opacity, identification | $o$ | $\Delta_0$, $\phi$, $j$. Degree: $1 - \operatorname{corr}(j, j_{\mathcal{L}})$ [assumed] | [open] |
-| Contingency, composition | $c$ | $\operatorname{lift}$, $\Gamma_e$. Degree on $\Lambda_S$ [open] | [open] |
-| Transience, persistence | $\vartheta$ | update of $G$, $K_M$, $\pi$. Degree: $\dot{d}_{\mathcal{SM}}$ absent update | [open] |
+## 5. Open
 
-Dependency: §2 $\to$ §1 $\to$ §3 $\to$ §4. Theorems on partition and perspective are outside the series unless a later version requires one.
+Corner $(0,0,0)$ of the cube: the 2025 reading (no formalizable structure) against the reading under graded degrees (no obstruction). Confidence against the corrected $\mathcal{E}$. Statement of $I$ at $\sigma$ and $\gamma$. Forms of $\Delta a_e$ and of the compounding of error. Estimators.
+
+Dependency: §2 $\to$ §1 $\to$ §3 $\to$ §4. Paper 1 is self-sufficient with respect to §2.

@@ -4,6 +4,8 @@ Version 0.1, 12 November 2026. Every element of the 2025 versions of Papers 1 an
 
 Status: **kept**, **revised** (by ruling), **moved**, **proposed removal** (not ruled), **not carried** (dropped in drafting without a ruling, now flagged).
 
+Superseded in part, 12 November 2026. The tables below predate the audit of the kernel against the sources and kernel version 0.11. Since then the following are restored to their 2025 role: curvature as the regime variable, the Fisher metric, metric decay and metric shift, singularities under contingency, intensity and meaning, the neighbors and altered states in terms of curvature, the comparative criterion, paralysis and hallucination, parsimony, error compounding along the trajectory, the cube with the primitives as coordinates and its eight corners, and algorithm selection. From the notes the following are entered: the spectral gap against its critical level, Hodge decomposition and cycles, the note's budgets, the envelope, the unconstrained transport distance, the viability condition, control-work necessity, perspective asymmetry, the content of the nine hypotheses, the boundary test. Where a row below disagrees with the kernel, the kernel holds. Each scaffold ends with a list of what it does not carry from its source.
+
 ## Research notes
 
 Concepts introduced in the notes for Papers 3 and 4 and in "Adaptive Recalibration in Runtime". Version 0.1 of this record covered the 2025 papers only.

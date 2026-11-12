@@ -1,131 +1,109 @@
-# 2 UNS Scaffold
+# Unsurveyability: Scaffold
 
-Paper 2, Unsurveyability. Version 0.2, 12 November 2026. Register level: Paper, about 12 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §2. Items marked [assumed] or [open] need a ruling.
+Version 0.3, 12 November 2026. Baseline: the 2025 paper. Kernel: `0_LSMN_kernel.md` §2. Tags as in the kernel. In the series this paper stands beside Paper 1 as its companion.
 
-Headline contribution: an account of how a cognitive agent arrives at a dynamic heuristic for navigating an unsurveyable reality. Unsurveyability is intractability plus three obstructions, and the agent answers each obstruction by assigning an ordering.
+Headline. Unsurveyability is the property of reality that forces a cognitive agent to translate between a comprehensive territory and a comprehensible map. It has one boundary condition, intractability, and three sources of instability: opacity, contingency and transience. Each source poses one problem, calls for one kind of ordering, and corresponds to one mathematical primitive.
 
-## Abstract (0.25 page)
+Status of the paper. Conceptual. A design guide for parsimony in formal modeling (2025, kept).
 
-- Claim: reality cannot be surveyed from above. Search is therefore local, and local search meets three obstructions.
-- Claim: opacity, contingency and transience each force the agent to manufacture something. The three answers combine into a heuristic that is revised as it runs.
-- Shape of support: a derivation in steps, with the cul-de-sac and chess as running cases.
+## 1. The Translation Problem
 
-## 1. Introduction (1.25 pages)
+- Claim: local search has to translate the observable part of a state space into a representation that gives guidance.
+- Territory: the most faithful formal approximation of the state space. Comprehensive, intractable and intransigent. It presents alternatives and privileges none.
+- Map: a compressed representation that enables movement. Tractable and transigent. Its gradients are manufactured.
+- Claim: territory alone gives paralysis (Buridan's ass). Map alone gives hallucination. The map proposes, the territory disposes.
+- Claim: parsimony is the most faithful searchable representation.
+- Reference: Korzybski.
 
-- Context: Simon asked how agents make goal-directed decisions under resource limits. His images of search were combinatorial and his formal answers were dynamic programs. The passage from the one to the other was left unstated.
-- Contribution: the route from an unsurveyable search space to a dynamic heuristic, stated without assuming a view from above at any step.
-- Novelty: the obstructions to local search are named, graded and linked. Satisficing appears as the outcome of the derivation and not as its premise.
-- Relation to Paper 1: this paper says why an agent needs a map and what the map must supply. Paper 1 says what the agent does to keep the map usable.
-- Depends on: nothing. The Simon record needs the fact-check pass.
+## 2. No View From Above
 
-## 2. No View From Above (1.5 pages)
+- Claim: unsurveyable is meant literally. No agent has a view of the whole.
+- Intractability: relevant distinctions exceed the capacity of any feasible map. Limit condition of the kernel.
+- Claim: intractability forces local search. It acts at all three translations [ruled]: parochial sampling, lossy compression, navigation as a linear sequence of steps.
+- Claim: intractability determines that translation is necessary. The three obstructions determine how it becomes unstable.
 
-- Claim: unsurveyable is literal. The agent cannot stand above the search space and inspect it.
-- Claim: intractability is the reason. Arranging even a few options in an order, when they interact, yields more arrangements than any agent can enumerate.
-- Claim: almost all environments present the obstacles of combinatorial search, which are intractability, opacity, contingency and transience. The territory is presented as combinatorial for that reason.
-- Footnote: reality is mixed combinatorial. It has high dimensionality, objects that differ in kind, strong interaction between objects, and the need for arrangements (policy trajectories) in place of isolated decisions. The mixed part, where options differ in degree and the local gradient is aligned with the global one, needs no translation and rarely makes up a whole environment.
-- Consequence: exhaustive search gives way to local search on local information.
-- Claim: intractability acts at each translation. It makes sampling parochial, compression lossy, and navigation a linear sequence of local steps. Each is an economy under the same resource constraint.
-- Claim: navigation is the mediation of local steps under a global goal. The goal may be loose.
-- Support: territory alone gives paralysis (Buridan). Map alone gives hallucination.
-- Kernel: search space, intractability condition.
-- Depends on: Section 1.
-
-## 3. Three Obstructions (3 pages)
-
-Lead: the obstructions a navigating agent can meet. They are the dimensions in which the mediation between the global goal and the local step can be obscured. Each comes in degrees, and the degrees vary with the environment and from place to place within it. Any of them can be near zero: gradients can be aligned, choices can leave every option open, and an environment can be almost static. Each poses one problem that the mediation has to solve, and each forces the agent to manufacture something where it is present. The problems are identification, composition and persistence.
+## 3. Three Obstructions
 
 ### 3.1 Opacity
 
-- Claim: opacity has two forms. The environment gives no local signal, or it gives one with no assurance that the signal relates to the global path.
-- Support: the maze. The agent faces a wall and can turn left or right. With no marker on the wall there is no gradient. With an arrow pointing left and no assurance that it leads to the exit, there is a gradient that may mislead.
-- Claim: in both forms opacity is resolved in one way, which is to establish that the local signal correlates with the global path. The correlation can be deterministic (the arrow is always right) or stochastic (it is right more often than wrong).
-- Claim: once any correlation is established, following the signal is better than ignoring it. Under a stochastic correlation the agent can improve its chances by adding noise to its choice. The noise shrinks as the correlation rises.
+- Definition (2025): the territory provides no local information that reliably indicates the direction of global improvement.
 - Problem posed: identification. What is available in the immediate environment.
-- Degree: one minus the correlation between the local signal and the global path.
-- Support: hill climbing. It has a gradient at every point and succeeds only where local and global gradients agree. A given gradient does not remove opacity.
-- Claim: a combinatorial space differs from a continuous one in kind. It has no differentiable structure and therefore no gradient to give.
-- Answer: the agent manufactures a gradient. To do so it builds a continuous map, in which proximity stands for similarity.
-- Ordering assigned: comes with. No order.
+- Maze [ruled]: a bare wall gives no gradient. An arrow of unknown origin gives a gradient that may mislead. Opacity is resolved only by establishing that the local arrow correlates with the global path, deterministically or stochastically.
+- Hill climbing gives gradients everywhere. They work only where local and global gradients are aligned.
+- Claim: in the stochastic case, noise added to the choice can improve on strict following.
+- Claim: dense sampling inside a habitat serves to reduce opacity.
+- Support (2025): in satisfiability problems, local reduction of violations often raises them globally.
 
 ### 3.2 Contingency
 
-- Claim: physical steps foreclose options.
-- Problem posed: composition. How what is available connects to the overall objective.
-- Degree: the cost of reversion, from free to impossible.
-- Support: the cul-de-sac. Short of impossible, the agent returns to the last branch point. It recovers the search space. It does not recover what it spent.
-- Answer: the agent manufactures virtual trajectories and tries them before it steps.
-- Ordering assigned: follows from. Logical and negotiable.
+- Definition (2025): transitions between states are not freely reversible.
+- Problem posed: composition. How the available options connect to the overall objective.
+- Claim: reversibility is graded. Cost of reversion in $[0, 1]$, both ends included [ruled].
+- Cul-de-sac [ruled]: backtracking recovers the options and does not recover the budget spent.
+- Claim: the map enables virtual backtracking at the cost of computation.
 
 ### 3.3 Transience
 
-- Claim: the search space changes during the search.
-- Problem posed: persistence. How long it will be available.
-- Degree: the rate of change. In an unchanging space backtracking costs only resources. In a changing one the agent also loses information it had gathered.
-- Answer: the agent updates its trajectory on observed divergences.
-- Ordering assigned: follows after. Temporal and non-negotiable.
+- Definition (2025): the structure of the territory changes over time, or the map decays absent maintenance.
+- Problem posed: persistence. How long the options will be available.
+- Claim: perfect stability is impossible. The best achievable is equilibrium through continuous maintenance.
 
-- Kernel: obstruction table, reversion.
-- Depends on: Section 2.
+### 3.4 Structure
 
-## 4. Conjectures (1.5 pages)
+- Causal structure (2025): intractability, compression, intransigence.
+- Claim: the degrees of all three vary with the environment and within it, and any can be near zero [ruled].
+- Coupling [ruled]: contingency binds in proportion to opacity. Transience binds given a committed trajectory.
+- Conjecture (2025): the four dimensions are complete.
 
-- Claim: the three answers form one cycle. The agent invests in a gradient, tries routes along it virtually, steps, and corrects. Conjectures fail in place of the agent (Popper).
-- Claim: modal sampling inside a habitat serves to reduce opacity. The correlation between local signal and global path is established by experience, and experience is dense there.
-- Claim: the obstructions are not independent. Where the gradient is reliable, foreclosure costs nothing, so contingency binds in proportion to opacity. Without a committed trajectory, change costs nothing.
-- Claim: the unit of navigation is the trajectory. Error compounds along a path of dependent steps.
-- Kernel: coupling, cycle.
-- Depends on: Section 3.
+## 4. Orderings and Their Mathematics
 
-## 5. The Dynamic Heuristic (1.5 pages)
+- Claim: each obstruction is the absence or the kind of an ordering.
+- Opacity: comes with. No ordering.
+- Contingency: follows from. Logical ordering, negotiable.
+- Transience: follows after. Temporal ordering, non-negotiable.
+- Correspondence (2025): opacity with relations, contingency with functions, transience with dynamics.
+- Claim [ruled]: the agent assigns orderings. Relations, functions and dynamics are the mathematical primitives that capture them. The paper does not claim that a conscious agent makes up mathematics.
+- Footnote: "directional" as an alternative to "dynamic".
 
-- Claim: the product of the cycle is a heuristic revised as it runs. It satisfices. It is the best approximation the budget allows.
-- Claim: the budget divides among the three answers and movement. Search stops when one more pass costs more than it is expected to return.
-- Claim: without intractability the three budgets vanish and the route is optimal. Satisficing is what optimization becomes under unsurveyability.
-- Link to Paper 1: part of this budget is what Paper 1 calls allocation. Which part is [open].
-- Kernel: heuristic, link to §1.
-- Depends on: Section 4.
+## 5. Conjectures
 
-## 6. Orderings and Their Mathematics (1 page)
+- Claim: under the three obstructions a route is a conjecture. Popper: we send our conjectures to their deaths in our stead.
+- Cycle: manufacture a ranking, form a virtual route, test it against the territory, step, update.
+- Claim: the cycle links the three obstructions. Opacity makes the ranking conjectural, contingency makes the virtual test worth its cost, transience makes the update necessary.
 
-- Claim: the agent assigns orderings. It does not do mathematics.
-- Claim: relations, functions and dynamics are the primitives that capture the three orderings. They belong to the description.
-- Footnote: "directional" as a second reading of the third.
-- Kernel: last two columns of the obstruction table.
-- Depends on: Section 3.
+## 6. Activity as Trajectory
 
-## 7. The Cube (1.25 pages)
+- Claim (2025): the endpoint of translation is a trajectory, a sequence of dependent steps.
+- Claim: error compounds along the trajectory.
+- Claim: unsurveyability is a property of paths under bounded representation.
 
-- Claim: the cube is a picture of which obstructions an environment presents. Its eight corners are extreme types.
-- Claim: real environments lie inside it and combine the three in degrees.
-- Support: chess. Well-structured in rules and roles, and it presents all three obstructions.
-- Support: the eight corners with one example each, corrected. SAT and constraint satisfaction share a corner.
-- Use: a vocabulary for matching search methods to environments. One paragraph.
-- Kernel: cube.
-- Depends on: Sections 3 and 6.
+## 7. The Dynamic Heuristic
 
-## 8. Open Points (0.5 page)
+- Claim [ruled]: the paper explains the route from an unsurveyable search space to a dynamic heuristic.
+- Budgets (Paper 3 note): guidance, virtual search, physical execution, reconciliation, engine maintenance.
+- Claim: satisficing is the best approximation under budget. Search stops when one more pass costs more than it is expected to gain.
+- Simon: his images are combinatorial, his formal tool is Bellman's dynamic optimization, and his engagement with combinatorial optimization was limited and present [ruled].
+- Dependency: Paper 1 identifies the stopping point with the critical level of curvature.
 
-- Completeness: that the three obstructions exhaust intransigence is conjectured.
-- Measurement of the degrees: Paper 3.
-- Depends on: Sections 3 and 4.
+## 8. The Cube
 
-## 9. Conclusion (0.25 page)
+- Signature (2025): presence or absence of relations, functions and dynamics. Eight signatures. Coordinates: intractability and signature.
+- The eight corners with the 2025 examples.
+- Claim [ruled]: the cube is a metaphor. The corners are extreme types. Environments have graded degrees. Chess presents all three obstructions. It is well-structured, with unambiguous rules and roles, and it is not smooth.
+- Open: the reading of the corner with no primitive.
 
-- One paragraph. From no view from above to a dynamic heuristic, and the hand-off to Papers 1 and 3.
+## 9. Implications and Open Points
 
-## References to add
+- Algorithm selection (2025): algorithms assume signatures. Mismatch produces pathologies.
+- Expansions (2025): formal definitions of the three obstructions, a diagnostic for signatures, completeness, the structure of the cube.
+- Dependency: Paper 3 gives operators for the three primitives.
 
-- Carried from 2025: Rice on algorithm selection, Wolpert and Macready on no free lunch, Stadler and Stephens on landscapes, Simon 1957.
-- New: Popper on conjectures. Bellman. Simon's dynamic-programming papers. Newell and Simon on heuristic search. All through the fact-check pass.
+## 10. Conclusion
 
-## Changes from the 2025 version
+- Restates the headline.
+- Hands over to Paper 1 (what the translation costs the agent) and Paper 3 (operators).
 
-Full accounting, element by element: `0_LSMN_disposition.md`. The list below is a summary.
+## Not carried from 2025
 
-- Territory: "the most faithful formal approximation of the state space" becomes the agent's record of encounters.
-- Obstructions: binary and independent become graded and coupled.
-- Contingency: reversion cost on a scale with both extremes included.
-- Primitives: structure of the territory becomes description of orderings the agent assigns.
-- New: the conjecture cycle and the dynamic heuristic.
-- Removed: the signature-count theorem, "periodic table of territories", the "take it or leave it" passage, the categorical remark.
+- The proof environment for the count of signatures. The count stays as a remark.
+- Claim-and-denial phrasing of the 2025 prose.

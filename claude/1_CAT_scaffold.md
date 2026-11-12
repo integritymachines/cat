@@ -1,136 +1,134 @@
-# 1 CAT Scaffold
+# Consciousness as Translation: Scaffold
 
-Paper 1, Consciousness as Translation. Version 0.2, 12 November 2026. Register level: Paper, about 13 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Items marked [open] need a ruling.
+Version 0.3, 12 November 2026. Baseline: the 2025 paper. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Tags as in the kernel.
 
-Headline contribution: a cognitive agent that navigates an unsurveyable reality has to maintain two models of that reality, a comprehensive one (the territory) and a comprehensible one (the map), and has to mediate between them. Consciousness arises out of this mediation and out of the need to allocate metabolic resources to keep the two models aligned.
+Epigraph (kept from 2025, original punctuation): *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
-Shorthand, not a definition: adaptive recalibration in runtime.
+Headline. A cognitive agent that navigates an unsurveyable reality has to navigate by conjecture. Virtual conjectures require two models of the world, one comprehensive (the territory) and one comprehensible (the map), and a mediation between them. Consciousness arises out of that mediation and out of the need to allocate metabolic resources to keep the two models aligned.
 
-## Abstract (0.25 page)
+Status of the paper. Conceptual. It uses three stand-ins and names them as such: combinatorial against continuous, curvature, the Fisher metric. Papers 3 and 4 replace the stand-ins with operators and tests.
 
-- Claim: the headline contribution, in one sentence.
-- Claim: it follows from bounded rationality. An agent that could survey reality would need one model only and would have nothing to keep aligned.
-- Shape of support: a four-stage chain, an allocation rule, three regimes of repair, one geometric picture offered as illustration.
-- Hand-off: Papers 3 and 4 turn the account into operators and tests.
+## Abstract
 
-## 1. Introduction (1.5 pages)
+- Claim: the headline.
+- Claim: curvature of the map marks where the map's loss matters, and a critical level separates following the map from correcting it.
+- Claim: experience has a geometric reading (effort, salience, meaning).
+- Claim: the hard problem stands. Consciousness is a work effort, and its traces can be observed from without.
+- Dependency: none. The paper is self-sufficient.
 
-- Context: reality is unsurveyable, so a cognitive agent searches it locally.
-- Claim: local search needs a model that orders the options, and any model that orders them discards distinctions. The agent can detect where such a model has gone wrong only against a second model that keeps the distinctions and imposes no order. It therefore maintains both, the comprehensible map and the comprehensive territory.
-- Claim: the paper presents the two models as a combinatorial territory and a continuous map. The pair is a stand-in with a specific job, which is to show that the models differ in kind. A combinatorial structure keeps every distinction, has no gradient, and explodes under enumeration. A continuous structure has proximity and gradients, lets the agent interpolate, and is cheap to follow, and it has no image for discrete branch points. Because the difference is one of kind, no translation between the two is exact and the friction between them is permanent.
-- Epigraph, kept: "The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises." The introduction states its function.
-- Claim: almost all environments present the obstacles of combinatorial search, which are intractability, opacity, contingency and transience. This is why the pair is central.
-- Footnote: reality is mixed combinatorial. It has high dimensionality, its objects differ in kind, they interact strongly, and acting in it calls for arrangements (policy trajectories) in place of isolated decisions. The mixed part, where options differ in degree and the local gradient is aligned with the global one, needs no translation and rarely makes up a whole environment.
-- Claim: the two models therefore cannot coincide, and they drift further apart as the agent moves. Keeping them aligned takes metabolic resources, the resources are limited, and the agent has to decide where to spend them. Consciousness arises out of this mediation and allocation.
-- Claim: this separates a cognitive agent from a homeostat. A homeostat holds a signal to a set point, whereas a cognitive agent compares two models of reality and has to judge, from where it is going, which of their divergences matter.
-- Novelty: consciousness is placed at the instance and comes in degrees. Existing accounts place it at the state of the whole system or at a stage of processing.
-- Relevance: the account says when an agent is conscious of something, how strongly, and what it costs.
-- Division of labor: Papers 1 and 2 are conceptual. Papers 3 and 4 are scientific. The combinatorial and continuous pair and the geometry built on it are stand-ins. Papers 3 and 4 refine them and keep their function. Say so once, here.
-- Depends on: nothing.
+## 1. Introduction
 
-## 2. The Chain (1.5 pages)
+- Claim: the world presents more configurations than a finite agent can represent. Support: chess, about $10^{43}$ states against about $10^{11}$ neurons [2025, unchecked].
+- Claim: the agent compresses. Compression distorts. Where distortion passes a critical level, the agent has to intervene.
+- Claim: the paper is conceptual and Papers 3 and 4 carry the falsifiable form.
+- Footnote (2025, kept): the paper does not claim reality is combinatorial. Combinatorial explosion is the closest formal expression of unsurveyability. Footnote level: reality is mixed combinatorial.
 
-- Claim: translation has four stages. Landscape, territory, map, navigation.
-- Landscape: unsurveyable reality itself. It offers options and no directions.
-- Territory: the agent's own record of what it has encountered. Internal and faithful to what was observed. Sampling is parochial: dense around the agent's habitats and thin elsewhere, so the territory is small compared with the landscape.
-- Claim: inside a habitat the map interpolates and is expected to hold. Outside it extrapolates and is expected to be off.
-- Territory as combinatorial: discrete options under interaction. It gives no gradient because a combinatorial structure has none to give.
-- Map: a compression of the territory, built to be used. It supplies the orderings the territory lacks.
-- Map as continuous: proximity stands for similarity, so the agent can follow a gradient and can interpolate between what it has sampled. This is what makes the map cheap to use.
-- Navigation: local steps under a global goal. It turns the continuous map back into a sequence of discrete steps.
-- Claim: the mediation has three problems to solve, taken from Paper 2. Identification under opacity, composition under contingency, persistence under transience. The orderings the map supplies are the answers to them.
-- Claim: each translation changes the kind of structure. Unsurveyable to combinatorial, combinatorial to continuous, continuous to sequential.
-- Support: the door. The door as remembered is a map entry. The door as found is a territory entry.
-- Kernel: §0.1.
-- Depends on: Paper 2 for why compression is forced and what the map must supply.
+## 2. Unsurveyable Reality
 
-## 3. Synchronization (2 pages)
+- Claim: $U = I + N$, $N = (O, C, T)$. Self-sufficient statement [ruled 6a].
+- Intractability: relevant distinctions outgrow any representation. Limit condition of the kernel. It forces local search.
+- Opacity: reality gives no local signal with an assured relation to the global path. The agent manufactures gradients.
+- Contingency: steps foreclose options or make them costly to recover. Branch points appear in the map as singularities.
+- Transience: reality changes and the map decays. Stand-in: decay of the metric.
+- Causal chain (2025): intractability, compression, opacity with contingency and transience, high curvature, control, consciousness.
+- Dependency: Paper 2 develops this section. Paper 1 does not require it.
 
-- Claim: the agent compares map and territory continuously, instance by instance.
-- Claim: two things set what an instance receives. Before a divergence, how much the route depends on the instance and how likely the map is to be off there. After a divergence, its size times its consequence.
-- Claim: an instance is conscious when it receives allocation. The agent is conscious when any instance does. Intensity is the amount.
-- Support: the door and the handle. The route runs through the door, so its state is watched. The handle is not watched.
-- Support: the hammock. An awake agent at rest in a changing world still allocates, at low cost.
-- Support: what is unconscious. Instances that receive nothing (encapsulated routines, masked input). States in which nothing can receive (anesthesia, dreamless sleep). Content that is stable and predicted fades.
-- Kernel: allocation rule, definition, Results 1.2, 1.3, 1.4, 1.6.
-- Depends on: Section 2.
+## 3. Conjectural Navigation
 
-## 4. Three Regimes (1.5 pages)
+- Claim: to navigate is to choose local steps under a global objective. Trees act. They do not navigate [ruled].
+- Claim: under $U$, a route is a conjecture. A conjecture can be tested physically or virtually. Popper: we send our conjectures to their deaths in our stead.
+- Claim: virtual testing requires a central conjecturing engine, and the engine costs metabolic resources.
+- Claim: the engine separates conjectural navigation from random, passive or myopic motion.
+- Dependency: this section comes before the two models [ruled]. Motility is not discussed in Paper 1 [ruled].
 
-- Claim: the regimes differ in where the repair happens. Two tests separate them.
-- Drift: the divergence is within tolerance. Repair acts on the trajectory, in flight.
-- Control: the divergence exceeds tolerance and the map holds another route that the territory supports. Repair acts on the choice of route. Candidates are tried virtually and the step is paused.
-- Remap: the divergence exceeds tolerance and the map holds no such route. Repair acts on the map.
-- Claim: all three are conscious to their degree. Drift is the low end.
-- Claim: consequence and cost come apart. The closed door matters to the route and is cheap to repair. The changed handle matters little and is dear.
-- Support: the cul-de-sac. Backtracking recovers the options. It does not recover what was spent.
-- Kernel: regime table, Result 1.5.
-- Depends on: Section 3.
+## 4. Two Models
 
-## 5. A Geometric Picture (1.5 pages)
+- Claim: the engine cannot run on the habitat as experienced. It needs a compact travel guide.
+- Territory: the first model. An unordered accumulation of impressions, sampled densely around habitats and sparsely elsewhere. Comprehensive.
+- Map: the second model. A rank offering of the available choices by their connection to the objective, as a chess engine ranks moves. Comprehensible, lossy.
+- Stand-in: the map as a smooth manifold with the Fisher metric. Distance is discriminability. Default dynamics: natural gradient descent plus a control field.
+- Claim: all models are wrong and some are useful (Box). The map's loss is negligible in some instances and decisive in others.
+- Chain: landscape, territory, map, navigation.
 
-- Purpose: develop the continuous side of the pair into one image for Sections 3 and 4. The first sentence labels it a stand-in.
-- Content: a smooth map, a potential with its gradient flow, a control term, curvature standing for consequence, a critical level that falls as the map gets further off.
-- Claim: curvature marks where the continuous map misrepresents the combinatorial territory. Branch points appear as singularities and conflicting constraints as saddles.
-- Support: the three regimes drawn on the picture.
-- Closing table: each element of the picture and the operator that replaces it in Paper 3.
-- Kernel: Stand-in 1.8, §5 first column.
-- Depends on: Sections 3 and 4. No later section depends on this one.
+## 5. Curvature
 
-## 6. Experience (1 page)
+- Claim: curvature is the geometric signature of the translation problem. It is high where small moves in the map correspond to large changes in reality, and where discrete structure has no continuous image.
+- Claim: curvature carries both the divergence between map and territory and its consequence for navigation [ruled].
+- Support: just-noticeable difference scales as $\kappa^{-1/2}$ [2025, unchecked]. High curvature gives fine discrimination and fragility.
+- Claim: the critical level $\kappa^\ast$ is specific to the agent and set by the cost of control against the cost of error.
+- Dependency: Paper 3 replaces curvature with the spectral gap, cycles and the lift test.
 
-- Claim: the paper does not dissolve the hard problem. The hard problem is right that scientific inquiry regularizes observations from without and can only triangulate a purely subjective experience within.
-- Claim: where this theory differs is that it does not treat consciousness as an inherent property. It treats it as a work effort. Work leaves physical traces, and those can be observed from without.
-- Claim: the same stimulus yields different experiences because it meets differently evolved manifolds. The same lamp trained on the same object casts different shadows on surfaces of different texture.
-- Claim: felt effort follows the cost of repair, and salience follows the allocation an instance receives before any divergence.
-- Support: effort without progress, and progress without effort, read as cases of the allocation rule.
-- Kernel: Postulate 1.7.
-- Depends on: Sections 3 and 4.
+## 6. Three Regimes
 
-## 7. Friendly Neighbors (2 pages)
+- Drift: $\kappa < \kappa^\ast$. The agent follows the map because in that instance it does not differ substantially from the territory. Includes skilled and abstract performance.
+- Control: $\kappa \ge \kappa^\ast$ and the map holds another supported route. Conjectures compete, are tried virtually, and one is chosen.
+- Remap: $\kappa \ge \kappa^\ast$ and the map holds no supported route. The map changes. Learning, insight.
+- Change from 2025 [ruled]: control and remap are separated by the existence of a supported alternative, where the 2025 text used "far above the critical level".
+- Envelope of assured navigation: drift and control together. A wingsuit flight is control inside the envelope [ruled]. Answer to the dark-room objection: the agent has an objective and pays to stay assured outside the dark room.
+- Examples (2025, kept): chess opening against unfamiliar position against new strategic pattern. Flat ground, rough terrain, learning to balance on ice.
 
-- Order: free energy, bounded rationality, information theory, energy-based networks, global workspace.
-- For each: what it specifies, and what the allocation account adds. One paragraph each, two for bounded rationality.
-- Bounded rationality: the program began as an extension of Simon. His images of search were combinatorial. His formal models were dynamic programs. His engagement with combinatorial optimization was limited. The program works in that gap, and the translation between a combinatorial territory and a continuous map is its account of how the two sides of his work connect.
-- Energy-based networks: continuous dynamics used on combinatorial problems. An early instance of the same translation.
-- Claim: consciousness sits downstream of bounded rationality.
-- Claim: a perfectly rational agent cannot be conscious.
-- Global workspace: broadcast and ignition read as marks of control, which is one regime, and not of presence.
-- Kernel: Result 1.1.
-- Depends on: Sections 3 and 4. The Simon record needs the fact-check pass.
+## 7. Consciousness
 
-## 8. Altered States (1 page)
+- Claim: consciousness arises out of the mediation and the allocation. It is graded and tied to instances.
+- Claim: allocation has a waking baseline and surges. The baseline maintains the live map against transience. Surges occur at instances at or above the critical level.
+- Claim: humans are conscious whenever awake. The exceptions are dreamless sleep and anesthesia [ruled]. Boredom and stimulus deprivation need a remark.
+- Why this is consciousness and more than control [ruled 6b]: a thermostat, a governor and a tree's stomata control against a fixed reference. Conjectural control decides between virtual conjectures before commitment. The 2025 reasons are kept: phenomenology, signatures and functional necessity align.
+- Results 1.1 to 1.5 of the kernel.
+- Claim: a perfectly rational agent would need zero models and could not be conscious.
 
-- Claim: each state is a characteristic shift in what receives allocation and how much. Qualitative.
-- Cover: meditation, psychedelics, flow, dreams, anxiety and rumination, anesthesia and deep sleep.
-- Anesthesia and deep sleep: nothing can receive allocation.
-- Flow: allocation held just below the critical level, little spent elsewhere.
-- Rumination: repeated allocation to an instance whose divergence does not shrink.
-- Dreams: allocation to internal instances with the actuators uncoupled.
-- Hand-off: Paper 4 gives the quantitative version.
-- [open] Keep here, or move whole to Paper 4.
-- Depends on: Sections 3 and 4.
+## 8. Experience
 
-## 9. What Would Count Against It (0.75 page)
+- Effort: the felt rate of control cost.
+- Salience: information density, high where curvature is high.
+- Meaning: criticality. Felt significance, not propositional meaning (2025 footnote).
+- Intensity: how fast curvature changes along a controlled trajectory.
+- Qualia differ because embeddings differ.
+- Hard problem [ruled 7]: not dissolved. It is right that science, as regularization of observations from without, can only triangulate experience within. The paper's claim is narrower: consciousness is a work effort, and work leaves physical traces. The same lamp trained on the same object casts different shadows on surfaces of different texture.
+- Change from 2025: the section titled "The Hard Problem Dissolved" and the sentence "phenomenology is geometry, experienced" are replaced by this position.
 
-- Claim: the account can fail in two ways. On presence: whether an instance receives allocation. On degree: how much.
-- Support: three cases it must survive. Experience without behavior. Behavior without experience. Braking without awareness.
-- Hand-off: operators in Paper 3, tests in Paper 4.
-- Kernel: Tests 4.3 to 4.11, Refutation 4.12, named and not developed.
-- Depends on: Sections 3, 4, 6.
+## 9. Friendly Neighbors
 
-## 10. Conclusion (0.25 page)
+- Free energy and predictive coding: they state the global objective. Curvature states when minimization becomes unstable.
+- Bounded rationality (Simon): the program extends it. Satisficing stops where the cost of further search exceeds its gain, and that point is the critical level. March: explore and exploit map to remap and drift. Simon stays here [ruled].
+- Information theory: rate and distortion. Curvature marks where distortion concentrates. Control as error correction.
+- Energy-based networks: local regulation of temperature by curvature.
+- Global workspace and attention: curvature as the trigger for broadcast.
+- Claim: each neighbor governs its own domain. The paper adds the local criterion.
 
-- One paragraph. The claim and the hand-off. It returns to the epigraph.
+## 10. Altered States
 
-## Changes from the 2025 version
+- Qualitative here, quantitative in Paper 4 [ruled].
+- Meditation: lower average curvature, higher critical level.
+- Psychedelics: higher variance of curvature, access to remap.
+- Flow: sustained navigation just below the critical level.
+- Dreams: conjectures enacted without physical risk. Far-fetched and potentially lethal conjectures can be tested.
+- Anxiety and rumination: overestimated curvature, control where none is needed.
+- Anesthesia and dreamless sleep: no control field, no allocation.
 
-Full accounting, element by element: `0_LSMN_disposition.md`. The list below is a summary.
+## 11. What Would Count Against It
 
-- Chain: three stages with an external territory become four stages with an internal one.
-- Core claim: control near a curvature threshold becomes allocation per instance.
-- Regimes: one dial becomes two tests.
-- Combinatorial and continuous: kept, with its function stated. It was the theory's literal claim and is now its central stand-in.
-- Geometry: presented as the theory becomes presented as a stand-in. The JND equation, the Ricci-flow equation and the instability measure are removed.
-- Sections removed: the hard problem as a result, advantages, Simon's vision, future directions, broader implications, personality traits, the species list.
-- Style: the tropes listed in the register are removed.
+- Behavioral: response time and error pattern track curvature. Strategy shifts at the critical level.
+- Neural: control-related activity rises at the critical level and not uniformly.
+- Learning (kept by ruling 6d): insight follows struggle. Practice lowers curvature. Development and aging move the critical level and control capacity.
+- Individual differences: control capacity, tolerance for high curvature.
+- Dependency: Paper 4 states the tests and the refutation condition.
+
+## 12. The Lower Bound
+
+- Three requirements (2025): representations rich enough for compression to distort, detection of failure of the gradient, capacity for corrective control.
+- Machines [ruled]: current LLMs are not capable of conscious navigation. They have no adaptive recalibration in runtime and no parochialism. The second makes them the nearest known case of the perfectly rational agent that cannot be conscious.
+- Change from 2025: the passage that adaptive AI may require conscious AI is replaced by this position.
+- Dependency: the boundary test and the comparative table are in Paper 4 and a satellite note.
+
+## 13. Conclusion
+
+- Restates the headline and the three stand-ins.
+- Simon: consciousness sits downstream of bounded rationality.
+- Hands over to Paper 2 (the structure of unsurveyability), Paper 3 (operators) and Paper 4 (tests).
+
+## Not carried from 2025
+
+- Dissolution of the hard problem. Replaced, section 8.
+- Machine-consciousness passage. Replaced, section 12.
+- Regime boundary by "far above". Replaced, section 6.
+- Claim-and-denial phrasing, staged questions and closing punchlines of the 2025 prose.
