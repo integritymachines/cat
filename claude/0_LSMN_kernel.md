@@ -43,13 +43,13 @@ Rule: one meaning per symbol. Every symbol is in the registry. A case pair denot
 
 $\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N}$
 
-$\pi: V_S \twoheadrightarrow V_M$, non-injective. $\gamma = (m_0, m_1, \dots)$, finite, toward $\zeta$, $\mathbf{1}^\top \zeta = 0$. Agent: $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$.
+$\pi: V_S \twoheadrightarrow V_M$, non-injective. $\gamma = (m_0, m_1, \dots)$, finite, toward $\zeta$, $\mathbf{1}^\top \zeta = 0$. Cognitive agent: $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$.
 
 $U = I + N$, $N = (O, C, T)$.
 
 ## 1. CAT
 
-Two models. $\mathcal{S}$ is comprehensive: it keeps the distinctions and gives no order. $\mathcal{M}$ is comprehensible: it gives order and loses distinctions. Navigation of an unsurveyable $\mathcal{L}$ requires both and a mediation between them. The mediation compares $\mathcal{M}$ with $\mathcal{S}$ at instances and repairs divergence. Consciousness is this mediation. Its measure at $e$ is $a_e$.
+Two models. $\mathcal{S}$ is comprehensive: it keeps the distinctions and gives no order. $\mathcal{M}$ is comprehensible: it gives order and loses distinctions. A cognitive agent that navigates an unsurveyable reality $\mathcal{L}$ requires both and a mediation between them. The mediation compares $\mathcal{M}$ with $\mathcal{S}$ at instances and repairs divergence. It costs metabolic resources and $B$ is finite, so the agent has to allocate. Consciousness arises out of the mediation and this allocation. $a_e$ is the allocation at $e$.
 
 $$a^\circ_e = f(\rho_e s_e \bar{d}_e) + h_{\operatorname{reg}(e)}(q_e), \qquad q_e = d_e s_e$$
 

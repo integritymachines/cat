@@ -2,7 +2,7 @@
 
 Paper 2, Unsurveyability. Version 0.2, 12 November 2026. Register level: Paper, about 12 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §2. Items marked [assumed] or [open] need a ruling.
 
-Headline contribution: an account of how a bounded agent gets from a search space it cannot survey to a dynamic heuristic. Unsurveyability is intractability plus three obstructions, and the agent answers each obstruction by assigning an ordering.
+Headline contribution: an account of how a cognitive agent arrives at a dynamic heuristic for navigating an unsurveyable reality. Unsurveyability is intractability plus three obstructions, and the agent answers each obstruction by assigning an ordering.
 
 ## Abstract (0.25 page)
 

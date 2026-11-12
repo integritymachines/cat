@@ -4,11 +4,11 @@ Report, draft 0.1, 12 November 2026. Oliver Beige, Viktor Arvidsson. Expands §0
 
 ## 1. Model
 
-To navigate a reality it cannot survey, an agent maintains two models of the world. One is comprehensive and one is comprehensible. The agent must mediate between the two, and this report identifies consciousness with that mediation. Four stages are involved.
+A cognitive agent that navigates an unsurveyable reality has to maintain two models of that reality, a comprehensive one and a comprehensible one, and has to mediate between them. Keeping the two aligned takes metabolic resources, and because the resources are limited the agent has to allocate them. Consciousness arises out of this mediation and allocation. Four stages are involved.
 
 $$\mathcal{L} \xrightarrow{\ \sigma\ } \mathcal{S} \xrightarrow{\ \pi\ } \mathcal{M} \xrightarrow{\ \gamma\ } \mathcal{N}$$
 
-The Landscape $\mathcal{L}$ is the world as it is. It contains the options and gives them no order. The Territory $\mathcal{S}$ is the agent's record of its encounters with $\mathcal{L}$, obtained by sampling $\sigma$. It is internal to the agent. It is partial with respect to the Landscape. It is the comprehensive model: it keeps every distinction the agent has encountered and gives none of them an order. The Map $\mathcal{M}$ is a compression $\pi$ of the Territory. The compression is many-to-one,
+The Landscape $\mathcal{L}$ is unsurveyable reality itself. It contains the options and gives them no order. The Territory $\mathcal{S}$ is the agent's record of its encounters with $\mathcal{L}$, obtained by sampling $\sigma$. It is internal to the agent. It is partial with respect to the Landscape. It is the comprehensive model: it keeps every distinction the agent has encountered and gives none of them an order. The Map $\mathcal{M}$ is a compression $\pi$ of the Territory. The compression is many-to-one,
 
 $$\pi: V_S \twoheadrightarrow V_M, \qquad \lvert V_M \rvert < \lvert V_S \rvert,$$
 
@@ -68,7 +68,7 @@ Rule (5) is the simplest that serves larger demands first. Of the results in Sec
 
 $$\text{conscious}(e) \iff a_e > 0, \qquad \text{conscious}(\text{agent}) \iff \sum_e a_e > 0, \qquad \text{intensity}(e) = a_e. \tag{7}$$
 
-Consciousness is defined at the instance and it has a degree. The agent-level predicate is derived from the instance-level one. No separate global quantity is introduced. By (6),
+Statement (7) is a criterion for where consciousness arises and to what degree. It applies at the instance. The agent-level predicate is derived from the instance-level one. No separate global quantity is introduced. By (6),
 
 $$\text{conscious}(\text{agent}) \iff B > 0 \ \text{ and } \ a^\circ_e > 0 \text{ for some } e. \tag{8}$$
 

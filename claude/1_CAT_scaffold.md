@@ -2,22 +2,23 @@
 
 Paper 1, Consciousness as Translation. Version 0.2, 12 November 2026. Register level: Paper, about 13 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Items marked [open] need a ruling.
 
-Headline contribution: to navigate a reality it cannot survey, an agent must maintain two models of the world and mediate between them. One is comprehensive, the territory. One is comprehensible, the map. Consciousness is that mediation.
+Headline contribution: a cognitive agent that navigates an unsurveyable reality has to maintain two models of that reality, a comprehensive one (the territory) and a comprehensible one (the map), and has to mediate between them. Consciousness arises out of this mediation and out of the need to allocate metabolic resources to keep the two models aligned.
 
 Shorthand, not a definition: adaptive recalibration in runtime.
 
 ## Abstract (0.25 page)
 
 - Claim: the headline contribution, in one sentence.
-- Claim: it follows from bounded rationality. An agent that could survey its world has nothing to synchronize.
+- Claim: it follows from bounded rationality. An agent that could survey reality would need one model only and would have nothing to keep aligned.
 - Shape of support: a four-stage chain, an allocation rule, three regimes of repair, one geometric picture offered as illustration.
 - Hand-off: Papers 3 and 4 turn the account into operators and tests.
 
 ## 1. Introduction (1.5 pages)
 
-- Context: a bounded agent cannot survey the reality it moves in. It searches locally.
-- Claim: it therefore keeps two models of the world. The territory is comprehensive and gives no direction. The map is comprehensible and loses distinctions. Neither suffices alone.
-- Claim: the agent must mediate between the two as it moves. The mediation costs resources and is spent selectively. It is consciousness.
+- Context: reality is unsurveyable, so a cognitive agent searches it locally.
+- Claim: local search needs a model that orders the options, and any model that orders them discards distinctions. The agent can detect where such a model has gone wrong only against a second model that keeps the distinctions and imposes no order. It therefore maintains both, the comprehensible map and the comprehensive territory.
+- Claim: the two models cannot coincide and they drift apart as the agent moves. Keeping them aligned takes metabolic resources, the resources are limited, and the agent has to decide where to spend them. Consciousness arises out of this mediation and allocation.
+- Claim: this separates a cognitive agent from a homeostat. A homeostat holds a signal to a set point, whereas a cognitive agent compares two models of reality and has to judge, from where it is going, which of their divergences matter.
 - Novelty: consciousness is placed at the instance and comes in degrees. Existing accounts place it at the state of the whole system or at a stage of processing.
 - Relevance: the account says when an agent is conscious of something, how strongly, and what it costs.
 - Division of labor: Papers 1 and 2 are conceptual. Papers 3 and 4 are scientific. The mathematics in this paper is illustration. Say so once, here.
@@ -26,7 +27,7 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 ## 2. The Chain (1.5 pages)
 
 - Claim: translation has four stages. Landscape, territory, map, navigation.
-- Landscape: the world as it is. It offers options and no directions.
+- Landscape: unsurveyable reality itself. It offers options and no directions.
 - Territory: the agent's own record of what it has encountered. Internal, parochial, faithful to what was observed.
 - Map: a compression of the territory, built to be used. It supplies the orderings the territory lacks.
 - Navigation: local steps under a global goal.
