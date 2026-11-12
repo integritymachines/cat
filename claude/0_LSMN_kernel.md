@@ -49,6 +49,8 @@ $U = I + N$, $N = (O, C, T)$.
 
 ## 1. CAT
 
+Two models. $\mathcal{S}$ is comprehensive: it keeps the distinctions and gives no order. $\mathcal{M}$ is comprehensible: it gives order and loses distinctions. Navigation of an unsurveyable $\mathcal{L}$ requires both and a mediation between them. The mediation compares $\mathcal{M}$ with $\mathcal{S}$ at instances and repairs divergence. Consciousness is this mediation. Its measure at $e$ is $a_e$.
+
 $$a^\circ_e = f(\rho_e s_e \bar{d}_e) + h_{\operatorname{reg}(e)}(q_e), \qquad q_e = d_e s_e$$
 
 $f$, $h$ nondecreasing, zero at zero, positive elsewhere. $f$ continuous at zero. $h_{\text{drift}} < h_{\text{control}} < h_{\text{remap}}$ on $q_e > 0$. Forms [open].

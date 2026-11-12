@@ -4,15 +4,15 @@ Report, draft 0.1, 12 November 2026. Oliver Beige, Viktor Arvidsson. Expands §0
 
 ## 1. Model
 
-A bounded agent does not act on the world directly. It acts on a compressed representation of what it has encountered. Four stages are involved.
+To navigate a reality it cannot survey, an agent maintains two models of the world. One is comprehensive and one is comprehensible. The agent must mediate between the two, and this report identifies consciousness with that mediation. Four stages are involved.
 
 $$\mathcal{L} \xrightarrow{\ \sigma\ } \mathcal{S} \xrightarrow{\ \pi\ } \mathcal{M} \xrightarrow{\ \gamma\ } \mathcal{N}$$
 
-The Landscape $\mathcal{L}$ is the world as it is. It contains the options and gives them no order. The Territory $\mathcal{S}$ is the agent's record of its encounters with $\mathcal{L}$, obtained by sampling $\sigma$. It is internal to the agent and it is partial. The Map $\mathcal{M}$ is a compression $\pi$ of the Territory. The compression is many-to-one,
+The Landscape $\mathcal{L}$ is the world as it is. It contains the options and gives them no order. The Territory $\mathcal{S}$ is the agent's record of its encounters with $\mathcal{L}$, obtained by sampling $\sigma$. It is internal to the agent. It is partial with respect to the Landscape. It is the comprehensive model: it keeps every distinction the agent has encountered and gives none of them an order. The Map $\mathcal{M}$ is a compression $\pi$ of the Territory. The compression is many-to-one,
 
 $$\pi: V_S \twoheadrightarrow V_M, \qquad \lvert V_M \rvert < \lvert V_S \rvert,$$
 
-and the Map carries the orderings by which the agent chooses its steps. Navigation $\mathcal{N}$ is a trajectory $\gamma = (m_0, m_1, \dots)$ in the Map toward a goal $\zeta$. The agent is the tuple $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$. The budget $B$ is defined in Section 2.
+and the Map carries the orderings by which the agent chooses its steps. It is the comprehensible model. Navigation $\mathcal{N}$ is a trajectory $\gamma = (m_0, m_1, \dots)$ in the Map toward a goal $\zeta$. The agent is the tuple $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$. The budget $B$ is defined in Section 2.
 
 Two facts from the companion report on unsurveyability are used. Intractability $I$ holds when the Territory has more relevant distinctions than any Map can hold. It forces $\pi$ to be many-to-one. Transience $T$ has a degree $\vartheta \ge 0$, the rate at which the search space changes.
 

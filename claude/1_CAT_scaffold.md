@@ -2,11 +2,9 @@
 
 Paper 1, Consciousness as Translation. Version 0.2, 12 November 2026. Register level: Paper, about 13 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Items marked [open] need a ruling.
 
-Headline contribution: consciousness is adaptive recalibration in runtime.
+Headline contribution: to navigate a reality it cannot survey, an agent must maintain two models of the world and mediate between them. One is comprehensive, the territory. One is comprehensible, the map. Consciousness is that mediation.
 
-- Recalibration: bringing the map back in step with the territory at an instance. It covers watching for divergence and repairing it.
-- In runtime: while a policy trajectory is under way, in a world that changes and in which steps commit.
-- Adaptive: selective and graded. Each instance receives resources in proportion to its divergence and to the consequence of that divergence for the route, under a budget.
+Shorthand, not a definition: adaptive recalibration in runtime.
 
 ## Abstract (0.25 page)
 
@@ -17,8 +15,9 @@ Headline contribution: consciousness is adaptive recalibration in runtime.
 
 ## 1. Introduction (1.5 pages)
 
-- Context: a bounded agent searches locally and steers by a compressed map. The map and what the agent has encountered fall out of step.
-- Claim: keeping them in step costs resources, the agent spends them selectively, and that spending is consciousness.
+- Context: a bounded agent cannot survey the reality it moves in. It searches locally.
+- Claim: it therefore keeps two models of the world. The territory is comprehensive and gives no direction. The map is comprehensible and loses distinctions. Neither suffices alone.
+- Claim: the agent must mediate between the two as it moves. The mediation costs resources and is spent selectively. It is consciousness.
 - Novelty: consciousness is placed at the instance and comes in degrees. Existing accounts place it at the state of the whole system or at a stage of processing.
 - Relevance: the account says when an agent is conscious of something, how strongly, and what it costs.
 - Division of labor: Papers 1 and 2 are conceptual. Papers 3 and 4 are scientific. The mathematics in this paper is illustration. Say so once, here.
