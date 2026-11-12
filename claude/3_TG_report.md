@@ -121,7 +121,7 @@ It contains everything reached under drift or control [ruled]. The note restrict
 
 ## Viability
 
-The machinery that performs the virtual test (6) and the reconciliation has a cost. Let $\ell$ be the loss from a failed physical conjecture, $B_F$ the budget for virtual search, $B_w$ the budget for reconciliation and $B_0$ the its maintenance. It is viable iff
+The machinery that performs the virtual test (6) and the reconciliation has a cost. Let $\ell$ be the loss from a failed physical conjecture, $B_F$ the budget for virtual search, $B_w$ the budget for reconciliation and $B_0$ the cost of its maintenance. It is viable iff
 
 $$\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0] \tag{13}$$
 
