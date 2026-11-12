@@ -106,11 +106,13 @@ The condition is stated at $\pi$. $I$ acts equally at $\sigma$ and at $\gamma$ (
 
 | | Obstruction | Problem posed | Degree | Agent manufactures | Ordering | Primitive |
 |---|---|---|---|---|---|---|
-| $O$ | local gradient absent or unrelated to global | identification: what is available in the immediate environment | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ [assumed] | flow $j$ | comes with (none) | relations |
+| $O$ | no local signal, or a local signal with no assured relation to the global path | identification: what is available in the immediate environment | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ | flow $j$ | comes with (none) | relations |
 | $C$ | steps foreclose options | composition: how it connects to the overall objective | $c \in [0,1]$, cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
 | $T$ | $X$ varies in $t$ | persistence: how long it will be available | $\vartheta \ge 0$, rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
 
 $O$, $C$ and $T$ are the dimensions in which the mediation between the global goal and the local step can be obscured. Each poses one problem that the mediation has to solve: identification, composition, persistence. Their degrees vary with the environment and from place to place within it. Any of them can be near zero.
+
+Resolution of $O$: establish that the local signal correlates with the global path, deterministically ($o = 0$) or stochastically ($0 < o < 1$). For $o < 1$ following the signal beats ignoring it. For $0 < o < 1$ noise added to the choice can improve on strict following. The noise vanishes as $o \to 0$.
 
 Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $\beta(t) - \beta(t')$ is not restored. Information: $\dot{\iota} = -r(\vartheta)\, \iota$, $r(0) = 0$, $r$ increasing [open].
 

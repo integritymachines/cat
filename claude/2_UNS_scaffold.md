@@ -37,9 +37,12 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 
 ### 3.1 Opacity
 
-- Claim: the territory gives no gradient, or one unrelated to the global goal.
+- Claim: opacity has two forms. The environment gives no local signal, or it gives one with no assurance that the signal relates to the global path.
+- Support: the maze. The agent faces a wall and can turn left or right. With no marker on the wall there is no gradient. With an arrow pointing left and no assurance that it leads to the exit, there is a gradient that may mislead.
+- Claim: in both forms opacity is resolved in one way, which is to establish that the local signal correlates with the global path. The correlation can be deterministic (the arrow is always right) or stochastic (it is right more often than wrong).
+- Claim: once any correlation is established, following the signal is better than ignoring it. Under a stochastic correlation the agent can improve its chances by adding noise to its choice. The noise shrinks as the correlation rises.
 - Problem posed: identification. What is available in the immediate environment.
-- Degree: how well the local gradient tracks the global one. With full tracking the obstruction reduces to noise. [assumed]
+- Degree: one minus the correlation between the local signal and the global path.
 - Support: hill climbing. It has a gradient at every point and succeeds only where local and global gradients agree. A given gradient does not remove opacity.
 - Claim: a combinatorial space differs from a continuous one in kind. It has no differentiable structure and therefore no gradient to give.
 - Answer: the agent manufactures a gradient. To do so it builds a continuous map, in which proximity stands for similarity.
