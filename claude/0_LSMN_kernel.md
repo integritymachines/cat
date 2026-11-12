@@ -9,7 +9,7 @@ Rule: one meaning per symbol. Every symbol is in the registry. A case pair denot
 | Symbol | Meaning |
 |---|---|
 | $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape, Territory, Map, Navigation |
-| $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, trajectory in $\mathcal{M}$ |
+| $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, policy trajectory $\mathcal{M} \to \mathcal{N}$ |
 | $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, measure |
 | $K_M, V_M, m, E_M, e, G, \partial_1, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, edge (instance), edge weights, incidence, metric |
 | $\Delta_i$ | Hodge Laplacian of degree $i$ on $K_M$ |
