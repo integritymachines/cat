@@ -52,7 +52,7 @@ Paper 1, Consciousness as Translation. Version 0.1, 12 November 2026. Register l
 
 - Purpose: give the reader one image for Sections 3 and 4. Label it a stand-in at the top of the section.
 - Content: a smooth map with a gradient, curvature as the stand-in for sensitivity to divergence, a critical level $\kappa_c$ that depends on how far the map is off at that place, and a control term added to the gradient flow.
-- Keep: the gradient flow with control, the three regimes drawn on the picture, control work as $\int \lVert u \rVert^2$.
+- Keep: the gradient flow with control, the three regimes drawn on the picture, control work as $\int \lVert w \rVert^2$.
 - Remove: the JND equation (it holds for the metric and not for curvature), the Ricci-flow equation, the instability measure $\lVert \nabla K \rVert$.
 - Closing bullet: what Paper 3 replaces each element with. One short table.
 - Depends on: Sections 3 and 4. Nothing later depends on this section.

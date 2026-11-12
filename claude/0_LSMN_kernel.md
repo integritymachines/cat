@@ -1,114 +1,152 @@
 # LSMN Kernel
 
-Version 0.4, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
+Version 0.5, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
 
-## 0. Model
+Rule: one meaning per symbol. Every symbol is in the registry. A case pair denotes related objects only: $(O, o)$, $(C, c)$, $(G, g)$, $(w, \mathcal{W})$, $(X, x)$. Regimes, results and tests carry words or section numbers, never single letters.
+
+## 0. Registry
+
+| Symbol | Meaning |
+|---|---|
+| $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape, Territory, Map, Navigation |
+| $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, trajectory in $\mathcal{M}$ |
+| $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, measure |
+| $K_M, V_M, m, E_M, e, G, \partial_1, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, edge (instance), edge weights, incidence, metric |
+| $\Delta_i$ | Hodge Laplacian of degree $i$ on $K_M$ |
+| $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector of $m$ or $z$, all-ones vector |
+| $\zeta, \phi, j, j_{\mathcal{L}}$ | goal vector, potential, manufactured flow, flow under the potential of $\mathcal{L}$ |
+| $\Gamma_e, \operatorname{lift}$ | supported alternatives to $e$, lift functional |
+| $U, I, N$ | Unsurveyability, Intractability, Intransigence |
+| $O, C, T$ | Opacity, Contingency, Transience |
+| $o, c, \vartheta$ | degrees of $O$, $C$, $T$ |
+| $\nu, \lambda$ | count of relevant distinctions, scale |
+| $d_e, \bar{d}_e, d_{\mathcal{SM}}$ | divergence at $e$, its expectation, total divergence |
+| $s_e, \rho_e, q_e$ | consequence, use by $\gamma$, warrant |
+| $g_e$ | effective conductance at $e$ |
+| $\tau$ | tolerance |
+| $\epsilon_c, \kappa_c$ | critical level: measurable, conceptual. Subscript $c$ reads "critical" |
+| $\kappa, y, d(y)$ | smooth stand-in: curvature, point, divergence at $y$ |
+| $a_e, B$ | allocation to $e$, allocation budget |
+| $f, h$ | monitoring function, recalibration function |
+| $\operatorname{reg}(e)$ | regime at $e$: drift, control or remap |
+| $w, \mathcal{W}$ | control, control work |
+| $\operatorname{Tor}$ | Ray-Singer torsion of $K_M$ |
+| $X, x_t, k, \operatorname{val}, \operatorname{Nbr}$ | search space, state at $t$, number of options, objective, neighborhood |
+| $\Omega_t, \beta(t), \iota, r$ | options reachable, budget spent, information held, decay rate function |
+| $\ell_C, \ell_T$ | loss from $C$, loss from $T$ |
+| $B_{\mathrm{tot}}, B_O, B_C, B_T, B_{\mathrm{step}}$ | navigation budget and its parts |
+| $\operatorname{met}_e, \eta$ | metabolic expenditure at $e$, efficiency |
+| $\hat{\ }$ | estimator |
+| $t$ | time |
+
+## 0.1 Model
 
 $\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N}$
 
-$\mathcal{L}$: Landscape. $\mathcal{S}$: Territory, $(K_S, A_S, d_S, \mu_S)$ on $V_S$. $\mathcal{M}$: Map, $(K_M, W, d_M)$ on $V_M$, $E_M$, incidence $B_1$. $\pi: V_S \twoheadrightarrow V_M$, non-injective. $\mathcal{N}$: Navigation, $\gamma = (m_0, \dots, m_H) \subset K_M$ toward $b$, $\mathbf{1}^\top b = 0$.
+$\pi: V_S \twoheadrightarrow V_M$, non-injective. $\gamma = (m_0, m_1, \dots)$, finite, toward $\zeta$, $\mathbf{1}^\top \zeta = 0$. Agent: $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$.
 
-Agent: $A = (\mathcal{S}, \mathcal{M}, \pi, b, B)$.
-
-Unsurveyability: $U = I + N$. $I$: Intractability. $N = (O, C, T)$: Intransigence, with Opacity $O$, Contingency $C$, Transience $T$. Degrees: $o \in [0,1]$, $c \in [0,1]$, $\vartheta \ge 0$.
-
-Instance $e$: $d_e \ge 0$ divergence. $\bar{d}_e = \mathbb{E}[d_e]$ expected divergence. $s_e \ge 0$ consequence. $\rho_e \ge 0$ use by $\gamma$. $q_e = d_e s_e$ warrant. $a_e \ge 0$ allocation. $\tau > 0$ tolerance. $u$ control. $\mathcal{W} = \int \lVert u_t \rVert^2 dt$.
+$U = I + N$, $N = (O, C, T)$.
 
 ## 1. CAT
 
-$$a_e = f(\rho_e s_e \bar{d}_e) + h_{R(e)}(q_e), \qquad \sum_e a_e \le B$$
+$$a_e = f(\rho_e s_e \bar{d}_e) + h_{\operatorname{reg}(e)}(q_e), \qquad q_e = d_e s_e, \qquad \sum_e a_e \le B$$
 
-$f, h_\cdot$ nondecreasing, $f(0) = h_\cdot(0) = 0$, $h_{\mathrm{D}} < h_{\mathrm{C}} < h_{\mathrm{R}}$ on $q > 0$. Forms [open].
+$f$, $h$ nondecreasing. $f(0) = h(0) = 0$. $h_{\text{drift}} < h_{\text{control}} < h_{\text{remap}}$ on $q_e > 0$. Forms [open].
 
-$$\text{conscious}(e) \iff a_e > 0, \qquad \text{conscious}(A) \iff \textstyle\sum_e a_e > 0, \qquad \text{intensity}(e) = a_e$$
+$$\text{conscious}(e) \iff a_e > 0, \qquad \text{conscious}(\text{agent}) \iff \textstyle\sum_e a_e > 0, \qquad \text{intensity}(e) = a_e$$
 
-$\Gamma_e = \{\gamma' : e \notin \gamma',\ \gamma' \text{ reaches } b,\ \gamma' \text{ supported by } \mathcal{S}\}$.
+$\Gamma_e = \{\gamma' : e \notin \gamma',\ \gamma' \text{ reaches } \zeta,\ \gamma' \text{ supported by } \mathcal{S}\}$.
 
-| $R(e)$ | Condition | Repair acts on |
+| $\operatorname{reg}(e)$ | Condition | Repair acts on |
 |---|---|---|
-| $\mathrm{D}$ (Drift) | $q_e \le \tau$ | $\gamma$ |
-| $\mathrm{C}$ (Control) | $q_e > \tau$, $\Gamma_e \ne \emptyset$ | choice in $\Gamma_e$, $u \ne 0$ |
-| $\mathrm{R}$ (Remap) | $q_e > \tau$, $\Gamma_e = \emptyset$ | $(\mathcal{M}, \pi)$ |
+| drift | $q_e \le \tau$ | $\gamma$ |
+| control | $q_e > \tau$, $\Gamma_e \ne \emptyset$ | choice in $\Gamma_e$, $w \ne 0$ |
+| remap | $q_e > \tau$, $\Gamma_e = \emptyset$ | $(\mathcal{M}, \pi)$ |
 
-R1. $I = 0 \Rightarrow \pi$ isometric $\Rightarrow d_e = \bar{d}_e = 0\ \forall e \Rightarrow a \equiv 0$.
-R2. $\vartheta > 0 \Rightarrow \bar{d}_e > 0$. With $\rho_e s_e > 0$: $a_e > 0$ at $q_e = 0$.
-R3. $\rho_e s_e \bar{d}_e = 0 \wedge d_e = 0 \Rightarrow a_e = 0$. Processing at $e$ is not excluded.
-R4. $B = 0 \Rightarrow a \equiv 0$.
-R5. $\exists\, e, e'$: $s_e > s_{e'}$, $\Gamma_e \ne \emptyset$, $\Gamma_{e'} = \emptyset$, $h_{R(e)}(q_e) < h_{R(e')}(q_{e'})$.
-R6. $d_e = 0,\ \bar{d}_e \to 0 \Rightarrow a_e \to 0$.
+Result 1.1. Not $I$ $\Rightarrow \pi$ isometric $\Rightarrow d_e = \bar{d}_e = 0\ \forall e \Rightarrow a_e = 0\ \forall e$.
+Result 1.2. $\vartheta > 0 \Rightarrow \bar{d}_e > 0$. With $\rho_e s_e > 0$: $a_e > 0$ at $q_e = 0$.
+Result 1.3. $\rho_e s_e \bar{d}_e = 0$ and $d_e = 0 \Rightarrow a_e = 0$. Processing at $e$ is not excluded.
+Result 1.4. $B = 0 \Rightarrow a_e = 0\ \forall e$.
+Result 1.5. There are $e, e'$ with $s_e > s_{e'}$, $\Gamma_e \ne \emptyset$, $\Gamma_{e'} = \emptyset$ and $h_{\operatorname{reg}(e)}(q_e) < h_{\operatorname{reg}(e')}(q_{e'})$.
+Result 1.6. $d_e = 0$ and $\bar{d}_e \to 0 \Rightarrow a_e \to 0$.
 
-Postulate. $\text{effort}(e) \equiv h_{R(e)}(q_e)$. $\text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e)$. Identification, not derived.
+Postulate 1.7. $\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e)$. $\text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e)$. Identification, not derived.
 
-Stand-in. $(\mathcal{M}, g)$ smooth, $\dot{x} = -g^{-1} \nabla V + u$, $K(x) \sim s$, $\kappa_c(x) = \tau / d(x)$. $q \le \tau \iff K \le \kappa_c$.
+Stand-in 1.8. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa_c(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa_c$.
 
 ## 2. UNS
 
-$X$: arrangements of $n$ interacting options, $\lvert X \rvert \ge n!$. $f: X \to \mathbb{R}$.
+$X$: arrangements of $k$ interacting options, $\lvert X \rvert \ge k!$. $\operatorname{val}: X \to \mathbb{R}$.
 
-$$I \iff \lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}} = \infty, \qquad I \Rightarrow x_{t+1} \in \mathrm{Nbr}(x_t)$$
+$$I \iff \lim_{\lambda \to \infty} \frac{\log \nu(\mathcal{S}_\lambda)}{\dim \mathcal{M}} = \infty, \qquad I \Rightarrow x_{t+1} \in \operatorname{Nbr}(x_t)$$
 
 | | Obstruction | Degree | Agent manufactures | Ordering | Primitive |
 |---|---|---|---|---|---|
-| $O$ | local gradient absent or unrelated to global | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} f, \nabla_{\mathrm{glob}} f)$ [assumed] | gradient $j$ | comes with (none) | relations |
-| $C$ | steps foreclose options | $c$ = cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
-| $T$ | $X_t$ varies | $\vartheta$ = rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
+| $O$ | local gradient absent or unrelated to global | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ [assumed] | flow $j$ | comes with (none) | relations |
+| $C$ | steps foreclose options | $c \in [0,1]$, cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
+| $T$ | $X$ varies in $t$ | $\vartheta \ge 0$, rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
 
-Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $B_t - B_{t'}$ is not restored. Information: $\dot{\iota} = -k(\vartheta)\, \iota$, $k(0) = 0$, $k$ increasing [open].
+Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $\beta(t) - \beta(t')$ is not restored. Information: $\dot{\iota} = -r(\vartheta)\, \iota$, $r(0) = 0$, $r$ increasing [open].
 
 Coupling [assumed]: $\ell_C = \ell_C(o \cdot c)$, $\ell_C(0) = 0$. $\ell_T = \ell_T(\vartheta, \lvert \gamma \rvert)$, $\ell_T(0, \cdot) = \ell_T(\cdot, 0) = 0$. Both increasing.
 
 Cycle: $j \to \gamma \to \text{step} \to \text{update}$.
 
-Heuristic: $B_{\mathrm{tot}} = B_O + B_C + B_T + B_{\mathrm{step}}$. $\gamma^\ast_t$ = output of the cycle under $B_{\mathrm{tot}}$. Stop when $\mathbb{E}[\Delta f \mid \text{one more pass}] < \text{cost}$. $I = 0 \Rightarrow B_O = B_C = B_T = 0$, $\gamma^\ast$ optimal.
+Heuristic: $B_{\mathrm{tot}} = B_O + B_C + B_T + B_{\mathrm{step}}$. The heuristic is the $\gamma$ returned by the cycle under $B_{\mathrm{tot}}$, revised at each $t$. Stop when the expected gain in $\operatorname{val}$ of one more pass is below its cost. Not $I$ $\Rightarrow B_O = B_C = B_T = 0$ and $\gamma$ is optimal.
 
 Link to §1: $B \le B_{\mathrm{tot}} - B_{\mathrm{step}}$. Which of $B_O, B_C, B_T$ count toward $B$ is [open].
 
-Cube: $(\mathbb{1}[o > 0], \mathbb{1}[c > 0], \mathbb{1}[\vartheta > 0]) \in \{0,1\}^3$ are extreme types. Environments lie in $[0,1]^2 \times \mathbb{R}_{\ge 0}$. That $O, C, T$ exhaust $N$ is conjectured.
+Cube: $([o > 0], [c > 0], [\vartheta > 0]) \in \{0,1\}^3$ are extreme types. Environments lie in $[0,1]^2 \times \mathbb{R}_{\ge 0}$. That $O, C, T$ exhaust $N$ is conjectured.
 
 ## 3. TG
 
-$$\Delta_0 = B_1 W B_1^\top, \qquad \Delta_0 \phi = b, \qquad j = -W B_1^\top \phi$$
+$$\Delta_0 = \partial_1 G\, \partial_1^\top, \qquad \Delta_0 \phi = \zeta, \qquad j = -G\, \partial_1^\top \phi$$
 
-For $e = (v, w) \in E_M$, $F_e = \pi^{-1}(v) \cup \pi^{-1}(w)$:
+For $e = (m, m') \in E_M$, with $\pi^{-1}(e) := \pi^{-1}(m) \cup \pi^{-1}(m')$:
 
-$$\rho_e = \lvert j_e \rvert, \qquad s_e = g_e^{-1}, \qquad g_e = \big[(\chi_v - \chi_w)^\top \Delta_0^\dagger (\chi_v - \chi_w)\big]^{-1}$$
+$$\rho_e = \lvert j_e \rvert, \qquad s_e = g_e^{-1}, \qquad g_e = \big[(\mathbf{1}_m - \mathbf{1}_{m'})^\top \Delta_0^\dagger (\mathbf{1}_m - \mathbf{1}_{m'})\big]^{-1}$$
 
-$$d_e = \sum_{x, y \in F_e} \mu_S(x) \mu_S(y)\, \lvert d_S(x,y) - d_M(\pi x, \pi y) \rvert^2, \qquad D = \sum_{x, y \in V_S} \mu_S(x) \mu_S(y)\, \lvert d_S(x,y) - d_M(\pi x, \pi y) \rvert^2$$
+$$d_e = \sum_{z, z' \in \pi^{-1}(e)} \mu_S(z) \mu_S(z')\, \lvert \operatorname{dist}_S(z,z') - \operatorname{dist}_M(\pi z, \pi z') \rvert^2$$
 
-$$\mathcal{L}_{\mathrm{lift}}(\gamma \mid x_0) = \chi_{x_0}^\top P_{m_0} A_S P_{m_1} \cdots A_S P_{m_H} \mathbf{1}, \qquad \gamma \text{ supported by } \mathcal{S} \iff \mathcal{L}_{\mathrm{lift}} > 0$$
+$$d_{\mathcal{SM}} = \sum_{z, z' \in V_S} \mu_S(z) \mu_S(z')\, \lvert \operatorname{dist}_S(z,z') - \operatorname{dist}_M(\pi z, \pi z') \rvert^2$$
 
-$\mathcal{L}_{\mathrm{lift}}(\gamma \mid x_0) = 0 \Rightarrow d_e := \infty$ at the first failing edge.
+$$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i \ge 1} \big(\Lambda_S P_{m_i}\big) \mathbf{1}, \qquad \gamma \text{ supported by } \mathcal{S} \iff \operatorname{lift}(\gamma \mid z_0) > 0$$
 
-$$\epsilon_c(e) = d_e / \tau, \qquad q_e \le \tau \iff g_e \ge \epsilon_c(e), \qquad d_e = 0 \Rightarrow \epsilon_c(e) = 0 \Rightarrow R(e) = \mathrm{D}$$
+$\operatorname{lift}(\gamma \mid z_0) = 0 \Rightarrow d_e := \infty$ at the first failing edge.
 
-$o = 1 - \operatorname{corr}(j, j^\ast)$, $j^\ast$ the flow under the potential of $\mathcal{L}$ [assumed]. $\vartheta$: $\dot{D} > 0$ absent update. $\bar{d}_e$ as a function of $\vartheta$ and time since last check [open]. $c$ on $A_S$ [open]. $u_t$ on $K_M$ [open].
+$$\epsilon_c(e) = d_e / \tau, \qquad q_e \le \tau \iff g_e \ge \epsilon_c(e), \qquad d_e = 0 \Rightarrow \epsilon_c(e) = 0 \Rightarrow \operatorname{reg}(e) = \text{drift}$$
 
-Remap, signed observable at constant rank: $\frac{d}{dt} \log T_{\mathrm{RS}} = \frac{1}{2} \sum_q (-1)^{q+1} q \operatorname{Tr}(\Delta_q^\dagger \dot{\Delta}_q)$. $\log T_{\mathrm{RS}} \ne \mathcal{W}$.
+$o = 1 - \operatorname{corr}(j, j_{\mathcal{L}})$, with $j_{\mathcal{L}}$ the flow under the potential of $\mathcal{L}$ [assumed]. $\vartheta$: $\dot{d}_{\mathcal{SM}} > 0$ absent update. $\bar{d}_e$ as a function of $\vartheta$ and time since last check [open]. $c$ on $\Lambda_S$ [open]. $w$ on $K_M$ [open].
 
-Worked case. $V_S = \{x_1, \dots, x_4\}$ path. $\pi: x_1, x_4 \mapsto m_1$, $x_2 \mapsto m_2$, $x_3 \mapsto m_3$. $K_M$ triangle, $W = I$, goal $m_1 \to m_3$ from $x_1$.
-$\phi = (\tfrac13, 0, -\tfrac13)$, $j = (\tfrac13, \tfrac13, -\tfrac23)$.
-$\mathcal{L}_{\mathrm{lift}}((m_1, m_3) \mid x_1) = 0$, $\mathcal{L}_{\mathrm{lift}}((m_1, m_2, m_3) \mid x_1) = 1 \Rightarrow \Gamma \ne \emptyset \Rightarrow R = \mathrm{C}$.
-$D = \tfrac{22}{16}$. On $\{x_1, x_2, x_3\}$: $\tfrac29 \to 0$ as $w_{31} \to 0$. $\det{}' \Delta_1 = 3(1 + 2w)$, $\Delta \log T_{\mathrm{RS}} = -\tfrac12 \ln 3$.
-Harmonic components: $\tfrac13$ for $(m_1, m_3)$, $\tfrac23$ for $(m_1, m_2, m_3)$. They do not separate supported from unsupported routes.
+Remap, signed observable at constant rank: $\frac{d}{dt} \log \operatorname{Tor} = \frac{1}{2} \sum_i (-1)^{i+1}\, i \operatorname{Tr}(\Delta_i^\dagger \dot{\Delta}_i)$. $\mathcal{W} = \int \lVert w \rVert^2 dt \ge 0$. $\log \operatorname{Tor} \ne \mathcal{W}$.
+
+Worked case 3.1. $V_S = \{z_1, z_2, z_3, z_4\}$, path. $\pi: z_1, z_4 \mapsto m_1$, $z_2 \mapsto m_2$, $z_3 \mapsto m_3$. $K_M$ is a triangle with unit weights. Goal: $m_1$ to $m_3$, from $z_1$.
+$\phi = (\tfrac13, 0, -\tfrac13)$. $j = (\tfrac13, \tfrac13, -\tfrac23)$ on $(m_1 m_2, m_2 m_3, m_3 m_1)$.
+$\operatorname{lift}((m_1, m_3) \mid z_1) = 0$. $\operatorname{lift}((m_1, m_2, m_3) \mid z_1) = 1$. Hence $\Gamma_e \ne \emptyset$ and $\operatorname{reg}(e) = \text{control}$ at $e = m_3 m_1$.
+$d_{\mathcal{SM}} = \tfrac{22}{16}$. On $\{z_1, z_2, z_3\}$: $\tfrac29$, and $0$ as $G_{m_3 m_1} \to 0$.
+$\det{}' \Delta_1 = 3(1 + 2 G_{m_3 m_1})$. $\log \operatorname{Tor}$ changes by $-\tfrac12 \ln 3$ as $G_{m_3 m_1}$ goes from $1$ to $0$.
+Harmonic component: $\tfrac13$ for $(m_1, m_3)$, $\tfrac23$ for $(m_1, m_2, m_3)$. It does not separate supported from unsupported routes.
 
 ## 4. MC
 
-$a_e$ is not observed. Traces: $E_e \ge 0$ metabolic expenditure, $\mathcal{W}_e$ control work, $\eta = \mathcal{W} / E \in (0, 1]$.
-M1: $\partial E_e / \partial a_e > 0$. M2: $\mathcal{W}_e > 0 \Rightarrow R(e) = \mathrm{C}$.
+$a_e$ is not observed. Traces: $\operatorname{met}_e \ge 0$ and $\mathcal{W}$ at $e$. $\eta = \mathcal{W} / \operatorname{met} \in (0, 1]$.
+
+Assumption 4.1. $\operatorname{met}_e$ is increasing in $a_e$.
+Assumption 4.2. $\mathcal{W} > 0$ at $e$ $\Rightarrow \operatorname{reg}(e) = \text{control}$.
 Estimators $\hat{\Delta}_0, \hat{g}_e, \hat{\rho}_e, \hat{d}_e, \hat{\tau}$ [open]. No effect size is stated before the fact-check pass.
 
-Presence ($a_e > 0$ against $a_e = 0$).
-P1. Same input at $e$, reported against unreported: $\Delta E_e \ne 0$, specific to $e$.
-P2. $\rho_e s_e \bar{d}_e \to 0$: report and $E_e$ decline together.
-P3. $\Pr(\text{detect change at } e)$ increasing in $\rho_e s_e$ at fixed physical change.
-P4. Anesthesia, dreamless sleep: $\partial E_e / \partial d_e = \partial E_e / \partial(\rho_e s_e) = 0\ \forall e$.
+Presence: $a_e > 0$ against $a_e = 0$.
+Test 4.3. Same input at $e$, reported against unreported: $\operatorname{met}_e$ differs, and only at $e$.
+Test 4.4. $\rho_e s_e \bar{d}_e \to 0$: report and $\operatorname{met}_e$ decline together.
+Test 4.5. $\Pr(\text{change at } e \text{ detected})$ is increasing in $\rho_e s_e$ at fixed physical change.
+Test 4.6. Anesthesia, dreamless sleep: $\operatorname{met}_e$ does not depend on $d_e$ or $\rho_e s_e$, for all $e$.
 
-Degree (size of $a_e$).
-D1. At $d_e = 0$: $E_e$ increasing in $\hat{\rho}_e \hat{s}_e$.
-D2. Control begins at $\hat{g}_e < \hat{d}_e / \hat{\tau}$. At $\hat{d}_e = 0$ no $\hat{g}_e$ triggers it.
-D3. Response time near the transition increasing in $\hat{s}_e$.
-D4. At matched $q_e$: $E_e \mid \Gamma_e = \emptyset \;>\; E_e \mid \Gamma_e \ne \emptyset$.
-D5. Degraded input lowers evidence for $d_e$. It does not raise $h$.
+Degree: size of $a_e$.
+Test 4.7. At $d_e = 0$: $\operatorname{met}_e$ is increasing in $\hat{\rho}_e \hat{s}_e$.
+Test 4.8. Control begins at $\hat{g}_e < \hat{d}_e / \hat{\tau}$. At $\hat{d}_e = 0$ no $\hat{g}_e$ triggers it.
+Test 4.9. Response time near the transition is increasing in $\hat{s}_e$.
+Test 4.10. At matched $q_e$: $\operatorname{met}_e$ is larger for $\Gamma_e = \emptyset$ than for $\Gamma_e \ne \emptyset$.
+Test 4.11. Degraded input lowers evidence for $d_e$. It does not raise $h$.
 
 | Dissociation | Behavior | Prediction |
 |---|---|---|
@@ -117,21 +155,21 @@ D5. Degraded input lowers evidence for $d_e$. It does not raise $h$.
 | Masked stop signal | braking | brake at $a_e = 0$. The brake marks conflict, not presence |
 | Flow | high | $\eta$ high |
 
-Refutation: presence varies at fixed $(d_e, \rho_e s_e, \bar{d}_e)$ with $B > 0$. Or P3, D2 or D4 fail under valid estimators.
+Refutation 4.12. Presence varies at fixed $(d_e, \rho_e s_e, \bar{d}_e)$ with $B > 0$. Or Tests 4.5, 4.8 or 4.10 fail under valid estimators.
 
 ## 5. Correspondence
 
 | Construct | Papers 1, 2 | Paper 3 | Paper 4 |
 |---|---|---|---|
-| consequence | $K(x)$ | $s_e = g_e^{-1}$ | $\hat{s}_e$ |
-| use | route through $x$ | $\rho_e = \lvert j_e \rvert$ | $\hat{\rho}_e$ |
-| divergence | map off at $x$ | $d_e$, $\mathcal{L}_{\mathrm{lift}} = 0$ | $\hat{d}_e$ |
-| critical level | $\kappa_c(x) = \tau / d(x)$ | $\epsilon_c(e) = d_e / \tau$ | $\hat{\tau}$, D2 |
-| alternatives | map holds another route | $\Gamma_e$ | D4 |
-| allocation | $a_e$ | $a_e$ | $E_e$ under M1 |
-| control | $u$, $\mathcal{W}$ | $u_t$ on $K_M$ [open] | $\mathcal{W}_e$ under M2 |
-| Opacity | $o$ | $1 - \operatorname{corr}(j, j^\ast)$ [assumed] | [open] |
-| Contingency | $c$ | on $A_S$ [open] | [open] |
-| Transience | $\vartheta$ | $\dot{D}$ absent update | [open] |
+| consequence | $\kappa(y)$ | $s_e = g_e^{-1}$ | $\hat{s}_e$ |
+| use | route through $y$ | $\rho_e = \lvert j_e \rvert$ | $\hat{\rho}_e$ |
+| divergence | map off at $y$ | $d_e$, $\operatorname{lift} = 0$ | $\hat{d}_e$ |
+| critical level | $\kappa_c(y) = \tau / d(y)$ | $\epsilon_c(e) = d_e / \tau$ | $\hat{\tau}$, Test 4.8 |
+| alternatives | map holds another route | $\Gamma_e$ | Test 4.10 |
+| allocation | $a_e$ | $a_e$ | $\operatorname{met}_e$ under 4.1 |
+| control | $w$, $\mathcal{W}$ | $w$ on $K_M$ [open] | $\mathcal{W}$ under 4.2 |
+| Opacity | $o$ | $1 - \operatorname{corr}(j, j_{\mathcal{L}})$ [assumed] | [open] |
+| Contingency | $c$ | on $\Lambda_S$ [open] | [open] |
+| Transience | $\vartheta$ | $\dot{d}_{\mathcal{SM}}$ absent update | [open] |
 
 Dependency: §2 $\to$ §1 $\to$ §3 $\to$ §4. Theorems on partition and perspective are outside the series unless a later version requires one.
