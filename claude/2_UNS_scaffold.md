@@ -33,11 +33,12 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 
 ## 3. Three Obstructions (3 pages)
 
-Lead: the obstructions a navigating agent can meet. They are the dimensions in which the mediation between the global goal and the local step can be obscured. Each comes in degrees, and the degrees vary with the environment and from place to place within it. Any of them can be near zero: gradients can be aligned, choices can leave every option open, and an environment can be almost static. Each forces the agent to manufacture something where it is present.
+Lead: the obstructions a navigating agent can meet. They are the dimensions in which the mediation between the global goal and the local step can be obscured. Each comes in degrees, and the degrees vary with the environment and from place to place within it. Any of them can be near zero: gradients can be aligned, choices can leave every option open, and an environment can be almost static. Each poses one problem that the mediation has to solve, and each forces the agent to manufacture something where it is present. The problems are identification, composition and persistence.
 
 ### 3.1 Opacity
 
 - Claim: the territory gives no gradient, or one unrelated to the global goal.
+- Problem posed: identification. The agent has to tell which of the options in reach serves the goal. A given gradient does not settle this, because the agent still has to judge whether it is aligned with the global one.
 - Degree: how well the local gradient tracks the global one. With full tracking the obstruction reduces to noise. [assumed]
 - Support: hill climbing. It has a gradient at every point and succeeds only where local and global gradients agree. A given gradient does not remove opacity.
 - Claim: a combinatorial space differs from a continuous one in kind. It has no differentiable structure and therefore no gradient to give.
@@ -47,6 +48,7 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 ### 3.2 Contingency
 
 - Claim: physical steps foreclose options.
+- Problem posed: composition. The agent has to chain steps into an arrangement that reaches the goal, and a step that looks good alone can foreclose the arrangement.
 - Degree: the cost of reversion, from free to impossible.
 - Support: the cul-de-sac. Short of impossible, the agent returns to the last branch point. It recovers the search space. It does not recover what it spent.
 - Answer: the agent manufactures virtual trajectories and tries them before it steps.
@@ -55,6 +57,7 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 ### 3.3 Transience
 
 - Claim: the search space changes during the search.
+- Problem posed: persistence. The agent has to keep the arrangement valid for as long as it takes to carry it out.
 - Degree: the rate of change. In an unchanging space backtracking costs only resources. In a changing one the agent also loses information it had gathered.
 - Answer: the agent updates its trajectory on observed divergences.
 - Ordering assigned: follows after. Temporal and non-negotiable.

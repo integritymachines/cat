@@ -4,6 +4,31 @@ Version 0.1, 12 November 2026. Every element of the 2025 versions of Papers 1 an
 
 Status: **kept**, **revised** (by ruling), **moved**, **proposed removal** (not ruled), **not carried** (dropped in drafting without a ruling, now flagged).
 
+## Research notes
+
+Concepts introduced in the notes for Papers 3 and 4 and in "Adaptive Recalibration in Runtime". Version 0.1 of this record covered the 2025 papers only.
+
+| Concept | Source | Status | Now |
+|---|---|---|---|
+| Identification, composition, persistence | notes 3, 4 | kept | Kernel §2 and §5, scaffolds 1 to 3, CAT report. Left out of the kernel until version 0.10 |
+| Path-lifting functional | note 3 | kept | Kernel §3 |
+| Anchored transport distortion | note 3 | kept | Kernel §3, as divergence |
+| Unconstrained transport distance | note 3 | not carried | Was used for comparison between agents and across states |
+| Torsion as control work | notes 3, 4 | revised | Signed observable of map change |
+| Navigational budgets | note 3 | revised | Kernel §2, indexed by obstruction |
+| Economic viability condition, motility | note 3 | not carried | |
+| Envelope of assured navigation, confidence, microbacktracking | notes 3, 4, recalibration note | not carried | Drift now covers in-flight repair |
+| Four propositions | note 3 | removed | By the ruling on theorems |
+| Dual-echo inequality | note 4 | not carried | It rested on torsion as control work |
+| Control conversion efficiency | note 4 | kept | Kernel §4 |
+| Sensor-to-operator dictionary | note 4 | partly carried | Estimators are open |
+| Four neurobiological validations | note 4 | not carried | Pending the fact-check pass |
+| Hypotheses H1 to H9 | note 4 | proposed replacement | Tests 4.3 to 4.11 |
+| Baseline plus conflict decomposition of control work | author reply | revised | Monitoring plus recalibration, per instance |
+| Three tiers of recalibration | recalibration note | revised | Three regimes |
+| Adaptive recalibration in runtime | recalibration note | kept | Shorthand only |
+| Dyads and repair, sleep and remapping corridor, boundary test across taxa, clinical stages | note 4 and satellites | moved | Satellite notes |
+
 ## Paper 1, Consciousness as Translation
 
 | 2025 element | Function in the 2025 paper | Status | Now |

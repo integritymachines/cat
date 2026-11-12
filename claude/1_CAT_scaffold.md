@@ -38,6 +38,7 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 - Map: a compression of the territory, built to be used. It supplies the orderings the territory lacks.
 - Map as continuous: proximity stands for similarity, so the agent can follow a gradient and can interpolate between what it has sampled. This is what makes the map cheap to use.
 - Navigation: local steps under a global goal. It turns the continuous map back into a sequence of discrete steps.
+- Claim: the mediation has three problems to solve, taken from Paper 2. Identification under opacity, composition under contingency, persistence under transience. The orderings the map supplies are the answers to them.
 - Claim: each translation changes the kind of structure. Unsurveyable to combinatorial, combinatorial to continuous, continuous to sequential.
 - Support: the door. The door as remembered is a map entry. The door as found is a territory entry.
 - Kernel: §0.1.

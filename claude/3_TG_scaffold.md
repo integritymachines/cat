@@ -35,7 +35,7 @@ Headline contribution: every construct of Papers 1 and 2 is given an operator on
 - Claim: the flow is the agent's manufactured gradient. Its magnitude on an edge is the use of that instance.
 - Degree of opacity: how far the manufactured flow departs from the flow the landscape would give. [assumed] The reference flow is not available to the agent.
 - Kernel: gradient, use.
-- Depends on: Section 2. Answers opacity.
+- Depends on: Section 2. Answers opacity. Operator form of identification.
 
 ## 4. Consequence (1.25 pages)
 
@@ -61,7 +61,7 @@ Headline contribution: every construct of Papers 1 and 2 is given an operator on
 - Claim: a virtual trajectory is a route whose lift is computed before the step. This is the operator form of trying conjectures.
 - Reversion cost on the territory relation: [open].
 - Kernel: lift, alternatives.
-- Depends on: Sections 3 and 5. Answers contingency.
+- Depends on: Sections 3 and 5. Answers contingency. Operator form of composition.
 
 ## 7. The Critical Level (1.25 pages)
 
@@ -80,7 +80,7 @@ Headline contribution: every construct of Papers 1 and 2 is given an operator on
 - Claim: control work is the integrated squared control. It is nonnegative. Torsion is not control work.
 - Form of control on the complex: [open].
 - Kernel: update, torsion, control work.
-- Depends on: Sections 5 and 7. Answers transience.
+- Depends on: Sections 5 and 7. Answers transience. Operator form of persistence.
 
 ## 9. A Worked Case (1.75 pages)
 
