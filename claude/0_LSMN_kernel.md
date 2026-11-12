@@ -1,6 +1,6 @@
 # LSMN Kernel
 
-Version 0.6, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
+Version 0.7, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
 
 Rule: one meaning per symbol. Every symbol is in the registry. A case pair denotes related objects only: $(O, o)$, $(C, c)$, $(G, g)$, $(w, \mathcal{W})$, $(X, x)$. Regimes, results and tests carry words or section numbers, never single letters.
 
@@ -26,7 +26,7 @@ Rule: one meaning per symbol. Every symbol is in the registry. A case pair denot
 | $\tau$ | tolerance |
 | $\epsilon^\ast, \kappa^\ast$ | critical level: measurable, conceptual |
 | $\kappa, y, d(y)$ | smooth stand-in: curvature, point, divergence at $y$ |
-| $a_e, B$ | allocation to $e$, allocation budget |
+| $a^\circ_e, a_e, B$ | demand at $e$, allocation to $e$, allocation budget |
 | $f, h$ | monitoring function, recalibration function |
 | $\operatorname{reg}(e)$ | regime at $e$: drift, control or remap |
 | $w, \mathcal{W}$ | control, control work |
@@ -49,9 +49,13 @@ $U = I + N$, $N = (O, C, T)$.
 
 ## 1. CAT
 
-$$a_e = f(\rho_e s_e \bar{d}_e) + h_{\operatorname{reg}(e)}(q_e), \qquad q_e = d_e s_e, \qquad \sum_e a_e \le B$$
+$$a^\circ_e = f(\rho_e s_e \bar{d}_e) + h_{\operatorname{reg}(e)}(q_e), \qquad q_e = d_e s_e$$
 
-$f$, $h$ nondecreasing. $f(0) = h(0) = 0$. $h_{\text{drift}} < h_{\text{control}} < h_{\text{remap}}$ on $q_e > 0$. Forms [open].
+$f$, $h$ nondecreasing, zero at zero, positive elsewhere. $f$ continuous at zero. $h_{\text{drift}} < h_{\text{control}} < h_{\text{remap}}$ on $q_e > 0$. Forms [open].
+
+Rationing [assumed]: instances are served in descending order of $a^\circ_e$ until $B$ is spent. $0 \le a_e \le a^\circ_e$, $\sum_e a_e = \min(B, \sum_e a^\circ_e)$.
+
+Expected divergence [assumed]: $\vartheta > 0 \Rightarrow \bar{d}_e > 0$ for every $e$ not checked at the current $t$.
 
 $$\text{conscious}(e) \iff a_e > 0, \qquad \text{conscious}(\text{agent}) \iff \textstyle\sum_e a_e > 0, \qquad \text{intensity}(e) = a_e$$
 
@@ -63,11 +67,11 @@ $\Gamma_e = \{\gamma' : e \notin \gamma',\ \gamma' \text{ reaches } \zeta,\ \gam
 | control | $q_e > \tau$, $\Gamma_e \ne \emptyset$ | choice in $\Gamma_e$, $w \ne 0$ |
 | remap | $q_e > \tau$, $\Gamma_e = \emptyset$ | $(\mathcal{M}, \pi)$ |
 
-Result 1.1. Not $I$ $\Rightarrow \pi$ isometric $\Rightarrow d_e = \bar{d}_e = 0\ \forall e \Rightarrow a_e = 0\ \forall e$.
-Result 1.2. $\vartheta > 0 \Rightarrow \bar{d}_e > 0$. With $\rho_e s_e > 0$: $a_e > 0$ at $q_e = 0$.
-Result 1.3. $\rho_e s_e \bar{d}_e = 0$ and $d_e = 0 \Rightarrow a_e = 0$. Processing at $e$ is not excluded.
+Result 1.1. Not $I$, with survey of $\mathcal{L}$ at every $t$, $\Rightarrow \pi$ isometric $\Rightarrow d_e = \bar{d}_e = 0\ \forall e \Rightarrow a_e = 0\ \forall e$.
+Result 1.2. $\vartheta > 0$, $B > 0$, and $\rho_e s_e > 0$ for some unchecked $e$ $\Rightarrow \sum_e a_e > 0$, also when $q_e = 0\ \forall e$.
+Result 1.3. $a_e = 0$ if $\rho_e s_e \bar{d}_e = 0$ and $d_e = 0$, or if $e$ is reached after $B$ is spent. Processing at $e$ is not excluded.
 Result 1.4. $B = 0 \Rightarrow a_e = 0\ \forall e$.
-Result 1.5. There are $e, e'$ with $s_e > s_{e'}$, $\Gamma_e \ne \emptyset$, $\Gamma_{e'} = \emptyset$ and $h_{\operatorname{reg}(e)}(q_e) < h_{\operatorname{reg}(e')}(q_{e'})$.
+Result 1.5. There are $e, e'$ with $q_e = q_{e'} > \tau$, $s_e > s_{e'}$, $\Gamma_e \ne \emptyset$, $\Gamma_{e'} = \emptyset$ and $h_{\operatorname{reg}(e)}(q_e) < h_{\operatorname{reg}(e')}(q_{e'})$.
 Result 1.6. $d_e = 0$ and $\bar{d}_e \to 0 \Rightarrow a_e \to 0$.
 
 Postulate 1.7. $\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e)$. $\text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e)$. Identification, not derived.
