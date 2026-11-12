@@ -17,11 +17,13 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 
 - Context: reality is unsurveyable, so a cognitive agent searches it locally.
 - Claim: local search needs a model that orders the options, and any model that orders them discards distinctions. The agent can detect where such a model has gone wrong only against a second model that keeps the distinctions and imposes no order. It therefore maintains both, the comprehensible map and the comprehensive territory.
-- Claim: the two models cannot coincide and they drift apart as the agent moves. Keeping them aligned takes metabolic resources, the resources are limited, and the agent has to decide where to spend them. Consciousness arises out of this mediation and allocation.
+- Claim: the paper presents the two models as a combinatorial territory and a continuous map. The pair is a stand-in with a specific job, which is to show that the models differ in kind. A combinatorial structure keeps every distinction, has no gradient, and explodes under enumeration. A continuous structure has proximity and gradients, lets the agent interpolate, and is cheap to follow, and it has no image for discrete branch points. Because the difference is one of kind, no translation between the two is exact and the friction between them is permanent.
+- Epigraph, kept: "The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises." The introduction states its function. Reality is not claimed to be combinatorial. Combinatorial explosion is the closest formal expression of unsurveyability.
+- Claim: the two models therefore cannot coincide, and they drift further apart as the agent moves. Keeping them aligned takes metabolic resources, the resources are limited, and the agent has to decide where to spend them. Consciousness arises out of this mediation and allocation.
 - Claim: this separates a cognitive agent from a homeostat. A homeostat holds a signal to a set point, whereas a cognitive agent compares two models of reality and has to judge, from where it is going, which of their divergences matter.
 - Novelty: consciousness is placed at the instance and comes in degrees. Existing accounts place it at the state of the whole system or at a stage of processing.
 - Relevance: the account says when an agent is conscious of something, how strongly, and what it costs.
-- Division of labor: Papers 1 and 2 are conceptual. Papers 3 and 4 are scientific. The mathematics in this paper is illustration. Say so once, here.
+- Division of labor: Papers 1 and 2 are conceptual. Papers 3 and 4 are scientific. The combinatorial and continuous pair and the geometry built on it are stand-ins. Papers 3 and 4 refine them and keep their function. Say so once, here.
 - Depends on: nothing.
 
 ## 2. The Chain (1.5 pages)
@@ -30,8 +32,11 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 - Landscape: unsurveyable reality itself. It offers options and no directions.
 - Territory: the agent's own record of what it has encountered. Internal and faithful to what was observed. Sampling is parochial: dense around the agent's habitats and thin elsewhere, so the territory is small compared with the landscape.
 - Claim: inside a habitat the map interpolates and is expected to hold. Outside it extrapolates and is expected to be off.
+- Territory as combinatorial: discrete options under interaction. It gives no gradient because a combinatorial structure has none to give.
 - Map: a compression of the territory, built to be used. It supplies the orderings the territory lacks.
-- Navigation: local steps under a global goal.
+- Map as continuous: proximity stands for similarity, so the agent can follow a gradient and can interpolate between what it has sampled. This is what makes the map cheap to use.
+- Navigation: local steps under a global goal. It turns the continuous map back into a sequence of discrete steps.
+- Claim: each translation changes the kind of structure. Unsurveyable to combinatorial, combinatorial to continuous, continuous to sequential.
 - Support: the door. The door as remembered is a map entry. The door as found is a territory entry.
 - Kernel: §0.1.
 - Depends on: Paper 2 for why compression is forced and what the map must supply.
@@ -61,8 +66,9 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 
 ## 5. A Geometric Picture (1.5 pages)
 
-- Purpose: one image for Sections 3 and 4. The first sentence labels it a stand-in.
+- Purpose: develop the continuous side of the pair into one image for Sections 3 and 4. The first sentence labels it a stand-in.
 - Content: a smooth map, a potential with its gradient flow, a control term, curvature standing for consequence, a critical level that falls as the map gets further off.
+- Claim: curvature marks where the continuous map misrepresents the combinatorial territory. Branch points appear as singularities and conflicting constraints as saddles.
 - Support: the three regimes drawn on the picture.
 - Closing table: each element of the picture and the operator that replaces it in Paper 3.
 - Kernel: Stand-in 1.8, §5 first column.
@@ -81,7 +87,8 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 
 - Order: free energy, bounded rationality, information theory, energy-based networks, global workspace.
 - For each: what it specifies, and what the allocation account adds. One paragraph each, two for bounded rationality.
-- Bounded rationality: the program began as an extension of Simon. His images of search were combinatorial. His formal models were dynamic programs. His engagement with combinatorial optimization was limited. The program works in that gap.
+- Bounded rationality: the program began as an extension of Simon. His images of search were combinatorial. His formal models were dynamic programs. His engagement with combinatorial optimization was limited. The program works in that gap, and the translation between a combinatorial territory and a continuous map is its account of how the two sides of his work connect.
+- Energy-based networks: continuous dynamics used on combinatorial problems. An early instance of the same translation.
 - Claim: consciousness sits downstream of bounded rationality.
 - Claim: a perfectly rational agent cannot be conscious.
 - Global workspace: broadcast and ignition read as marks of control, which is one regime, and not of presence.
@@ -110,14 +117,16 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 
 ## 10. Conclusion (0.25 page)
 
-- One paragraph. The claim and the hand-off.
-- [open] The epigraph ("The territory is combinatorial. The map is continuous."): keep, revise or drop. Outside Section 5 the map is no longer claimed to be continuous.
+- One paragraph. The claim and the hand-off. It returns to the epigraph.
 
 ## Changes from the 2025 version
+
+Full accounting, element by element: `0_LSMN_disposition.md`. The list below is a summary.
 
 - Chain: three stages with an external territory become four stages with an internal one.
 - Core claim: control near a curvature threshold becomes allocation per instance.
 - Regimes: one dial becomes two tests.
-- Mathematics: presented as the theory becomes presented as illustration. The JND equation, the Ricci-flow equation and the instability measure are removed.
+- Combinatorial and continuous: kept, with its function stated. It was the theory's literal claim and is now its central stand-in.
+- Geometry: presented as the theory becomes presented as a stand-in. The JND equation, the Ricci-flow equation and the instability measure are removed.
 - Sections removed: the hard problem as a result, advantages, Simon's vision, future directions, broader implications, personality traits, the species list.
 - Style: the tropes listed in the register are removed.

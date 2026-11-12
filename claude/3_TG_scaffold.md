@@ -20,8 +20,9 @@ Headline contribution: every construct of Papers 1 and 2 is given an operator on
 
 ## 2. From Picture to Operator (2 pages)
 
-- Claim: the smooth picture cannot carry the theory. Search spaces are discrete, steps are path-dependent, and the map changes.
-- Claim: territory and map are finite complexes joined by a compression that is many-to-one.
+- Claim: Papers 1 and 2 present a combinatorial territory and a continuous map. The pair shows that the two models differ in kind. This paper refines the pair and keeps that function.
+- Claim: territory and map are finite complexes joined by a compression that is many-to-one. The territory complex carries relations only and has no potential. The map complex carries weights, a potential and a flow, which are the discrete counterparts of continuous structure.
+- Claim: the smooth manifold itself is given up. Steps are path-dependent, the map changes, and curvature cannot be computed from data.
 - Support: the correspondence table. Each element of the picture, the operator that replaces it, and what the replacement makes computable.
 - Claim: an instance is an edge of the map, together with the territory vertices that the compression sends to its ends.
 - Kernel: §0.1, §5.

@@ -12,7 +12,7 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 
 ## 1. Introduction (1.25 pages)
 
-- Context: Simon asked how agents make goal-directed decisions under resource limits. The formal answers were dynamic programs. The combinatorial side of the question received less.
+- Context: Simon asked how agents make goal-directed decisions under resource limits. His images of search were combinatorial and his formal answers were dynamic programs. The passage from the one to the other was left unstated.
 - Contribution: the route from an unsurveyable search space to a dynamic heuristic, stated without assuming a view from above at any step.
 - Novelty: the obstructions to local search are named, graded and linked. Satisficing appears as the outcome of the derivation and not as its premise.
 - Relation to Paper 1: this paper says why an agent needs a map and what the map must supply. Paper 1 says what the agent does to keep the map usable.
@@ -22,6 +22,7 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 
 - Claim: unsurveyable is literal. The agent cannot stand above the search space and inspect it.
 - Claim: intractability is the reason. Arranging even a few options in an order, when they interact, yields more arrangements than any agent can enumerate.
+- Claim: combinatorial explosion is the closest formal expression of unsurveyability. Reality is not claimed to be combinatorial. The territory is presented as combinatorial because that form keeps the distinctions and shows the pressure they exert.
 - Consequence: exhaustive search gives way to local search on local information.
 - Claim: intractability acts at each translation. It makes sampling parochial, compression lossy, and navigation a linear sequence of local steps. Each is an economy under the same resource constraint.
 - Claim: navigation is the mediation of local steps under a global goal. The goal may be loose.
@@ -37,7 +38,8 @@ Lead: the obstructions a navigating agent can meet. Each comes in degrees. Each 
 
 - Claim: the territory gives no gradient, or one unrelated to the global goal.
 - Degree: how well the local gradient tracks the global one. With full tracking the obstruction reduces to noise. [assumed]
-- Answer: the agent manufactures a gradient.
+- Claim: a combinatorial space differs from a continuous one in kind. It has no differentiable structure and therefore no gradient to give.
+- Answer: the agent manufactures a gradient. To do so it builds a continuous map, in which proximity stands for similarity.
 - Ordering assigned: comes with. No order.
 
 ### 3.2 Contingency
@@ -105,9 +107,12 @@ Lead: the obstructions a navigating agent can meet. Each comes in degrees. Each 
 
 ## References to add
 
-- Popper on conjectures. Bellman. Simon's dynamic-programming papers. Newell and Simon on heuristic search. All through the fact-check pass.
+- Carried from 2025: Rice on algorithm selection, Wolpert and Macready on no free lunch, Stadler and Stephens on landscapes, Simon 1957.
+- New: Popper on conjectures. Bellman. Simon's dynamic-programming papers. Newell and Simon on heuristic search. All through the fact-check pass.
 
 ## Changes from the 2025 version
+
+Full accounting, element by element: `0_LSMN_disposition.md`. The list below is a summary.
 
 - Territory: "the most faithful formal approximation of the state space" becomes the agent's record of encounters.
 - Obstructions: binary and independent become graded and coupled.

@@ -1,6 +1,6 @@
 # LSMN Kernel
 
-Version 0.8, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
+Version 0.9, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
 
 Rule: one meaning per symbol. Every symbol is in the registry. A case pair denotes related objects only: $(O, o)$, $(C, c)$, $(G, g)$, $(w, \mathcal{W})$, $(X, x)$. Regimes, results and tests carry words or section numbers, never single letters.
 
@@ -49,11 +49,13 @@ $\mu_S$ is multimodal, with modes of different heights. The modes are the habita
 
 $I$ acts at each stage. Each translation is an economy under the same metabolic constraint.
 
-| Translation | $I$ forces | Discards | Imposes |
-|---|---|---|---|
-| $\sigma: \mathcal{L} \to \mathcal{S}$ | parochial sampling | most of $\mathcal{L}$ outside the habitats | the modal density $\mu_S$ |
-| $\pi: \mathcal{S} \to \mathcal{M}$ | lossy compression | distinctions | orderings |
-| $\gamma: \mathcal{M} \to \mathcal{N}$ | a linear sequence of local steps | the routes not taken | commitment |
+| Translation | Change of kind | $I$ forces | Discards | Imposes |
+|---|---|---|---|---|
+| $\sigma: \mathcal{L} \to \mathcal{S}$ | unsurveyable to combinatorial | parochial sampling | most of $\mathcal{L}$ outside the habitats | the modal density $\mu_S$ |
+| $\pi: \mathcal{S} \to \mathcal{M}$ | combinatorial to continuous | lossy compression | distinctions | orderings |
+| $\gamma: \mathcal{M} \to \mathcal{N}$ | continuous to sequential | a linear sequence of local steps | the routes not taken | commitment |
+
+Combinatorial and continuous. This pair is the central stand-in of Papers 1 and 2. $\mathcal{S}$ is combinatorial: discrete options under interaction, every distinction kept, no gradient, enumeration cost explosive. It is the closest formal expression of unsurveyability. $\mathcal{L}$ itself is not claimed to be combinatorial. $\mathcal{M}$ is continuous: proximity stands for similarity, gradients exist, interpolation is possible, and following a gradient is cheap. The pair says why the two models cannot coincide. They differ in kind, so no translation between them is exact, and divergence concentrates where discrete structure (branch points, conflicting constraints) has no continuous image. Papers 3 and 4 refine the pair and keep its function: $K_S$ carries relations only ($\Lambda_S$), and $K_M$ carries weights, potential and flow ($G$, $\phi$, $j$).
 
 $U = I + N$, $N = (O, C, T)$.
 
@@ -90,7 +92,7 @@ Postulate 1.7. $\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e)$. $\text{
 
 Result 1.9 [assumed]. At fixed $\rho_e s_e$, monitoring demand $f(\rho_e s_e \bar{d}_e)$ is decreasing in $\mu_S(e)$. $\Pr(\Gamma_e = \emptyset)$ is decreasing in $\mu_S(e)$. Habitats draw little allocation and repair by control. The frontier draws much and repairs by remap.
 
-Stand-in 1.8. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa^\ast(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa^\ast$.
+Stand-in 1.8. Develops the continuous side of the pair in §0.1. $\kappa$ is large where the continuous $\mathcal{M}$ misrepresents the combinatorial $\mathcal{S}$. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa^\ast(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa^\ast$.
 
 ## 2. UNS
 
@@ -181,6 +183,8 @@ Refutation 4.12. Presence varies at fixed $(d_e, \rho_e s_e, \bar{d}_e)$ with $B
 
 | Construct | Papers 1, 2 | Paper 3 | Paper 4 |
 |---|---|---|---|
+| comprehensive model | combinatorial territory | $K_S$ with $\Lambda_S$, no potential | [open] |
+| comprehensible model | continuous map | $K_M$ with $G$, $\phi$, $j$ | $\hat{\Delta}_0$ |
 | consequence | $\kappa(y)$ | $s_e = g_e^{-1}$ | $\hat{s}_e$ |
 | use | route through $y$ | $\rho_e = \lvert j_e \rvert$ | $\hat{\rho}_e$ |
 | divergence | map off at $y$ | $d_e$, $\operatorname{lift} = 0$ | $\hat{d}_e$ |

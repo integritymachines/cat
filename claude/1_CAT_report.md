@@ -1,6 +1,6 @@
 # Consciousness as Translation
 
-Report, draft 0.1, 12 November 2026. Oliver Beige, Viktor Arvidsson. Expands §0.1 and §1 of `0_LSMN_kernel.md`, version 0.8. Symbols are those of the kernel registry. [assumed] marks a proposal not yet ruled. [open] marks a form not yet fixed.
+Report, draft 0.1, 12 November 2026. Oliver Beige, Viktor Arvidsson. Expands §0.1 and §1 of `0_LSMN_kernel.md`, version 0.9. Symbols are those of the kernel registry. [assumed] marks a proposal not yet ruled. [open] marks a form not yet fixed.
 
 ## 1. Model
 
@@ -13,6 +13,8 @@ The Landscape $\mathcal{L}$ is unsurveyable reality itself. It contains the opti
 $$\pi: V_S \twoheadrightarrow V_M, \qquad \lvert V_M \rvert < \lvert V_S \rvert,$$
 
 and the Map carries the orderings by which the agent chooses its steps. It is the comprehensible model. Navigation $\mathcal{N}$ is carried by a policy trajectory $\gamma = (m_0, m_1, \dots)$, a sequence of local steps on the Map directed at a goal $\zeta$. The agent is the tuple $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$. The budget $B$ is defined in Section 2.
+
+Papers 1 and 2 present the two models through one pair of terms. The Territory is combinatorial and the Map is continuous. A combinatorial structure consists of discrete options under interaction. It keeps every distinction, it has no gradient, and its size explodes under enumeration. It is the closest formal expression of unsurveyability, and reality itself is not claimed to be combinatorial. A continuous structure lets proximity stand for similarity. It has gradients, it allows interpolation between samples, and it is cheap to follow. The pair has a specific function. It shows that the two models differ in kind, so that no translation between them is exact. Discrete branch points and conflicting constraints have no continuous image, and the Map is most wrong where the Territory has most of them. Each translation in the chain changes the kind of structure: unsurveyable to combinatorial at $\sigma$, combinatorial to continuous at $\pi$, continuous to sequential at $\gamma$. The pair is a stand-in. Paper 3 refines it and keeps its function.
 
 Two facts from the companion report on unsurveyability are used. Intractability $I$ acts at each of the three translations. It forces sampling to be parochial, it forces $\pi$ to be many-to-one, and it forces navigation into a linear sequence of local steps. Transience $T$ has a degree $\vartheta \ge 0$, the rate at which the search space changes.
 
@@ -156,7 +158,7 @@ The postulate has content. By (4), effort at equal warrant is ordered drift, con
 
 ## 7. Stand-in
 
-Papers 1 and 2 use one smooth picture in place of the operators of Paper 3. Let $\mathcal{M}$ be smooth with points $y$, a potential $\phi$ and a control $w$,
+Papers 1 and 2 develop the continuous side of the pair into one smooth picture, which stands in place of the operators of Paper 3. Curvature in the picture is large where the continuous Map misrepresents the combinatorial Territory. Let $\mathcal{M}$ be smooth with points $y$, a potential $\phi$ and a control $w$,
 
 $$\dot{y} = -\nabla \phi(y) + w(y). \tag{13}$$
 
