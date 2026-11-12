@@ -1,6 +1,6 @@
 # LSMN Kernel
 
-Version 0.5, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
+Version 0.6, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
 
 Rule: one meaning per symbol. Every symbol is in the registry. A case pair denotes related objects only: $(O, o)$, $(C, c)$, $(G, g)$, $(w, \mathcal{W})$, $(X, x)$. Regimes, results and tests carry words or section numbers, never single letters.
 
@@ -24,7 +24,7 @@ Rule: one meaning per symbol. Every symbol is in the registry. A case pair denot
 | $s_e, \rho_e, q_e$ | consequence, use by $\gamma$, warrant |
 | $g_e$ | effective conductance at $e$ |
 | $\tau$ | tolerance |
-| $\epsilon_c, \kappa_c$ | critical level: measurable, conceptual. Subscript $c$ reads "critical" |
+| $\epsilon^\ast, \kappa^\ast$ | critical level: measurable, conceptual |
 | $\kappa, y, d(y)$ | smooth stand-in: curvature, point, divergence at $y$ |
 | $a_e, B$ | allocation to $e$, allocation budget |
 | $f, h$ | monitoring function, recalibration function |
@@ -72,7 +72,7 @@ Result 1.6. $d_e = 0$ and $\bar{d}_e \to 0 \Rightarrow a_e \to 0$.
 
 Postulate 1.7. $\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e)$. $\text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e)$. Identification, not derived.
 
-Stand-in 1.8. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa_c(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa_c$.
+Stand-in 1.8. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa^\ast(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa^\ast$.
 
 ## 2. UNS
 
@@ -114,7 +114,7 @@ $$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i 
 
 $\operatorname{lift}(\gamma \mid z_0) = 0 \Rightarrow d_e := \infty$ at the first failing edge.
 
-$$\epsilon_c(e) = d_e / \tau, \qquad q_e \le \tau \iff g_e \ge \epsilon_c(e), \qquad d_e = 0 \Rightarrow \epsilon_c(e) = 0 \Rightarrow \operatorname{reg}(e) = \text{drift}$$
+$$\epsilon^\ast(e) = d_e / \tau, \qquad q_e \le \tau \iff g_e \ge \epsilon^\ast(e), \qquad d_e = 0 \Rightarrow \epsilon^\ast(e) = 0 \Rightarrow \operatorname{reg}(e) = \text{drift}$$
 
 $o = 1 - \operatorname{corr}(j, j_{\mathcal{L}})$, with $j_{\mathcal{L}}$ the flow under the potential of $\mathcal{L}$ [assumed]. $\vartheta$: $\dot{d}_{\mathcal{SM}} > 0$ absent update. $\bar{d}_e$ as a function of $\vartheta$ and time since last check [open]. $c$ on $\Lambda_S$ [open]. $w$ on $K_M$ [open].
 
@@ -164,7 +164,7 @@ Refutation 4.12. Presence varies at fixed $(d_e, \rho_e s_e, \bar{d}_e)$ with $B
 | consequence | $\kappa(y)$ | $s_e = g_e^{-1}$ | $\hat{s}_e$ |
 | use | route through $y$ | $\rho_e = \lvert j_e \rvert$ | $\hat{\rho}_e$ |
 | divergence | map off at $y$ | $d_e$, $\operatorname{lift} = 0$ | $\hat{d}_e$ |
-| critical level | $\kappa_c(y) = \tau / d(y)$ | $\epsilon_c(e) = d_e / \tau$ | $\hat{\tau}$, Test 4.8 |
+| critical level | $\kappa^\ast(y) = \tau / d(y)$ | $\epsilon^\ast(e) = d_e / \tau$ | $\hat{\tau}$, Test 4.8 |
 | alternatives | map holds another route | $\Gamma_e$ | Test 4.10 |
 | allocation | $a_e$ | $a_e$ | $\operatorname{met}_e$ under 4.1 |
 | control | $w$, $\mathcal{W}$ | $w$ on $K_M$ [open] | $\mathcal{W}$ under 4.2 |

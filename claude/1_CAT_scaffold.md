@@ -1,103 +1,118 @@
 # 1 CAT Scaffold
 
-Paper 1, Consciousness as Translation. Version 0.1, 12 November 2026. Register level: Paper, 10 to 15 pages. Conceptual paper. Items marked [open] need a ruling.
+Paper 1, Consciousness as Translation. Version 0.2, 12 November 2026. Register level: Paper, about 13 pages. Conceptual paper. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Items marked [open] need a ruling.
 
-## Abstract
+Headline contribution: consciousness is the allocation of metabolic resources to the synchronization of map and territory, per instance, to the degree that divergence and its consequence for navigation warrant.
 
-- Claim: consciousness is the ongoing synchronization of an agent's map with its territory, carried out to the degree that divergences and their consequences for navigation warrant.
-- Claim: it follows from bounded rationality. An agent that could survey its world would have nothing to synchronize.
-- Shape of support: a four-stage translation chain, three regimes of repair, a geometric picture offered as illustration, and a statement of what Papers 3 and 4 must deliver.
+## Abstract (0.25 page)
 
-## 1. Introduction
+- Claim: the headline contribution, in one sentence.
+- Claim: it follows from bounded rationality. An agent that could survey its world has nothing to synchronize.
+- Shape of support: a four-stage chain, an allocation rule, three regimes of repair, one geometric picture offered as illustration.
+- Hand-off: Papers 3 and 4 turn the account into operators and tests.
 
-- Context: a bounded agent cannot survey its world from above. It searches locally and steers by a compressed map.
-- Claim: the map drifts out of step with the territory, and keeping the two in step costs metabolic resources. Consciousness is where those resources go.
-- Division of labor: Papers 1 and 2 give the conceptual account. Papers 3 and 4 translate it into operators and measurements that can fail.
-- Status of the mathematics here: illustration only. State this once, in this section.
-- Depends on: nothing. Sets terms for all later sections.
-- Remove: "This is not a metaphor", the chess state count used as a slogan, the claim of precise operational definitions.
+## 1. Introduction (1.5 pages)
 
-## 2. The Chain
+- Context: a bounded agent searches locally and steers by a compressed map. The map and what the agent has encountered fall out of step.
+- Claim: keeping them in step costs resources, the agent spends them selectively, and that spending is consciousness.
+- Novelty: consciousness is placed at the instance and comes in degrees. Existing accounts place it at the state of the whole system or at a stage of processing.
+- Relevance: the account says when an agent is conscious of something, how strongly, and what it costs.
+- Division of labor: Papers 1 and 2 are conceptual. Papers 3 and 4 are scientific. The mathematics in this paper is illustration. Say so once, here.
+- Depends on: nothing.
+
+## 2. The Chain (1.5 pages)
 
 - Claim: translation has four stages. Landscape, territory, map, navigation.
-- Landscape: the world as it is, which offers options and no directions.
-- Territory: the agent's own record of what it has encountered. It is internal, parochial and faithful to what was observed.
-- Map: a compression of the territory built for comprehension. It supplies orderings the territory lacks.
-- Navigation: local steps mediated under a global goal.
-- Support: the door example. A remembered open door is a map entry. The door as found is a territory entry.
-- Change from the 2025 version: the territory was external and the chain had three stages.
-- Depends on: Paper 2 for why compression is forced.
+- Landscape: the world as it is. It offers options and no directions.
+- Territory: the agent's own record of what it has encountered. Internal, parochial, faithful to what was observed.
+- Map: a compression of the territory, built to be used. It supplies the orderings the territory lacks.
+- Navigation: local steps under a global goal.
+- Support: the door. The door as remembered is a map entry. The door as found is a territory entry.
+- Kernel: §0.1.
+- Depends on: Paper 2 for why compression is forced and what the map must supply.
 
-## 3. Synchronization
+## 3. Synchronization (2 pages)
 
-- Claim: the agent continuously compares map and territory. Two factors set how much it invests at any one place: the size of the divergence, and what the divergence would do to the route.
-- Claim: consciousness is per instance and graded. An instance is conscious when it draws allocation. The agent is conscious when any instance does.
-- Support: the door and the handle. The door's state is watched closely because the route runs through it. The handle is not.
-- Support: the hammock. An awake agent at rest still synchronizes, at low cost.
-- What is unconscious: instances that draw no allocation (encapsulated routines, masked input), and states in which nothing can draw allocation (anesthesia, dreamless sleep).
+- Claim: the agent compares map and territory continuously, instance by instance.
+- Claim: two things set what an instance receives. Before a divergence, how much the route depends on the instance and how likely the map is to be off there. After a divergence, its size times its consequence.
+- Claim: an instance is conscious when it receives allocation. The agent is conscious when any instance does. Intensity is the amount.
+- Support: the door and the handle. The route runs through the door, so its state is watched. The handle is not watched.
+- Support: the hammock. An awake agent at rest in a changing world still allocates, at low cost.
+- Support: what is unconscious. Instances that receive nothing (encapsulated routines, masked input). States in which nothing can receive (anesthesia, dreamless sleep). Content that is stable and predicted fades.
+- Kernel: allocation rule, definition, Results 1.2, 1.3, 1.4, 1.6.
 - Depends on: Section 2.
 
-## 4. Three Regimes
+## 4. Three Regimes (1.5 pages)
 
-- Claim: the regimes differ in where the repair happens, and two questions separate them.
-- First question: can the divergence be absorbed in flight? If yes, Drift. Repair acts on the trajectory.
-- Second question: does the map hold another route that the territory supports? If yes, Control. Repair acts on the choice of route, by virtual search, with commitment paused. If no, Remap. Repair acts on the map.
-- Support: the closed door is Control. The changed handle is Remap, and it costs more although it matters less to the route.
-- Support: the cul-de-sac. Backtracking recovers the options and not the resources spent.
+- Claim: the regimes differ in where the repair happens. Two tests separate them.
+- Drift: the divergence is within tolerance. Repair acts on the trajectory, in flight.
+- Control: the divergence exceeds tolerance and the map holds another route that the territory supports. Repair acts on the choice of route. Candidates are tried virtually and the step is paused.
+- Remap: the divergence exceeds tolerance and the map holds no such route. Repair acts on the map.
 - Claim: all three are conscious to their degree. Drift is the low end.
-- Change from the 2025 version: one dial with a band around a threshold. The second boundary is now a different question and not a higher level.
+- Claim: consequence and cost come apart. The closed door matters to the route and is cheap to repair. The changed handle matters little and is dear.
+- Support: the cul-de-sac. Backtracking recovers the options. It does not recover what was spent.
+- Kernel: regime table, Result 1.5.
 - Depends on: Section 3.
 
-## 5. A Geometric Picture
+## 5. A Geometric Picture (1.5 pages)
 
-- Purpose: give the reader one image for Sections 3 and 4. Label it a stand-in at the top of the section.
-- Content: a smooth map with a gradient, curvature as the stand-in for sensitivity to divergence, a critical level $\kappa_c$ that depends on how far the map is off at that place, and a control term added to the gradient flow.
-- Keep: the gradient flow with control, the three regimes drawn on the picture, control work as $\int \lVert w \rVert^2$.
-- Remove: the JND equation (it holds for the metric and not for curvature), the Ricci-flow equation, the instability measure $\lVert \nabla K \rVert$.
-- Closing bullet: what Paper 3 replaces each element with. One short table.
-- Depends on: Sections 3 and 4. Nothing later depends on this section.
+- Purpose: one image for Sections 3 and 4. The first sentence labels it a stand-in.
+- Content: a smooth map, a potential with its gradient flow, a control term, curvature standing for consequence, a critical level that falls as the map gets further off.
+- Support: the three regimes drawn on the picture.
+- Closing table: each element of the picture and the operator that replaces it in Paper 3.
+- Kernel: Stand-in 1.8, §5 first column.
+- Depends on: Sections 3 and 4. No later section depends on this one.
 
-## 6. Experience
+## 6. Experience (1 page)
 
-- Claim: the theory identifies felt effort with allocation and salience with consequence for the route.
-- Claim: this is an identification, stated as the theory's commitment. Paper 1 does not prove it. Papers 3 and 4 say what would count against it.
-- Qualia: differences in experience follow differences in the maps involved. Keep short.
-- Remove: "The Hard Problem Dissolved" as a heading and as a result, the temperature and pressure analogy, the organizational aside.
-- Depends on: Section 3.
+- Claim: the theory identifies felt effort with the cost of repair and salience with the allocation an instance receives before any divergence.
+- Claim: this is an identification. The paper states it as a commitment and does not derive it.
+- Claim: experiences differ because the maps involved differ. Brief.
+- Support: effort without progress, and progress without effort, read as cases of the allocation rule.
+- Kernel: Postulate 1.7.
+- Depends on: Sections 3 and 4.
 
-## 7. Friendly Neighbors
+## 7. Friendly Neighbors (2 pages)
 
-- Order as in the 2025 version: free energy, bounded rationality, information theory, energy-based networks, global workspace.
-- Bounded rationality carries the program's origin. Simon asked how agents make goal-directed decisions under resource limits. His images were combinatorial and his formal models were dynamic programs. His engagement with combinatorial optimization was limited. This program works in that gap.
-- Two claims made here: consciousness sits downstream of bounded rationality, and a perfectly rational agent cannot be conscious.
-- Correction: chess is well-structured in rules and roles. It is not smooth.
-- For each neighbor: what it specifies, and what the synchronization account adds. One paragraph each.
-- Remove: "completes Herbert Simon's life pursuit", the closing bullet list of neighbors, the claim of unification.
-- Depends on: Sections 3 and 4. Fact-check pass required on the Simon record.
+- Order: free energy, bounded rationality, information theory, energy-based networks, global workspace.
+- For each: what it specifies, and what the allocation account adds. One paragraph each, two for bounded rationality.
+- Bounded rationality: the program began as an extension of Simon. His images of search were combinatorial. His formal models were dynamic programs. His engagement with combinatorial optimization was limited. The program works in that gap.
+- Claim: consciousness sits downstream of bounded rationality.
+- Claim: a perfectly rational agent cannot be conscious.
+- Global workspace: broadcast and ignition read as marks of control, which is one regime, and not of presence.
+- Kernel: Result 1.1.
+- Depends on: Sections 3 and 4. The Simon record needs the fact-check pass.
 
-## 8. Altered States
+## 8. Altered States (1 page)
 
-- Claim: each state is a characteristic shift in what draws allocation and how much. Qualitative only.
+- Claim: each state is a characteristic shift in what receives allocation and how much. Qualitative.
 - Cover: meditation, psychedelics, flow, dreams, anxiety and rumination, anesthesia and deep sleep.
-- Rewrite each on allocation. Anesthesia: nothing can draw allocation. Flow: sustained allocation near the Drift and Control boundary with little wasted on self-monitoring. Rumination: allocation to an instance whose divergence does not shrink.
+- Anesthesia and deep sleep: nothing can receive allocation.
+- Flow: allocation held just below the critical level, little spent elsewhere.
+- Rumination: repeated allocation to an instance whose divergence does not shrink.
+- Dreams: allocation to internal instances with the actuators uncoupled.
 - Hand-off: Paper 4 gives the quantitative version.
-- [open] Keep this section here, or move it whole to Paper 4.
+- [open] Keep here, or move whole to Paper 4.
+- Depends on: Sections 3 and 4.
 
-## 9. What Would Count Against It
+## 9. What Would Count Against It (0.75 page)
 
-- Replaces "Empirical Implications". One page.
-- State the two kinds of test: presence (does an instance draw allocation) and degree (how much).
-- Name the dissociations the account must survive: responsiveness without experience, experience without responsiveness.
-- Hand-off: operators in Paper 3, measurements in Paper 4, comparative questions in the satellite note on the lower bound.
-- Remove: personality traits, the developmental paragraph, the species list.
+- Claim: the account can fail in two ways. On presence: whether an instance receives allocation. On degree: how much.
+- Support: three cases it must survive. Experience without behavior. Behavior without experience. Braking without awareness.
+- Hand-off: operators in Paper 3, tests in Paper 4.
+- Kernel: Tests 4.3 to 4.11, Refutation 4.12, named and not developed.
+- Depends on: Sections 3, 4, 6.
 
-## 10. Conclusion
+## 10. Conclusion (0.25 page)
 
-- One paragraph. Restate the claim and the hand-off. No slogans.
-- [open] The epigraph ("The territory is combinatorial. The map is continuous."): keep, revise or drop. The map is no longer claimed to be continuous outside Section 5.
+- One paragraph. The claim and the hand-off.
+- [open] The epigraph ("The territory is combinatorial. The map is continuous."): keep, revise or drop. Outside Section 5 the map is no longer claimed to be continuous.
 
-## Removed from the 2025 version
+## Changes from the 2025 version
 
-- Sections 8.2 to 8.5 (advantages, Simon's vision, future directions, broader implications).
-- All em dashes and semicolons, staged questions, and paired negations of the form "not X but Y".
-- Unused reference: Nemhauser and Wolsey.
+- Chain: three stages with an external territory become four stages with an internal one.
+- Core claim: control near a curvature threshold becomes allocation per instance.
+- Regimes: one dial becomes two tests.
+- Mathematics: presented as the theory becomes presented as illustration. The JND equation, the Ricci-flow equation and the instability measure are removed.
+- Sections removed: the hard problem as a result, advantages, Simon's vision, future directions, broader implications, personality traits, the species list.
+- Style: the tropes listed in the register are removed.
