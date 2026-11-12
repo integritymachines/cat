@@ -1,195 +1,181 @@
 # Consciousness as Translation
 
-Report, draft 0.2, 12 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. Baseline: the 2025 paper. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Symbols are defined at first use and listed in the kernel registry.
+Report, draft 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates of the kernel, marked U1 to U8 where they enter. [inference] marks a proposal of this draft and [open] a form not fixed. Symbols are listed in the kernel registry.
 
 *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
-This report states the conceptual argument. It uses three stand-ins: the pair combinatorial and continuous, curvature, and the Fisher metric. Papers 3 and 4 replace them with operators and tests.
+To navigate an unsurveyable reality, a cognitive agent has to maintain, and mediate between, two models of the world, one comprehensive (the territory) and one comprehensible (the map). Consciousness arises out of that mediation and out of the need to allocate metabolic resources to keep the two aligned (U2).
 
-## Reality
+The report is conceptual. It uses three stand-ins: the pair combinatorial and continuous, curvature, and the Fisher metric. Papers 3 and 4 make them operational (U6).
 
-Let $\mathcal{L}$ be reality as a cognitive agent meets it, the landscape. The agent holds two models, a territory $\mathcal{S}$ and a map $\mathcal{M}$, and navigates along a trajectory $\gamma$:
+## Translation Problem
+
+The world presents more configurations than any finite agent can represent. The agent compresses a combinatorial territory $\mathcal{S}$ into a continuous map $\mathcal{M}$ and navigates by the map. The full chain has four stages (U1):
 
 $$\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N} \tag{1}$$
 
-Here $\sigma$ is sampling, $\pi$ is compression and $\mathcal{N}$ is navigation. The landscape is unsurveyable. Unsurveyability $U$ has four constituents, one boundary condition and three obstructions:
+$\mathcal{L}$ is reality, the landscape. $\sigma$ is sampling, $\pi$ is compression, $\gamma$ is the policy trajectory and $\mathcal{N}$ is navigation. The paper does not claim that reality is combinatorial. Reality is unsurveyable, and combinatorial explosion is the closest formal expression of that property.
+
+Translation fails in four characteristic ways. Together they constitute unsurveyability $U$:
 
 $$U = I + N, \qquad N = (O, C, T) \tag{2}$$
 
-Intractability $I$. Let $\nu(\mathcal{S}_\alpha)$ count the task-relevant distinctions at scale $\alpha$. Then
+Intractability $I$ is the boundary condition. Configuration spaces grow as $b^d$, $n!$ or $2^n$. Let $\nu(\mathcal{S}_\alpha)$ count the task-relevant distinctions at scale $\alpha$. The territory is unsurveyable whenever
 
-$$I \iff \lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}} = \infty \tag{3}$$
+$$\lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}} = \infty \tag{3}$$
 
-Distinctions outgrow any representation. A scheduling problem with $k$ tasks has $k!$ orderings. Intractability forces local search, and it acts on all three arrows of (1). Sampling is parochial, compression is lossy, and navigation is a linear sequence of local steps.
+Structure proliferates faster than any representation can encode, and translation has to be lossy.
 
-Opacity $O$. Reality gives no local signal with an assured relation to the global path. A bare wall in a maze gives no signal. An arrow of unknown origin gives a signal that may mislead. The agent has to manufacture its gradients.
+Opacity $O$. The territory provides no gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures a gradient by building a map with smooth geometry. Manufactured gradients need not align with the external objective. In satisfiability problems, flipping a variable to reduce violations locally often raises them globally.
 
-Contingency $C$. A step forecloses options or makes them costly to recover. Reversion has a cost $c \in [0, 1]$.
+Contingency $C$. Choices alter the topology of the reachable states. Some options are foreclosed and others become costly to recover. In the map, branch points appear as singularities.
 
-Transience $T$. Reality changes at a rate $\vartheta \ge 0$, and a map that is not maintained decays.
+Transience $T$. The world is non-stationary, and a map that was valid decays. With $g_F$ the metric of the map defined below, $\operatorname{Ric}$ its Ricci curvature and $L_{\mathrm{decay}}$ the external change,
 
-The three obstructions vary between environments and inside one environment, and each can be near zero. They are the dimensions in which the mediation between the global objective and the local step can be obscured. Paper 2 develops them. This report needs only the statements above.
+$$\partial_t g_F = -2 \operatorname{Ric} + L_{\mathrm{decay}} \tag{4}$$
 
-## Engine
+The four form a causal hierarchy:
 
-To navigate is to choose local steps under a global objective $\zeta$. A tree acts on its surroundings and has no route to choose. An agent with a route to choose in an unsurveyable reality cannot know the route in advance. Each candidate route is a conjecture.
+$$I \to \text{compression} \to O + C + T \to \text{high curvature} \to \text{control} \to \text{consciousness} \tag{5}$$
 
-A conjecture can be tested in two ways. The physical test executes $\gamma$ in $\mathcal{L}$, and failure costs the agent a loss $\ell$ that can be the agent itself. The virtual test runs $\gamma$ against what the agent has recorded, and failure costs only the test. In Popper's words, the agent sends its conjectures to their deaths in its stead.
+## Architecture
 
-Virtual testing requires a capacity that generates candidate routes, runs them, and discards the failures. We call it the central conjecturing engine. It consumes metabolic resources whether or not a given test changes the route. Navigation with the engine is conjectural. Navigation without it is random, passive or myopic.
+The agent holds two models (U1, U2).
 
-The engine comes first in the argument [ruled]. The two models are what the engine needs in order to run.
+The territory $\mathcal{S}$ is the comprehensive model. It is the agent's accumulated record of the landscape, kept without order. Sampling has density $\mu_S$, concentrated around the habitats in which the agent lives and sparse elsewhere.
 
-## Two Models
+The map $\mathcal{M} = \pi(\mathcal{S})$ is the comprehensible model, with $\pi$ non-injective and $\dim \mathcal{M} \ll \log \lvert \mathcal{S} \rvert$. It presents the available choices ranked by their connection to the objective, as a chess engine ranks moves. Distinct states of the territory can lie close together in the map, and some states of the map correspond to nothing in the territory.
 
-The engine cannot run on the experienced habitat as recorded, because the record grows with experience as in (3). It needs a compact travel guide. This gives two models with opposite virtues.
+All models are wrong and some are useful (Box). The map is a lossy translation, and its loss is negligible in some instances and decisive in others.
 
-The territory $\mathcal{S}$ is the first model. It is the accumulation of impressions, kept without order. Sampling has density $\mu_S$, concentrated around the habitats in which the agent lives and sparse elsewhere. $\mathcal{S}$ is comprehensive and gives no direction.
+Stand-in. Activity at a point $y \in \mathcal{M}$ generates a distribution $p(\cdot \mid y)$ over responses. The Fisher metric
 
-The map $\mathcal{M} = \pi(\mathcal{S})$ is the second model. The compression $\pi$ is non-injective. $\mathcal{M}$ presents the available choices ranked by how they connect to the objective, as a chess engine ranks moves. It is comprehensible and it has lost distinctions.
+$$g_F(y)_{ik} = \mathbb{E}\big[\partial_i \log p(\cdot \mid y)\, \partial_k \log p(\cdot \mid y)\big] \tag{6}$$
 
-Neither model serves alone. The territory without the map gives every option and privileges none. The map without the territory gives confident direction with no check. The agent needs both and a mediation between them.
+measures discriminability: how reliably nearby states can be told apart. It arises from the statistics of the coding itself. With a potential $\phi$ that encodes task-relevant value and a control field $w$,
 
-Stand-in. We picture $\mathcal{S}$ as combinatorial and $\mathcal{M}$ as a smooth manifold. Activity at a point $y \in \mathcal{M}$ generates a distribution $p(\cdot \mid y)$ over responses. The Fisher metric
+$$\dot{y} = -g_F^{-1} \nabla \phi(y) + w(y) \tag{7}$$
 
-$$g_F(y)_{ik} = \mathbb{E}\big[\partial_i \log p(\cdot \mid y)\, \partial_k \log p(\cdot \mid y)\big] \tag{4}$$
-
-measures how reliably nearby states can be told apart. With a potential $\phi$ that encodes the objective and a control field $w$, the dynamics are
-
-$$\dot{y} = -g_F^{-1} \nabla \phi(y) + w(y) \tag{5}$$
-
-The first term is natural gradient descent. It is the map's ranking, followed.
-
-All models are wrong and some are useful (Box). The map is a lossy translation of the territory, and the loss is negligible in some instances and decisive in others. The next section says where.
+With $w \approx 0$ the agent follows natural gradient descent. This is the backbone of automatic and habitual processing.
 
 ## Curvature
 
-Let $\kappa(y)$ be the scalar curvature of $g_F$ at $y$. Compression produces distortion, and distortion produces curvature. Curvature is low where discriminability varies smoothly, so that local information generalizes. It is high where a small move in $\mathcal{M}$ corresponds to a large change in $\mathcal{L}$. Discrete branch points of $\mathcal{S}$ appear in $\mathcal{M}$ as singularities, and conflicting constraints appear as saddle points.
+The Fisher metric captures discriminability and says nothing about its stability. In some regions discriminability varies smoothly and local information generalizes. In others it changes abruptly, and a small move in the map produces a large change in what can be distinguished.
 
-Curvature therefore carries two things at once: how far the map diverges from the territory at an instance, and how much that divergence matters for the route [ruled]. A flat stretch can be extrapolated. A curved stretch cannot.
+Let $\kappa(y)$ be the scalar curvature of $g_F$. Large $\kappa$ marks regions where the map is sharply bent, stretched or folded, and where it is least reliable. Curvature relates to perceptual sensitivity:
 
-The 2025 paper relates curvature to perceptual sensitivity:
-
-$$\operatorname{JND}(y) \propto \kappa(y)^{-1/2} \tag{6}$$
+$$\operatorname{JND}(y) \propto \kappa(y)^{-1/2} \tag{8}$$
 
 High curvature gives fine discrimination and fragility. Low curvature gives coarse discrimination and stability.
 
-The obstructions of (2) enter through curvature. Opacity makes manufactured gradients unreliable. Contingency produces singularities where $\kappa$ diverges. Transience makes the metric decay,
-
-$$\partial_t g_F = -2 \operatorname{Ric} + L_{\mathrm{decay}} \tag{7}$$
-
-with $\operatorname{Ric}$ the Ricci curvature and $L_{\mathrm{decay}}$ the external change. The causal chain of the 2025 paper stands:
-
-$$I \to \text{compression} \to O + C + T \to \text{high } \kappa \to \text{control} \to \text{consciousness}$$
-
-Let $\kappa^\ast$ be the critical level of curvature. It is specific to the agent. Control costs energy, so $\kappa^\ast$ sits where the expected cost of error equals the cost of intervening.
+High curvature signals that the continuous approximation has broken down. Branch points of the territory appear as singularities, conflicting structure appears as saddle points, and sparse structure appears as sharp ridges and valleys. Curvature is the geometric signature of the translation problem. It carries both how far the map diverges from the territory at an instance and how much that divergence matters for the route.
 
 ## Regimes
 
-Let $\Gamma(\gamma)$ be the set of alternatives to the current route $\gamma$ that reach $\zeta$ and that the territory supports.
+Behavior partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma(\gamma)$ be the set of alternatives to the current route $\gamma$ that reach the objective and that the territory supports.
 
 | Regime | Condition | Dynamics |
 |---|---|---|
-| drift | $\kappa < \kappa^\ast$ | $w \approx 0$ in (5) |
-| control | $\kappa \ge \kappa^\ast$ and $\Gamma(\gamma) \ne \emptyset$ | $w \ne 0$ |
-| remap | $\kappa \ge \kappa^\ast$ and $\Gamma(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
+| drift | $\kappa < \kappa^\ast$ | $w \approx 0$ in (7) |
+| control | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) \ne \emptyset$ | $w \ne 0$ |
+| remap | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
 
-Drift. The agent follows the map, because in that instance the map does not differ substantially from the territory. Drift includes fast, skilled and abstract performance. A chess master in a standard opening drifts.
+Drift. The map represents the territory faithfully enough, and the agent follows it. Drift includes skilled, abstract and rapid behavior in domains where learning has lowered curvature. A chess master in a standard opening drifts. So does a walker on flat ground.
 
-Control. The map's first offer fails and the map holds another supported route. Conjectures compete. The engine tries them virtually and the control field moves the trajectory to the survivor. A player in an unfamiliar position controls.
+Control. The geometry is fragile and small errors can derail progress. The agent deploys the control field to stabilize its trajectory. Candidate routes are tried virtually before commitment, so that a failed conjecture dies in the agent's stead. Control is effortful and metabolically expensive. A chess player in an unfamiliar position controls.
 
-Remap. The map holds no supported route. The map itself has to change. This is learning and insight.
+Remap. Control cannot stabilize the dynamics, and the representation itself changes. This is learning, insight and conceptual change.
 
-The 2025 paper separates control from remap by degree of curvature. The test on $\Gamma(\gamma)$ replaces that separation [ruled]. The boundary between drift and control is a threshold. The boundary between control and remap is a question of existence.
+The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma(\gamma)$ replaces that (U4). Control applies while the map still holds a supported route. Remap applies when it holds none.
 
-The envelope of assured navigation $\mathcal{E}$ is the set of states from which the agent reaches $\zeta$ under drift or control. A wingsuit flight that ends safely stays inside $\mathcal{E}$ and is far from drift [ruled]. Remap lies outside. The envelope answers the dark-room objection to surprise-minimizing accounts. An agent with an objective leaves the dark room and pays for control so that it remains assured outside it.
+$\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error.
+
+The envelope of assured navigation $\mathcal{E}$ is the set of states from which the agent reaches its objective under drift or control (U7). A wingsuit flight that ends safely stays inside $\mathcal{E}$ and is far from drift. The envelope answers the dark-room objection to accounts built on minimizing surprise: an agent with an objective leaves the dark room and pays for control to remain assured outside it.
 
 ## Consciousness
 
-Control work along a trajectory is
+The integrated control cost over a trajectory is
 
-$$\mathcal{W} = \int \lVert w(y(t)) \rVert^2_{g_F}\, dt \tag{8}$$
+$$\mathcal{W} = \int \lVert w(y(t)) \rVert^2_{g_F}\, dt \tag{9}$$
 
-Let $a(t)$ be the metabolic allocation to the mediation at time $t$ and $\eta = \mathcal{W} / a \in (0, 1]$ the efficiency of conversion. An instance $e$ is a point of choice on the route, with curvature $\kappa_e$. Allocation has two parts:
+and the local instability at a point is
 
-$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t) \tag{9}$$
+$$\lVert \nabla \kappa(y) \rVert_{g_F} \tag{10}$$
 
-The baseline $a_{\mathrm{base}}$ maintains the live map against transience. It is positive during wake. The surge $\Delta a_e$ is positive exactly when $\kappa_e \ge \kappa^\ast$. It is nondecreasing in $\kappa_e$, and at equal $\kappa_e$ it is larger under remap than under control.
+which measures how rapidly the geometric demand changes nearby.
 
-Consciousness arises out of the mediation between the two models and out of the need to allocate metabolic resources to it:
+The 2025 paper identifies consciousness with the operation of the control field at $\kappa \approx \kappa^\ast$. Update U3 refines this. Let $a(t)$ be the metabolic allocation to the mediation between map and territory, with $\mathcal{W} = \eta\, a$ and $\eta \in (0, 1]$. Let $e$ index the instances on the route, with curvature $\kappa_e$.
 
-$$\text{conscious}(t) \iff a(t) > 0, \qquad \text{degree at } e = \Delta a_e \tag{10}$$
+$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \qquad \text{conscious}(t) \iff a(t) > 0 \tag{11}$$
 
-Two assumptions complete the picture. Rationing [inference]: the budget $B$ is finite, $a \le B$, and surges are served in descending order of $\kappa_e$. Sampling [inference]: $\kappa_e$ is decreasing in $\mu_S(e)$, because the map interpolates where sampling is dense and extrapolates where it is sparse.
+The baseline $a_{\mathrm{base}}$ maintains the live map against transience and is positive throughout wake. The surge $\Delta a_e$ is positive when $\kappa_e \ge \kappa^\ast$ and grows with $\kappa_e$. Consciousness is graded, and its degree at an instance is $\Delta a_e$. It is absent in dreamless sleep and under anesthesia, where $w \equiv 0$. Boredom and stimulus deprivation are low surge on a positive baseline [open].
 
-Result 1.1. Without intractability the agent can survey $\mathcal{L}$. It needs no compression, no map and no mediation, so $a \equiv 0$. A perfectly rational agent needs zero models and cannot be conscious.
+Two forms are proposed here [inference]. The budget is finite, so surges are served in descending order of $\kappa_e$. Curvature $\kappa_e$ is decreasing in the sampling density $\mu_S(e)$, so that habitats drift and the frontier draws allocation.
 
-Result 1.2. During wake with $\vartheta > 0$, $a \ge a_{\mathrm{base}} > 0$ with no conflict present. Higher-order organisms spend on mediation continuously while awake. Boredom and stimulus deprivation are cases of low surge on a positive baseline [open].
-
-Result 1.3. $\kappa_e < \kappa^\ast$ gives $\Delta a_e = 0$. Processing at $e$ proceeds under drift and is automatic.
-
-Result 1.4. With $w \equiv 0$, as in dreamless sleep and under anesthesia, $a = 0$.
-
-Result 1.5. Practice lowers $\kappa$ on the practiced domain and moves it from control to drift. By the sampling assumption, habitats drift and the frontier draws allocation.
-
-Control occurs in many systems that nobody takes to be conscious. A thermostat, a centrifugal governor and the stomata of a tree correct a deviation against a fixed reference. They test nothing virtually. Control in the table above is conjectural: it decides between virtual conjectures before commitment, and it revises the reference itself under remap. The identification of this mode with consciousness rests on three alignments of the 2025 paper. Effort and deliberate engagement accompany it. Its behavioral and neural markers are those of conscious processing. It engages when needed and is costly enough that it does not engage otherwise.
+Why consciousness here. Three reasons of the 2025 paper stand. Phenomenology aligns: conscious experience is marked by effort, deliberation and active engagement, which is the signature of costly control. Neural and behavioral signatures align: tasks of high curvature produce longer reaction times, more errors and reports of difficulty. Functional necessity aligns: the agent intervenes when the cost of error exceeds the cost of control. One clarification is added. A thermostat and the stomata of a tree also control, against a fixed reference. Control in the sense used here decides between candidate routes before commitment and can revise the map itself.
 
 ## Experience
 
-The following are identifications. They are not derived.
+The 2025 paper claimed to dissolve the hard problem. This report does not (U5).
+
+The geometric reading of experience stands as an identification.
 
 | Experience | Geometric reading |
 |---|---|
-| effort | the rate $\lVert w \rVert^2_{g_F}$ in (8) |
+| effort | the rate of control cost in (9) |
 | salience | information density, high where $\kappa$ is high |
 | meaning | criticality, $\kappa$ near $\kappa^\ast$ |
-| intensity | $\lVert \nabla \kappa \rVert_{g_F}$ along trajectories with $w \ne 0$ |
+| intensity | the instability (10) along trajectories with $w \ne 0$ |
 
-Meaning here is felt significance. Experiences differ in quality because embeddings differ. The geometry of color differs from the geometry of pain.
+Meaning here is felt significance and has no propositional content. Experiences differ in quality because embeddings differ: the geometry of color differs from the geometry of pain.
 
-The 2025 paper claimed to dissolve the hard problem. This report does not [ruled]. The hard problem is right that science, which regularizes observations from without, can only triangulate subjective experience within. The same stimuli meet maps with different histories. The same lamp trained on the same object casts different shadows on surfaces of different texture. Paper 3 states this as a positive distance between the map of an agent and the map of any observer.
+The hard problem is right that science, which regularizes observations from without, can only triangulate subjective experience within. The same stimuli meet maps with different histories. The same lamp trained on the same object casts different shadows on surfaces of different texture.
 
-The claim of this series is narrower. Consciousness is a work effort, described by (8) to (10). Work consumes resources and leaves physical traces, and traces can be observed from without. Paper 4 builds its tests on them.
+The claim of the series is that consciousness is a work effort and no inherent property. Work consumes resources and leaves physical traces, and those traces can be observed from without. No new physics is required. Consciousness stands to the underlying dynamics as temperature stands to kinetic energy.
 
-## Offline
+## Neighbors
 
-During sleep with rapid eye movement the actuators are gated. The engine can then enact conjectures that are far-fetched or potentially lethal, at no physical risk. Offline conjecturing removes singularities of the map and lowers curvature for the next waking period. In the terms of the 2025 paper, curvature is high and control is cheap.
+The framework connects to established theories. Each governs its own domain, and curvature adds the local criterion for when control becomes necessary.
 
-Other altered states are changes of the same quantities.
+| Account | What it specifies | What curvature adds |
+|---|---|---|
+| free energy, predictive coding | the global objective, with $\phi$ as free energy | when minimization becomes unstable |
+| bounded rationality (Simon, March) | why agents satisfice | the stopping point is $\kappa^\ast$. Explore and exploit map to remap and drift |
+| information theory | rate against distortion | where distortion concentrates. Control as error correction |
+| energy-based networks | distributed dynamics with a global temperature | temperature regulated locally |
+| global workspace, attention | broadcast | the trigger for broadcast |
+
+Bounded rationality is the economic foundation. Without computational bounds there would be no compression, no translation problem and no consciousness. A fully rational agent would need zero models and cannot be conscious.
+
+## Altered States
+
+Altered states are systematic changes of the same geometry. The survey is qualitative here, and Paper 4 gives it a quantitative form.
 
 | State | Change |
 |---|---|
 | meditation | lower average $\kappa$, higher $\kappa^\ast$ |
 | psychedelics | higher variance of $\kappa$, access to remap |
-| flow | sustained $\kappa$ just below $\kappa^\ast$ |
+| flow | sustained navigation near $\kappa^\ast$ |
+| dreams | regions of high $\kappa$ explored with actuators gated, control cheap |
 | anxiety, rumination | overestimated $\kappa$, control where none is needed |
-| anesthesia, dreamless sleep | $w \equiv 0$ |
+| anesthesia, dreamless sleep | control disabled, $w \equiv 0$ |
 
-Paper 4 gives these a quantitative form.
+## Implications
 
-## Bound
+The predictions of the 2025 paper stand.
 
-Not every system that processes information meets the conditions above. The 2025 paper names three requirements: representations rich enough that compression distorts, a mechanism that detects when following the gradient fails, and the capacity to intervene. Paper 4 turns them into a boundary test.
+Behavior. Reaction time rises with curvature. Errors cluster in regions of high curvature and differ in kind between drift and control. Strategy shifts from heuristic to systematic as curvature rises.
 
-Current large language models are not capable of conscious navigation [ruled]. They lack adaptive recalibration in runtime: no divergence met during use changes the map. They also lack parochialism: their sampling has no habitat. The second point makes them the nearest known case of Result 1.1.
+Neural activity. Control-related activity tracks the approach to $\kappa^\ast$ and does not rise uniformly across tasks. Variability rises near the critical level.
 
-## Neighbors
+Learning and development. Insight follows struggle. Practice lowers curvature and moves a domain from control to drift. Maturation smooths representations and raises control capacity.
 
-Each established account governs its own domain. Curvature adds the local criterion.
+Individual differences. Control capacity varies, and so does the willingness to enter regions of high curvature.
 
-| Account | What it states | What curvature adds |
-|---|---|---|
-| free energy, predictive coding | the global objective, with $\phi$ as free energy | when minimization becomes unstable |
-| bounded rationality (Simon) | why search must stop short | the stopping point is $\kappa^\ast$ |
-| rate-distortion theory | the trade between compression and fidelity | where distortion concentrates |
-| energy-based networks | distributed dynamics with a global temperature | local regulation of temperature |
-| global workspace | the architecture of broadcast | the trigger for broadcast |
-
-The series extends Simon's program. Bounded rationality makes compression necessary, and consciousness sits downstream of it.
+Comparative. Three architectural requirements decide which systems qualify: representations rich enough that compression distorts, a mechanism that detects when following the gradient fails, and the capacity to deploy corrective control. Current large language models do not meet them (U7). They have no adaptive recalibration in runtime and no parochialism, since their sampling has no habitat. The second point makes them the nearest known case of the fully rational agent that cannot be conscious. This replaces the 2025 claim that adaptive AI may require conscious AI.
 
 ## Open
 
-1. The form of $\Delta a_e$, and the rationing and sampling assumptions [inference].
-2. Whether (6) and (7) survive the fact check. Both are taken from the 2025 paper.
-3. Boredom and stimulus deprivation under Result 1.2.
-4. The relation of confidence, the low-cost correction inside drift named in the Paper 3 note, to the envelope $\mathcal{E}$ as defined here.
+1. The forms of $\Delta a_e$, and the two [inference] items under (11).
+2. Relations (4) and (8) are carried from the 2025 paper and await the fact check.
+3. Boredom and stimulus deprivation under (11).

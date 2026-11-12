@@ -1,6 +1,6 @@
 # LSMN Kernel
 
-Version 0.11, 12 November 2026. One kernel for Papers 1 to 4. Baseline: the 2025 Papers 1 and 2 and the research notes for Papers 3 and 4. A departure from the baseline carries one of three tags. [ruled]: decided by the authors. [inference]: proposed here, not ruled. [open]: form not fixed. Numbers taken from the notes are unchecked.
+Version 0.12, 13 November 2026. One kernel for Papers 1 to 4. Baseline: the 2025 Papers 1 and 2 and the research notes for Papers 3 and 4. A departure from the baseline carries one of three tags. [ruled]: decided by the authors. [inference]: proposed here, not ruled. [open]: form not fixed. Numbers taken from the notes are unchecked.
 
 Rule: one meaning per symbol. Every symbol is in the registry. Regimes, results and tests carry words or section numbers, never single letters.
 
@@ -49,17 +49,29 @@ Notation against the sources: $\pi$ for the 2025 $\phi$, $\phi$ for $V$, $w$ for
 
 $$\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N}, \qquad U = I + N, \quad N = (O, C, T)$$
 
-Order of the argument [ruled]. (i) $\mathcal{L}$ is unsurveyable. (ii) Navigation in $\mathcal{L}$ has to be conjectural: the agent sends conjectures to their deaths in its stead. (iii) Virtual conjectures require a central conjecturing engine, which costs metabolic resources. (iv) The engine cannot run on the experienced habitat as recorded, so the record $\mathcal{S}$ is compressed into a travel guide $\mathcal{M}$. The two models follow from the engine. (v) $\mathcal{M}$ is lossy, and curvature marks where the loss matters. (vi) Consciousness arises out of the mediation between the two models and the need to allocate metabolic resources to it.
+Yardstick: the 2025 papers. Their argument and its order stand:
+
+$$I \to \text{compression} \to O + C + T \to \text{high } \kappa \to \text{control} \to \text{consciousness}$$
+
+Updates to the 2025 papers [ruled], numbered for reference in the scaffolds.
+1. Chain of four stages. $\mathcal{S}$ is the agent's own model, sampled parochially.
+2. Headline: to navigate an unsurveyable reality, a cognitive agent maintains, and mediates between, two models, one comprehensive ($\mathcal{S}$) and one comprehensible ($\mathcal{M}$). Consciousness arises out of that mediation and the need to allocate metabolic resources to keep the two aligned.
+3. Consciousness is graded and present throughout wake: a baseline plus surges.
+4. Control and remap are separated by whether a supported alternative exists.
+5. The hard problem is not dissolved.
+6. Stand-ins are named as such. Papers 3 and 4 make them operational.
+7. $\mathcal{E}$ includes control. Current LLMs are below the bound.
+8. The prose tropes of the 2025 text are removed.
+
+Background. Virtual testing of conjectures (Popper) belongs to control (§1) and to $C$ (§2). The conjecturing engine, motility, the lower bound and the dreaming test belong to §4 and a satellite note.
 
 Combinatorial and continuous. This pair is the central stand-in of Papers 1 and 2. The territory is combinatorial, the map is continuous. Papers 3 and 4 replace the pair with $K_S$ (relations only) and $K_M$ (weights, potential, flow). Footnote level: reality is mixed combinatorial, and the part with aligned local and global gradients needs no translation.
 
 ## 1. CAT
 
-**Reality.** $I \iff \lim_{\alpha \to \infty} \log \nu(\mathcal{S}_\alpha) / \dim \mathcal{M} = \infty$. $O$: no local signal with an assured relation to the global path. $C$: steps foreclose options. $T$: reality and map drift apart in time. Stated in full in §2. Paper 1 restates them without reference to Paper 2.
+**Translation problem.** $I \iff \lim_{\alpha \to \infty} \log \nu(\mathcal{S}_\alpha) / \dim \mathcal{M} = \infty$. $O$: no local signal with an assured relation to the global path. $C$: steps foreclose options. $T$: reality and map drift apart in time. Stated in full in §2. Paper 1 restates them without reference to Paper 2.
 
-**Engine.** A conjecture is a candidate $\gamma$. Physical test: execute $\gamma$ in $\mathcal{L}$ and bear $\ell$ on failure. Virtual test: run $\gamma$ against $\mathcal{S}$ at cost $B_F$ and discard it on failure. The engine is the capacity for virtual tests. Navigation with the engine is conjectural. Navigation without it is random, passive or myopic.
-
-**Two models.** $\mathcal{S}$: unordered accumulation of impressions, sampled with density $\mu_S$ around habitats, comprehensive. $\mathcal{M} = \pi(\mathcal{S})$, $\pi$ non-injective: a rank offering of the available choices by their connection to $\zeta$, comprehensible. On the smooth stand-in, $\mathcal{M}$ is a manifold with Fisher metric
+**Architecture.** $\mathcal{S}$: unordered accumulation of impressions, sampled with density $\mu_S$ around habitats, comprehensive. $\mathcal{M} = \pi(\mathcal{S})$, $\pi$ non-injective: a rank offering of the available choices by their connection to $\zeta$, comprehensible. On the smooth stand-in, $\mathcal{M}$ is a manifold with Fisher metric
 
 $$g_F(y)_{ik} = \mathbb{E}\big[\partial_i \log p(\cdot \mid y)\, \partial_k \log p(\cdot \mid y)\big], \qquad \dot{y} = -g_F^{-1} \nabla \phi(y) + w(y)$$
 
@@ -72,7 +84,7 @@ $C$ appears in $\mathcal{M}$ as singularities, where $\kappa$ diverges. $T$ appe
 | $\operatorname{reg}$ | Condition | Dynamics |
 |---|---|---|
 | drift | $\kappa < \kappa^\ast$ | $w \approx 0$. The agent follows $\mathcal{M}$ |
-| control | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) \ne \emptyset$ | $w \ne 0$. Competing conjectures are tested virtually and one is chosen |
+| control | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) \ne \emptyset$ | $w \ne 0$. Candidate routes are tried virtually before commitment (Popper: conjectures die in the agent's stead) |
 | remap | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$. The map changes |
 
 The 2025 paper separates control from remap by $\kappa \approx \kappa^\ast$ against $\kappa \gg \kappa^\ast$. The test on $\Gamma(\gamma)$ replaces that [ruled]. $\mathcal{E}$: the states from which $\zeta$ is reached under drift or control. Remap lies outside $\mathcal{E}$ [ruled].
@@ -89,17 +101,19 @@ Result 1.3. $\kappa_e < \kappa^\ast \Rightarrow \Delta a_e = 0$. Processing at $
 Result 1.4. $w \equiv 0$ (dreamless sleep, anesthesia) $\Rightarrow a = 0$.
 Result 1.5. Practice lowers $\kappa$ on the practiced domain and moves it from control to drift.
 
-Conjectural control. A homeostat corrects against a fixed reference and tests nothing virtually. Control in the sense of the table decides between conjectures before commitment. This separates consciousness from control in general.
+Why consciousness here (2025): phenomenology, signatures and functional necessity align with control at $\kappa \ge \kappa^\ast$. Addition [ruled]: a homeostat corrects against a fixed reference and tests nothing virtually. Control in the sense of the table decides between candidate routes before commitment.
 
 **Experience.** Identifications, not derived. Effort: the rate $\lVert w \rVert^2_{g_F}$. Salience: information density, high where $\kappa$ is high. Meaning: criticality, $\kappa$ near $\kappa^\ast$. Intensity: $\lVert \nabla \kappa \rVert_{g_F}$ along trajectories with $w \ne 0$. Hard problem [ruled]: not dissolved. Science regularizes observations from without and can only triangulate experience within. Consciousness is a work effort, and work leaves traces observable from without. Different histories give different $\mathcal{M}$ for the same stimuli (§3, Proposition 3.3).
 
-**Offline.** Dreaming: conjectures enacted with actuators gated, at no physical risk. It tests far-fetched conjectures and removes singularities of $\mathcal{M}$.
+**Neighbors.** Free energy: the global objective, $\phi$ as free energy. Bounded rationality: satisficing stops at $\kappa^\ast$. Rate-distortion: $\kappa$ marks where distortion concentrates. Energy-based networks: temperature regulated locally by $\kappa$. Global workspace: $\kappa \to \kappa^\ast$ triggers broadcast.
 
-**Bound.** Three requirements (2025): representations rich enough for compression to distort, detection of failure of the gradient, capacity for corrective control. Current LLMs fail on two counts [ruled]: no adaptive recalibration in runtime, and no parochialism ($\mu_S$ without habitats). The second makes them the nearest known case of Result 1.1. Motility plays no role in Paper 1 [ruled].
+**Altered states.** Changes of average $\kappa$, its variance, $\kappa^\ast$, or control capacity. Meditation: lower $\kappa$, higher $\kappa^\ast$. Psychedelics: higher variance of $\kappa$. Flow: $\kappa$ sustained near $\kappa^\ast$. Dreams: high $\kappa$ explored with actuators gated, control cheap. Anxiety: $\kappa$ overestimated. Anesthesia, dreamless sleep: $w \equiv 0$.
+
+**Implications.** Behavioral, neural, developmental and individual predictions in terms of $\kappa$ and $\kappa^\ast$ (2025). Comparative criterion, three requirements (2025): representations rich enough for compression to distort, detection of failure of the gradient, capacity for corrective control. Current LLMs fail on two counts [ruled]: no adaptive recalibration in runtime, and no parochialism ($\mu_S$ without habitats). The second makes them the nearest known case of Result 1.1. Motility plays no role in Paper 1 [ruled].
 
 ## 2. UNS
 
-**Translation problem.** $\mathcal{S}$ alone: no $j$, paralysis. $\mathcal{M}$ alone: $j$ never tested, hallucination. The map proposes, the territory disposes.
+**Translation problem.** $\mathcal{S}$ alone: no $j$, paralysis. $\mathcal{M}$ alone: $j$ never tested, hallucination. The map proposes, the territory disposes. Parsimony: $\pi^\ast = \arg\min_\pi d_{\mathcal{SM}}$ subject to $\dim \mathcal{M}$ within capacity, the most faithful searchable representation.
 
 **Intractability.** $X$: arrangements of $k$ interacting options, $\lvert X \rvert \ge k!$. $\operatorname{val}: X \to \mathbb{R}$.
 
@@ -119,16 +133,11 @@ Degrees vary with the environment and within it. Any can be near zero [ruled]. R
 
 **Orderings.** $R$, $F$, $D$ are the mathematical primitives that capture the three orderings. The agent assigns orderings. It does not make up mathematics [ruled].
 
-**Conjectures.** Cycle: $j \to \gamma \to \operatorname{lift}(\gamma) \to \text{step} \to \text{update}$. A conjecture that fails the virtual test dies in the agent's stead.
-
 **Trajectory.** The endpoint of translation is $\gamma$, a sequence of dependent steps. Error compounds along $\gamma$ under $O$, $C$ and $T$: $\operatorname{err}_{i+1} = (1 + \operatorname{rate}(o, c, \vartheta)) \operatorname{err}_i$ [open]. $U$ is a property of paths under bounded representation.
 
-**Heuristic.** $B = B_R + B_F + B_D + B_w + B_0$. The heuristic is the $\gamma$ returned by the cycle under $B$. Search stops when the expected gain of one more pass falls below its cost. This stopping point is $\kappa^\ast$. Not $I$ $\Rightarrow$ $\gamma$ optimal at $B_R = B_F = B_w = 0$.
+**Heuristic.** Addition [ruled]. Cycle: $j \to \gamma \to \operatorname{lift}(\gamma) \to \text{step} \to \text{update}$. A route that fails the virtual test dies in the agent's stead (Popper). $B = B_R + B_F + B_D + B_w + B_0$. The heuristic is the $\gamma$ returned by the cycle under $B$. Search stops when the expected gain of one more pass falls below its cost. This stopping point is $\kappa^\ast$. Not $I$ $\Rightarrow$ $\gamma$ optimal at $B_R = B_F = B_w = 0$.
 
 **Cube.** $\operatorname{sig} = (R, F, D) \in \{0,1\}^3$. Eight signatures. Coordinates of a translation problem: $(I, \operatorname{sig})$. Corners are extreme types [ruled]. Environments have graded $(o, c, \vartheta)$.
-
-**Parsimony.** $\pi^\ast = \arg\min_\pi d_{\mathcal{SM}}$ subject to $\dim \mathcal{M}$ within capacity: the most faithful searchable representation.
-
 ## 3. TG
 
 **Complexes.** $K_S$ with $\Lambda_S$, symmetric or asymmetric, no potential. $K_M$ with $G$. $\pi: V_S \twoheadrightarrow V_M$.
@@ -175,13 +184,11 @@ $\log \operatorname{Tor}$ is a signed observable of deformation. It is not ident
 
 **Dictionary.** $\hat{\Delta}_0$ from connectivity among recording channels. $\hat{\beta}_1$ from persistent cohomology of population states. $\hat{d}_{\mathrm{GW}}$ from dissimilarity matrices across epochs or agents. Forms [open].
 
-**Presence.** Boundary test, all three required: (i) compression $\pi$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, (ii) a discontinuity measurable from without at the critical limit, (iii) offline conjecturing in high-intensity REM, $\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}}$. Only organisms that dream can be conscious [ruled]. Motility and sessility give the first dividing line: a sessile agent can afford physical conjectures, a motile agent cannot. Test 4.3: under anesthesia and in dreamless sleep, $\hat{a}$ and $\hat{\mathcal{W}}$ do not respond to $\hat{\lambda}_2$.
-
-**Degree.**
-Test 4.4. Graded ambiguity produces a step drop of $\hat{\lambda}_2$ at a critical value, followed by a nonlinear rise of control markers.
-Test 4.5. $\mathbb{E}[\text{response time}] = t_0 + c_1 \lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2}$.
-Test 4.6. $\Delta \operatorname{bnd} = c_2\, [\lambda_2 \le \epsilon^\ast]\, \log \operatorname{Tor}$.
-Test 4.7. $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ with slope proportional to $\eta^{-1}$.
+**Waking tests.** Transition from drift to control.
+Test 4.3. Graded ambiguity produces a step drop of $\hat{\lambda}_2$ at a critical value, followed by a nonlinear rise of control markers.
+Test 4.4. $\mathbb{E}[\text{response time}] = t_0 + c_1 \lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2}$.
+Test 4.5. $\Delta \operatorname{bnd} = c_2\, [\lambda_2 \le \epsilon^\ast]\, \log \operatorname{Tor}$.
+Test 4.6. $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ with slope proportional to $\eta^{-1}$.
 
 **States.**
 
@@ -195,9 +202,13 @@ Test 4.7. $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ with slope pro
 | propofol | $w \equiv 0$ | long-range $\lambda_2 \to 0$, $\mathcal{W} \to 0$, $a$ suppressed |
 | ketamine, REM | control without actuators | $\mathcal{W} > 0$ internally, input and output gated |
 
+Test 4.7. Under propofol and in dreamless sleep, $\hat{a}$ and $\hat{\mathcal{W}}$ do not respond to $\hat{\lambda}_2$.
+
 **Agents.** Two agents coordinate under drift while $d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast$ and require explicit translation above it.
 
-**Refutation.** The series fails if an organism passes the boundary test without any of Tests 4.4 to 4.7, if $\hat{a}$ and $\hat{\mathcal{W}}$ respond to $\hat{\lambda}_2$ under Test 4.3, or if control markers scale linearly through the critical value in Test 4.4.
+**Lower bound.** Handed to a satellite note. A conjecturing engine pays only under the viability condition of §3. Motility and sessility give the first dividing line: a sessile agent can afford physical conjectures, a motile agent cannot. Boundary test, all three required: (i) compression $\pi$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, (ii) a discontinuity measurable from without at the critical limit, (iii) offline conjecturing in high-intensity REM, $\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}}$. Only organisms that dream can be conscious [ruled].
+
+**Refutation.** The series fails if control markers scale linearly through the critical value in Test 4.3, if $\hat{a}$ and $\hat{\mathcal{W}}$ respond to $\hat{\lambda}_2$ under Test 4.7, or if a system passes the boundary test and shows none of Tests 4.3 to 4.6.
 
 ## 5. Open
 

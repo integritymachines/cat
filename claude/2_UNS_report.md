@@ -1,6 +1,6 @@
 # Unsurveyability
 
-Report, draft 0.1, 12 November 2026. Kernel: `0_LSMN_kernel.md` §2. Baseline: the 2025 paper. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed.
+Report, draft 0.2, 13 November 2026. Kernel: `0_LSMN_kernel.md` §2. The 2025 paper is the yardstick, and its order is kept. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed.
 
 This report is conceptual. It characterizes what makes the translation from territory to map unstable. It can be read before or after Paper 1.
 
@@ -19,7 +19,13 @@ Let $j$ be the direction the map supplies and let a route $\gamma$ be a sequence
 | $\mathcal{S}$ | fidelity, no $j$ | paralysis: every option visible, none privileged |
 | $\mathcal{M}$ | $j$, untested | hallucination: confident movement with no check |
 
-Buridan's ass is the first case. A map that reads "this way" at a cliff is the second. The map proposes and the territory disposes. Unsurveyability $U$ is the property that forces this translation:
+Buridan's ass is the first case. A map that reads "this way" at a cliff is the second. The map proposes and the territory disposes.
+
+The territory acts as the agent of the state space and the map as the agent of the representational limits. Parsimony lies between them. With $\pi$ the compression and $d_{\mathcal{SM}}$ the distortion between territory and map (defined in Paper 3), the parsimonious translation is the most faithful representation that can still be searched:
+
+$$\pi^\ast = \arg\min_\pi\ d_{\mathcal{SM}} \quad \text{subject to } \dim \mathcal{M} \text{ within capacity}$$
+
+Unsurveyability $U$ is the property that forces this translation:
 
 $$U = I + N, \qquad N = (O, C, T) \tag{1}$$
 
@@ -93,16 +99,6 @@ Under opacity, what remains is relational structure without direction or distanc
 
 The agent assigns orderings to what it meets. Relations, functions and dynamics are the primitives in which mathematics captures these orderings. The paper makes no claim that a conscious agent makes up mathematics [ruled]. "Directional" is an alternative name for the third primitive.
 
-## Conjectures
-
-Under opacity the map's direction $j$ is a guess. Under contingency a wrong guess is costly to take back. Under transience a right guess expires. A route is therefore a conjecture, and the agent benefits from testing it before it commits. Popper's phrase applies: we send our conjectures to their deaths in our stead.
-
-The agent runs a cycle:
-
-$$j \;\to\; \gamma \;\to\; \text{virtual test of } \gamma \text{ against } \mathcal{S} \;\to\; \text{step} \;\to\; \text{update} \tag{7}$$
-
-Each stage answers one obstruction. The ranking $j$ answers opacity. The virtual test answers contingency. The update answers transience. Paper 3 gives the test an exact form, the lift of a map route into the territory.
-
 ## Trajectory
 
 The endpoint of translation is a trajectory $\gamma$, a sequence of actions whose feasibility and value depend on earlier commitments. The three obstructions act along $\gamma$:
@@ -113,13 +109,21 @@ The endpoint of translation is a trajectory $\gamma$, a sequence of actions whos
 
 Error compounds along the trajectory. A small misalignment at one step can amplify into a large deviation later. As a form [open], with $\operatorname{err}_i$ the misalignment after step $i$ and a growth rate $\operatorname{rate} \ge 0$ that increases in each of $o$, $c$ and $\vartheta$,
 
-$$\operatorname{err}_{i+1} = (1 + \operatorname{rate}(o, c, \vartheta))\, \operatorname{err}_i \tag{8}$$
+$$\operatorname{err}_{i+1} = (1 + \operatorname{rate}(o, c, \vartheta))\, \operatorname{err}_i \tag{7}$$
 
 Unsurveyability is a property of paths under bounded representation. Guidance has to remain robust across a chain of dependent actions.
 
 ## Heuristic
 
-The cycle (7) runs under a budget. Following the note for Paper 3, we split it:
+This section is an addition to the 2025 paper [ruled]. It describes the route from an unsurveyable search space to a dynamic heuristic.
+
+Under opacity the map's direction $j$ is a guess. Under contingency a wrong guess is costly to take back. Under transience a right guess expires. A route is therefore a conjecture, and the agent benefits from testing it before it commits. Popper's phrase applies: we send our conjectures to their deaths in our stead. This is the virtual backtracking of the 2025 paper, run as a cycle:
+
+$$j \;\to\; \gamma \;\to\; \text{virtual test of } \gamma \text{ against } \mathcal{S} \;\to\; \text{step} \;\to\; \text{update} \tag{8}$$
+
+The ranking $j$ answers opacity, the virtual test answers contingency, and the update answers transience. Paper 3 gives the test an exact form.
+
+The cycle runs under a budget. Following the note for Paper 3, we split it:
 
 $$B = B_R + B_F + B_D + B_w + B_0 \tag{9}$$
 
@@ -158,18 +162,10 @@ The cube is a metaphor [ruled]. Its corners are extreme types, and environments 
 
 Algorithms assume signatures. Constraint propagation assumes relational structure, gradient descent assumes functional structure with smoothness, and local search assumes dynamical structure. Where the assumption matches the territory, performance is good. Where it does not, pathologies appear.
 
-## Parsimony
-
-Let $d_{\mathcal{SM}}$ be the distortion between territory and map. The parsimonious translation is the most faithful representation that can still be searched:
-
-$$\pi^\ast = \arg\min_\pi\ d_{\mathcal{SM}} \quad \text{subject to } \dim \mathcal{M} \text{ within capacity} \tag{11}$$
-
-The territory acts as the agent of the state space and the map as the agent of the representational limits. Parsimony lies between them. Paper 3 defines $d_{\mathcal{SM}}$.
-
 ## Open
 
 1. The corner $(0,0,0)$. The 2025 paper reads it as a territory with no formalizable structure. Under graded degrees, the point where all three degrees vanish is an environment with no obstruction. The two readings need to be reconciled.
-2. Formal definitions of the three obstructions beyond (4) and (5), and the form of (6) and (8).
+2. Formal definitions of the three obstructions beyond (4) and (5), and the form of (6) and (7).
 3. A procedure that determines the signature of a territory from samples.
 4. Whether intermediate signatures behave as restrictions of the full signature.
 5. Completeness of the four dimensions.

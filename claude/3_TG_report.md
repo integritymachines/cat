@@ -1,6 +1,6 @@
 # Translation Geometry
 
-Report, draft 0.1, 12 November 2026. Kernel: `0_LSMN_kernel.md` §3. Baseline: the research note for Paper 3. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed.
+Report, draft 0.2, 13 November 2026. Kernel: `0_LSMN_kernel.md` §3. Baseline: the research note for Paper 3. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed.
 
 Papers 1 and 2 argue with stand-ins: a combinatorial territory, a smooth map with the Fisher metric, and curvature against a critical level. This report replaces each stand-in with an operator on a pair of discrete complexes. It contains definitions, propositions and one computed example. It contains no empirical claims.
 
@@ -59,7 +59,7 @@ The test of a route against the territory is the lift functional. For a start $z
 
 $$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i \ge 1} \big(\Lambda_S P_{m_i}\big)\, \mathbf{1} \tag{6}$$
 
-It counts the paths in $K_S$ from $z_0$ that project onto $\gamma$. If $\operatorname{lift} > 0$, the route is executable. If $\operatorname{lift} = 0$, the compression has joined parts of the territory that are not connected, and the route exists only in the map. The engine of Paper 1 rejects it before execution. This is the exact form of sending a conjecture to its death.
+It counts the paths in $K_S$ from $z_0$ that project onto $\gamma$. If $\operatorname{lift} > 0$, the route is executable. If $\operatorname{lift} = 0$, the compression has joined parts of the territory that are not connected, and the route exists only in the map. Virtual rollout rejects it before execution. This is the exact form of the virtual backtracking of Paper 2.
 
 The supported alternatives to a route are
 
@@ -121,7 +121,7 @@ It contains everything reached under drift or control [ruled]. The note restrict
 
 ## Viability
 
-The engine that performs the virtual test (6) and the reconciliation has a cost. Let $\ell$ be the loss from a failed physical conjecture, $B_F$ the budget for virtual search, $B_w$ the budget for reconciliation and $B_0$ the maintenance of the engine. The engine is viable iff
+The machinery that performs the virtual test (6) and the reconciliation has a cost. Let $\ell$ be the loss from a failed physical conjecture, $B_F$ the budget for virtual search, $B_w$ the budget for reconciliation and $B_0$ the its maintenance. It is viable iff
 
 $$\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0] \tag{13}$$
 

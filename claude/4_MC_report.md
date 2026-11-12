@@ -1,8 +1,8 @@
 # Measuring Consciousness
 
-Report, draft 0.1, 12 November 2026. Kernel: `0_LSMN_kernel.md` §4. Baseline: the research note for Paper 4 and the summary report on the lower bound. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Numbers quoted from the note are unchecked and are marked as note values.
+Report, draft 0.2, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4. The research note for Paper 4 is the yardstick, with the summary report on the lower bound for the last section. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Numbers quoted from the note are unchecked and are marked as note values.
 
-This report states what the operators of Paper 3 predict in recordings of living systems. It separates presence of consciousness from its degree, and it ends with a refutation condition.
+This report states what the operators of Paper 3 predict in recordings of living systems. It follows the order of the note: thesis, traces, dictionary, waking tests, states, agents, and the handoff on the lower bound. It ends with a refutation condition.
 
 ## Thesis
 
@@ -53,71 +53,27 @@ The note names four empirical supports for this dictionary: a factorization of h
 
 The dictionary is the weakest link of the paper. A failed test refutes the series only under valid estimators.
 
-## Presence
+## Waking Tests
 
-Presence asks whether a system is conscious at all. The answer has a lower bound.
+The four tests follow the transition from drift to control. They concern the degree of allocation at an instance.
 
-Viability. The conjecturing engine pays only when the expected physical loss it avoids exceeds its cost. With $\ell$ the loss from a failed physical conjecture and $B_F$, $B_w$, $B_0$ the budgets for virtual search, reconciliation and maintenance (Paper 3),
+Test 4.3 (spectral). Let ambiguity or conflict be varied in small steps. Control markers do not scale linearly. $\hat{\lambda}_2$ shows a step drop at a critical value, and control markers rise nonlinearly immediately after it. Note values: a drop of more than half, preceding the rise by less than 50 ms.
 
-$$\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0] \tag{4}$$
+Test 4.4 (kinematic). The relaxation time grows as $\lambda_2^{-1}$ (Paper 3). Response time follows
 
-Motility and sessility give the first dividing line [ruled]. An agent that moves meets changing environments, and their number explodes combinatorially. A sessile agent has limited need for the engine. It can produce physical conjectures in place of virtual ones: a tree grows many branches and lets the losers die, which is literal branch and bound. A motile agent has one body on one route. Its conjectures have to die in its stead, so they have to be virtual. The need for a compact map arises downstream, from the exploding complexity of the experienced habitat.
-
-| | Sessile, reflexive | Motile, navigational |
-|---|---|---|
-| conjectures | physical, parallel | virtual, before commitment |
-| map | none required | compressed from the record |
-| gap at choice points | $\lambda_2 > \epsilon^\ast$ throughout | $\lambda_2 \le \epsilon^\ast$ occurs |
-| cycles, torsion | $\beta_1 = 0$, $\log \operatorname{Tor}$ flat | $\beta_1 > 0$ resolved under control |
-| offline | physical recuperation | physical and virtual recuperation |
-
-Boundary test [ruled]. A system is above the bound iff it shows all three:
-
-1. Compression. It holds a map $\mathcal{M} = \pi(\mathcal{S})$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, separate from the record.
-2. Discontinuity. At a critical limit the system shows a discontinuity that can be measured from without. Tests 4.4 to 4.7 give its forms.
-3. Offline conjecturing. It has high-intensity REM phases. With actuators gated, the map deforms within a band:
-
-$$\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}} \tag{5}$$
-
-Note values: $\delta_{\mathrm{lo}} = 0.10$, $\delta_{\mathrm{hi}} = 0.45$, with $\operatorname{PR}_{\mathrm{REM}} > \operatorname{PR}_{\mathrm{wake}}$ and a higher $\lambda_2$ after sleep.
-
-Dreaming is the enactment of far-fetched and potentially lethal conjectures under physical incapacitation. Only organisms that dream can be conscious [ruled]. An organism that does not dream recuperates physically in sleep. A conscious organism also has to recuperate virtually and send the singularities of its map to their deaths.
-
-Applied across taxa, the summary report gives the following placement. It is unchecked.
-
-| System | Compression | Discontinuity | Offline conjecturing | Placement |
-|---|---|---|---|---|
-| plants, microbes | no | no | no | well below |
-| insects, spiders | local | minimal | borderline | at or below |
-| reptiles | yes | yes | yes | at or just above |
-| cephalopods | yes | yes | yes | above |
-| mammals, birds | yes | yes | yes | well above |
-
-Current large language models are below the bound [ruled]. They have no adaptive recalibration in runtime, so point 2 has no object, and they have no parochialism. Their sampling has no habitat, which makes them the nearest known case of the perfectly rational agent of Paper 1.
-
-Test 4.3. Under general anesthesia and in dreamless sleep, $\hat{a}$ and $\hat{\mathcal{W}}$ do not respond to $\hat{\lambda}_2$. Local responses to input can persist. A drop of the gap triggers no control.
-
-## Degree
-
-Degree asks how much is allocated at an instance. The four tests follow the transition from drift to control.
-
-Test 4.4 (spectral). Let ambiguity or conflict be varied in small steps. Control markers do not scale linearly. $\hat{\lambda}_2$ shows a step drop at a critical value, and control markers rise nonlinearly immediately after it. Note values: a drop of more than half, preceding the rise by less than 50 ms.
-
-Test 4.5 (kinematic). The relaxation time grows as $\lambda_2^{-1}$ (Paper 3). Response time follows
-
-$$\mathbb{E}[\text{response time}] = t_0 + c_1\, \lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2} \tag{6}$$
+$$\mathbb{E}[\text{response time}] = t_0 + c_1\, \lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2} \tag{4}$$
 
 with constants $t_0$, $c_1$. Variability across trials rises in the same window, and errors separate into fast slips under drift and slow errors under control.
 
-Test 4.6 (braking). Resolving a cycle before commitment requires halting execution. Let $\operatorname{bnd}$ be the decision boundary of a sequential-sampling model. Then
+Test 4.5 (braking). Resolving a cycle before commitment requires halting execution. Let $\operatorname{bnd}$ be the decision boundary of a sequential-sampling model. Then
 
-$$\Delta \operatorname{bnd}(t) = c_2\, [\lambda_2(t) \le \epsilon^\ast]\, \log \operatorname{Tor}(K_M(t)) \tag{7}$$
+$$\Delta \operatorname{bnd}(t) = c_2\, [\lambda_2(t) \le \epsilon^\ast]\, \log \operatorname{Tor}(K_M(t)) \tag{5}$$
 
 with a constant $c_2$ and the bracket equal to one when the condition holds. The behavioral form is vicarious trial and error at a fork: the animal stops, sweeps its head between options, and reverses a prepotent movement.
 
-Test 4.7 (metabolic). By (3), $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ across trials, with slope proportional to $\eta^{-1}$.
+Test 4.6 (metabolic). By (3), $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ across trials, with slope proportional to $\eta^{-1}$.
 
-Individuals differ in baseline $\epsilon^\ast$ and in $\eta$. The note describes the margin just above $\epsilon^\ast$ as confidence, the low-cost correction of minor divergence, and reads individual differences in that margin as a spectrum between sequential and parallel styles of cognition. Above the lower bound, organisms differ in how they allocate, and Tests 4.4 to 4.7 are where that variance can be picked up. Bat navigation is a candidate case: stereotyped flight corridors with sonar locked to the wingbeat under drift, and strobe groups with braking when a target is displaced.
+Individuals differ in baseline $\epsilon^\ast$ and in $\eta$. The note describes the margin just above $\epsilon^\ast$ as confidence, the low-cost correction of minor divergence, and reads individual differences in that margin as a spectrum between sequential and parallel styles of cognition. Above the lower bound, organisms differ in how they allocate, and Tests 4.3 to 4.6 are where that variance can be picked up. Bat navigation is a candidate case: stereotyped flight corridors with sonar locked to the wingbeat under drift, and strobe groups with braking when a target is displaced.
 
 ## States
 
@@ -135,21 +91,65 @@ Paper 1 describes altered states by curvature $\kappa$ against its critical leve
 
 The table makes three commitments that can fail separately. Flow and overload differ in $\eta$ at comparable work. Propofol and ketamine differ in internal $\mathcal{W}$ at comparable unresponsiveness. Meditation moves the baseline, where psychedelics move the variance.
 
+Test 4.7. Under propofol and in dreamless sleep, $\hat{a}$ and $\hat{\mathcal{W}}$ do not respond to $\hat{\lambda}_2$. Local responses to input can persist. A drop of the gap triggers no control.
+
 ## Agents
 
 Two agents $A$ and $B$ hold maps compressed from private territories. They coordinate under drift while
 
-$$d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast \tag{8}$$
+$$d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast \tag{6}$$
 
 and they build a shared representation as the distance falls. At or above $\delta^\ast$, automatic coordination breaks down and the agents need explicit translation at the boundary between their maps, with $w \ne 0$ on both sides. The note predicts that compatibility between people follows relational geometry, the structure of distances inside each map, and does not follow similarity of attributes. Note value: $\delta^\ast$ near 0.35 of the map's diameter.
+
+## Lower Bound
+
+Whether a system is conscious at all has a lower bound. The note hands this question to a satellite note. This section states the test that the satellite note applies.
+
+Viability. The conjecturing engine pays only when the expected physical loss it avoids exceeds its cost. With $\ell$ the loss from a failed physical conjecture and $B_F$, $B_w$, $B_0$ the budgets for virtual search, reconciliation and maintenance (Paper 3),
+
+$$\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0] \tag{7}$$
+
+Motility and sessility give the first dividing line [ruled]. An agent that moves meets changing environments, and their number explodes combinatorially. A sessile agent has limited need for the engine. It can produce physical conjectures in place of virtual ones: a tree grows many branches and lets the losers die, which is literal branch and bound. A motile agent has one body on one route. Its conjectures have to die in its stead, so they have to be virtual. The need for a compact map arises downstream, from the exploding complexity of the experienced habitat.
+
+| | Sessile, reflexive | Motile, navigational |
+|---|---|---|
+| conjectures | physical, parallel | virtual, before commitment |
+| map | none required | compressed from the record |
+| gap at choice points | $\lambda_2 > \epsilon^\ast$ throughout | $\lambda_2 \le \epsilon^\ast$ occurs |
+| cycles, torsion | $\beta_1 = 0$, $\log \operatorname{Tor}$ flat | $\beta_1 > 0$ resolved under control |
+| offline | physical recuperation | physical and virtual recuperation |
+
+Boundary test [ruled]. A system is above the bound iff it shows all three:
+
+1. Compression. It holds a map $\mathcal{M} = \pi(\mathcal{S})$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, separate from the record.
+2. Discontinuity. At a critical limit the system shows a discontinuity that can be measured from without. Tests 4.3 to 4.6 give its forms.
+3. Offline conjecturing. It has high-intensity REM phases. With actuators gated, the map deforms within a band:
+
+$$\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}} \tag{8}$$
+
+Note values: $\delta_{\mathrm{lo}} = 0.10$, $\delta_{\mathrm{hi}} = 0.45$, with $\operatorname{PR}_{\mathrm{REM}} > \operatorname{PR}_{\mathrm{wake}}$ and a higher $\lambda_2$ after sleep.
+
+Dreaming is the enactment of far-fetched and potentially lethal conjectures under physical incapacitation. Only organisms that dream can be conscious [ruled]. An organism that does not dream recuperates physically in sleep. A conscious organism also has to recuperate virtually and send the singularities of its map to their deaths.
+
+Applied across taxa, the summary report gives the following placement. It is unchecked.
+
+| System | Compression | Discontinuity | Offline conjecturing | Placement |
+|---|---|---|---|---|
+| plants, microbes | no | no | no | well below |
+| insects, spiders | local | minimal | borderline | at or below |
+| reptiles | yes | yes | yes | at or just above |
+| cephalopods | yes | yes | yes | above |
+| mammals, birds | yes | yes | yes | well above |
+
+Current large language models are below the bound [ruled]. They have no adaptive recalibration in runtime, so point 2 has no object, and they have no parochialism. Their sampling has no habitat, which makes them the nearest known case of the perfectly rational agent of Paper 1.
 
 ## Refutation
 
 Under valid estimators, the series fails in any of three cases.
 
-1. A system passes the boundary test and shows none of the forms of Tests 4.4 to 4.7.
-2. Under the conditions of Test 4.3, $\hat{a}$ and $\hat{\mathcal{W}}$ respond to $\hat{\lambda}_2$ as they do in wake.
-3. In Test 4.4, control markers scale linearly through the critical value, with no step in $\hat{\lambda}_2$.
+1. In Test 4.3, control markers scale linearly through the critical value, with no step in $\hat{\lambda}_2$.
+2. Under the conditions of Test 4.7, $\hat{a}$ and $\hat{\mathcal{W}}$ respond to $\hat{\lambda}_2$ as they do in wake.
+3. A system passes the boundary test and shows none of the forms of Tests 4.3 to 4.6.
 
 A fourth case concerns the bound. An organism that demonstrably does not dream and passes points 1 and 2 of the boundary test would refute the claim that offline conjecturing is necessary.
 
@@ -159,7 +159,7 @@ No effect size is asserted before the fact check.
 
 1. Validity of the estimators in the dictionary.
 2. Identification of $\epsilon^\ast$ in data, independent of the markers it is meant to predict.
-3. The band (5) and the level $\delta^\ast$.
+3. The band (8) and the level $\delta^\ast$.
 4. The derivation of $c_0$ in (3).
 5. The comparative table.
 
