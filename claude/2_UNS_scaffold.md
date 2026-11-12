@@ -22,7 +22,9 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 
 - Claim: unsurveyable is literal. The agent cannot stand above the search space and inspect it.
 - Claim: intractability is the reason. Arranging even a few options in an order, when they interact, yields more arrangements than any agent can enumerate.
-- Claim: combinatorial explosion is the closest formal expression of unsurveyability. Reality is not claimed to be combinatorial. The territory is presented as combinatorial because that form keeps the distinctions and shows the pressure they exert.
+- Claim: reality is mixed combinatorial in the sense that matters. Four features make it so: high dimensionality, objects that differ in kind, strong interaction between objects, and the need for arrangements (policy trajectories) in place of isolated decisions.
+- Claim: the mixed part consists of options that differ in degree only, with gradients given. It requires no translation. Environments made up of that part alone are rare.
+- Claim: almost all environments present the obstacles of combinatorial search, which are intractability, opacity, contingency and transience. The territory is presented as combinatorial for that reason.
 - Consequence: exhaustive search gives way to local search on local information.
 - Claim: intractability acts at each translation. It makes sampling parochial, compression lossy, and navigation a linear sequence of local steps. Each is an economy under the same resource constraint.
 - Claim: navigation is the mediation of local steps under a global goal. The goal may be loose.
