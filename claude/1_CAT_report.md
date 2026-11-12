@@ -1,6 +1,6 @@
 # Consciousness as Translation
 
-Report, draft 0.1, 12 November 2026. Oliver Beige, Viktor Arvidsson. Expands §0.1 and §1 of `0_LSMN_kernel.md`, version 0.7. Symbols are those of the kernel registry. [assumed] marks a proposal not yet ruled. [open] marks a form not yet fixed.
+Report, draft 0.1, 12 November 2026. Oliver Beige, Viktor Arvidsson. Expands §0.1 and §1 of `0_LSMN_kernel.md`, version 0.8. Symbols are those of the kernel registry. [assumed] marks a proposal not yet ruled. [open] marks a form not yet fixed.
 
 ## 1. Model
 
@@ -8,13 +8,13 @@ A cognitive agent that navigates an unsurveyable reality has to maintain two mod
 
 $$\mathcal{L} \xrightarrow{\ \sigma\ } \mathcal{S} \xrightarrow{\ \pi\ } \mathcal{M} \xrightarrow{\ \gamma\ } \mathcal{N}$$
 
-The Landscape $\mathcal{L}$ is unsurveyable reality itself. It contains the options and gives them no order. The Territory $\mathcal{S}$ is the agent's record of its encounters with $\mathcal{L}$, obtained by sampling $\sigma$. It is internal to the agent. It is partial with respect to the Landscape. It is the comprehensive model: it keeps every distinction the agent has encountered and gives none of them an order. The Map $\mathcal{M}$ is a compression $\pi$ of the Territory. The compression is many-to-one,
+The Landscape $\mathcal{L}$ is unsurveyable reality itself. It contains the options and gives them no order. The Territory $\mathcal{S}$ is the agent's record of its encounters with $\mathcal{L}$, obtained by sampling $\sigma$. It is internal to the agent. Sampling is parochial: its density $\mu_S$ is concentrated around the habitats of the agent and is thin elsewhere, so the Territory is small compared with the Landscape. It is the comprehensive model: it keeps every distinction the agent has encountered and gives none of them an order. The Map $\mathcal{M}$ is a compression $\pi$ of the Territory. The compression is many-to-one,
 
 $$\pi: V_S \twoheadrightarrow V_M, \qquad \lvert V_M \rvert < \lvert V_S \rvert,$$
 
 and the Map carries the orderings by which the agent chooses its steps. It is the comprehensible model. Navigation $\mathcal{N}$ is a trajectory $\gamma = (m_0, m_1, \dots)$ in the Map toward a goal $\zeta$. The agent is the tuple $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$. The budget $B$ is defined in Section 2.
 
-Two facts from the companion report on unsurveyability are used. Intractability $I$ holds when the Territory has more relevant distinctions than any Map can hold. It forces $\pi$ to be many-to-one. Transience $T$ has a degree $\vartheta \ge 0$, the rate at which the search space changes.
+Two facts from the companion report on unsurveyability are used. Intractability $I$ acts at each of the three translations. It forces sampling to be parochial, it forces $\pi$ to be many-to-one, and it forces navigation into a linear sequence of local steps. Transience $T$ has a degree $\vartheta \ge 0$, the rate at which the search space changes.
 
 Because $\pi$ loses distinctions and the search space changes, Map and Territory diverge. The agent compares them at instances. An instance $e$ is a place where the Map makes a commitment that the Territory can confirm or contradict. Paper 3 identifies instances with edges of the Map. This report needs only that instances are countable and that $\gamma$ uses some of them.
 
@@ -33,6 +33,12 @@ One assumption links these quantities to Transience. [assumed]
 $$\vartheta > 0 \ \Rightarrow\ \bar{d}_e > 0 \ \text{ for every } e \text{ not checked at the current } t. \tag{A1}$$
 
 In a changing world, an unchecked commitment of the Map is expected to be off by some amount.
+
+A second assumption links them to sampling. [assumed] Write $\mu_S(e)$ for the sampling density at the Territory vertices that $\pi$ sends to $e$.
+
+$$\bar{d}_e \ \text{ is decreasing in } \ \mu_S(e). \tag{A2}$$
+
+Where sampling is dense the Map interpolates between observations. Where it is sparse the Map extrapolates.
 
 ## 2. Allocation
 
@@ -138,6 +144,8 @@ $$0 \ \le\ a_e \ \le\ a^\circ_e = f(\rho_e s_e \bar{d}_e) \ \to\ 0.$$
 
 Content that is stable and repeatedly confirmed leaves consciousness. A found divergence at the same instance restores allocation through $h$.
 
+**Result 1.9, habitat and frontier.** [assumed] Fix $\rho_e s_e$. By (A2) and (3), monitoring demand $f(\rho_e s_e \bar{d}_e)$ is nonincreasing in $\mu_S(e)$. Assume further that the probability of $\Gamma_e = \emptyset$ is decreasing in $\mu_S(e)$, since a sparse Territory supports fewer alternatives. Then instances inside a habitat draw little monitoring and are mostly repaired by control. Instances at the frontier draw much monitoring and are more often repaired by remap. Familiar surroundings fade by Result 1.6, and unfamiliar ones hold allocation.
+
 ## 6. Identification
 
 $$\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e), \qquad \text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e). \tag{12}$$
@@ -164,4 +172,4 @@ The picture is an illustration. Curvature is not computed from data anywhere in 
 
 ## 8. Open
 
-The forms of $f$ and $h$. The rationing rule (5). The form of $\bar{d}_e$ as a function of $\vartheta$ and of the time since $e$ was last checked, of which (A1) fixes only the sign. The relation of $B$ to the navigation budget of the companion report. The value of $\tau$, which Paper 4 estimates.
+The forms of $f$ and $h$. The rationing rule (5). The form of $\bar{d}_e$ as a function of $\vartheta$ and of the time since $e$ was last checked, of which (A1) and (A2) fix only signs. The relation of $B$ to the navigation budget of the companion report. The value of $\tau$, which Paper 4 estimates.

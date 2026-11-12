@@ -23,6 +23,7 @@ Headline contribution: an account of how a cognitive agent arrives at a dynamic 
 - Claim: unsurveyable is literal. The agent cannot stand above the search space and inspect it.
 - Claim: intractability is the reason. Arranging even a few options in an order, when they interact, yields more arrangements than any agent can enumerate.
 - Consequence: exhaustive search gives way to local search on local information.
+- Claim: intractability acts at each translation. It makes sampling parochial, compression lossy, and navigation a linear sequence of local steps. Each is an economy under the same resource constraint.
 - Claim: navigation is the mediation of local steps under a global goal. The goal may be loose.
 - Support: territory alone gives paralysis (Buridan). Map alone gives hallucination.
 - Kernel: search space, intractability condition.

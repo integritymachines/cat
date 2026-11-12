@@ -1,6 +1,6 @@
 # LSMN Kernel
 
-Version 0.7, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
+Version 0.8, 12 November 2026. One kernel for Papers 1 to 4. [assumed]: proposed, not ruled. [open]: form not fixed.
 
 Rule: one meaning per symbol. Every symbol is in the registry. A case pair denotes related objects only: $(O, o)$, $(C, c)$, $(G, g)$, $(w, \mathcal{W})$, $(X, x)$. Regimes, results and tests carry words or section numbers, never single letters.
 
@@ -10,7 +10,7 @@ Rule: one meaning per symbol. Every symbol is in the registry. A case pair denot
 |---|---|
 | $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape, Territory, Map, Navigation |
 | $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, policy trajectory $\mathcal{M} \to \mathcal{N}$ |
-| $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, measure |
+| $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, sampling density |
 | $K_M, V_M, m, E_M, e, G, \partial_1, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, edge (instance), edge weights, incidence, metric |
 | $\Delta_i$ | Hodge Laplacian of degree $i$ on $K_M$ |
 | $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector of $m$ or $z$, all-ones vector |
@@ -45,6 +45,16 @@ $\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xri
 
 $\pi: V_S \twoheadrightarrow V_M$, non-injective. $\gamma = (m_0, m_1, \dots)$, finite, toward $\zeta$, $\mathbf{1}^\top \zeta = 0$. Cognitive agent: $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$.
 
+$\mu_S$ is multimodal, with modes of different heights. The modes are the habitats. $\lvert V_S \rvert \ll \lvert \mathcal{L} \rvert$. For an instance, $\mu_S(e) := \sum_{z \in \pi^{-1}(e)} \mu_S(z)$.
+
+$I$ acts at each stage. Each translation is an economy under the same metabolic constraint.
+
+| Translation | $I$ forces | Discards | Imposes |
+|---|---|---|---|
+| $\sigma: \mathcal{L} \to \mathcal{S}$ | parochial sampling | most of $\mathcal{L}$ outside the habitats | the modal density $\mu_S$ |
+| $\pi: \mathcal{S} \to \mathcal{M}$ | lossy compression | distinctions | orderings |
+| $\gamma: \mathcal{M} \to \mathcal{N}$ | a linear sequence of local steps | the routes not taken | commitment |
+
 $U = I + N$, $N = (O, C, T)$.
 
 ## 1. CAT
@@ -57,7 +67,7 @@ $f$, $h$ nondecreasing, zero at zero, positive elsewhere. $f$ continuous at zero
 
 Rationing [assumed]: instances are served in descending order of $a^\circ_e$ until $B$ is spent. $0 \le a_e \le a^\circ_e$, $\sum_e a_e = \min(B, \sum_e a^\circ_e)$.
 
-Expected divergence [assumed]: $\vartheta > 0 \Rightarrow \bar{d}_e > 0$ for every $e$ not checked at the current $t$.
+Expected divergence [assumed]: $\vartheta > 0 \Rightarrow \bar{d}_e > 0$ for every $e$ not checked at the current $t$. $\bar{d}_e$ is decreasing in $\mu_S(e)$: $\mathcal{M}$ interpolates where sampling is dense and extrapolates where it is sparse.
 
 $$\text{conscious}(e) \iff a_e > 0, \qquad \text{conscious}(\text{agent}) \iff \textstyle\sum_e a_e > 0, \qquad \text{intensity}(e) = a_e$$
 
@@ -78,6 +88,8 @@ Result 1.6. $d_e = 0$ and $\bar{d}_e \to 0 \Rightarrow a_e \to 0$.
 
 Postulate 1.7. $\text{effort}(e) \equiv h_{\operatorname{reg}(e)}(q_e)$. $\text{salience}(e) \equiv f(\rho_e s_e \bar{d}_e)$. Identification, not derived.
 
+Result 1.9 [assumed]. At fixed $\rho_e s_e$, monitoring demand $f(\rho_e s_e \bar{d}_e)$ is decreasing in $\mu_S(e)$. $\Pr(\Gamma_e = \emptyset)$ is decreasing in $\mu_S(e)$. Habitats draw little allocation and repair by control. The frontier draws much and repairs by remap.
+
 Stand-in 1.8. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(y)$ stands for $s_e$. $\kappa^\ast(y) = \tau / d(y)$. $q \le \tau \iff \kappa \le \kappa^\ast$.
 
 ## 2. UNS
@@ -85,6 +97,8 @@ Stand-in 1.8. $\mathcal{M}$ smooth, $\dot{y} = -\nabla \phi(y) + w(y)$. $\kappa(
 $X$: arrangements of $k$ interacting options, $\lvert X \rvert \ge k!$. $\operatorname{val}: X \to \mathbb{R}$.
 
 $$I \iff \lim_{\lambda \to \infty} \frac{\log \nu(\mathcal{S}_\lambda)}{\dim \mathcal{M}} = \infty, \qquad I \Rightarrow x_{t+1} \in \operatorname{Nbr}(x_t)$$
+
+The condition is stated at $\pi$. $I$ acts equally at $\sigma$ and at $\gamma$ (§0.1). Its statement at those stages is [open].
 
 | | Obstruction | Degree | Agent manufactures | Ordering | Primitive |
 |---|---|---|---|---|---|
@@ -122,7 +136,7 @@ $\operatorname{lift}(\gamma \mid z_0) = 0 \Rightarrow d_e := \infty$ at the firs
 
 $$\epsilon^\ast(e) = d_e / \tau, \qquad q_e \le \tau \iff g_e \ge \epsilon^\ast(e), \qquad d_e = 0 \Rightarrow \epsilon^\ast(e) = 0 \Rightarrow \operatorname{reg}(e) = \text{drift}$$
 
-$o = 1 - \operatorname{corr}(j, j_{\mathcal{L}})$, with $j_{\mathcal{L}}$ the flow under the potential of $\mathcal{L}$ [assumed]. $\vartheta$: $\dot{d}_{\mathcal{SM}} > 0$ absent update. $\bar{d}_e$ as a function of $\vartheta$ and time since last check [open]. $c$ on $\Lambda_S$ [open]. $w$ on $K_M$ [open].
+$o = 1 - \operatorname{corr}(j, j_{\mathcal{L}})$, with $j_{\mathcal{L}}$ the flow under the potential of $\mathcal{L}$ [assumed]. $\vartheta$: $\dot{d}_{\mathcal{SM}} > 0$ absent update. $\bar{d}_e$ as a function of $\vartheta$, time since last check and $\mu_S(e)$ [open]. $c$ on $\Lambda_S$ [open]. $w$ on $K_M$ [open].
 
 Remap, signed observable at constant rank: $\frac{d}{dt} \log \operatorname{Tor} = \frac{1}{2} \sum_i (-1)^{i+1}\, i \operatorname{Tr}(\Delta_i^\dagger \dot{\Delta}_i)$. $\mathcal{W} = \int \lVert w \rVert^2 dt \ge 0$. $\log \operatorname{Tor} \ne \mathcal{W}$.
 
@@ -172,6 +186,7 @@ Refutation 4.12. Presence varies at fixed $(d_e, \rho_e s_e, \bar{d}_e)$ with $B
 | divergence | map off at $y$ | $d_e$, $\operatorname{lift} = 0$ | $\hat{d}_e$ |
 | critical level | $\kappa^\ast(y) = \tau / d(y)$ | $\epsilon^\ast(e) = d_e / \tau$ | $\hat{\tau}$, Test 4.8 |
 | alternatives | map holds another route | $\Gamma_e$ | Test 4.10 |
+| sampling | habitat and frontier | $\mu_S(e)$ | [open] |
 | allocation | $a_e$ | $a_e$ | $\operatorname{met}_e$ under 4.1 |
 | control | $w$, $\mathcal{W}$ | $w$ on $K_M$ [open] | $\mathcal{W}$ under 4.2 |
 | Opacity | $o$ | $1 - \operatorname{corr}(j, j_{\mathcal{L}})$ [assumed] | [open] |

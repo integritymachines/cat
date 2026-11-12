@@ -28,7 +28,8 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 
 - Claim: translation has four stages. Landscape, territory, map, navigation.
 - Landscape: unsurveyable reality itself. It offers options and no directions.
-- Territory: the agent's own record of what it has encountered. Internal, parochial, faithful to what was observed.
+- Territory: the agent's own record of what it has encountered. Internal and faithful to what was observed. Sampling is parochial: dense around the agent's habitats and thin elsewhere, so the territory is small compared with the landscape.
+- Claim: inside a habitat the map interpolates and is expected to hold. Outside it extrapolates and is expected to be off.
 - Map: a compression of the territory, built to be used. It supplies the orderings the territory lacks.
 - Navigation: local steps under a global goal.
 - Support: the door. The door as remembered is a map entry. The door as found is a territory entry.
