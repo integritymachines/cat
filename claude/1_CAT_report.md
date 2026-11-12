@@ -12,7 +12,7 @@ The Landscape $\mathcal{L}$ is unsurveyable reality itself. It contains the opti
 
 $$\pi: V_S \twoheadrightarrow V_M, \qquad \lvert V_M \rvert < \lvert V_S \rvert,$$
 
-and the Map carries the orderings by which the agent chooses its steps. It is the comprehensible model. Navigation $\mathcal{N}$ is a trajectory $\gamma = (m_0, m_1, \dots)$ in the Map toward a goal $\zeta$. The agent is the tuple $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$. The budget $B$ is defined in Section 2.
+and the Map carries the orderings by which the agent chooses its steps. It is the comprehensible model. Navigation $\mathcal{N}$ is carried by a policy trajectory $\gamma = (m_0, m_1, \dots)$, a sequence of local steps on the Map directed at a goal $\zeta$. The agent is the tuple $(\mathcal{S}, \mathcal{M}, \pi, \zeta, B)$. The budget $B$ is defined in Section 2.
 
 Two facts from the companion report on unsurveyability are used. Intractability $I$ acts at each of the three translations. It forces sampling to be parochial, it forces $\pi$ to be many-to-one, and it forces navigation into a linear sequence of local steps. Transience $T$ has a degree $\vartheta \ge 0$, the rate at which the search space changes.
 
