@@ -106,11 +106,11 @@ The condition is stated at $\pi$. $I$ acts equally at $\sigma$ and at $\gamma$ (
 
 | | Obstruction | Problem posed | Degree | Agent manufactures | Ordering | Primitive |
 |---|---|---|---|---|---|---|
-| $O$ | local gradient absent or unrelated to global | identification: which option serves the goal | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ [assumed] | flow $j$ | comes with (none) | relations |
-| $C$ | steps foreclose options | composition: how steps chain into an arrangement that reaches the goal | $c \in [0,1]$, cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
-| $T$ | $X$ varies in $t$ | persistence: whether the arrangement still holds while it is carried out | $\vartheta \ge 0$, rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
+| $O$ | local gradient absent or unrelated to global | identification: what is available in the immediate environment | $o = 1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val}) \in [0,1]$ [assumed] | flow $j$ | comes with (none) | relations |
+| $C$ | steps foreclose options | composition: how it connects to the overall objective | $c \in [0,1]$, cost of reversion | virtual $\gamma$ before the step | follows from (logical, negotiable) | functions |
+| $T$ | $X$ varies in $t$ | persistence: how long it will be available | $\vartheta \ge 0$, rate of change | update of $\gamma$ on divergence | follows after (temporal, non-negotiable) | dynamics |
 
-$O$, $C$ and $T$ are the dimensions in which the mediation between the global goal and the local step can be obscured. Each poses one problem that the mediation has to solve: identification, composition, persistence. A given gradient does not solve identification, since the agent still has to judge whether it is aligned with the global one. Their degrees vary with the environment and from place to place within it. Any of them can be near zero.
+$O$, $C$ and $T$ are the dimensions in which the mediation between the global goal and the local step can be obscured. Each poses one problem that the mediation has to solve: identification, composition, persistence. Their degrees vary with the environment and from place to place within it. Any of them can be near zero.
 
 Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $\beta(t) - \beta(t')$ is not restored. Information: $\dot{\iota} = -r(\vartheta)\, \iota$, $r(0) = 0$, $r$ increasing [open].
 

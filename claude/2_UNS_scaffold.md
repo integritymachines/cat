@@ -38,7 +38,7 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 ### 3.1 Opacity
 
 - Claim: the territory gives no gradient, or one unrelated to the global goal.
-- Problem posed: identification. The agent has to tell which of the options in reach serves the goal. A given gradient does not settle this, because the agent still has to judge whether it is aligned with the global one.
+- Problem posed: identification. What is available in the immediate environment.
 - Degree: how well the local gradient tracks the global one. With full tracking the obstruction reduces to noise. [assumed]
 - Support: hill climbing. It has a gradient at every point and succeeds only where local and global gradients agree. A given gradient does not remove opacity.
 - Claim: a combinatorial space differs from a continuous one in kind. It has no differentiable structure and therefore no gradient to give.
@@ -48,7 +48,7 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 ### 3.2 Contingency
 
 - Claim: physical steps foreclose options.
-- Problem posed: composition. The agent has to chain steps into an arrangement that reaches the goal, and a step that looks good alone can foreclose the arrangement.
+- Problem posed: composition. How what is available connects to the overall objective.
 - Degree: the cost of reversion, from free to impossible.
 - Support: the cul-de-sac. Short of impossible, the agent returns to the last branch point. It recovers the search space. It does not recover what it spent.
 - Answer: the agent manufactures virtual trajectories and tries them before it steps.
@@ -57,7 +57,7 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 ### 3.3 Transience
 
 - Claim: the search space changes during the search.
-- Problem posed: persistence. The agent has to keep the arrangement valid for as long as it takes to carry it out.
+- Problem posed: persistence. How long it will be available.
 - Degree: the rate of change. In an unchanging space backtracking costs only resources. In a changing one the agent also loses information it had gathered.
 - Answer: the agent updates its trajectory on observed divergences.
 - Ordering assigned: follows after. Temporal and non-negotiable.
