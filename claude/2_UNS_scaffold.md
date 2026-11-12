@@ -71,7 +71,8 @@ Lead: the obstructions a navigating agent can meet. They are the dimensions in w
 ## 4. Conjectures (1.5 pages)
 
 - Claim: the three answers form one cycle. The agent invests in a gradient, tries routes along it virtually, steps, and corrects. Conjectures fail in place of the agent (Popper).
-- Claim: the obstructions are not independent. [assumed] Where the gradient is reliable, foreclosure costs nothing, so contingency binds in proportion to opacity. Without a committed trajectory, change costs nothing.
+- Claim: modal sampling inside a habitat serves to reduce opacity. The correlation between local signal and global path is established by experience, and experience is dense there.
+- Claim: the obstructions are not independent. Where the gradient is reliable, foreclosure costs nothing, so contingency binds in proportion to opacity. Without a committed trajectory, change costs nothing.
 - Claim: the unit of navigation is the trajectory. Error compounds along a path of dependent steps.
 - Kernel: coupling, cycle.
 - Depends on: Section 3.

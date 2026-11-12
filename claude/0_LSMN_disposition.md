@@ -17,7 +17,8 @@ Concepts introduced in the notes for Papers 3 and 4 and in "Adaptive Recalibrati
 | Torsion as control work | notes 3, 4 | revised | Signed observable of map change |
 | Navigational budgets | note 3 | revised | Kernel §2, indexed by obstruction |
 | Economic viability condition, motility | note 3 | not carried | |
-| Envelope of assured navigation, confidence, microbacktracking | notes 3, 4, recalibration note | not carried | Drift now covers in-flight repair |
+| Envelope of assured navigation, confidence, microbacktracking | notes 3, 4, recalibration note | kept by ruling | To enter. Needed for the dark-room objection to free energy accounts |
+| Unconstrained transport distance, economic viability condition | note 3 | kept by ruling | To enter in Paper 3 |
 | Four propositions | note 3 | removed | By the ruling on theorems |
 | Dual-echo inequality | note 4 | not carried | It rested on torsion as control work |
 | Control conversion efficiency | note 4 | kept | Kernel §4 |
@@ -40,14 +41,14 @@ Concepts introduced in the notes for Papers 3 and 4 and in "Adaptive Recalibrati
 | Four dimensions and causal hierarchy (§2) | restates Paper 2 inside Paper 1 | not carried | Scaffold has only a pointer to Paper 2. Restate briefly in Section 2? |
 | Unsurveyability condition (eq. 2) | formal statement of intractability | moved | Paper 2, kernel §2 |
 | Metric decay equation (eq. 3) | formal statement of transience | proposed removal | The equation is asserted and has no derivation |
-| Fisher information metric, natural gradient (§3.1) | ties the map's geometry to what the agent can discriminate | not carried | Dropped from the stand-in while clearing a symbol collision. Proposal: restore in Section 5 |
+| Fisher information metric, natural gradient (§3.1) | ties the map's geometry to what the agent can discriminate | restored by ruling | Section 5 |
 | Curvature, singularities, saddles (§3.2) | where the continuous map misrepresents combinatorial structure | kept | Section 5 |
 | JND relation (eq. 6) | links curvature to perceptual sensitivity | proposed removal | The relation holds for the metric and not for curvature |
 | Three regimes on one threshold (§3.3) | partitions behavior | revised | Section 4. Two tests, critical level depends on divergence |
 | Control cost (eq. 11) | effort as integrated control | kept | Section 5, as control work |
 | Instability measure (eq. 12) | richness of experience | proposed removal | No counterpart in the kernel |
 | Why consciousness here (§3.5) | three convergences: phenomenology, signatures, functional necessity | not carried | Candidate for Section 6 or 9 |
-| The hard problem dissolved (§4.1, 4.2) | claims the explanatory gap closes | proposed revision | Section 6 states an identification and does not claim a dissolution |
+| The hard problem dissolved (§4.1, 4.2) | claims the explanatory gap closes | revised by ruling | Section 6. Not dissolved. Consciousness is a work effort and leaves traces observable from without |
 | Effort, salience, meaning (§4.2) | three felt qualities mapped to geometry | partly carried | Effort and salience are in the kernel. Meaning is not carried |
 | Why qualia differ (§4.3) | differences in experience follow differences in embedding | kept | Section 6, brief |
 | No separate substance, temperature analogy, distributed cognition (§4.4) | places consciousness among emergent quantities | proposed removal | |
@@ -71,7 +72,7 @@ Concepts introduced in the notes for Papers 3 and 4 and in "Adaptive Recalibrati
 | Territory as most faithful formal approximation | defines the territory | revised | The agent's record of encounters, presented as combinatorial |
 | Map as compressed, gradient-supplying | defines the map | kept | Sections 2, 3.1, presented as continuous |
 | Intractable and intransigent against tractable and transigent | names the opposition of the two models | partly carried | Intransigence is kept. "Transigent" is not carried |
-| Parsimony as the most faithful searchable representation | names the target between the two models | not carried | Candidate for Section 5, next to satisficing |
+| Parsimony as the most faithful searchable representation | names the target between the two models | restored by ruling | Section 5, next to satisficing |
 | Paralysis and hallucination (Buridan) | shows neither model suffices alone | kept | Section 2 |
 | "The map proposes, the territory disposes" | slogan for the friction | not carried | |
 | Definitions 1 to 4 | the four dimensions | revised | Sections 2, 3. Degrees added |

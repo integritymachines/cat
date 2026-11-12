@@ -116,7 +116,9 @@ Resolution of $O$: establish that the local signal correlates with the global pa
 
 Reversion at $c < 1$ from $t$ to $t' < t$: $\Omega_t \leftarrow \Omega_{t'}$. $\beta(t) - \beta(t')$ is not restored. Information: $\dot{\iota} = -r(\vartheta)\, \iota$, $r(0) = 0$, $r$ increasing [open].
 
-Coupling [assumed]: $\ell_C = \ell_C(o \cdot c)$, $\ell_C(0) = 0$. $\ell_T = \ell_T(\vartheta, \lvert \gamma \rvert)$, $\ell_T(0, \cdot) = \ell_T(\cdot, 0) = 0$. Both increasing.
+Opacity and sampling: $o$ is lower where $\mu_S$ is high. Modal sampling inside a habitat serves to reduce opacity.
+
+Coupling: $\ell_C = \ell_C(o \cdot c)$, $\ell_C(0) = 0$. $\ell_T = \ell_T(\vartheta, \lvert \gamma \rvert)$, $\ell_T(0, \cdot) = \ell_T(\cdot, 0) = 0$. Both increasing.
 
 Cycle: $j \to \gamma \to \text{step} \to \text{update}$.
 

@@ -79,9 +79,10 @@ Shorthand, not a definition: adaptive recalibration in runtime.
 
 ## 6. Experience (1 page)
 
-- Claim: the theory identifies felt effort with the cost of repair and salience with the allocation an instance receives before any divergence.
-- Claim: this is an identification. The paper states it as a commitment and does not derive it.
-- Claim: experiences differ because the maps involved differ. Brief.
+- Claim: the paper does not dissolve the hard problem. The hard problem is right that scientific inquiry regularizes observations from without and can only triangulate a purely subjective experience within.
+- Claim: where this theory differs is that it does not treat consciousness as an inherent property. It treats it as a work effort. Work leaves physical traces, and those can be observed from without.
+- Claim: the same stimulus yields different experiences because it meets differently evolved manifolds. The same lamp trained on the same object casts different shadows on surfaces of different texture.
+- Claim: felt effort follows the cost of repair, and salience follows the allocation an instance receives before any divergence.
 - Support: effort without progress, and progress without effort, read as cases of the allocation rule.
 - Kernel: Postulate 1.7.
 - Depends on: Sections 3 and 4.
