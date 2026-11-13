@@ -670,3 +670,92 @@ Claude. The authors ruled on this response the same day, and the rulings are mar
 Deferred: the benches are specified in the reports. Running them requires code, which lies outside the scope of the reports.
 
 One remaining point for the next round. Abandonment of a goal is now the endpoint when remap fails within budget. The drafts give it no cost and no criterion. Whether abandonment belongs to the regime table or to the viability criterion of §3 is open.
+
+---
+
+## Review round 3 — Operational consistency before paper drafting
+
+**Reviewer, 13 November 2026.** Response to the drafting side's adopted round 2, checked against kernel 0.14, Paper 3 report 0.4, and Paper 4 report 0.4. **Status:** recommendations for author disposition; none is an author ruling. The author already knows the editorial register. This round addresses **substance only** and does not reopen the decision to use combinatorial territory, continuous map, Fisher geometry and curvature as conceptual synecdoches.
+
+The revised reports now provide a satisfactory basis for drafting full papers. The concerns below are localized at the interface between **declared regimes, the actual controller, and measurable expenditure**. They should be resolved in the finite-system realization so that the paper does not implicitly claim more than its operators do.
+
+### R3.1 A faithful but fragile route need not produce nonzero control (P0)
+
+**Location:** Paper 3, “Regimes” and Bench H; kernel §§1, 3; Paper 4, Tests 4.3 and 4.6.
+
+The round-2 response correctly repaired the false remap of the faithful three-node path by including the current route in $\Gamma_B$. That repairs the **choice between remap and non-remap**. It does not, on its own, establish the formal mechanism of **control**.
+
+In Bench H, $\lambda_\zeta=g<\epsilon^\ast$ and the unique route lifts. Under the present regime table the agent engages control, $w\ne0$, and “carefully executes” the same route, followed by reconciliation of $G$. Yet the environment can be deterministic, stationary and fully represented; there is no failed lift, no route to replace and no necessary update of $G$. If $w$ means a *flow correction*, exactly what does the controller change? Caution or monitoring may require computation and metabolic allocation, but these are not automatically a nonzero correction to $j$.
+
+This matters more than nomenclature. Paper 4 predicts a change in control expenditure at the task-gap threshold. A thresholded **label** does not produce expenditure unless the controller has a specified action that consumes it.
+
+**Action proposed.** Declare which of the following the model intends, then instantiate it in Bench H:
+
+- **Stabilization:** $w$ implements explicit feedback against a stated class of perturbations; give the perturbation, baseline policy, controlled policy and incremental cost. A route may be faithful yet difficult to stabilize.
+- **Deliberation/verification:** control includes computational inspection of the current route, even if physical flow remains unchanged. If so, represent verification expenditure as $B_F$ or a distinct controller term instead of forcing $w\ne0$.
+- **Conditional control:** $\lambda_\zeta\le\epsilon^\ast$ raises a request for verification or stabilization, but a nonzero intervention occurs only if its expected benefit exceeds its cost. This separates a trigger from a physical correction.
+
+**Acceptance check:** run Bench H twice, once with a perfectly known, noiseless execution process and once with a specified reliability perturbation. Report what the controller does, the resulting route, and each cost component. The regime and the asserted cost should follow from those operations rather than being supplied by the threshold definition. Preserve the authors' decision that difficult, hazardous navigation **can** warrant control; the question is its mechanism.
+
+### R3.2 A failed execution is evidence, not necessarily deletion (P0)
+
+**Location:** Paper 3, “Composition” and Bench J; kernel §3.
+
+The current text states that a failed execution “removes the failed transition from $\Lambda_S$.” This is correct only under additional assumptions, for example a deterministic environment with verified edge absence and error-free action execution. A failed attempt can instead arise from actuator error, transient blockage, stochastic transitions, a state-estimation mistake or an obsolete record. These cases are central to contingency and transience.
+
+Deleting a transition on the first failure can create false zero lifts and drive premature remapping. In Bench J, repeated failure empties $\Gamma_B$ by construction if every failure deletes an edge, irrespective of whether any transition is actually unavailable. This makes the purported robustness of the revised classifier too dependent on the evidence-update convention.
+
+**Action proposed.** Make the update rule conditional:
+
+1. Record the attempted transition, actual observation, execution confidence and known failure modes.
+2. Remove an edge from a deterministic $\Lambda_S$ **only after a stipulated certificate of structural unavailability**. Otherwise reduce confidence, attach a temporal qualification, or update a probabilistic transition model.
+3. Distinguish **failed physical execution** from **falsified structural support**.
+4. Extend Bench J to include both a permanently invalidated edge and a reliable edge with intermittent execution failures. Require different posterior support or different decisions.
+
+The existing deterministic binary lift remains useful; it needs a declared domain. Probabilistic lift can stay open for the full paper, but the current report must not make irreversible deletion a universal learning rule.
+
+### R3.3 A torsion–work lower bound requires more than excluding passive drift (P0)
+
+**Location:** Kernel §4; Paper 4, Postulate 4.2 and Test 4.6; Paper 3, “Persistence” and “Regimes”.
+
+The authors accepted the restriction of the work bound to controller-induced changes:
+
+$$\mathcal W\ge c_0\left|\Delta_{\mathrm{ctrl}}\log\operatorname{Tor}\right|,\qquad c_0>0.$$
+
+That settles the earlier counterexample involving passive drift. It does **not** guarantee compatibility with the unspecified cost of the controller's own representation updates.
+
+The paper's own triangle, with $G=\operatorname{diag}(1,1,g)$, has
+
+$$\log\operatorname{Tor}(g)=\tfrac12\log[3(1+2g)],\qquad
+\log\operatorname{Tor}(1+\delta)-\log\operatorname{Tor}(1)=\delta/3+O(\delta^2).$$
+
+Suppose the controller changes only the weight $g$ and its update expenditure is quadratic, $C_{\mathrm{update}}(\delta)=k\delta^2$, as occurs in many local quadratic control penalties. There need be no additional flow correction. For any fixed $c_0>0$, the proposed bound fails at sufficiently small nonzero $\delta$: its right side is first order while expenditure is second order.
+
+The point is conditional: **the paper has not yet chosen the update-cost functional**, so it has not established a contradiction with its finalized model. It has established an obligation to choose a cost functional whose asymptotics can support the postulate, or to delimit the postulate's domain.
+
+**Action proposed.** Before Paper 4 uses Postulate 4.2 as a quantitative test, do one of the following:
+
+- Define a nonnegative update-cost term with a demonstrable first-order lower bound for controller-induced changes in $\log\operatorname{Tor}$, with a calibrated common unit; or
+- Restrict the postulate to a specified class/minimum scale of discrete update operations; or
+- Test a quadratic inequality such as $\mathcal W\ge c|\Delta_{\mathrm{ctrl}}\log\operatorname{Tor}|^2$ on a stated bounded domain, if compatible with the final control functional; or
+- Keep torsion as a prospective predictor and abandon a universal lower bound.
+
+**Acceptance check:** use the same graph under a sequence of updates $\delta\to0$, with the chosen controller and full cost accounting. Report $\mathcal W(\delta)$ and the torsion shift. Check whether one **fixed positive** $c_0$ works over the declared domain. Do not estimate a new $c_0$ separately for each update.
+
+### R3.4 Goal abandonment and budget infeasibility (P1)
+
+**Location:** Author response to round 2; Paper 3, “Regimes,” “Envelope,” “Viability”; Paper 4, “Design”.
+
+The drafting side identifies goal abandonment after failed remapping as open. The problem is slightly broader: an empty acceptable set $\Gamma_B$ can mean either **no adequately represented route** or **an adequately represented route whose execution cost exceeds the remaining budget**. These are different reasons to stop. A map change is not always the economically relevant next action.
+
+**Action proposed.** Treat abandonment, postponement or changing the objective as a **meta-policy outcome** rather than adding an ad hoc fourth translation regime. Keep drift, control and remap as the modes of mediation. Introduce a budgeted decision to continue, remap, postpone or abandon, using the expected value of the goal, risk and remaining resources. This makes the regime classification orthogonal to whether the goal is pursued.
+
+**Acceptance check:** add two finite cases with the same faithful territory and map and different remaining budgets. The agent should be able to abandon or defer a goal without asserting a representation defect. Conversely, an invalid representation with enough resources should remain eligible for remap.
+
+### R3.5 Disposition and handoff
+
+These are **four bounded issues**, not a request for another global reconstruction. The explanatory-obligations bridge, the retained Fisher illustration, the separate lower-bound paper and the empirical scope of Paper 4 remain settled.
+
+For the next drafting-side response, give each item **accept / modify / reject / defer** and identify the precise model assumption or counterexample used to decide. Where an implementation is deferred, label it explicitly and avoid saying that the bench **passed** unless its test was executed or analytically established under fully specified assumptions.
+
+The paper stage can begin with these items open, provided the drafts retain their conditional status. The most valuable next technical deliverable is a **small, executable controller and cost model** that distinguishes threshold detection, verification, correction, map revision and task abandonment. That model would convert several current stipulations into independently checkable relationships.
