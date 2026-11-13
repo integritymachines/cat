@@ -1,6 +1,6 @@
 # Consciousness as Translation
 
-Report, draft 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates of the kernel, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in the kernel registry.
+Report, draft 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates listed in the disposition ledger, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in `0_LSMN_notation.md`.
 
 *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 

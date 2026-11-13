@@ -2,7 +2,7 @@
 
 Version 0.6, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1.
 
-The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the kernel), or **Rev** (a correction adopted from rounds 1 and 2 of the review protocol). Nothing else is added. Claim types as in the kernel: (def), (thm), (post), (hyp), (ill).
+The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the disposition ledger), or **Rev** (a correction adopted from rounds 1 and 2 of the review protocol). Nothing else is added. Claim types as in `0_LSMN_notation.md`: (def), (thm), (post), (hyp), (ill).
 
 Epigraph (2025, original punctuation): *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 

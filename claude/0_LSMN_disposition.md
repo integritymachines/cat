@@ -99,7 +99,7 @@ Changes adopted from `0_LSMN_review.md` under the authors' rulings of the same d
 
 | Element | Status | Now |
 |---|---|---|
-| Motility, lower bound, dreaming test, taxa table, LLM placement in Paper 4 | moved by ruling | Separate paper. Parked in kernel §6. Removed from Paper 4 |
+| Motility, lower bound, dreaming test, taxa table, LLM placement in Paper 4 | moved by ruling | Separate paper. Parked in this ledger, section "Parked for the separate paper". Removed from Paper 4 |
 | Curvature in Papers 1, 2 | kept by ruling | Labeled synecdoche (ill). Stands for discriminability, distortion, aliasing, sensitivity |
 | JND proportional to curvature to the power minus one half | withdrawn | JND tied to the Fisher metric in a direction |
 | Metric decay by Ricci flow | revised | Kept as illustration, one chosen picture of decay |
@@ -140,3 +140,28 @@ Changes adopted from round 2 of `0_LSMN_review.md` under the authors' rulings of
 | Control work on the map | revised | Controller expenditure: flow correction plus the controller's own updates |
 | Bench | extended | H, I, J and a Fisher bench |
 | Fisher in Paper 4 | revised | Predictive contribution and explanatory sufficiency kept apart |
+
+## Updates to the 2025 papers
+
+Moved here from the kernel in version 0.15. Numbered for reference in the scaffolds. All ruled.
+
+1. Chain of four stages. $\mathcal{S}$ is the agent's own model, sampled parochially.
+2. Headline: to navigate an unsurveyable reality, a cognitive agent maintains, and mediates between, two models, one comprehensive ($\mathcal{S}$) and one comprehensible ($\mathcal{M}$). Consciousness arises out of that mediation and the need to allocate metabolic resources to keep the two aligned.
+3. Consciousness is graded and present throughout wake: a baseline plus surges.
+4. Control and remap are separated by whether an acceptable supported route, the current one included, is found within budget (hyp).
+5. The hard problem is not dissolved.
+6. Papers 1 and 2 develop conceptual synecdoches as stand-ins. Paper 3 supplies computable candidates for the mechanisms they explain. The correspondence is partial and lossy, and Paper 3 states what is lost. Operational realizations preserve the explanatory obligations of the stand-ins and need not reproduce their geometry. Compression is performed by $\pi$. The Fisher metric illustrates discriminability within the resulting map.
+7. $\mathcal{E}$ includes control. Current LLMs are below the bound.
+8. The prose tropes of the 2025 text are removed.
+
+Placement: virtual testing of routes (Popper) belongs to control in Paper 1 and to contingency in Paper 2.
+
+## Parked for the separate paper
+
+Moved here from kernel §6 in version 0.15. Not part of Papers 1 to 4 [ruled].
+
+A conjecturing engine pays only under the viability criterion of Paper 3. Motility and sessility give the first dividing line: the combinatorial explosion of changing environments. A sessile agent can produce physical conjectures (literal branch and bound). A motile agent has to produce virtual ones, which requires a metabolically costly central conjecturing engine. The two models sit downstream of that need. Boundary test, all three required: (i) compression $\pi$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, (ii) a discontinuity measurable from without at a critical limit, (iii) offline conjecturing in high-intensity REM, $\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}}$. Dreaming is the enactment of far-fetched, potentially lethal conjectures under physical incapacitation. Only organisms that dream can be conscious [ruled]. Comparative placement across taxa and of LLMs: summary report on the lower bound, unchecked.
+
+## Kernel 0.15, 14 November 2026
+
+The kernel is reduced to the contribution in its densest form. Symbols, tags and claim types moved to `0_LSMN_notation.md`. The update list and the parked material moved to this ledger. Bench, adequacy tests, design, worked case and the translation-loss register remain in the Paper 3 and Paper 4 reports. No content was dropped.

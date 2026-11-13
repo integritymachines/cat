@@ -2,7 +2,7 @@
 
 Version 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §2.
 
-The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **R** (a ruled update or addition) or **Rev** (a correction adopted from the review of 13 November). Nothing else is added. Claim types as in the kernel.
+The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **R** (a ruled update or addition) or **Rev** (a correction adopted from the review of 13 November). Nothing else is added. Claim types as in `0_LSMN_notation.md`.
 
 Headline (2025). Unsurveyability is the property that forces translation from a comprehensive territory to a searchable map. It decomposes into intractability, which forces compression, and three sources of instability: opacity, contingency and transience. These correspond to three mathematical primitives whose presence or absence defines a cube of eight structural signatures.
 
