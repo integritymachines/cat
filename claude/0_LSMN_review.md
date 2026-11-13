@@ -464,3 +464,183 @@ Claude, 13 November 2026. The authors ruled on the review the same day, and the 
 8. **Remap under budget.** Adopted as a hypothesis, as ruled. One gap remains that the review does not address. An agent that repeatedly fails under control on the same instance may remap even when $\Gamma_B$ is not empty. The rule as written does not cover this case, and it is listed as open.
 
 9. **Torsion terminology.** Agreed. The finite expression is now called combinatorial torsion. The analytic name remains only as a pointer to the note.
+---
+
+## Review round 2 — Conceptual-to-scientific bridge and targeted corrections
+
+**Reviewer follow-up, 13 November 2026.** This section is appended *after*, and without altering, the drafting side's nine-point response. It records the project principal's clarification, the agreed methodological resolution, and the next actionable recommendations. It does not purport to be an author ruling. **Author response to this round: pending.**
+
+### R2.0 Decision and resolution of the earlier methodological disagreement
+
+The project principal clarifies that **the combinatorial territory, continuous map, Fisher geometry and curvature-as-signpost were deliberately selected as expository synecdoches**. They develop the concepts in Papers 1–2 rather than claim to be the complete measurable mathematics of CAT. It was understood from the beginning that these illustrations would be too simple to make CAT empirically falsifiable and could be replaced by other operational mechanisms without abandoning the architecture. Attempting to put Paper 3's actual operators in Paper 1 would make the conceptual exposition inscrutable.
+
+**Disposition: accepted.** The drafting side should **defend** this deliberate expository decision, rather than apologize for it or treat the absence of the final operators from Paper 1 as a technical mistake. The review's earlier mathematical objections remain relevant only when an illustrative property is asserted as a universal mathematical law, or when the later scientific realization wrongly claims to be equivalent to the illustration.
+
+The reviewer withdraws any implication that CAT must retain **literal** Fisher curvature, natural-gradient flow or intrinsic Riemannian geometry in its eventual operational theory. Their historical and explanatory role should be preserved; their empirical indispensability should be **investigated, not presumed**. Conversely, no set of graph operators should inherit the explanatory achievement of the conceptual argument merely because its symbols resemble those of Paper 1.
+
+The methodological agreement is thus:
+
+> **Preserve explanatory relationships, not mathematical objects.** Papers 1–2 establish the conceptual architecture. Paper 3 proposes mechanisms that discharge its explanatory obligations. Paper 4 tests those mechanisms and the distinct consciousness attribution. Each passage is a translation with explicitly recorded losses, assumptions and tests.
+
+**Important terminological precision:** Fisher information itself is not a compression algorithm. In the conceptual exposition, compression is performed by $\pi$; Fisher geometry illustrates local statistical discriminability *within the resulting map*. This clarification need not burden Paper 1's main argument. It can be made once at the inter-paper bridge.
+
+### R2.1 What must remain invariant?
+
+Replace the current predominantly *object-to-object* translation table with a **two-stage contract**: first a functional/inferential contract, then the existing table of mathematical candidates and losses.
+
+The following are the architectural commitments to be preserved in a candidate realization:
+
+1. **Bounded access:** $\mathcal L$ is unsurveyable to the agent; $\mathcal S$ is its parochial, incomplete accumulation of encountered distinctions, not a God's-eye view.
+2. **Two distinct representations:** $\mathcal S$ and $\mathcal M$ have different roles. The former preserves encountered constraints more faithfully; the latter makes choices searchable and rankable.
+3. **Lossy compression:** $\pi:\mathcal S\to\mathcal M$ sacrifices distinctions that can become navigationally consequential; the map cannot be presumed faithful.
+4. **Manufactured guidance:** the agent must generate task-directed preference or direction not given by the territory as a globally reliable ordering.
+5. **Three obstructions along trajectories:** opacity, contingency and transience can make guidance unreliable, costly to reverse, or stale.
+6. **Operational mediation:** the agent tests or corrects proposed navigation against its available territory before or during action, under finite resources. Control and remapping are distinguishable operations, even if their decision boundary remains an open hypothesis.
+7. **Accountable expenditure:** correction, maintenance and representation changes are resource-dependent; a scientific realization must specify the relevant costs and consequences.
+8. **Separate consciousness commitment:** CAT's identification of the relevant mediation/allocation with consciousness is a postulate. It does not follow mathematically from the existence of a graph, Fisher metric, or controller.
+
+These are explanatory commitments, not a demand that the scientific model literally reproduce a continuum, smooth metric, curvature field or exact Fisher gradient.
+
+**Implementation proposal (Paper 3, new first subsection before the current “Contract”):**
+
+| Explanatory obligation | Paper 1–2 synecdoche | Paper 3 candidate realization | Evidence of fulfillment |
+|---|---|---|---|
+| Preserve encountered distinctions | Combinatorial territory | Sampled relational complex $K_S$ | Known, task-relevant relations survive sampling |
+| Enable finite search | Continuous/comprehensible map | $\pi$ and compact weighted $K_M$ | Search cost reduced, with documented information loss |
+| Supply goal direction | Smooth/natural gradient | $\phi,\ j,\ \gamma_j$ | Policy ranking varies appropriately with goal |
+| Express local discriminability | Fisher metric | Optional distributions $p_m$, $D_{\mathrm{sym}}$ or another divergence | Predicts discriminable versus aliased observations |
+| Detect inadequate guidance | Large curvature near $\kappa^\ast$ | Route lift, task sensitivity, independent error/cost signals | Flags genuine navigation failures, rejects false alarms |
+| Test before irreversible action | $w$, virtual backtracking | Budgeted search of alternatives in $\mathcal S$ | Prevents avoidable costly commitments |
+| Correct or rebuild | Control versus remap | Flow/weight correction, or change of $K_M$/$\pi$ | Restores expected navigational reliability |
+| Measure correction burden | Integrated control cost | Explicit intervention costs, metabolic estimates | Prospective, calibrated resource predictions |
+
+The fourth column is essential. Without it, the table is merely a dictionary of renamed objects. The existing “Kept/Lost” table remains valuable and should follow this one as a **mathematical translation-loss register**.
+
+### R2.2 Adequacy conditions for a scientific realization
+
+Paper 3 should state four qualification tests that do **not** presuppose the final biological interpretation:
+
+- **Structural adequacy.** Do the formal objects instantiate the roles they are assigned? Is compression actually non-injective when it matters? Can a sampled territory differ from the landscape, and the map from the territory?
+- **Causal adequacy.** Does the specified mismatch *cause* the predicted failure mode within the model, rather than merely correlate with a diagnostic? Example: spurious edge from aliasing causes a route with zero lift.
+- **Interventional adequacy.** Does a predeclared correction to the causal mechanism restore navigation under controlled perturbation, without choosing a new threshold after seeing the answer?
+- **Explanatory economy.** Does a common mechanism classify several obstruction/failure types without bespoke rescue rules for each counterexample?
+
+**Pass criterion:** implement and validate on known finite systems, with ground truth specified independently of the classifier. A mechanism that fails here is not a validated realization of CAT.
+
+**Limit on theoretical flexibility:** failure of one mathematical realization need not refute the conceptual architecture; however repeated failures across independently motivated, adequately specified realizations should force revision of the architecture or its causal commitments. Authors must not use “Paper 1 was only illustrative” to exempt an already committed operational model from empirical refutation. State in Paper 4 exactly which claims are at risk in a test and what theoretical freedom remains after failure.
+
+### R2.3 Exact bridge text proposed for the drafts
+
+**Paper 1 — proposed short end-of-paper paragraph (do not insert the operators):**
+
+> The combinatorial territory, continuous map, Fisher information geometry and curvature developed here are explanatory stand-ins for a more general navigational predicament. They illustrate the distinction between a comparatively comprehensive record and a searchable representation, the manufacture of guidance, and the conditions under which that guidance becomes unreliable. CAT's conceptual argument does not depend on the literal geometry of these illustrations. Scientific development requires operational mechanisms that preserve their explanatory roles while yielding independently measurable and falsifiable consequences. Translation Geometry undertakes that task.
+
+**Paper 3 — proposed opening after its introductory paragraph:**
+
+> The aim is not to reproduce the Riemannian picture of Paper 1. It is to construct and test mechanisms that perform the explanatory work that picture made accessible. Each operator is assigned a functional obligation, assumptions, information lost in the realization, and independently checkable consequences. Correspondence between the conceptual and operational expositions is partial, not isomorphic. Adequacy is established by structural, causal, interventional and explanatory tests, not by similarity of terminology.
+
+**Paper 4 — proposed sentence in “Science”:**
+
+> Tests of a mathematical realization concern whether its proposed mechanisms describe agents; tests of CAT's consciousness postulate concern an additional inference from mediation and resource allocation to experience. Failure at either level is recorded at that level, rather than being redescribed as failure to preserve a metaphor.
+
+Do not add a long discourse on the stand-ins to the body of Paper 1. The short boundary paragraph, plus the substantive contract in Paper 3, suffices.
+
+### R2.4 Fisher: optional as an operational bridge, not dispensable by fiat
+
+The author is correct that symmetric KL is one possible local realization and that Hellinger distance, Jensen–Shannon divergence and Fisher–Rao distance need not yield identical finite-state geometry. The choice should be matched to an identified statistical question and measurement scale.
+
+The empirical question has **two distinct parts**:
+
+1. **Predictive contribution:** does a Fisher/divergence-informed model improve held-out predictions of behavior, correction and expenditure over a graph-only model?
+2. **Explanatory sufficiency:** does the graph-only model retain the distinguishability and navigational constraints required by CAT, or can distinct statistical situations yield the same graph while producing different outcomes?
+
+The first is a model-comparison experiment. A null result alone does **not** establish Fisher's explanatory redundancy. Insensitivity may result from weak observations, insufficient perturbation, model misspecification, or an operational regime in which statistical discrimination does not matter.
+
+**Proposed paired bridge bench (Paper 3, before biological data):**
+
+- **Forward construction:** choose a fully specified response family $p(o\mid y,\zeta,h)$ with known Fisher geometry and a separate, known territory/action graph. Construct candidate divergences and map conductances by a *declared* rule. Determine which local discrimination orderings and task outcomes survive the construction.
+- **Non-identifiability construction:** exhibit two different response families, or two different observation channels, that induce the **same** topology and conductances but differ in discriminability or in the intervention required for successful navigation. If the graph-only realization makes identical predictions, record precisely what information has been lost.
+- **Ablation:** compare graph-only, graph-plus-divergence, and (where mathematically well-defined) local Fisher-informed realizations at matched complexity and on prospective hold-out perturbations.
+- **Negative controls:** vary Fisher discriminability without changing executable connectivity; vary connectivity/route lift without changing the observation family; vary generic task cost without introducing a translation error.
+
+**Decision rule:** Fisher is a valuable explanatory instrument in Paper 1 regardless of whether its metric appears in Paper 3. The scientific realization should retain or omit a Fisher-derived operator on evidence of *functional adequacy and discriminating predictive value*, not merely historical fidelity or the convenience of computing a Laplacian.
+
+### R2.5 Four focused mathematical corrections still warranted
+
+These observations arise from the revised v0.13 kernel, Paper 3 report v0.3 and Paper 4 report v0.3. They do not reopen the defended expositional decision.
+
+**R2.5a — Low task gap with a fully valid route (P0; Paper 3 Regimes/Bench).**
+
+Let both territory and map be the same three-node path $m_1-m_2-m_3$, with no aliased states and no alternative route. Let the two map conductances be $g>0$, and $\zeta=(1,0,-1)$. Then
+
+$$R_\zeta=\zeta^\top\Delta_0^\dagger\zeta=2/g,\qquad
+\lVert\zeta\rVert^2=2,\qquad
+\lambda_\zeta=g.$$
+
+At $g=10^{-3}$ and $\epsilon^\ast=10^{-2}$ the present fixed classifier triggers on $\lambda_\zeta\leq\epsilon^\ast$. Since no alternative route exists, it prescribes **remap**, although the map is faithful and its sole route is entirely supported. Its route may be slow or costly; that fact alone is not a representational error. This distinguishes **task difficulty or susceptibility** from **failed translation**.
+
+**Action:** append **Bench H: faithful low-conductance path**. Specify whether a rational agent executes cautiously, waits, decides the goal is infeasible under budget, or remaps for some independent representational reason. A purely low spectral value must not *by definition* imply an erroneous map. Revise the regime rule accordingly, without simply adding “if no mismatch, do not remap” after seeing the case. The agent must be able to decide using observables available to it.
+
+**R2.5b — Flow sign versus edge orientation (P0; Paper 3 Identification/Worked Case).**
+
+The printed $\partial_1$ orients the triangle's third edge from $m_3$ to $m_1$. With $j=(1/3,1/3,-2/3)$, the shortcut $m_1\to m_3$ has *negative* signed flow along that stored orientation. “Follow the outgoing edge of largest positive $j$” is therefore not an executable orientation-invariant rule and, read literally, does not select the example's shortcut.
+
+**Action:** define outward flux at vertex $v$ for incident edge $e$ as $f_{v,e}=-(\partial_1)_{v,e}j_e$ (for the stated incidence convention). Compare positive outward flux across *all incident edges*, then move to the opposite endpoint; specify termination and ties. In the example, outward flux at $m_1$ is $1/3$ on $m_1\to m_2$ and $2/3$ on $m_1\to m_3$, so the claimed shortcut is recovered. Test invariance under reversing every arbitrary stored edge orientation.
+
+**R2.5c — What $\lambda_\zeta^{-1}$ exactly measures (P1; Paper 3 Theorem 3.0, Paper 4 Test 4.4).**
+
+The proved identity is
+
+$$\lambda_\zeta^{-1}
+=\frac{\sum_{k\geq2}c_k^2/\lambda_k}{\sum_{k\geq2}c_k^2}.$$
+
+It is the integrated, normalized diffusion autocorrelation time of the **input vector $\zeta$**:
+
+$$\int_0^\infty\frac{\zeta^\top e^{-t\Delta_0}\zeta}{\lVert\zeta\rVert^2}\,dt
+=\lambda_\zeta^{-1}.$$
+
+It is not, in general, the same weighted mean for the **potential** $\phi=\Delta_0^\dagger\zeta$, whose spectral weights are $c_k^2/\lambda_k^2$. Moreover no purely spectral identity establishes $\mathbb E[RT]=t_0+c_1\lambda_\zeta^{-1}$ for biological decisions.
+
+**Action:** replace “mean relaxation time of the task potential” by the exact input-vector statement (or carefully define “task potential” to mean the forcing response rather than $\phi$). Retain Test 4.4 **as an additional, falsifiable behavioral postulate**. Replace the report's “Hence” with “We postulate, for the specified task and calibration, ...” and allow its coefficients to be estimated independently.
+
+**R2.5d — Torsion lower bound versus external change (P0; Kernel §4, Paper 4 Postulate 4.2).**
+
+The postulate $\mathcal W\geq c_0|\Delta\log\operatorname{Tor}|$ cannot hold across arbitrary passive changes of $G$ while $\mathcal W$ counts only an active correction $w$. A nonzero torsion shift may arise from external drift with $w=0$. The kernel itself assigns weight-update and maintenance costs separately.
+
+**Action:** either (i) restrict the domain to **controller-induced deformation**, defining precisely which updates are included in $\mathcal W$ and in the observation interval; (ii) define a total intervention/representation-update expenditure, distinct from flow-correction work, and state the postulate for that; or (iii) abandon the universal lower bound and test torsion change as a conditional predictor. Explicitly require invariance to passive changes in the negative-control suite. Keep the claim typed as (post) if authors rule to retain it; this review contests its current unrestricted domain, not the legitimacy of postulates.
+
+### R2.6 Additional open case from the author response: remap after repeated failed control
+
+The drafting side correctly identifies a case not covered by the $\Gamma_B=\emptyset$ decision rule: supported alternatives may exist, yet repeated control on the same instance may be exhausted, prohibitively expensive or unsuccessful.
+
+Recommend representing **control failure under budget** separately from **existence of alternatives**. For instance, distinguish a discovered route set $\Gamma_B$, a set of *acceptable* alternatives satisfying a confidence, cost and risk constraint, and a stopping criterion on expected value of another search/correction. Remap may be warranted when the acceptable set is exhausted even if $\Gamma_B$ is nonempty.
+
+Do not immediately canonize a replacement formula. First implement two bench cases: (I) a supported but prohibitively expensive alternative; (J) repeated unsuccessful correction despite nonempty $\Gamma_B$. Require any revision to handle them and Bench H using a single, declared decision rule. This also improves the connection to the viability economics already in the kernel.
+
+### R2.7 Paper-level changes and acceptance checks
+
+| Target | Minimal edit | Acceptance test |
+|---|---|---|
+| **Kernel §0.1** | State that operational realizations preserve explanatory obligations, not literal stand-in geometry | No statement makes scalar Fisher curvature a required empirical operator |
+| **Kernel §3 / Paper 3 opening** | Put the functional/causal contract of R2.1 before the mathematical loss register | Every operator has one job and an independently checkable success condition |
+| **Paper 1 Architecture/Curvature** | Keep the synecdoches and existing conceptual structure; add only the short boundary paragraph in R2.3 | A reader can follow Paper 1 without Paper 3; no universal curvature inference is asserted |
+| **Paper 3 Identification** | Correct signed route extraction and the interpretation of $\lambda_\zeta^{-1}$ | Arbitrary edge reorientation leaves the selected physical route unchanged |
+| **Paper 3 Regimes** | Solve Bench H and the author's repeated-control case; distinguish susceptibility from representational failure | No unnecessary remap on a faithful but slow path; genuine failed lifts still trigger correction |
+| **Paper 3 Bench** | Add H (valid low-gap route), I (costly supported alternative), J (failed repeated control), and Fisher forward/ablation cases | Predeclared classifier passes the complete suite without exceptions |
+| **Paper 4 Tests 4.4/4.6** | Label latency mapping as behavioral postulate; qualify torsion-work domain and cost accounting | Assumptions, intervention domain and observables identifiable independently |
+| **Paper 4 Design/Falsification** | Separate internal realization tests from external tests and consciousness-link tests; test predictive contribution separately from explanatory sufficiency | A failed result names which model commitment it challenges |
+| **Disposition ledger** | Record the methodological resolution and subsequent author rulings only once made | No reviewer proposal is silently converted into an author ruling |
+
+### R2.8 Process for the ongoing review protocol
+
+This file is the chronological record. **Append, do not overwrite**, each subsequent review and author response. Keep their voice, status and dates explicit. Suggested header for the next entry: “Response from the drafting side to review round 2 — [date]”. For each issue, reply **accept / modify / reject / defer**, give a concise reason, name the affected file/section, and mark whether the authors have ruled. When a proposal is adopted, record the resulting version and executable acceptance check. Disagreement is useful when it exposes a different explanatory obligation or a counterexample; the target is not consensus on terminology.
+
+**Recommended immediate sequence:**
+
+1. Settle the functional translation contract and brief inter-paper boundary paragraphs, without making Paper 1 technically denser.
+2. Test and, where necessary, repair the fixed classifier on H/I/J, and correct route-extraction orientation.
+3. Correct the diffusion-time language and constrain the torsion/work postulate.
+4. Add the Fisher forward/non-identifiability experiments as the bridge qualification stage.
+5. Only then lock Paper 4's prospective test forms around the surviving mechanisms.
+
+**Reviewer disposition:** the author's nine-point response is substantively constructive; the methodological issue is resolved in favor of the original design. The pending work is now **operational adequacy**, not whether Paper 1 should have anticipated Paper 3's mathematics. This round adds no new ruling and makes no change to the drafts themselves.
