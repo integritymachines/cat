@@ -1,6 +1,6 @@
 # LSMN Kernel
 
-Version 0.13, 13 November 2026. One kernel for Papers 1 to 4. Baseline: the 2025 Papers 1 and 2 and the research notes for Papers 3 and 4. Changes since 0.12 adopt the review of 13 November (`0_LSMN_review.md`) under the authors' rulings.
+Version 0.14, 13 November 2026. One kernel for Papers 1 to 4. Baseline: the 2025 Papers 1 and 2 and the research notes for Papers 3 and 4. Changes since 0.12 adopt rounds 1 and 2 of the review protocol (`0_LSMN_review.md`) under the authors' rulings.
 
 Provenance tags. [ruled]: decided by the authors. [inference]: proposed here, not ruled. [open]: form not fixed. Numbers taken from the notes are unchecked.
 
@@ -21,9 +21,10 @@ Rule: one meaning per symbol. Every symbol is in the registry. Regimes, results 
 | $\lambda_\zeta$ | task-conditioned gap $\lVert \zeta \rVert^2 / (\zeta^\top \Delta_0^\dagger \zeta)$ |
 | $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector, all-ones vector |
 | $\zeta, \phi, j, \gamma_j$ | goal vector, potential, manufactured flow, route extracted from $j$ |
+| $f_{v,e}$ | outward flux at vertex $v$ along incident edge $e$ |
 | $u, v, h$ | Hodge components of an edge chain: gradient, rotational, harmonic |
 | $\operatorname{lift}$ | lift functional |
-| $\Gamma_{\mathcal{L}}, \Gamma_{\mathcal{S}}, \Gamma_B$ | alternatives to a route supported by $\mathcal{L}$, by $\mathcal{S}$, found within budget |
+| $\Gamma_{\mathcal{L}}, \Gamma_{\mathcal{S}}, \Gamma_B$ | routes from $z_0$ to $\zeta$, the current one included: supported by $\mathcal{L}$, supported by $\mathcal{S}$, acceptable and found within budget |
 | $U, I, N$ | Unsurveyability, Intractability, Intransigence |
 | $O, C, T$ | Opacity, Contingency, Transience |
 | $R, F, D$ | relations, functions, dynamics |
@@ -34,7 +35,7 @@ Rule: one meaning per symbol. Every symbol is in the registry. Regimes, results 
 | $D_{\mathrm{sym}}(m, n)$ | symmetrized divergence between $p(\cdot \mid m)$ and $p(\cdot \mid n)$ |
 | $\kappa, \kappa^\ast$ | curvature, its critical level (Papers 1 and 2) |
 | $\epsilon^\ast, t_{\mathrm{rel}}$ | critical level of the gap (Papers 3 and 4), relaxation time |
-| $w, \mathcal{W}, \Theta$ | control field, control work over an interval, matched interval |
+| $w, \mathcal{W}, \Theta$ | control field, controller expenditure over an interval, matched interval |
 | $a, a_{\mathrm{base}}, \Delta a_e, B$ | metabolic power allocated to mediation, its waking baseline, its surge at instance $e$, budget |
 | $\eta$ | conversion efficiency |
 | $\operatorname{reg}$ | regime: drift, control or remap |
@@ -67,13 +68,15 @@ Updates to the 2025 papers [ruled], numbered for reference in the scaffolds.
 1. Chain of four stages. $\mathcal{S}$ is the agent's own model, sampled parochially.
 2. Headline: to navigate an unsurveyable reality, a cognitive agent maintains, and mediates between, two models, one comprehensive ($\mathcal{S}$) and one comprehensible ($\mathcal{M}$). Consciousness arises out of that mediation and the need to allocate metabolic resources to keep the two aligned.
 3. Consciousness is graded and present throughout wake: a baseline plus surges.
-4. Control and remap are separated by whether a supported alternative is found within budget (hyp).
+4. Control and remap are separated by whether an acceptable supported route, the current one included, is found within budget (hyp).
 5. The hard problem is not dissolved.
 6. Papers 1 and 2 develop conceptual synecdoches as stand-ins. Paper 3 supplies computable candidates for the mechanisms they explain. The correspondence is partial and lossy, and Paper 3 states what is lost.
 7. $\mathcal{E}$ includes control. Current LLMs are below the bound.
 8. The prose tropes of the 2025 text are removed.
 
 Background. Virtual testing of routes (Popper) belongs to control (§1) and to $C$ (§2). The conjecturing engine, motility, the lower bound and dreaming as offline conjecturing are the subject of a separate paper (§6) and have no place in Paper 4 [ruled].
+
+Realization [ruled]. Operational realizations preserve the explanatory obligations of the stand-ins. They need not reproduce the stand-ins' geometry, and no scalar Fisher curvature is a required empirical operator. Compression is performed by $\pi$. The Fisher metric illustrates discriminability within the resulting map.
 
 Combinatorial and continuous (ill). The central synecdoche of Papers 1 and 2. The territory is combinatorial, the map is continuous. Paper 3 gives candidates: $K_S$ (relations only) and $K_M$ (weights, potential, flow). Footnote level: reality is mixed combinatorial, and the part with aligned local and global gradients needs no translation.
 
@@ -93,15 +96,15 @@ $g_F$ measures local discriminability. It does not by itself measure distortion 
 
 $C$ appears in $\mathcal{M}$ as singularities (ill). $T$ appears as decay of the metric (ill, a chosen dynamical model): $\partial_t g_F = -2 \operatorname{Ric} + L_{\mathrm{decay}}$.
 
-**Regimes.** $\Gamma_B(\gamma)$: alternatives to $\gamma$ that reach $\zeta$ and that the agent finds within budget $B$ (def).
+**Regimes.** $\Gamma_B$: routes to $\zeta$, the current one included, that the territory supports, that fit the remaining budget, and that the agent finds within budget $B$ (def).
 
 | $\operatorname{reg}$ | Condition | Dynamics |
 |---|---|---|
 | drift | $\kappa < \kappa^\ast$ | $w \approx 0$. The agent follows $\mathcal{M}$ |
-| control | $\kappa \ge \kappa^\ast$, $\Gamma_B(\gamma) \ne \emptyset$ | $w \ne 0$. Candidate routes are tried virtually before commitment (Popper: conjectures die in the agent's stead) |
-| remap | $\kappa \ge \kappa^\ast$, $\Gamma_B(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$. The map changes |
+| control | $\kappa \ge \kappa^\ast$, $\Gamma_B \ne \emptyset$ | $w \ne 0$. Candidate routes are tried virtually before commitment (Popper: conjectures die in the agent's stead) |
+| remap | $\kappa \ge \kappa^\ast$, $\Gamma_B = \emptyset$ | $g_F \leftarrow g_F + \delta g$. The map changes |
 
-The 2025 paper separates control from remap by $\kappa \approx \kappa^\ast$ against $\kappa \gg \kappa^\ast$. The test on $\Gamma_B$ replaces that [ruled] (hyp). Remap is a decision under budget. It does not prove that no route exists. $\mathcal{E}$: the states from which $\zeta$ is reached under drift or control, certified within budget. Remap lies outside $\mathcal{E}$ [ruled].
+The 2025 paper separates control from remap by $\kappa \approx \kappa^\ast$ against $\kappa \gg \kappa^\ast$. The test on $\Gamma_B$ replaces that [ruled] (hyp). Remap is a decision under budget. It does not prove that no route exists. A faithful but fragile route stays in control: the current route belongs to $\Gamma_B$ and is executed with care. $\mathcal{E}$: the states from which $\zeta$ is reached under drift or control, certified within budget. Remap lies outside $\mathcal{E}$ [ruled].
 
 **Consciousness.** $a(t)$ (def): metabolic power allocated to mediation, excluding background metabolism. $\mathcal{W}$ (def): control work over a matched interval $\Theta$.
 
@@ -157,7 +160,22 @@ $o$ (def) is computed by an experimenter who knows the global gradient. The agen
 
 ## 3. TG
 
-**Translation contract.** Paper 3 constructs computable candidates for the mechanisms the stand-ins explain. Their correspondence is partial and lossy [ruled].
+**Translation contract.** Paper 3 constructs computable candidates for the mechanisms the stand-ins explain. Their correspondence is partial and lossy [ruled]. The contract has two stages. First, each candidate is assigned an explanatory obligation and a condition that shows it is met. Second, the mathematical losses are recorded.
+
+| Obligation | Synecdoche (Papers 1, 2) | Candidate (Paper 3) | Evidence of fulfillment |
+|---|---|---|---|
+| preserve encountered distinctions | combinatorial territory | $K_S$ | known task-relevant relations survive sampling |
+| enable finite search | continuous map | $\pi$, weighted $K_M$ | search cost falls, with documented loss |
+| supply goal direction | natural gradient | $\phi$, $j$, $\gamma_j$ | ranking varies appropriately with the goal |
+| express local discriminability | Fisher metric | optional $p_m$, $D_{\mathrm{sym}}$ or another divergence | predicts discriminable against aliased observations |
+| detect inadequate guidance | curvature near $\kappa^\ast$ | $\operatorname{lift}$, $\lambda_\zeta$, independent error and cost signals | flags real failures, rejects false alarms |
+| test before irreversible action | $w$, virtual backtracking | budgeted search in $\mathcal{S}$ | avoidable costly commitments are prevented |
+| correct or rebuild | control against remap | correction of flow or weights, revision of $K_M$ or $\pi$ | navigational reliability is restored |
+| measure correction burden | integrated control cost | controller expenditure, metabolic estimates | resource predictions hold prospectively |
+
+Adequacy (def). Structural: the objects play their assigned roles. Causal: the specified mismatch causes the predicted failure inside the model. Interventional: a correction declared in advance restores navigation, with no threshold chosen afterward. Economy: one mechanism classifies several failure types without a rescue rule per case. A realization that fails these on known finite systems is not a validated realization. Failure of one realization does not refute the architecture. Repeated failure of independently motivated, adequately specified realizations forces its revision.
+
+Mathematical losses:
 
 | Stand-in (Papers 1, 2) | Candidate (Paper 3) | Kept | Lost |
 |---|---|---|---|
@@ -172,15 +190,15 @@ $o$ (def) is computed by an experimenter who knows the global gradient. The agen
 
 **Weighted convention (def).** $\tilde{\partial}_1 = \partial_1 G^{1/2}$, $\tilde{\partial}_2 = G^{-1/2} \partial_2$, $\tilde{\partial}_1 \tilde{\partial}_2 = 0$. $\Delta_0 = \tilde{\partial}_1 \tilde{\partial}_1^\top = \partial_1 G \partial_1^\top$, $\Delta_1 = \tilde{\partial}_1^\top \tilde{\partial}_1 + \tilde{\partial}_2 \tilde{\partial}_2^\top$.
 
-**Identification.** $\Delta_0 \phi = \zeta$, $\mathbf{1}^\top \zeta = 0$, $j = -G\, \partial_1^\top \phi$. $\gamma_j$ (def): from the current vertex, step along the outgoing edge of largest positive $j$. $\lambda_2 > 0$ gives connectivity and no direction. Task-conditioned gap: $\lambda_\zeta = \lVert \zeta \rVert^2 / (\zeta^\top \Delta_0^\dagger \zeta)$.
+**Identification.** $\Delta_0 \phi = \zeta$, $\mathbf{1}^\top \zeta = 0$, $j = -G\, \partial_1^\top \phi$. Outward flux (def): $f_{v,e} = -(\partial_1)_{v,e}\, j_e$ for each edge $e$ incident to $v$. $\gamma_j$ (def): from the current vertex, step along the incident edge of largest positive outward flux to its other endpoint, until the sink. Ties are broken by a declared order. The rule does not depend on the stored orientation of the edges. $\lambda_2 > 0$ gives connectivity and no direction. Task-conditioned gap: $\lambda_\zeta = \lVert \zeta \rVert^2 / (\zeta^\top \Delta_0^\dagger \zeta)$.
 
-Theorem 3.0. $\lambda_2 = \min_{\zeta \perp \mathbf{1}} \lambda_\zeta$, and $\lambda_\zeta^{-1} = \sum_k (c_k^2 / \lVert \zeta \rVert^2) \lambda_k^{-1}$ for $\zeta = \sum_k c_k v_k$ in the eigenvectors of $\Delta_0$: the mean relaxation time of the task potential. A small $\lambda_2$ is necessary for a small $\lambda_\zeta$ and not sufficient. $t_{\mathrm{rel}} \propto \lambda_2^{-1}$ for diffusion on $K_M$.
+Theorem 3.0. $\lambda_2 = \min_{\zeta \perp \mathbf{1}} \lambda_\zeta$, and $\lambda_\zeta^{-1} = \sum_k (c_k^2 / \lVert \zeta \rVert^2) \lambda_k^{-1}$ for $\zeta = \sum_k c_k v_k$ in the eigenvectors of $\Delta_0$: equivalently $\lambda_\zeta^{-1} = \int_0^\infty \zeta^\top e^{-t \Delta_0} \zeta / \lVert \zeta \rVert^2\, dt$, the integrated autocorrelation time of the goal vector under diffusion on $K_M$. The potential $\phi$ weights the same components as $c_k^2 / \lambda_k^2$. A small $\lambda_2$ is necessary for a small $\lambda_\zeta$ and not sufficient. $t_{\mathrm{rel}} \propto \lambda_2^{-1}$ for diffusion on $K_M$.
 
 **Composition.** Hodge decomposition of an edge chain $r$ (thm): $G^{-1/2} r = \tilde{\partial}_1^\top u + \tilde{\partial}_2 v + h$, $h \in \ker \Delta_1$, $\beta_1 = \dim \ker \Delta_1$. The scaled flow $G^{-1/2} j = -\tilde{\partial}_1^\top \phi$ is a pure gradient. Harmonic parts belong to route chains.
 
 $$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i \ge 1} \big(\Lambda_S P_{m_i}\big) \mathbf{1}$$
 
-$\operatorname{lift} > 0$: at least one compatible path in the recorded $K_S$. Support (def): $\Gamma_{\mathcal{L}} \supseteq \Gamma_{\mathcal{S}} \supseteq \Gamma_B$. $\Gamma_{\mathcal{S}}(\gamma) = \{\gamma' \ne \gamma : \gamma' \text{ reaches } \zeta,\ \operatorname{lift}(\gamma' \mid z_0) > 0\}$. $\Gamma_B$: members of $\Gamma_{\mathcal{S}}$ found by the agent's search within $B$. $\Gamma_{\mathcal{L}}$ is unavailable to the agent. Where execution is stochastic, $\operatorname{lift}$ is replaced by a probability of success [open].
+$\operatorname{lift} > 0$: at least one compatible path in the recorded $K_S$. Support (def): $\Gamma_{\mathcal{L}} \supseteq \Gamma_{\mathcal{S}} \supseteq \Gamma_B$ are sets of routes from $z_0$ to $\zeta$, the current one included. $\Gamma_{\mathcal{S}} = \{\gamma : \gamma \text{ reaches } \zeta,\ \operatorname{lift}(\gamma \mid z_0) > 0\}$. A route in $\Gamma_{\mathcal{S}}$ is acceptable if its cost fits the remaining budget. $\Gamma_B$: the acceptable routes found by the agent's search within $B$. A failed execution enters $K_S$ as evidence and removes the failed transition from $\Lambda_S$. $\Gamma_{\mathcal{L}}$ is unavailable to the agent. Where execution is stochastic, $\operatorname{lift}$ is replaced by a probability of success [open].
 
 **Persistence.** $\log \operatorname{Tor} = \tfrac12 \sum_i (-1)^{i+1}\, i \log \det{}' \Delta_i$ (def, weighted convention, $\det{}'$ the product of nonzero eigenvalues). At constant rank, $\tfrac{d}{dt} \log \operatorname{Tor} = \tfrac12 \sum_i (-1)^{i+1}\, i \operatorname{Tr}(\Delta_i^\dagger \dot{\Delta}_i)$ (thm). A rank change is a discrete event: deleting an edge changes the chain space, a weight tending to zero does not.
 
@@ -193,22 +211,22 @@ $d_{\mathrm{GW}}$: the same squared integrand, minimized over couplings, for map
 | $\operatorname{reg}$ | Condition | Action |
 |---|---|---|
 | drift | $\operatorname{lift}(\gamma_j \mid z_0) > 0$ and $\lambda_\zeta > \epsilon^\ast$ | follow $j$. $d_{\mathcal{SM}} > 0$ is benign |
-| control | trigger, $\Gamma_B(\gamma_j) \ne \emptyset$ | $w \ne 0$, then reconciliation of $G$ |
-| remap | trigger, $\Gamma_B(\gamma_j) = \emptyset$ (hyp) | revision of $K_M$ or $\pi$ |
+| control | trigger, $\Gamma_B \ne \emptyset$ | $w \ne 0$: careful execution of $\gamma_j$ if $\gamma_j \in \Gamma_B$, otherwise a switch to a member of $\Gamma_B$. Then reconciliation of $G$ |
+| remap | trigger, $\Gamma_B = \emptyset$ (hyp) | revision of $K_M$ or $\pi$. If no revision succeeds within budget, the goal is abandoned [open] |
 
-Trigger: $\operatorname{lift}(\gamma_j \mid z_0) = 0$ or $\lambda_\zeta \le \epsilon^\ast$. $\lambda_2$ is a global diagnostic, and no regime rests on it alone [ruled]. The threshold is a policy rule (post). No bifurcation of the spectrum is claimed. Control work (post, candidate) [inference]: $\mathcal{W} = \sum_t w_t^\top G^{-1} w_t$. Weight updates and maintenance carry separate nonnegative costs [open].
+Trigger: $\operatorname{lift}(\gamma_j \mid z_0) = 0$ or $\lambda_\zeta \le \epsilon^\ast$. $\lambda_2$ is a global diagnostic, and no regime rests on it alone [ruled]. The threshold is a policy rule (post). No bifurcation of the spectrum is claimed. Controller expenditure (post, candidate) [inference]: $\mathcal{W}$ over $\Theta$ is the flow correction $\sum_t w_t^\top G^{-1} w_t$ plus the cost of the controller's own updates of $G$, $K_M$ or $\pi$ [open form]. Maintenance and passive change are excluded.
 
 $\log \operatorname{Tor}$ is a signed observable of deformation. It is not identified with $\mathcal{W}$ [ruled].
 
-**Envelope.** $\mathcal{E} = \{(z_0, \zeta) : \exists \gamma \in \{\gamma_j\} \cup \Gamma_B(\gamma_j),\ \operatorname{lift}(\gamma \mid z_0) > 0,\ \text{cost of } \gamma \le B\}$, the agent's budget-certified envelope. Confidence: low-cost correction of minor divergence inside drift.
+**Envelope.** $\mathcal{E} = \{(z_0, \zeta) : \Gamma_B(z_0, \zeta) \ne \emptyset\}$, the agent's budget-certified envelope. Confidence: low-cost correction of minor divergence inside drift.
 
 **Viability (def, ex ante criterion).** Against the counterfactual policy of physical testing, over a stated horizon, in common units: $\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0]$. Used by the separate paper (§6).
 
 **Propositions.** 3.1 Gradient manufacture (thm): $K_M$ connected $\Rightarrow$ $\phi = \Delta_0^\dagger \zeta$ unique up to a constant and $j$ unique. 3.2 Fixed-policy failure (thm, formerly control-work necessity): if $\operatorname{lift}(\gamma_j \mid z_0) = 0$, no trajectory with $w \equiv 0$ and $\dot{G} \equiv 0$ reaches $\zeta$. The identification with conscious engagement is Postulate 1.0, not a consequence. 3.3 Perspective asymmetry: (thm) for finite metric measure spaces, $d_{\mathrm{GW}} = 0$ iff they are isomorphic. (post) distinct parochial samplings with non-injective compression generically give non-isomorphic maps, so $d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{int}}, \mathcal{M}_{\mathrm{ext}}) > 0$. 3.4 Torsion variation at constant rank (thm). The partition and impossibility theorems of the note are outside the series [ruled].
 
-**Worked case 3.5.** $V_S = \{z_1, \dots, z_4\}$, path, uniform $\mu_S$. $\pi: z_1, z_4 \mapsto m_1$, $z_2 \mapsto m_2$, $z_3 \mapsto m_3$. $K_M$ a triangle, edges $(m_1 m_2, m_2 m_3, m_3 m_1)$, $G = \operatorname{diag}(1, 1, g)$, no face. Goal $\zeta = (1, 0, -1)$ from $z_1$. At $g = 1$: $\lambda_2 = \lambda_\zeta = 3$, $\phi = (\tfrac13, 0, -\tfrac13)$, $j = (\tfrac13, \tfrac13, -\tfrac23)$, $\gamma_j = (m_1, m_3)$. $\operatorname{lift}(\gamma_j \mid z_1) = 0$, $\operatorname{lift}((m_1, m_2, m_3) \mid z_1) = 1$: control. The gap does not detect the alias. The lift does. Harmonic parts of the route chains: $\tfrac13$ and $\tfrac23$ per edge, which do not separate the routes. $\det{}' \Delta_1 = 3(1 + 2g)$, so $\Delta \log \operatorname{Tor} = -\tfrac12 \ln 3$ as $g$ goes from $1$ to $0^+$, at $\beta_1 = 1$ throughout. Deleting the edge gives $\beta_1 = 0$ and $j = (1, 1)$. $d_{\mathcal{SM}}$: $\tfrac{22}{16}$ before and after deletion, $\tfrac29 \to 0$ on $\{z_1, z_2, z_3\}$. Local repair need not improve global distortion. Splitting $m_1$ (remap) gives $d_{\mathcal{SM}} = 0$. Three operations stay distinct: reweighting, deletion, splitting.
+**Worked case 3.5.** $V_S = \{z_1, \dots, z_4\}$, path, uniform $\mu_S$. $\pi: z_1, z_4 \mapsto m_1$, $z_2 \mapsto m_2$, $z_3 \mapsto m_3$. $K_M$ a triangle, edges $(m_1 m_2, m_2 m_3, m_3 m_1)$, $G = \operatorname{diag}(1, 1, g)$, no face. Goal $\zeta = (1, 0, -1)$ from $z_1$. At $g = 1$: $\lambda_2 = \lambda_\zeta = 3$, $\phi = (\tfrac13, 0, -\tfrac13)$, $j = (\tfrac13, \tfrac13, -\tfrac23)$, $\gamma_j = (m_1, m_3)$, with outward flux $\tfrac23$ against $\tfrac13$ at $m_1$. $\operatorname{lift}(\gamma_j \mid z_1) = 0$, $\operatorname{lift}((m_1, m_2, m_3) \mid z_1) = 1$: control. The gap does not detect the alias. The lift does. Harmonic parts of the route chains: $\tfrac13$ and $\tfrac23$ per edge, which do not separate the routes. $\det{}' \Delta_1 = 3(1 + 2g)$, so $\Delta \log \operatorname{Tor} = -\tfrac12 \ln 3$ as $g$ goes from $1$ to $0^+$, at $\beta_1 = 1$ throughout. Deleting the edge gives $\beta_1 = 0$ and $j = (1, 1)$. $d_{\mathcal{SM}}$: $\tfrac{22}{16}$ before and after deletion, $\tfrac29 \to 0$ on $\{z_1, z_2, z_3\}$. Local repair need not improve global distortion. Splitting $m_1$ (remap) gives $d_{\mathcal{SM}} = 0$. Three operations stay distinct: reweighting, deletion, splitting.
 
-**Bench (def).** Fixed classifier, independently known ground truth. (A) two clusters, weak bridge, task inside one cluster: small $\lambda_2$ alone must not trigger control. (B) Worked case 3.5: a large gap must not hide a zero lift. (C) a harmless cycle: $\beta_1 > 0$ alone must not trigger control. (D) a transition omitted from $\mathcal{S}$: failure under $\mathcal{S}$ is not impossibility in $\mathcal{L}$. (E) slow drift of one weight: no regime change follows automatically. (F) local against global repair, as in 3.5. (G) Bernoulli family: varying discriminability at zero curvature.
+**Bench (def).** Fixed classifier, independently known ground truth. (A) two clusters, weak bridge, task inside one cluster: small $\lambda_2$ alone must not trigger control. (B) Worked case 3.5: a large gap must not hide a zero lift. (C) a harmless cycle: $\beta_1 > 0$ alone must not trigger control. (D) a transition omitted from $\mathcal{S}$: failure under $\mathcal{S}$ is not impossibility in $\mathcal{L}$. (E) slow drift of one weight: a torsion change alone triggers nothing, and a regime changes only where $\lambda_\zeta$ crosses the declared $\epsilon^\ast$. (F) local against global repair, as in 3.5. (G) Bernoulli family: varying discriminability at zero curvature. (H) faithful path with low conductance and no alternative: control, no remap. (I) a supported alternative whose cost exceeds the remaining budget: not acceptable. (J) repeated failure under control: failures remove transitions from $\Lambda_S$ until $\Gamma_B = \emptyset$, then remap. Fisher bench: forward construction from a known response family, two response families with the same graph and different required interventions, ablation of graph-only against graph with divergence, negative controls that vary discriminability, connectivity or task cost alone. The Fisher bench separates predictive contribution from explanatory sufficiency.
 
 ## 4. MC
 
@@ -216,15 +234,15 @@ Scope [ruled]: making CAT measurable, predictive and falsifiable. Nothing else.
 
 **Thesis.** Scientific observation is a second translation (Proposition 3.3). Control at a critical limit consumes $a$ and produces $\mathcal{W}$. Both leave traces.
 
-**Constructs.** $a$: power, from metabolic markers. $\mathcal{W}$: correction cost over $\Theta$, from behavior and model fits. $\lambda_\zeta$, $\lambda_2$, $\operatorname{lift}$, $d_{\mathcal{SM}}$, $\operatorname{Tor}$: from estimated $K_M$. Assumption 4.1 (post): $\hat{a}$ is increasing in $a$. Postulate 4.2 (from the note): $\mathcal{W} \ge c_0\, \lvert \Delta \log \operatorname{Tor} \rvert$, $c_0 > 0$. It is not derived from Theorem 3.4.
+**Constructs.** $a$: power, from metabolic markers. $\mathcal{W}$: controller expenditure over $\Theta$, from behavior and model fits. $\lambda_\zeta$, $\lambda_2$, $\operatorname{lift}$, $d_{\mathcal{SM}}$, $\operatorname{Tor}$: from estimated $K_M$. Assumption 4.1 (post): $\hat{a}$ is increasing in $a$. Postulate 4.2 (from the note) [ruled domain]: for deformation induced by the controller over $\Theta$, $\mathcal{W} \ge c_0\, \lvert \Delta_{\mathrm{ctrl}} \log \operatorname{Tor} \rvert$, $c_0 > 0$, where $\Delta_{\mathrm{ctrl}}$ counts only changes made by the controller. Passive change is excluded. It is not derived from Theorem 3.4. Reserve options: total update expenditure, or torsion as a conditional predictor only.
 
 **Qualification.** Estimators are validated on synthetic graphs with known structure, on known interventions and on held-out data. Threshold calibration and confirmation use separate data. Failures are assigned to one layer: estimator, translation, mechanism, or consciousness link.
 
 **Waking tests (post).**
 Test 4.3. At an independently calibrated task threshold, control policy and control cost change. $\hat{\lambda}_\zeta$ predicts the location of the threshold.
-Test 4.4. $\mathbb{E}[\text{response time}] = t_0 + c_1\, \lambda_\zeta^{-1}$ near the threshold. The note's exponent $-\tfrac12$ requires a bifurcation model [open].
+Test 4.4. We postulate, for the specified task and calibration, $\mathbb{E}[\text{response time}] = t_0 + c_1\, \lambda_\zeta^{-1}$ near the threshold, with $t_0$ and $c_1$ estimated independently. No spectral identity implies it. The note's exponent $-\tfrac12$ requires a bifurcation model [open].
 Test 4.5. Braking ($\Delta \operatorname{bnd}$) is predicted by failed lift and revision demand. $\Delta \log \operatorname{Tor}$ adds explanatory power beyond them.
-Test 4.6. $\int_\Theta \hat{a}\, dt$ tracks $\hat{\mathcal{W}}$ with slope $\eta^{-1}$. $\lvert \Delta \log \operatorname{Tor} \rvert$ adds out-of-sample prediction.
+Test 4.6. $\int_\Theta \hat{a}\, dt$ tracks $\hat{\mathcal{W}}$ with slope $\eta^{-1}$. $\lvert \Delta_{\mathrm{ctrl}} \log \operatorname{Tor} \rvert$ adds out-of-sample prediction. Passive change of $G$ with $w = 0$ must leave both unaffected.
 
 **State contrasts.** Experimental contrasts, not a taxonomy.
 
@@ -242,13 +260,13 @@ Test 4.7 (post). With state, task and recording sensitivity fixed in advance, un
 
 **Agents.** Two agents coordinate under drift while $d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast$ and require explicit translation above it (post).
 
-**Design.** A finite navigation task with known territory graph and local observations. Opacity, contingency, transience and task location are manipulated independently. A Fisher-informed model and a graph-only model are fitted to the same trials and predict held-out perturbations. Negative controls: bench cases A to E.
+**Design.** A finite navigation task with known territory graph and local observations. Opacity, contingency, transience and task location are manipulated independently. A Fisher-informed model and a graph-only model are fitted to the same trials and predict held-out perturbations. A null result on predictive contribution does not establish explanatory redundancy. Negative controls: bench cases A to E.
 
-**Falsification.** Operator level: under known graphs, the identities or the fixed classifier fail. Bridge: Fisher-informed and graph quantities disagree beyond their stated domain. Mechanism: calibrated quantities do not predict route failures, corrections or energy costs prospectively. Consciousness link: the mechanism is present where experience-related evidence is absent, or the reverse. The last is Postulate 1.0 and is tested last. No numeric cutoff from the note is carried as established.
+**Falsification.** Tests of a realization ask whether its mechanisms describe agents. Tests of the consciousness postulate ask a further question, whether mediation and allocation go with experience. Each failure is recorded at its own level. The illustrative status of Paper 1 does not shield a committed operational model. Operator level: under known graphs, the identities or the fixed classifier fail. Bridge: Fisher-informed and graph quantities disagree beyond their stated domain. Mechanism: calibrated quantities do not predict route failures, corrections or energy costs prospectively. Consciousness link: the mechanism is present where experience-related evidence is absent, or the reverse. The last is Postulate 1.0 and is tested last. No numeric cutoff from the note is carried as established.
 
 ## 5. Open
 
-Confidence against the budget-certified $\mathcal{E}$. Statement of $I$ at $\sigma$ and $\gamma$. Forms of $\Delta a_e$, of the compounding of error, and of control work on $K_M$. Probabilistic lift. Remap after repeated failure under control while $\Gamma_B$ is not empty. The relation between $\epsilon^\ast$ and $\kappa^\ast$. Estimators.
+Confidence against the budget-certified $\mathcal{E}$. Statement of $I$ at $\sigma$ and $\gamma$. Forms of $\Delta a_e$, of the compounding of error, and of control work on $K_M$. Probabilistic lift. Calibration of $\epsilon^\ast$, which carries the units of conductance. The relation between $\epsilon^\ast$ and $\kappa^\ast$. Estimators.
 
 Dependency: §2 $\to$ §1 $\to$ §3 $\to$ §4. Paper 1 is self-sufficient with respect to §2. §6 depends on §1 and §3 and on nothing in §4.
 

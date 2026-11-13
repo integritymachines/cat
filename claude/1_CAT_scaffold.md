@@ -1,8 +1,8 @@
 # Consciousness as Translation: Scaffold
 
-Version 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1.
+Version 0.6, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1.
 
-The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the kernel), or **Rev** (a correction adopted from the review of 13 November). Nothing else is added. Claim types as in the kernel: (def), (thm), (post), (hyp), (ill).
+The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the kernel), or **Rev** (a correction adopted from rounds 1 and 2 of the review protocol). Nothing else is added. Claim types as in the kernel: (def), (thm), (post), (hyp), (ill).
 
 Epigraph (2025, original punctuation): *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
@@ -43,7 +43,7 @@ Headline (U2). To navigate an unsurveyable reality, a cognitive agent has to mai
 - 3.2 The role of curvature (2025): curvature measures how abruptly discriminability changes. It is the geometric signature of the translation problem.
 - Rev in 3.2: curvature is a synecdoche (ill). It stands for discriminability, distortion, aliasing and navigational sensitivity, which Paper 3 separates. The Bernoulli family shows varying discriminability at zero curvature. The just-noticeable difference is tied to the metric, not to curvature. The 2025 relation to curvature is withdrawn.
 - 3.3 Three regimes (2025): drift below the critical level, control near it, remap beyond what control can stabilize. Examples kept.
-- U4 in 3.3: control applies when the agent finds another supported route within its budget, and remap when it finds none (hyp). Remap is a decision under budget and proves no impossibility. Under control, candidate routes are tried virtually before commitment, so that conjectures die in the agent's stead (Popper).
+- U4 in 3.3: control applies when the agent finds an acceptable supported route within its budget, the current one included, and remap when it finds none (hyp). Remap is a decision under budget and proves no impossibility. A faithful but fragile route stays in control. Under control, candidate routes are tried virtually before commitment, so that conjectures die in the agent's stead (Popper).
 - U7 in 3.3: the envelope of assured navigation covers drift and control, certified by the agent's own search. It answers the dark-room objection.
 - 2025: drift includes skilled, abstract performance. The critical level is specific to the agent and metabolically constrained.
 - 3.4 Control cost and intensity (2025): integrated control cost. Local instability as the gradient of curvature.
@@ -93,6 +93,7 @@ Headline (U2). To navigate an unsurveyable reality, a cognitive agent has to mai
 - 8.4 Future directions (2025).
 - 8.5 Broader implications (2025), with U5 for philosophy and U7 for artificial intelligence.
 - 8.6 Final reflection (2025).
+- Rev: one short boundary paragraph. The stand-ins illustrate the predicament. The argument does not depend on their literal geometry. Translation Geometry supplies the operational mechanisms. No operators enter Paper 1.
 
 ## Prose (U8)
 

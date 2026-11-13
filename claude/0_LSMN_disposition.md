@@ -121,3 +121,22 @@ Changes adopted from `0_LSMN_review.md` under the authors' rulings of the same d
 | Step drop of the gap, latency exponent, braking by torsion, state classification by $\beta_1$ | revised | Policy threshold, latency in $\lambda_\zeta^{-1}$, torsion as added predictor, no classification by $\beta_1$ |
 | Bench, design, qualification, layered falsification | added | Papers 3 and 4 |
 | Numeric cutoffs from the notes | not carried as established | May return as preregistered exploratory values |
+
+## Review round 2, 13 November 2026
+
+Changes adopted from round 2 of `0_LSMN_review.md` under the authors' rulings of the same day. Kernel 0.14, Paper 1 report 0.5, Paper 3 report 0.4, Paper 4 report 0.4. Paper 2 is unchanged.
+
+| Element | Status | Now |
+|---|---|---|
+| Stand-ins as deliberate expository synecdoches | confirmed by ruling | Kernel §0.1 "Realization". Paper 1 ends with a short boundary paragraph |
+| Translation contract | revised | Two stages: explanatory obligations with evidence of fulfillment, then mathematical losses |
+| Adequacy of a realization | added | Structural, causal, interventional, economy. Limit on retreating to Paper 1's illustrative status |
+| Fisher and compression | clarified | $\pi$ compresses. Fisher illustrates discriminability within the map |
+| Remap rule | revised by ruling | Remap when no acceptable supported route, the current one included, is found within budget. Failed executions remove transitions from the territory |
+| Route extraction | corrected | Outward flux, independent of stored edge orientation |
+| Meaning of $\lambda_\zeta^{-1}$ | corrected | Integrated autocorrelation time of the goal vector, not relaxation of the potential |
+| Test 4.4 | revised | Behavioral postulate, coefficients estimated independently |
+| Postulate 4.2 | domain restricted by ruling | Controller-induced deformation only. Reserve: total update expenditure, or torsion as predictor |
+| Control work on the map | revised | Controller expenditure: flow correction plus the controller's own updates |
+| Bench | extended | H, I, J and a Fisher bench |
+| Fisher in Paper 4 | revised | Predictive contribution and explanatory sufficiency kept apart |

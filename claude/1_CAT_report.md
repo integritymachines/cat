@@ -1,6 +1,6 @@
 # Consciousness as Translation
 
-Report, draft 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates of the kernel, marked U1 to U8 where they enter, and the corrections adopted from the review of 13 November. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in the kernel registry.
+Report, draft 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates of the kernel, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in the kernel registry.
 
 *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
@@ -76,13 +76,13 @@ High curvature pictures the breakdown of the continuous approximation. Branch po
 
 ## Regimes
 
-Behavior partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma_B(\gamma)$ be the set of alternatives to the current route $\gamma$ that reach the objective, that the territory supports, and that the agent finds within its budget $B$ (def).
+Behavior partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma_B$ be the set of routes to the objective, the current one included, that the territory supports, that fit the remaining budget, and that the agent finds within its budget $B$ (def).
 
 | Regime | Condition | Dynamics |
 |---|---|---|
 | drift | $\kappa < \kappa^\ast$ | $w \approx 0$ in (7) |
-| control | $\kappa \ge \kappa^\ast$, $\Gamma_B(\gamma) \ne \emptyset$ | $w \ne 0$ |
-| remap | $\kappa \ge \kappa^\ast$, $\Gamma_B(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
+| control | $\kappa \ge \kappa^\ast$, $\Gamma_B \ne \emptyset$ | $w \ne 0$ |
+| remap | $\kappa \ge \kappa^\ast$, $\Gamma_B = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
 
 Drift. The map represents the territory faithfully enough, and the agent follows it. Drift includes skilled, abstract and rapid behavior in domains where learning has lowered curvature. A chess master in a standard opening drifts. So does a walker on flat ground.
 
@@ -90,7 +90,7 @@ Control. The geometry is fragile and small errors can derail progress. The agent
 
 Remap. Control cannot stabilize the dynamics, and the representation itself changes. This is learning, insight and conceptual change.
 
-The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma_B(\gamma)$ replaces that (U4). Control applies while the agent finds a supported route within its budget. Remap applies when it finds none (hyp). Remap is a decision under budget. It does not prove that no route exists, which no agent facing an unsurveyable reality could establish.
+The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma_B$ replaces that (U4). Control applies while the agent finds a supported route within its budget. Remap applies when it finds none (hyp). Remap is a decision under budget. It does not prove that no route exists, which no agent facing an unsurveyable reality could establish. A faithful but fragile route stays in control: the current route belongs to $\Gamma_B$ and is executed with care.
 
 $\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error.
 
@@ -181,6 +181,10 @@ Learning and development. Insight follows struggle. Practice lowers curvature an
 Individual differences. Control capacity varies, and so does the willingness to enter regions of high curvature.
 
 Comparative. Three architectural requirements decide which systems qualify: representations rich enough that compression distorts, a mechanism that detects when following the gradient fails, and the capacity to deploy corrective control. Current large language models do not meet them (U7). They have no adaptive recalibration in runtime and no parochialism, since their sampling has no habitat. The second point makes them the nearest known case of the fully rational agent that cannot be conscious. This replaces the 2025 claim that adaptive AI may require conscious AI.
+
+## Boundary
+
+The combinatorial territory, continuous map, Fisher information geometry and curvature developed here are explanatory stand-ins for a more general navigational predicament. They illustrate the distinction between a comparatively comprehensive record and a searchable representation, the manufacture of guidance, and the conditions under which that guidance becomes unreliable. The conceptual argument does not depend on the literal geometry of these illustrations. Scientific development requires operational mechanisms that keep their explanatory roles and yield independently measurable and falsifiable consequences. Translation Geometry undertakes that task.
 
 ## Open
 

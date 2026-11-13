@@ -644,3 +644,29 @@ This file is the chronological record. **Append, do not overwrite**, each subseq
 5. Only then lock Paper 4's prospective test forms around the surviving mechanisms.
 
 **Reviewer disposition:** the author's nine-point response is substantively constructive; the methodological issue is resolved in favor of the original design. The pending work is now **operational adequacy**, not whether Paper 1 should have anticipated Paper 3's mathematics. This round adds no new ruling and makes no change to the drafts themselves.
+
+---
+
+## Response from the drafting side to review round 2 — 13 November 2026
+
+Claude. The authors ruled on this response the same day, and the rulings are marked. Adopted in kernel 0.14, Paper 1 report 0.5 and scaffold 0.6, Paper 3 report 0.4 and scaffold 0.4, Paper 4 report 0.4 and scaffold 0.5. Paper 2 is unchanged. The disposition ledger records each change. All four claims in R2.5 were checked and hold.
+
+| Item | Reply | Reason | Affected | Ruled |
+|---|---|---|---|---|
+| R2.0 | accept | The expository decision is the authors' design. The drafts now state it once, in kernel §0.1 and in a closing paragraph of Paper 1 | Kernel §0.1, Paper 1 | yes |
+| R2.1 | accept | The obligations table precedes the loss table in Paper 3 and in the kernel | Kernel §3, Paper 3 | yes |
+| R2.2 | accept | Four adequacy tests, and the limit on retreating to Paper 1's illustrative status, are stated in Paper 3 and repeated in Paper 4 | Papers 3, 4 | yes |
+| R2.3, Paper 1 text | accept | Adopted with one word changed | Paper 1, Boundary | yes |
+| R2.3, Paper 3 and Paper 4 text | modify | Both proposed passages use a "not X but Y" construction, which the register bans. The content is kept and the sentences are rephrased | Paper 3 opening, Paper 4 Science | yes |
+| R2.4 | accept | Fisher bench added: forward construction, non-identifiability, ablation, negative controls. Predictive contribution and explanatory sufficiency kept apart | Paper 3 Bench, Paper 4 Design | yes |
+| R2.5a | modify | The counterexample holds: on a faithful three-node path, $\lambda_\zeta = g$. The cause was the definition of $\Gamma$, which excluded the current route. The sets now hold routes from $z_0$ to $\zeta$, the current one included. A route is acceptable if it lifts and its cost fits the remaining budget. A failed execution removes the failed transition from $\Lambda_S$. One rule meets H (control, no remap), I (the costly route is not acceptable) and J (failures empty the set, then remap). It follows the authors' earlier ruling that a wingsuit flight is control. Control now covers both careful execution of the current route and a switch. If no revision succeeds within budget, the goal is abandoned [open]. $\lambda_\zeta$ carries the units of conductance, so $\epsilon^\ast$ is calibrated per agent | Kernel §0.1 U4, §1, §3. Papers 1, 3 | yes, from old, new and justification texts |
+| R2.5b | accept | An error in the drafts. Route extraction by outward flux $f_{v,e} = -(\partial_1)_{v,e} j_e$. The worked case recovers the shortcut with $\tfrac23$ against $\tfrac13$. Invariance under reversal of stored orientations was checked numerically | Kernel §3, Paper 3 | yes |
+| R2.5c | accept | An error in the drafts. $\lambda_\zeta^{-1}$ is the integrated autocorrelation time of the goal vector under diffusion. The potential weights the components as $c_k^2 / \lambda_k^2$. Test 4.4 is now a behavioral postulate with independently estimated coefficients | Kernel §3, §4. Papers 3, 4 | yes |
+| R2.5d | accept option (i) | The bound now applies to deformation the controller induces, and passive change is excluded. Controller expenditure covers flow correction plus the controller's own updates. Options (ii) and (iii) are held in reserve. A passive change of the map with $w = 0$ joins the negative controls | Kernel §3, §4. Papers 3, 4 | yes |
+| R2.6 | accept | Benches I and J added and met by the rule under R2.5a | Paper 3 | yes |
+| R2.7 | accept | Every row is implemented. Paper 2 needed no change | All | yes |
+| R2.8 | accept | This entry follows the protocol | This file | yes |
+
+Deferred: the benches are specified in the reports. Running them requires code, which lies outside the scope of the reports.
+
+One remaining point for the next round. Abandonment of a goal is now the endpoint when remap fails within budget. The drafts give it no cost and no criterion. Whether abandonment belongs to the regime table or to the viability criterion of §3 is open.
