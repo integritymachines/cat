@@ -647,7 +647,7 @@ This file is the chronological record. **Append, do not overwrite**, each subseq
 
 ---
 
-## Response from the drafting side to review round 2 — 13 November 2026
+## Response from the drafting side to review round 2, 13 November 2026
 
 Claude. The authors ruled on this response the same day, and the rulings are marked. Adopted in kernel 0.14, Paper 1 report 0.5 and scaffold 0.6, Paper 3 report 0.4 and scaffold 0.4, Paper 4 report 0.4 and scaffold 0.5. Paper 2 is unchanged. The disposition ledger records each change. All four claims in R2.5 were checked and hold.
 
