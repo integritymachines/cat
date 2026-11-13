@@ -1,12 +1,12 @@
 # Consciousness as Translation
 
-Report, draft 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates of the kernel, marked U1 to U8 where they enter. [inference] marks a proposal of this draft and [open] a form not fixed. Symbols are listed in the kernel registry.
+Report, draft 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates of the kernel, marked U1 to U8 where they enter, and the corrections adopted from the review of 13 November. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in the kernel registry.
 
 *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
 To navigate an unsurveyable reality, a cognitive agent has to maintain, and mediate between, two models of the world, one comprehensive (the territory) and one comprehensible (the map). Consciousness arises out of that mediation and out of the need to allocate metabolic resources to keep the two aligned (U2).
 
-The report is conceptual. It uses three stand-ins: the pair combinatorial and continuous, curvature, and the Fisher metric. Papers 3 and 4 make them operational (U6).
+The report is conceptual. It develops conceptual synecdoches as stand-ins to explain the underlying concepts: the pair combinatorial and continuous, curvature, and the Fisher metric (ill). Paper 3 supplies computable candidates for the mechanisms they explain. The correspondence is partial and lossy (U6).
 
 ## Translation Problem
 
@@ -26,13 +26,15 @@ $$\lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}}
 
 Structure proliferates faster than any representation can encode, and translation has to be lossy.
 
-Opacity $O$. The territory provides no gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures a gradient by building a map with smooth geometry. Manufactured gradients need not align with the external objective. In satisfiability problems, flipping a variable to reduce violations locally often raises them globally.
+Opacity $O$. The territory provides no task-given gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures a gradient by building a map with smooth geometry. Manufactured gradients need not align with the external objective. In satisfiability problems, flipping a variable to reduce violations locally often raises them globally.
 
 Contingency $C$. Choices alter the topology of the reachable states. Some options are foreclosed and others become costly to recover. In the map, branch points appear as singularities.
 
-Transience $T$. The world is non-stationary, and a map that was valid decays. With $g_F$ the metric of the map defined below, $\operatorname{Ric}$ its Ricci curvature and $L_{\mathrm{decay}}$ the external change,
+Transience $T$. The world is non-stationary, and a map that was valid decays. The 2025 paper pictures the decay with a chosen dynamical model (ill). With $g_F$ the metric of the map defined below, $\operatorname{Ric}$ its Ricci curvature and $L_{\mathrm{decay}}$ the external change,
 
 $$\partial_t g_F = -2 \operatorname{Ric} + L_{\mathrm{decay}} \tag{4}$$
+
+Transience does not imply this form. It is one picture of decay among several.
 
 The four form a causal hierarchy:
 
@@ -42,17 +44,17 @@ $$I \to \text{compression} \to O + C + T \to \text{high curvature} \to \text{con
 
 The agent holds two models (U1, U2).
 
-The territory $\mathcal{S}$ is the comprehensive model. It is the agent's accumulated record of the landscape, kept without order. Sampling has density $\mu_S$, concentrated around the habitats in which the agent lives and sparse elsewhere.
+The territory $\mathcal{S}$ is the comprehensive model. It is the agent's accumulated record of the landscape, not globally ranked. Sampling has density $\mu_S$, concentrated around the habitats in which the agent lives and sparse elsewhere.
 
 The map $\mathcal{M} = \pi(\mathcal{S})$ is the comprehensible model, with $\pi$ non-injective and $\dim \mathcal{M} \ll \log \lvert \mathcal{S} \rvert$. It presents the available choices ranked by their connection to the objective, as a chess engine ranks moves. Distinct states of the territory can lie close together in the map, and some states of the map correspond to nothing in the territory.
 
 All models are wrong and some are useful (Box). The map is a lossy translation, and its loss is negligible in some instances and decisive in others.
 
-Stand-in. Activity at a point $y \in \mathcal{M}$ generates a distribution $p(\cdot \mid y)$ over responses. The Fisher metric
+Stand-in. Let $p(\cdot \mid y)$ be the distribution of observations that the map predicts at a point $y \in \mathcal{M}$, conditioned on the goal and the habitat. The family is assumed regular and identifiable. The Fisher metric (def)
 
 $$g_F(y)_{ik} = \mathbb{E}\big[\partial_i \log p(\cdot \mid y)\, \partial_k \log p(\cdot \mid y)\big] \tag{6}$$
 
-measures discriminability: how reliably nearby states can be told apart. It arises from the statistics of the coding itself. With a potential $\phi$ that encodes task-relevant value and a control field $w$,
+measures discriminability: how reliably nearby states can be told apart. It arises from the statistics of the coding itself. For a small displacement, $\mathrm{KL}\big(p(\cdot \mid y) \Vert p(\cdot \mid y + \delta y)\big) \approx \tfrac12\, \delta y^\top g_F(y)\, \delta y$. The Fisher metric is a model of local discriminability. It does not by itself measure distortion between map and territory, and it does not by itself determine the need for control. Those relations are elements of the model to be formalized and tested. With a potential $\phi$ that encodes task-relevant value and a control field $w$, the dynamics are (post)
 
 $$\dot{y} = -g_F^{-1} \nabla \phi(y) + w(y) \tag{7}$$
 
@@ -60,25 +62,27 @@ With $w \approx 0$ the agent follows natural gradient descent. This is the backb
 
 ## Curvature
 
+Curvature is the central synecdoche of the paper (ill). It stands for four things: discriminability, distortion of the territory in the map, aliasing of distinct states, and the sensitivity of navigation to small errors. Paper 3 separates them, and in general none determines the others. A Bernoulli response family has $g_F = 1/(y(1-y))$. Its discriminability varies with $y$, and its curvature is zero. The synecdoche therefore explains a concept and makes no general geometric claim.
+
 The Fisher metric captures discriminability and says nothing about its stability. In some regions discriminability varies smoothly and local information generalizes. In others it changes abruptly, and a small move in the map produces a large change in what can be distinguished.
 
-Let $\kappa(y)$ be the scalar curvature of $g_F$. Large $\kappa$ marks regions where the map is sharply bent, stretched or folded, and where it is least reliable. Curvature relates to perceptual sensitivity:
+Let $\kappa(y)$ be the scalar curvature of $g_F$. In the picture, large $\kappa$ marks regions where the map is sharply bent, stretched or folded, and where it is least reliable. Perceptual sensitivity belongs to the metric. In a direction $v$, under a fixed criterion (def),
 
-$$\operatorname{JND}(y) \propto \kappa(y)^{-1/2} \tag{8}$$
+$$\operatorname{JND}_v(y) \propto \big(v^\top g_F(y)\, v\big)^{-1/2} \tag{8}$$
 
-High curvature gives fine discrimination and fragility. Low curvature gives coarse discrimination and stability.
+The 2025 relation of the just-noticeable difference to scalar curvature does not hold in general and is withdrawn. In the picture, the metric sets discrimination and curvature sets fragility.
 
-High curvature signals that the continuous approximation has broken down. Branch points of the territory appear as singularities, conflicting structure appears as saddle points, and sparse structure appears as sharp ridges and valleys. Curvature is the geometric signature of the translation problem. It carries both how far the map diverges from the territory at an instance and how much that divergence matters for the route.
+High curvature pictures the breakdown of the continuous approximation. Branch points of the territory appear as singularities, conflicting structure appears as saddle points, and sparse structure appears as sharp ridges and valleys. Curvature is the geometric signature of the translation problem. It carries both how far the map diverges from the territory at an instance and how much that divergence matters for the route [ruled].
 
 ## Regimes
 
-Behavior partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma(\gamma)$ be the set of alternatives to the current route $\gamma$ that reach the objective and that the territory supports.
+Behavior partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma_B(\gamma)$ be the set of alternatives to the current route $\gamma$ that reach the objective, that the territory supports, and that the agent finds within its budget $B$ (def).
 
 | Regime | Condition | Dynamics |
 |---|---|---|
 | drift | $\kappa < \kappa^\ast$ | $w \approx 0$ in (7) |
-| control | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) \ne \emptyset$ | $w \ne 0$ |
-| remap | $\kappa \ge \kappa^\ast$, $\Gamma(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
+| control | $\kappa \ge \kappa^\ast$, $\Gamma_B(\gamma) \ne \emptyset$ | $w \ne 0$ |
+| remap | $\kappa \ge \kappa^\ast$, $\Gamma_B(\gamma) = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
 
 Drift. The map represents the territory faithfully enough, and the agent follows it. Drift includes skilled, abstract and rapid behavior in domains where learning has lowered curvature. A chess master in a standard opening drifts. So does a walker on flat ground.
 
@@ -86,17 +90,17 @@ Control. The geometry is fragile and small errors can derail progress. The agent
 
 Remap. Control cannot stabilize the dynamics, and the representation itself changes. This is learning, insight and conceptual change.
 
-The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma(\gamma)$ replaces that (U4). Control applies while the map still holds a supported route. Remap applies when it holds none.
+The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma_B(\gamma)$ replaces that (U4). Control applies while the agent finds a supported route within its budget. Remap applies when it finds none (hyp). Remap is a decision under budget. It does not prove that no route exists, which no agent facing an unsurveyable reality could establish.
 
 $\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error.
 
-The envelope of assured navigation $\mathcal{E}$ is the set of states from which the agent reaches its objective under drift or control (U7). A wingsuit flight that ends safely stays inside $\mathcal{E}$ and is far from drift. The envelope answers the dark-room objection to accounts built on minimizing surprise: an agent with an objective leaves the dark room and pays for control to remain assured outside it.
+The envelope of assured navigation $\mathcal{E}$ is the set of states from which the agent reaches its objective under drift or control, as certified by its own search within budget (U7). A wingsuit flight that ends safely stays inside $\mathcal{E}$ and is far from drift. The envelope answers the dark-room objection to accounts built on minimizing surprise: an agent with an objective leaves the dark room and pays for control to remain assured outside it.
 
 ## Consciousness
 
-The integrated control cost over a trajectory is
+The control work over a matched interval $\Theta$ is (def)
 
-$$\mathcal{W} = \int \lVert w(y(t)) \rVert^2_{g_F}\, dt \tag{9}$$
+$$\mathcal{W} = \int_\Theta \lVert w(y(t)) \rVert^2_{g_F}\, dt \tag{9}$$
 
 and the local instability at a point is
 
@@ -104,11 +108,15 @@ $$\lVert \nabla \kappa(y) \rVert_{g_F} \tag{10}$$
 
 which measures how rapidly the geometric demand changes nearby.
 
-The 2025 paper identifies consciousness with the operation of the control field at $\kappa \approx \kappa^\ast$. Update U3 refines this. Let $a(t)$ be the metabolic allocation to the mediation between map and territory, with $\mathcal{W} = \eta\, a$ and $\eta \in (0, 1]$. Let $e$ index the instances on the route, with curvature $\kappa_e$.
+The 2025 paper identifies consciousness with the operation of the control field at $\kappa \approx \kappa^\ast$. Update U3 refines this. Let $a(t)$ be the metabolic power allocated to the mediation between map and territory, excluding background metabolism (def). Let $e$ index the instances on the route, with curvature $\kappa_e$.
 
-$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \qquad \text{conscious}(t) \iff a(t) > 0 \tag{11}$$
+$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \qquad \eta = \frac{\mathcal{W}}{\int_\Theta \sum_e \Delta a_e\, dt} \tag{11}$$
 
-The baseline $a_{\mathrm{base}}$ maintains the live map against transience and is positive throughout wake. The surge $\Delta a_e$ is positive when $\kappa_e \ge \kappa^\ast$ and grows with $\kappa_e$. Consciousness is graded, and its degree at an instance is $\Delta a_e$. It is absent in dreamless sleep and under anesthesia, where $w \equiv 0$. Boredom and stimulus deprivation are low surge on a positive baseline [open].
+Work and power differ in kind, so $\eta$ compares work with allocated energy over the same interval, and it is dimensionless once both are in energy units.
+
+Postulate 1.0. $\text{conscious}(t) \iff a(t) > 0$.
+
+The baseline $a_{\mathrm{base}}$ maintains the live map against transience and is positive throughout wake. It is not part of $w$. The surge $\Delta a_e$ is positive when $\kappa_e \ge \kappa^\ast$ and grows with $\kappa_e$. Consciousness is graded, and its degree at an instance is $\Delta a_e$. It is absent in dreamless sleep and under anesthesia, where mediation stops. Boredom and stimulus deprivation are low surge on a positive baseline [open].
 
 Two forms are proposed here [inference]. The budget is finite, so surges are served in descending order of $\kappa_e$. Curvature $\kappa_e$ is decreasing in the sampling density $\mu_S(e)$, so that habitats drift and the frontier draws allocation.
 
@@ -149,7 +157,7 @@ Bounded rationality is the economic foundation. Without computational bounds the
 
 ## Altered States
 
-Altered states are systematic changes of the same geometry. The survey is qualitative here, and Paper 4 gives it a quantitative form.
+Altered states are systematic changes of the same geometry. The survey is qualitative here. Paper 4 uses the states as experimental contrasts.
 
 | State | Change |
 |---|---|
@@ -158,7 +166,7 @@ Altered states are systematic changes of the same geometry. The survey is qualit
 | flow | sustained navigation near $\kappa^\ast$ |
 | dreams | regions of high $\kappa$ explored with actuators gated, control cheap |
 | anxiety, rumination | overestimated $\kappa$, control where none is needed |
-| anesthesia, dreamless sleep | control disabled, $w \equiv 0$ |
+| anesthesia, dreamless sleep | mediation stops, $a = 0$ |
 
 ## Implications
 
@@ -177,5 +185,5 @@ Comparative. Three architectural requirements decide which systems qualify: repr
 ## Open
 
 1. The forms of $\Delta a_e$, and the two [inference] items under (11).
-2. Relations (4) and (8) are carried from the 2025 paper and await the fact check.
+2. Relation (4) is carried from the 2025 paper as an illustration. The 2025 relation of the just-noticeable difference to curvature is withdrawn in favor of (8).
 3. Boredom and stimulus deprivation under (11).

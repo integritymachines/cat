@@ -1,66 +1,62 @@
 # Measuring Consciousness: Scaffold
 
-Version 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4.
+Version 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4. Content from the research note for Paper 4. Structure from the review of 13 November, as adopted by the authors. Each bullet is marked **note** (content kept) or **R** (a ruled change). Numbers from the note are unchecked and are not carried as established values.
 
-The research note for Paper 4 is the yardstick. This scaffold keeps its sections and their order. Each bullet is marked **note** (kept) or **R** (a ruled update). Numbers from the note are unchecked. The fact check happens outside these drafts.
+Scope [ruled]: making CAT measurable, predictive and falsifiable. Motility, the lower bound and dreaming as offline conjecturing are the subject of a separate paper and do not appear here.
 
-Headline (note). Scientific observation is a second lossy translation of first-person experience. Control at a critical limit nevertheless consumes metabolic resources and produces control work, and either side of that conversion casts a measurable trace into external recording channels.
+Headline (note). Scientific observation is a second lossy translation of first-person experience. Control at a critical limit nevertheless consumes metabolic resources and produces control work, and either side of that conversion leaves a measurable trace.
 
-## 1. Thesis
+## 1. Science
 
-- Note: the internal map and an observer's map stand at a positive distance. Science observes from without and regularizes.
-- Note: an agent at a bottleneck has to consume resources to produce stabilizing control work.
-- R: this is the measurable side of the position on the hard problem in Paper 1.
+- R: what makes the theory scientific. Observables, independently qualified estimators, prior predictions, comparison with simpler accounts, refutation conditions.
+- Note: the thesis. The internal map and an observer's map stand at a positive discrepancy (Proposition 3.3).
+- R: Lemma 3.2 and Postulate 1.0 together give the traces. The tests do not measure experience itself.
 
-## 2. Traces
+## 2. Constructs
 
-- Note: the metabolic trace and its candidate channels.
-- Note: the control-work trace and its candidate channels.
-- Note: conversion efficiency. It separates flow from overload.
-- Note: the inequality between metabolic input and torsion shift.
-- R: log torsion is a signed observable of deformation and is not identified with control work.
-- R: allocation has a waking baseline and surges.
+- R: table of constructs with definitions and units. Allocation as power excluding background metabolism. Control work over a matched interval. Efficiency dimensionless after calibration.
+- Note: candidate observables for each.
+- Assumption 4.1 (post).
+- Note, Postulate 4.2 (post): control work bounded below by the torsion shift. Not derived from Paper 3.
+- Note: efficiency separates flow from overload.
 
-## 3. Dictionary
+## 3. Qualification
 
-- Note: the forward mapping from each operator of Paper 3 to a recording channel.
-- Note: four empirical supports. Listed as candidates until fact-checked.
-- Limit: every test is conditional on valid estimators.
+- Note: forward mapping from operators to recordings.
+- Note: four empirical supports, candidates until fact-checked.
+- R: qualification rules. Synthetic validation, no assumed identity of neural graph and map, separate calibration and confirmation data, comparison against simpler accounts.
 
 ## 4. Waking Tests
 
-- Note, H1: the spectral trace. Step drop of the gap at a critical ambiguity, then nonlinear rise of control markers. Test 4.3.
-- Note, H2: the kinematic trace. Response time diverges as the gap approaches its critical level. Test 4.4.
-- Note, H3: the braking trace. Decision boundary raised in proportion to torsion. Vicarious trial and error. Test 4.5.
-- Note, H4: the metabolic trace. Allocation linear in the torsion shift, slope inverse to efficiency. Confidence margin and individual differences. Test 4.6.
-- R: above the lower bound, organisms differ in how they allocate, and these tests pick up that variance. Bat navigation as a candidate case.
+- Note, H1, revised (R): Test 4.3, a change of control policy and cost at a calibrated threshold, located by the task gap. The step belongs to the policy, not the eigenvalue.
+- Note, H2, revised (R): Test 4.4, latency linear in the inverse task gap. The note's exponent carried as an alternative [open].
+- Note, H3, revised (R): Test 4.5, braking predicted by failed lift and revision demand, torsion as added predictor.
+- Note, H4, revised (R): Test 4.6, expenditure tracks correction cost, torsion shift adds prediction.
+- R: test forms are model elements subject to test (post).
+- Note: confidence margin, individual differences. Bat navigation as candidate case.
 
-## 5. States
+## 5. State Contrasts
 
-- Note, H5 to H8: the operator matrix for drift, overload, flow, meditation, psychedelics and anesthesia.
-- Note: flow against overload by efficiency. Propofol against ketamine by internal control work.
-- Test 4.7: no response to the gap under propofol and in dreamless sleep.
-- R: this section is the quantitative form of the altered states of Paper 1.
+- Note, H5 to H8: drift, overload, flow, meditation, psychedelics, propofol, ketamine and REM.
+- R: contrasts, not a taxonomy. No classification by cycle count.
+- R: Test 4.7, absence of control response under propofol and in dreamless sleep, with prior state definitions and positive and negative controls.
 
 ## 6. Agents
 
-- Note, H9: two agents coordinate under drift while the distance between their maps stays below a critical level, and need explicit translation above it.
-- Note: compatibility follows relational geometry.
+- Note, H9: coordination under drift below a critical discrepancy, explicit translation above it (post). The note's value not carried.
 
-## 7. Lower Bound
+## 7. Design
 
-- Note: handed to a satellite note, with a three-point boundary test.
-- R: motility and sessility give the first dividing line. A sessile agent can produce physical conjectures. A motile agent has to produce virtual ones, which requires a metabolically costly conjecturing engine.
-- R: the three points. Compression, an outwardly measurable discontinuity at a critical limit, offline conjecturing in high-intensity REM.
-- R: only organisms that dream can be conscious.
-- R: current LLMs are below the bound.
-- Comparative table (summary report, unchecked).
+- R: artificial navigation task with known territory graph. Opacity, contingency, transience and task location manipulated independently.
+- R: Fisher-informed model against graph-only model on the same trials.
+- R: negative controls from the Paper 3 bench.
 
-## 8. Refutation
+## 8. Falsification
 
-- Three conditions of the kernel, and a fourth on dreaming.
-- No effect size is asserted before the fact check.
+- R: four layers. Operator, bridge, mechanism, consciousness link. Each failure refutes one layer.
+- Note: linear scaling through the threshold, and control response under anesthesia, as mechanism failures.
+- No effect size before the fact check.
 
-## 9. Handoff
+## 9. Open Points
 
-- Note: satellite notes on dreaming, the lower bound and defects of control.
+- Estimators, identification of the critical level, calibration of work, constants.

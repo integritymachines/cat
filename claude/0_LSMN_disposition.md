@@ -92,3 +92,32 @@ Concepts introduced in the notes for Papers 3 and 4 and in "Adaptive Recalibrati
 | Signature identification from samples (§7) | names a missing diagnostic procedure | not carried | Candidate for Section 8 |
 | Cube structure, categorical remark (§7) | flags an unproven structural claim | proposed removal | |
 | References (Rice, Wolpert and Macready, Stadler and Stephens, Simon) | algorithm selection, no free lunch, landscapes | kept | Add to the scaffold's reference list |
+
+## Review of 13 November 2026
+
+Changes adopted from `0_LSMN_review.md` under the authors' rulings of the same day. Kernel 0.13, Paper 1 report 0.4, Paper 2 report 0.3, Paper 3 report 0.3, Paper 4 report 0.3.
+
+| Element | Status | Now |
+|---|---|---|
+| Motility, lower bound, dreaming test, taxa table, LLM placement in Paper 4 | moved by ruling | Separate paper. Parked in kernel §6. Removed from Paper 4 |
+| Curvature in Papers 1, 2 | kept by ruling | Labeled synecdoche (ill). Stands for discriminability, distortion, aliasing, sensitivity |
+| JND proportional to curvature to the power minus one half | withdrawn | JND tied to the Fisher metric in a direction |
+| Metric decay by Ricci flow | revised | Kept as illustration, one chosen picture of decay |
+| Fisher metric | kept | Distribution behind it stated. Optional bridge to Paper 3 by symmetrized divergence |
+| "Papers 3 and 4 make the stand-ins operational" | revised | Paper 3 supplies candidates. Translation contract with losses stated |
+| Global spectral gap as regime trigger | revised by ruling | Task-conditioned gap $\lambda_\zeta$ beside it. $\lambda_2$ is its minimum over goals |
+| Remap when no supported alternative exists | revised by ruling | Remap when none is found within budget (hyp). Three kinds of support |
+| Claim types | added by ruling | Definition, theorem, postulate, hypothesis, illustration |
+| Torsion bound on work, test formulas | kept by ruling as postulates | Elements subject to test. Not derived from torsion variation |
+| Unweighted degree-one Laplacian | corrected | One weighted convention. Worked case unchanged in value, harmonic parts assigned to route chains |
+| Change of $\beta_1$ as weight tends to zero | corrected | Only deletion changes $\beta_1$ |
+| Global distortion after removing the shortcut | corrected | Stays $22/16$. Only the local value falls |
+| Opacity degree on $[0, 1]$ | corrected | Rescaled. One half is uninformative |
+| Work equal to efficiency times allocation | corrected | Work over an interval, allocation as power, baseline not part of control |
+| Error compounding | revised | Amplification plus new disturbance |
+| Cube corner $(0,0,0)$ | resolved | Two coordinate sets, structure and obstruction |
+| Control-work necessity | renamed | Fixed-policy failure lemma |
+| Perspective asymmetry | split | Theorem plus postulate |
+| Step drop of the gap, latency exponent, braking by torsion, state classification by $\beta_1$ | revised | Policy threshold, latency in $\lambda_\zeta^{-1}$, torsion as added predictor, no classification by $\beta_1$ |
+| Bench, design, qualification, layered falsification | added | Papers 3 and 4 |
+| Numeric cutoffs from the notes | not carried as established | May return as preregistered exploratory values |

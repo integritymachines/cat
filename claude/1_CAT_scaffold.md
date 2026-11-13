@@ -1,8 +1,8 @@
 # Consciousness as Translation: Scaffold
 
-Version 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1.
+Version 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1.
 
-The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept) or **U1** to **U8** (one of the eight ruled updates listed in the kernel). Nothing else is added.
+The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the kernel), or **Rev** (a correction adopted from the review of 13 November). Nothing else is added. Claim types as in the kernel: (def), (thm), (post), (hyp), (ill).
 
 Epigraph (2025, original punctuation): *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
@@ -23,29 +23,32 @@ Headline (U2). To navigate an unsurveyable reality, a cognitive agent has to mai
 - 2025 footnote, with U1: the paper does not claim reality is combinatorial. Reality is unsurveyable. Combinatorial explosion is its closest formal expression. The chain is landscape, territory, map, navigation, and the territory is the agent's own parochially sampled model.
 - 2025: distortion creates friction. Where it exceeds a critical level, drift becomes unreliable and the agent has to intervene.
 - 2025: three regimes, named.
-- U6: the paper is conceptual. Combinatorial against continuous, curvature and the Fisher metric are stand-ins. Papers 3 and 4 make them operational.
+- U6: the paper is conceptual. It develops conceptual synecdoches as stand-ins to explain the underlying concepts: combinatorial against continuous, curvature, the Fisher metric (ill). Paper 3 supplies computable candidates. The correspondence is partial and lossy.
 - 2025: the epigraph, repeated.
 
 ## 2. The Translation Problem
 
 - 2025: translation fails in four characteristic ways, which together constitute unsurveyability. The statement is self-sufficient and does not presuppose Paper 2.
 - 2.1 Intractability, the boundary condition (2025): sizes, the limit condition, forced loss of fidelity.
-- 2.2 Opacity (2025): the territory provides no gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures gradients. Satisfiability as the example.
+- 2.2 Opacity (2025): the territory provides no task-given gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures gradients. Satisfiability as the example.
 - 2.3 Contingency (2025): choices alter the topology of reachable states. Branch points appear in the map as singularities. Foreclosure or costly backtracking.
-- 2.4 Transience (2025): the world is non-stationary and the map decays. Decay equation of the metric.
+- 2.4 Transience (2025): the world is non-stationary and the map decays. Decay equation of the metric. Rev: one chosen picture of decay (ill), not implied by transience.
 - 2.5 Causal hierarchy (2025): intractability, compression, opacity with contingency and transience, high curvature, control regime, consciousness.
 
 ## 3. Translation Geometry
 
 - 3.1 Basic architecture (2025): territory, map, compression. Fisher metric as discriminability. Natural gradient plus control field.
+- Rev in 3.1: the distribution behind the Fisher metric is stated: observations the map predicts at a state, given goal and habitat. Fisher measures local discriminability. It does not by itself measure distortion or the need for control.
 - U1, U2 in 3.1: the territory is the comprehensive model, sampled densely around habitats. The map is the comprehensible model, a rank offering of the available choices by their connection to the objective. All models are wrong and some are useful (Box): the map's loss is negligible in some instances.
-- 3.2 The role of curvature (2025): curvature measures how abruptly discriminability changes. It is the geometric signature of the translation problem. Relation to the just-noticeable difference.
+- 3.2 The role of curvature (2025): curvature measures how abruptly discriminability changes. It is the geometric signature of the translation problem.
+- Rev in 3.2: curvature is a synecdoche (ill). It stands for discriminability, distortion, aliasing and navigational sensitivity, which Paper 3 separates. The Bernoulli family shows varying discriminability at zero curvature. The just-noticeable difference is tied to the metric, not to curvature. The 2025 relation to curvature is withdrawn.
 - 3.3 Three regimes (2025): drift below the critical level, control near it, remap beyond what control can stabilize. Examples kept.
-- U4 in 3.3: control applies when the map holds another supported route, and remap when it holds none. Under control, candidate routes are tried virtually before commitment, so that conjectures die in the agent's stead (Popper).
-- U7 in 3.3: the envelope of assured navigation covers drift and control. It answers the dark-room objection.
+- U4 in 3.3: control applies when the agent finds another supported route within its budget, and remap when it finds none (hyp). Remap is a decision under budget and proves no impossibility. Under control, candidate routes are tried virtually before commitment, so that conjectures die in the agent's stead (Popper).
+- U7 in 3.3: the envelope of assured navigation covers drift and control, certified by the agent's own search. It answers the dark-room objection.
 - 2025: drift includes skilled, abstract performance. The critical level is specific to the agent and metabolically constrained.
 - 3.4 Control cost and intensity (2025): integrated control cost. Local instability as the gradient of curvature.
-- U3 in 3.4: allocation has a waking baseline, which maintains the map against transience, and surges at instances at or above the critical level. Consciousness is graded and is absent only in dreamless sleep and under anesthesia.
+- Rev in 3.4: control work over a matched interval. Allocation is metabolic power to mediation, excluding background metabolism. Efficiency compares work with allocated energy over the same interval. The baseline is not part of the control field.
+- U3 in 3.4: Postulate 1.0, conscious iff allocation is positive. Allocation has a waking baseline, which maintains the map against transience, and surges at instances at or above the critical level. Consciousness is graded and is absent only in dreamless sleep and under anesthesia.
 - 3.5 Why consciousness here (2025): phenomenology, signatures and functional necessity align.
 - U3 in 3.5: a homeostat corrects against a fixed reference. Control here decides between candidate routes before commitment.
 
@@ -70,7 +73,7 @@ Headline (U2). To navigate an unsurveyable reality, a cognitive agent has to mai
 ## 6. Altered States
 
 - 2025, all six: meditation, psychedelics, flow, dreams, anxiety and rumination, anesthesia and deep sleep. General principle.
-- U6: qualitative here. Paper 4 gives the quantitative form.
+- U6: qualitative here. Paper 4 uses the states as experimental contrasts.
 
 ## 7. Empirical Implications
 

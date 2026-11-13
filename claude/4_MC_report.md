@@ -1,166 +1,141 @@
 # Measuring Consciousness
 
-Report, draft 0.2, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4. The research note for Paper 4 is the yardstick, with the summary report on the lower bound for the last section. Tags: [ruled] marks a departure decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Numbers quoted from the note are unchecked and are marked as note values.
+Report, draft 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4. The research note for Paper 4 is the source of content. The structure follows the review of 13 November, as adopted by the authors. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Numbers from the note are unchecked and are not carried as established values.
 
-This report states what the operators of Paper 3 predict in recordings of living systems. It follows the order of the note: thesis, traces, dictionary, waking tests, states, agents, and the handoff on the lower bound. It ends with a refutation condition.
+This paper makes the theory measurable, predictive and falsifiable [ruled]. It states what is measured, how the estimators are qualified, which tests the model elements face, and which failure refutes which claim.
 
-## Thesis
+## Science
 
-An agent forms its map $\mathcal{M}_{\mathrm{int}}$ from its own sampling and compression. An observer forms $\mathcal{M}_{\mathrm{ext}}$ from another. By Proposition 3.3 of Paper 3 the two stand at a positive distance:
+Paper 1 states the theory with synecdoches. Paper 3 gives computable candidates for its mechanisms. A scientific theory also needs observables, estimators that are qualified independently of the claims they test, predictions made before the data, comparison with simpler accounts, and conditions under which it fails.
+
+Thesis. An agent forms its map $\mathcal{M}_{\mathrm{int}}$ from its own sampling and compression. An observer forms $\mathcal{M}_{\mathrm{ext}}$ from another. By Proposition 3.3 the two generically stand at a positive discrepancy:
 
 $$d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{int}}, \mathcal{M}_{\mathrm{ext}}) > 0 \tag{1}$$
 
-Scientific observation is a second lossy translation of first-person experience. It observes behavior and physiology from without and regularizes them across instances and species. It does not absorb what it is like to be the agent.
+Scientific observation is a second lossy translation of first-person experience. It observes behavior and physiology from without and regularizes them across instances. Lemma 3.2 gives the complement. When the route that the map offers fails the lift test, the agent reaches its goal only with a nonzero control field $w$ or a change of the map. By Postulate 1.0 of Paper 1, control at a critical limit consumes a metabolic allocation and produces control work. Both are physical, and both leave traces. The tests below concern those traces. They make no claim to measure experience itself.
 
-Proposition 3.2 gives the complement. When the spectral gap $\lambda_2$ of the map falls to its critical level $\epsilon^\ast$, or the planned route fails the lift test, the agent reaches its goal only with a nonzero control field $w$ or a deformation of the map. Control consumes a metabolic allocation $a$ and produces control work $\mathcal{W}$. Both are physical and both leave traces. The tests below concern those traces. They make no claim to measure experience itself.
+## Constructs
 
-## Traces
+| Construct | Definition | Units | Candidate observables (note) |
+|---|---|---|---|
+| $a(t)$ | metabolic power allocated to mediation, excluding background metabolism | power | regional hemodynamics, pupil diameter, autonomic balance |
+| $a_{\mathrm{base}}$, $\Delta a_e$ | waking baseline, surge at instance $e$ | power | contrast of task against matched rest |
+| $\mathcal{W}$ | correction cost over a matched interval $\Theta$ | energy, after calibration | behavioral correction, model fits, decision boundary |
+| $\eta$ | $\mathcal{W} / \int_\Theta \sum_e \Delta a_e\, dt$ | dimensionless | ratio of the two above |
+| $\lambda_\zeta$, $\lambda_2$ | task-conditioned and global gap of $K_M$ | inverse time, under a time scale | graph reconstructed from recording channels |
+| $\operatorname{lift}$ | support of a route by the record | count | task design with known territory |
+| $d_{\mathcal{SM}}$, $d_{\mathrm{GW}}$ | squared distortion, squared transport discrepancy | squared distance | dissimilarity matrices across epochs or agents |
+| $\log \operatorname{Tor}$ | signed observable of deformation | dimensionless | log determinants on reconstructed complexes |
 
-Allocation has a waking baseline and surges at instances $e$:
+Assumption 4.1 (post). $\hat{a}$ is increasing in $a$.
 
-$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \qquad \mathcal{W} = \eta\, a, \qquad \eta \in (0, 1] \tag{2}$$
+Postulate 4.2 (post, from the note). Control work is bounded below by the deformation it achieves:
 
-$\eta$ is the efficiency of conversion. Two traces are available.
+$$\mathcal{W} \ge c_0\, \lvert \Delta \log \operatorname{Tor} \rvert, \qquad c_0 > 0 \tag{2}$$
 
-| Trace | Estimates | Candidate channels (note) |
-|---|---|---|
-| $\hat{a}$ | metabolic input | regional hemodynamics, pupil diameter, autonomic balance |
-| $\hat{\mathcal{W}}$ | control work | reconstructed $\hat{\lambda}_2$, $\hat{\beta}_1$, $\log \widehat{\operatorname{Tor}}$, midfrontal theta, decision boundary, response-time dynamics |
-
-Assumption 4.1. $\hat{a}$ is increasing in $a$.
-
-Assumption 4.2 (note). Control work is bounded below by the deformation it achieves:
-
-$$\mathcal{W} \ge c_0\, \lvert \Delta \log \operatorname{Tor} \rvert, \qquad \text{hence} \qquad a \ge \frac{c_0}{\eta}\, \lvert \Delta \log \operatorname{Tor} \rvert \tag{3}$$
-
-with a constant $c_0 > 0$. The note derives $c_0$ from a thermodynamic argument. That derivation is not reproduced and awaits the fact check. Log torsion remains a signed observable and is not identified with $\mathcal{W}$ [ruled].
+(2) is an element of the model, subject to test in Test 4.6. It is not derived from the torsion variation of Paper 3, which supplies no energetic bound. Log torsion is not identified with control work [ruled].
 
 Separating $a$ from $\mathcal{W}$ matters where the two decouple. In flow, much work is done at low input and $\eta$ is high. In overload, input is high and the trajectory stalls, so $\eta$ is low.
 
-## Dictionary
+## Qualification
 
-Every test is conditional on estimators of the operators.
+Every test is conditional on qualified estimators. The note proposes a forward mapping:
 
 | Operator (Paper 3) | Role | Candidate estimator (note) |
 |---|---|---|
 | $K_S$ against $K_M$ | record against compressed map | orthogonal subspaces in population activity |
-| $\Delta_0$, $\lambda_2$ | identification | graph Laplacian from phase-based or precision-based connectivity among channels |
+| $\Delta_0$, $\lambda_2$, $\lambda_\zeta$ | identification | graph Laplacian from connectivity among channels |
 | $\Delta_1$, $\beta_1$ | composition | persistent cohomology of population state clouds |
-| $\operatorname{Tor}$ | persistence, deformation | log determinants on empirical clique complexes |
-| $d_{\mathrm{GW}}$ | remap, distance between agents | transport distance between dissimilarity matrices |
+| $\operatorname{Tor}$ | deformation | log determinants on empirical clique complexes |
+| $d_{\mathrm{GW}}$ | discrepancy between maps | transport between dissimilarity matrices |
 
-The note names four empirical supports for this dictionary: a factorization of hippocampal activity into orthogonal subspaces for drift in time and for position, a link between the spectrum of $\Delta_0$ and the participation ratio $\operatorname{PR}$ of population activity, a contraction of variability in familiar regimes with aliasing at the boundary of ignorance, and a multiplexing of dominant and suppressed percepts during rivalry. This report lists them as candidates. None has passed the fact check.
+The note names four empirical supports for this mapping: a factorization of hippocampal activity into orthogonal subspaces for drift in time and for position, a link between the spectrum of $\Delta_0$ and the participation ratio $\operatorname{PR}$, a contraction of variability in familiar regimes with aliasing at the boundary of ignorance, and a multiplexing of dominant and suppressed percepts during rivalry. All four are candidates until fact-checked.
 
-The dictionary is the weakest link of the paper. A failed test refutes the series only under valid estimators.
+Qualification rules (def):
+
+1. Each estimator is validated on synthetic graphs with known structure, on known interventions and on held-out recordings.
+2. A reconstructed neural connectivity graph is not assumed to be the agent's map. The relation is itself tested.
+3. Threshold calibration and confirmation use separate data. If the same control marker both sets $\epsilon^\ast$ and confirms the transition, the test is circular.
+4. Each test is compared against simpler accounts: difficulty, uncertainty, response conflict, standard sequential sampling.
 
 ## Waking Tests
 
-The four tests follow the transition from drift to control. They concern the degree of allocation at an instance.
+The tests follow the transition from drift to control. Their forms are elements of the model, subject to empirical test (post) [ruled].
 
-Test 4.3 (spectral). Let ambiguity or conflict be varied in small steps. Control markers do not scale linearly. $\hat{\lambda}_2$ shows a step drop at a critical value, and control markers rise nonlinearly immediately after it. Note values: a drop of more than half, preceding the rise by less than 50 ms.
+Test 4.3 (threshold). At an independently calibrated task threshold, control policy and control cost change. The estimated $\hat{\lambda}_\zeta$ predicts where the threshold lies. The note predicted a step drop of $\hat{\lambda}_2$. A smooth change of weights moves the spectrum smoothly, so the step belongs to the policy and not to the eigenvalue.
 
-Test 4.4 (kinematic). The relaxation time grows as $\lambda_2^{-1}$ (Paper 3). Response time follows
+Test 4.4 (latency). $\lambda_\zeta^{-1}$ is the mean relaxation time of the task potential (Paper 3). Hence
 
-$$\mathbb{E}[\text{response time}] = t_0 + c_1\, \lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2} \tag{4}$$
+$$\mathbb{E}[\text{response time}] = t_0 + c_1\, \lambda_\zeta^{-1} \tag{3}$$
 
-with constants $t_0$, $c_1$. Variability across trials rises in the same window, and errors separate into fast slips under drift and slow errors under control.
+near the threshold, with constants $t_0$, $c_1$. The note's form $\lvert \lambda_2 - \epsilon^\ast \rvert^{-1/2}$ diverges where the relaxation time stays finite. It requires a bifurcation model and is carried as an alternative [open]. Variability across trials rises in the same window, and errors separate into fast slips under drift and slow errors under control.
 
-Test 4.5 (braking). Resolving a cycle before commitment requires halting execution. Let $\operatorname{bnd}$ be the decision boundary of a sequential-sampling model. Then
+Test 4.5 (braking). Let $\operatorname{bnd}$ be the decision boundary of a sequential-sampling model. A rise of $\operatorname{bnd}$ is predicted by a failed lift of the offered route and by the demand for revision. $\Delta \log \operatorname{Tor}$ adds explanatory power beyond these. The behavioral form is vicarious trial and error at a fork: the agent stops, samples the options, and reverses a prepotent movement.
 
-$$\Delta \operatorname{bnd}(t) = c_2\, [\lambda_2(t) \le \epsilon^\ast]\, \log \operatorname{Tor}(K_M(t)) \tag{5}$$
+Test 4.6 (expenditure). Over matched intervals, $\int_\Theta \hat{a}\, dt$ tracks measured correction cost $\hat{\mathcal{W}}$ with slope $\eta^{-1}$. $\lvert \Delta \log \operatorname{Tor} \rvert$ adds out-of-sample prediction, as (2) requires.
 
-with a constant $c_2$ and the bracket equal to one when the condition holds. The behavioral form is vicarious trial and error at a fork: the animal stops, sweeps its head between options, and reverses a prepotent movement.
+Individuals differ in baseline $\epsilon^\ast$ and in $\eta$. The note reads the margin just above $\epsilon^\ast$ as confidence, the low-cost correction of minor divergence, and reads individual differences in that margin as a spectrum between sequential and parallel styles of cognition. Organisms differ in how they allocate, and Tests 4.3 to 4.6 are where that variance can be picked up. Bat navigation is a candidate case: stereotyped flight corridors with sonar locked to the wingbeat under drift, and strobe groups with braking when a target is displaced.
 
-Test 4.6 (metabolic). By (3), $\hat{a}$ is linear in $\Delta \log \operatorname{Tor}$ across trials, with slope proportional to $\eta^{-1}$.
+## State Contrasts
 
-Individuals differ in baseline $\epsilon^\ast$ and in $\eta$. The note describes the margin just above $\epsilon^\ast$ as confidence, the low-cost correction of minor divergence, and reads individual differences in that margin as a spectrum between sequential and parallel styles of cognition. Above the lower bound, organisms differ in how they allocate, and Tests 4.3 to 4.6 are where that variance can be picked up. Bat navigation is a candidate case: stereotyped flight corridors with sonar locked to the wingbeat under drift, and strobe groups with braking when a target is displaced.
+Paper 1 describes altered states qualitatively. Here they are experimental contrasts in which the model's predictions differ. They are not a classification of conscious systems.
 
-## States
+| State | Paper 1 | Contrast |
+|---|---|---|
+| drift | $\kappa < \kappa^\ast$ | $\lambda_\zeta > \epsilon^\ast$, $a = a_{\mathrm{base}}$ |
+| overload | $\kappa \ge \kappa^\ast$, sustained | $\lambda_\zeta \le \epsilon^\ast$ sustained, $\eta$ low |
+| flow | $\kappa$ just below $\kappa^\ast$ | $\lambda_\zeta$ just above $\epsilon^\ast$, $\eta$ maximal |
+| meditation | lower $\kappa$, higher $\kappa^\ast$ | baseline $\lambda_\zeta$ raised, larger $\mathcal{E}$ |
+| psychedelics | higher variance of $\kappa$ | higher $\operatorname{PR}$, large $d_{\mathrm{GW}}$ from baseline, remap afterward |
+| propofol | no mediation | long-range $\lambda_2 \to 0$, $\mathcal{W} \to 0$, $a$ suppressed |
+| ketamine, REM | control without actuators | $\mathcal{W} > 0$ internally, input and output gated |
 
-Paper 1 describes altered states by curvature $\kappa$ against its critical level $\kappa^\ast$. The operators give each state a signature.
+The cycle count $\beta_1$ is not used to classify states. A harmonic cycle is no contradiction by itself (Paper 3).
 
-| State | Papers 1 and 2 | Operators | $\eta$ |
-|---|---|---|---|
-| drift | $\kappa < \kappa^\ast$ | $\lambda_2 > \epsilon^\ast$, $\beta_1 = 0$, $a = a_{\mathrm{base}}$ | baseline |
-| overload | $\kappa \ge \kappa^\ast$, sustained | $\lambda_2 \le \epsilon^\ast$, $\beta_1 > 0$, torsion spike | low |
-| flow | $\kappa$ just below $\kappa^\ast$ | $\lambda_2$ just above $\epsilon^\ast$, $\beta_1 = 0$ | maximal |
-| meditation | lower $\kappa$, higher $\kappa^\ast$ | higher baseline $\lambda_2$, larger envelope | high |
-| psychedelics | higher variance of $\kappa$ | higher $\operatorname{PR}$, large $d_{\mathrm{GW}}$ from baseline, remap afterward | remap |
-| propofol | $w \equiv 0$ | long-range $\lambda_2 \to 0$, $\mathcal{W} \to 0$, $a$ suppressed | none |
-| ketamine, REM | control without actuators | $\mathcal{W} > 0$ internally, input and output gated | uncoupled |
+The table makes three commitments that can fail separately. Flow and overload differ in $\eta$ at comparable work. Propofol and ketamine differ in internal $\mathcal{W}$ at comparable unresponsiveness. Meditation moves the baseline, and psychedelics move the variance.
 
-The table makes three commitments that can fail separately. Flow and overload differ in $\eta$ at comparable work. Propofol and ketamine differ in internal $\mathcal{W}$ at comparable unresponsiveness. Meditation moves the baseline, where psychedelics move the variance.
-
-Test 4.7. Under propofol and in dreamless sleep, $\hat{a}$ and $\hat{\mathcal{W}}$ do not respond to $\hat{\lambda}_2$. Local responses to input can persist. A drop of the gap triggers no control.
+Test 4.7 (absence). State, task and recording sensitivity are fixed in advance. Under propofol and in dreamless sleep, the control channel does not respond to a manipulated $\lambda_\zeta$. Local responses to input can persist. Positive controls (wake, ketamine) and negative controls (stimulation that does not change $\lambda_\zeta$) are required. Lack of external response is separated from absence of internal processing.
 
 ## Agents
 
 Two agents $A$ and $B$ hold maps compressed from private territories. They coordinate under drift while
 
-$$d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast \tag{6}$$
+$$d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast \tag{4}$$
 
-and they build a shared representation as the distance falls. At or above $\delta^\ast$, automatic coordination breaks down and the agents need explicit translation at the boundary between their maps, with $w \ne 0$ on both sides. The note predicts that compatibility between people follows relational geometry, the structure of distances inside each map, and does not follow similarity of attributes. Note value: $\delta^\ast$ near 0.35 of the map's diameter.
+and build a shared representation as the discrepancy falls (post). At or above $\delta^\ast$, automatic coordination breaks down, and the agents need explicit translation at the boundary between their maps, with $w \ne 0$ on both sides. The note predicts that compatibility follows relational geometry, the structure of distances inside each map, and not similarity of attributes. The note's value for $\delta^\ast$ is not carried.
 
-## Lower Bound
+## Design
 
-Whether a system is conscious at all has a lower bound. The note hands this question to a satellite note. This section states the test that the satellite note applies.
+The first test bed is artificial. The investigator knows the territory graph and its changes, while participants see only local observations. Four factors are manipulated independently:
 
-Viability. The conjecturing engine pays only when the expected physical loss it avoids exceeds its cost. With $\ell$ the loss from a failed physical conjecture and $B_F$, $B_w$, $B_0$ the budgets for virtual search, reconciliation and maintenance (Paper 3),
+| Factor | Manipulation |
+|---|---|
+| opacity | quality of local cues, with connectivity unchanged |
+| contingency | cost or irreversibility of a wrong branch |
+| transience | frequency and location of changes to edges |
+| task location | inside a well-connected cluster, or across a weak bridge |
 
-$$\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0] \tag{7}$$
+Measures: choice, virtual backtracking, latency, error, revision of policy, model fits, metabolic markers, and independently estimated neural statistics. A Fisher-informed model and a graph-only model are fitted to the same trials and predict held-out perturbations. If the graph-only model suffices, the redundancy of the Fisher bridge is a result.
 
-Motility and sessility give the first dividing line [ruled]. An agent that moves meets changing environments, and their number explodes combinatorially. A sessile agent has limited need for the engine. It can produce physical conjectures in place of virtual ones: a tree grows many branches and lets the losers die, which is literal branch and bound. A motile agent has one body on one route. Its conjectures have to die in its stead, so they have to be virtual. The need for a compact map arises downstream, from the exploding complexity of the experienced habitat.
+Negative controls are cases A to E of the Paper 3 bench: a small global gap with a local task, a large gap with a false shortcut, a harmless cycle, an omitted transition, and slow drift of one weight. If the model cannot classify its own finite cases, no neural estimator can repair it.
 
-| | Sessile, reflexive | Motile, navigational |
-|---|---|---|
-| conjectures | physical, parallel | virtual, before commitment |
-| map | none required | compressed from the record |
-| gap at choice points | $\lambda_2 > \epsilon^\ast$ throughout | $\lambda_2 \le \epsilon^\ast$ occurs |
-| cycles, torsion | $\beta_1 = 0$, $\log \operatorname{Tor}$ flat | $\beta_1 > 0$ resolved under control |
-| offline | physical recuperation | physical and virtual recuperation |
+## Falsification
 
-Boundary test [ruled]. A system is above the bound iff it shows all three:
+Each failure refutes one layer. A failure is not reassigned to the estimator by default, and an estimator failure does not refute the whole series.
 
-1. Compression. It holds a map $\mathcal{M} = \pi(\mathcal{S})$ with $\dim \mathcal{M} \ll \log \nu(\mathcal{S})$, separate from the record.
-2. Discontinuity. At a critical limit the system shows a discontinuity that can be measured from without. Tests 4.3 to 4.6 give its forms.
-3. Offline conjecturing. It has high-intensity REM phases. With actuators gated, the map deforms within a band:
+| Layer | Fails when |
+|---|---|
+| operator | under known graphs, the identities of Paper 3 or the fixed classifier fail on the bench |
+| bridge | Fisher-informed and graph quantities disagree beyond their stated domain |
+| mechanism | qualified quantities fail to predict route failures, corrections or expenditure prospectively. In particular: control markers scale linearly through the threshold of Test 4.3, or the control channel responds to $\lambda_\zeta$ under the conditions of Test 4.7 as it does in wake |
+| consciousness link | the mechanism is present where experience-related evidence is absent, or absent where it is present, under a stated measurement theory |
 
-$$\delta_{\mathrm{lo}} \le d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{wake}}, \mathcal{M}_{\mathrm{sleep}}) \le \delta_{\mathrm{hi}} \tag{8}$$
-
-Note values: $\delta_{\mathrm{lo}} = 0.10$, $\delta_{\mathrm{hi}} = 0.45$, with $\operatorname{PR}_{\mathrm{REM}} > \operatorname{PR}_{\mathrm{wake}}$ and a higher $\lambda_2$ after sleep.
-
-Dreaming is the enactment of far-fetched and potentially lethal conjectures under physical incapacitation. Only organisms that dream can be conscious [ruled]. An organism that does not dream recuperates physically in sleep. A conscious organism also has to recuperate virtually and send the singularities of its map to their deaths.
-
-Applied across taxa, the summary report gives the following placement. It is unchecked.
-
-| System | Compression | Discontinuity | Offline conjecturing | Placement |
-|---|---|---|---|---|
-| plants, microbes | no | no | no | well below |
-| insects, spiders | local | minimal | borderline | at or below |
-| reptiles | yes | yes | yes | at or just above |
-| cephalopods | yes | yes | yes | above |
-| mammals, birds | yes | yes | yes | well above |
-
-Current large language models are below the bound [ruled]. They have no adaptive recalibration in runtime, so point 2 has no object, and they have no parochialism. Their sampling has no habitat, which makes them the nearest known case of the perfectly rational agent of Paper 1.
-
-## Refutation
-
-Under valid estimators, the series fails in any of three cases.
-
-1. In Test 4.3, control markers scale linearly through the critical value, with no step in $\hat{\lambda}_2$.
-2. Under the conditions of Test 4.7, $\hat{a}$ and $\hat{\mathcal{W}}$ respond to $\hat{\lambda}_2$ as they do in wake.
-3. A system passes the boundary test and shows none of the forms of Tests 4.3 to 4.6.
-
-A fourth case concerns the bound. An organism that demonstrably does not dream and passes points 1 and 2 of the boundary test would refute the claim that offline conjecturing is necessary.
-
-No effect size is asserted before the fact check.
+The last layer tests Postulate 1.0 of Paper 1. It is tested last, and it remains a postulate. No effect size is asserted before the fact check.
 
 ## Open
 
-1. Validity of the estimators in the dictionary.
-2. Identification of $\epsilon^\ast$ in data, independent of the markers it is meant to predict.
-3. The band (8) and the level $\delta^\ast$.
-4. The derivation of $c_0$ in (3).
-5. The comparative table.
-
-Satellite notes take over from here: dreaming, the lower bound, and defects of control.
+1. Validity of the estimators in the qualification table.
+2. Identification of $\epsilon^\ast$ in data, independent of the markers it predicts.
+3. Calibration of $\mathcal{W}$ in energy units.
+4. The constant $c_0$ in (2) and the level $\delta^\ast$ in (4).
+5. The alternative latency form with exponent $-\tfrac12$.

@@ -1,84 +1,91 @@
 # Translation Geometry: Scaffold
 
-Version 0.2, 12 November 2026. Baseline: the research note for Paper 3. Kernel: `0_LSMN_kernel.md` §3. Tags as in the kernel.
+Version 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §3. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt the review of 13 November under the authors' rulings. Each bullet carries a claim type: (def), (thm), (post), (hyp), (ill).
 
-Headline. The stand-ins of Papers 1 and 2 have exact counterparts on a pair of discrete complexes. Manufactured gradients, the virtual test of a route, the distortion between territory and map, and the deformation of the map under revision are each computed by one operator. Curvature against its critical level becomes a condition on the spectral gap and on the lift of routes.
+Headline. Papers 1 and 2 explain the theory with synecdoches. This paper constructs computable candidates for the mechanisms they explain: manufactured direction, task sensitivity, the virtual test of a route, distortion and deformation. The correspondence is partial and lossy, and the paper states what is lost.
 
-Status of the paper. Scientific. Every statement is a definition, a proposition with stated assumptions, or a computation. The paper contains no neuroscience. Empirical models belong to Paper 4.
+Status. Scientific. Definitions, theorems, postulates, one computed example and a bench. No neuroscience. Empirical models belong to Paper 4.
 
 ## 1. Introduction
 
-- Claim: Papers 1 and 2 argue with stand-ins. This paper retires them.
-- Table: each stand-in and its operator (kernel §3, Regimes).
-- Claim: the operators are unified by their roles along the chain landscape, territory, map, navigation. No scalar summary statistic is assumed.
-- Dependency: Paper 1 for the regimes, Paper 2 for the obstructions and primitives.
+- Papers 1 and 2 argue with synecdoches. This paper gives candidates, not replacements.
+- The translation contract: each stand-in, its candidate, what is kept, what is lost.
+- Fisher information stays. One bridge is offered and the rest is declared unestimated. Whether the bridge adds predictive power is tested in Paper 4.
+- The operators are unified by their roles along the chain. No scalar summary statistic is assumed.
 
 ## 2. Two Complexes
 
-- Territory $K_S$: a relational complex with adjacency $\Lambda_S$. A parochially sampled record of encounters. Relations may be symmetric or asymmetric. It has no potential and no gradient.
-- Map $K_M$: a simplicial complex with edge weights $G$. It does not create options. It orders them.
-- Projection $\pi$: surjective on vertices, non-injective.
-- Navigation: a policy trajectory on $K_M$, executed in the territory.
-- Table (note): role, gradients, reversibility and structure of the two complexes.
+- Territory $K_S$ (def): relations only, no task-given potential, not globally ranked, normalized sampling measure.
+- Map $K_M$ (def): weights, potential, flow.
+- Compression (def): surjective, non-injective. Quotienting can create map edges with no territory transition.
+- Metrics (def): symmetrized shortest path on $K_S$, edge length $G_e^{-1}$ on $K_M$.
+- Bridge to Fisher (def, optional): symmetrized divergence between predicted observation distributions. Setting weights from it is a modeling choice (post).
+- Weighted convention (def): one edge inner product for all degrees.
 
 ## 3. Identification
 
-- Operator: $\Delta_0$, potential $\phi$, flow $j$.
-- Proposition 3.1: connectivity gives no direction. A goal vector does. Potential and flow are unique.
-- Claim: collapse of the spectral gap, $\lambda_2 \le \epsilon^\ast$, makes the potential sensitive to perturbation and slows relaxation. Drift stalls.
-- Dependency: answers opacity (Paper 2). Replaces the Fisher metric and the natural gradient (Paper 1).
+- Potential and flow from a goal vector. Proposition 3.1 (thm).
+- Route extraction from the flow (def).
+- Task-conditioned gap $\lambda_\zeta$ (def). Theorem 3.0: $\lambda_2$ is its minimum over goals (thm).
+- Two clusters with a weak bridge: small $\lambda_2$, large $\lambda_\zeta$ inside a cluster.
+- Answers opacity.
 
 ## 4. Composition
 
-- Operator: $\Delta_1$ with Hodge decomposition into gradient, rotational and harmonic parts. $\beta_1$ counts independent cycles.
-- Claim (note): a harmonic cycle is a feature of the map. It is not by itself a contradiction.
-- Operator: the lift functional. A map route is executable iff its lift is positive.
-- Claim: zero lift means that compression has joined disconnected parts of the territory. The virtual test rejects the route before execution.
-- Dependency: answers contingency. Replaces the singularities of Paper 1.
+- Hodge decomposition of route chains under the weighted convention (thm). The scaled flow is a pure gradient.
+- A harmonic cycle is a feature of the map and no contradiction by itself.
+- Lift functional (def). Positive lift: one compatible path in the recorded territory, no more.
+- Three kinds of support: landscape, territory, found within budget (def).
+- Probabilistic lift for stochastic execution [open].
+- Answers contingency.
 
 ## 5. Persistence
 
-- Operator: Ray-Singer torsion and its variation.
-- Proposition 3.4: the rate of change of log torsion at constant rank. At a change of rank a discrete jump is added.
-- Operator: anchored distortion $d_{\mathcal{SM}}$ between an agent's own territory and map.
-- Operator: unconstrained distance $d_{\mathrm{GW}}$ between maps without shared registration (two agents, agent and observer, wake and sleep).
-- Claim [ruled]: log torsion is a signed observable of deformation. It is not identified with control work.
-- Dependency: answers transience. Replaces metric decay and the metric shift of Paper 1.
+- Combinatorial torsion under the weighted convention (def). Variation at constant rank, Proposition 3.4 (thm).
+- Deletion against a weight tending to zero.
+- Torsion is a signed observable of deformation, not control work [ruled]. No energetic bound follows.
+- Anchored squared distortion (def). Squared transport discrepancy for unregistered maps (def). Distances are square roots.
+- Answers transience.
 
 ## 6. Regimes
 
-- Drift: spectral gap above its critical level and the planned route lifts. Positive distortion is then benign.
-- Trigger: collapse of the gap, or zero lift of the planned route.
-- Control: a supported alternative exists. The control field is nonzero. Reconciliation of weights follows.
-- Remap: no supported alternative. The complex or the projection is revised.
-- Confidence (note): low-cost correction of minor divergence inside drift.
-- Envelope of assured navigation: pairs of start and goal joined by a supported route within budget [ruled: drift and control].
-- Open: the discrete form of the control field and of control work.
+- Rule fixed before data (def). Trigger: zero lift of the extracted route, or task gap at or below its critical level.
+- Control when an alternative is found within budget. Remap when none is (hyp).
+- No regime rests on $\lambda_2$ alone [ruled].
+- The threshold is a policy rule (post). No spectral bifurcation is claimed.
+- Control work, candidate (post) [inference]. Weight updates and maintenance carry separate costs [open].
+- Confidence (note).
 
-## 7. Viability
+## 7. Envelope
 
-- Claim (note): the full engine pays iff the expected physical loss avoided exceeds the expected cost of virtual search, reconciliation and maintenance.
-- Claim (note): the return rises with the number of mutually exclusive alternatives and with the irreversible cost of untested execution.
-- Dependency: lower bound of consciousness, Paper 4 and a satellite note.
+- Certified by the agent within its budget (def). Includes drift and control [ruled].
+- Remap lies outside and can enlarge it.
 
-## 8. Propositions
+## 8. Viability
 
-- 3.1 Gradient manufacture. Proved.
-- 3.2 Control-work necessity. Part A proved from the definitions. Part B, the identification with conscious engagement, is the postulate of Paper 1 and is not proved.
-- 3.3 Perspective asymmetry. Argued under a genericity condition. Formal support for the position on the hard problem in Paper 1.
-- 3.4 Torsion variation. Proved at constant rank.
+- Ex ante criterion against physical testing, over a stated horizon, in common units (def).
+- Used by the separate paper on the lower bound. Not a theorem about consciousness.
+
+## 9. Propositions
+
+- Lemma 3.2, fixed-policy failure (thm), formerly control-work necessity. The link to consciousness is Postulate 1.0 of Paper 1.
+- Proposition 3.3, perspective asymmetry: (thm) zero discrepancy iff isomorphic. (post) distinct parochial samplings generically give non-isomorphic maps.
 - Outside the series [ruled]: the impossibility and partition theorems of the note.
 
-## 9. Worked Case
+## 10. Worked Case
 
-- One system on which all operators run: a path of four territory states compressed onto a triangle.
-- Steps: flow, lift failure of the preferred shortcut, distortion before and after reconciliation, torsion shift, change of $\beta_1$, flow after reconciliation, split of the aliased vertex.
-- Claim: the operators cohere on a single agent.
+- Matrices listed. Flow, extracted route, both gaps, lift failure of the shortcut, control.
+- Reweighting: torsion shift $-\tfrac12 \ln 3$ at constant $\beta_1$.
+- Deletion: $\beta_1$ falls to zero.
+- Distortion: global unchanged at $\tfrac{22}{16}$, local falls to zero.
+- Splitting as remap. Three operations kept distinct.
 
-## 10. Open Points and Conclusion
+## 11. Bench
 
-- Discrete control field and control work.
-- Whether reconciliation of weights under an existing alternative belongs to control.
-- The critical level $\epsilon^\ast$: how it is set by the agent's costs.
-- Exploratory (note, kept as a remark): determinant-line geometry as a possible unifying structure.
+- Seven cases, A to G, with required results (def).
+
+## 12. Open Points and Conclusion
+
+- Control work, reconciliation, $\epsilon^\ast$ against $\kappa^\ast$, probabilistic lift, confidence, conditions for Proposition 3.3.
+- Exploratory: determinant-line geometry (note).
 - Hands over to Paper 4.

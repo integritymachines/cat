@@ -1,6 +1,6 @@
 # Unsurveyability
 
-Report, draft 0.2, 13 November 2026. Kernel: `0_LSMN_kernel.md` §2. The 2025 paper is the yardstick, and its order is kept. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed.
+Report, draft 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §2. The 2025 paper is the yardstick, and its order is kept. Corrections from the review of 13 November are adopted under the authors' rulings. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
 
 This report is conceptual. It characterizes what makes the translation from territory to map unstable. It can be read before or after Paper 1.
 
@@ -8,7 +8,7 @@ This report is conceptual. It characterizes what makes the translation from terr
 
 A search process sees a small part of a state space and has to act on the whole. It translates between two representations.
 
-The territory $\mathcal{S}$ is the most faithful formal approximation of the state space. It keeps the relevant distinctions and fabricates no structure. It presents alternatives and privileges none.
+The territory $\mathcal{S}$ is the most faithful formal approximation of the state space. It keeps the relevant distinctions and fabricates no structure. It presents alternatives and privileges none. It carries relations, so it is not without order of every kind. It carries no task-given potential and no global ranking.
 
 The map $\mathcal{M}$ is a compressed representation that enables movement. It orders the alternatives into better and worse. The ordering is manufactured. The map discards distinctions and smooths discontinuities in the service of search.
 
@@ -29,15 +29,15 @@ Unsurveyability $U$ is the property that forces this translation:
 
 $$U = I + N, \qquad N = (O, C, T) \tag{1}$$
 
-$I$ is intractability, the boundary condition. $N$ is intransigence, with its three modes opacity $O$, contingency $C$ and transience $T$.
+$I$ is intractability, the boundary condition. $N$ is intransigence, with its three modes opacity $O$, contingency $C$ and transience $T$. The sum is symbolic. It names a decomposition and defines no aggregate.
 
 ## Intractability
 
-Let $X$ be the set of arrangements of $k$ interacting options, with objective $\operatorname{val}: X \to \mathbb{R}$. Then $\lvert X \rvert \ge k!$. Let $\nu(\mathcal{S}_\alpha)$ count the relevant distinctions of the territory at scale $\alpha$.
+Let $X$ be a search space with objective $\operatorname{val}: X \to \mathbb{R}$. As an example (ill), if $X$ holds the orderings of $k$ interacting options, $\lvert X \rvert = k!$. Let $\nu(\mathcal{S}_\alpha)$ count the relevant distinctions of the territory at scale $\alpha$, and count $\dim \mathcal{M}$ at finite precision, since a real vector of unlimited precision has no capacity limit.
 
 $$I \iff \lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}} = \infty \tag{2}$$
 
-Unsurveyable is meant literally. No agent has a view from above. Under $I$ the state at time $t+1$ is chosen in a neighborhood of the state at $t$:
+Unsurveyable is meant literally. No agent has a view from above. Access (post): per step the agent can evaluate only states in a neighborhood $\operatorname{Nbr}(x_t)$ of its current state. With access so limited, intractability forces local search [ruled]:
 
 $$I \Rightarrow x_{t+1} \in \operatorname{Nbr}(x_t) \tag{3}$$
 
@@ -59,9 +59,11 @@ Each mode of intransigence obstructs the mediation between the global objective 
 
 A maze shows two forms. A bare wall gives no gradient. An arrow of unknown origin gives a gradient with no assured relation to the exit. Let the degree of opacity be
 
-$$o = 1 - \operatorname{corr}\big(\nabla_{\mathrm{loc}} \operatorname{val},\ \nabla_{\mathrm{glob}} \operatorname{val}\big) \in [0, 1] \tag{4}$$
+$$o = \tfrac12 \Big(1 - \operatorname{corr}\big(\nabla_{\mathrm{loc}} \operatorname{val},\ \nabla_{\mathrm{glob}} \operatorname{val}\big)\Big) \tag{4}$$
 
-Opacity is resolved only by establishing that the local signal correlates with the global path. The correlation can be deterministic ($o = 0$) or stochastic ($0 < o < 1$). For $o < 1$, following the signal is better than ignoring it. For $0 < o < 1$, noise added to the choice can improve on strict following, and the useful noise vanishes as $o \to 0$. Hill climbing has a gradient everywhere and succeeds only where local and global gradients are aligned.
+The correlation lies in $[-1, 1]$, so $o \in [0, 1]$. At $o = 0$ the signal is aligned, at $o = \tfrac12$ it is uninformative, and above $\tfrac12$ it misleads. The global gradient in (4) is known to an experimenter who designs the environment and not to the agent (def).
+
+Opacity is resolved only by establishing that the local signal correlates with the global path. The correlation can be deterministic ($o = 0$) or stochastic ($0 < o < \tfrac12$). For $o < \tfrac12$, following the signal is better than ignoring it. For $0 < o < \tfrac12$, noise added to the choice can improve on strict following, and the useful noise vanishes as $o \to 0$. Hill climbing has a gradient everywhere and succeeds only where local and global gradients are aligned.
 
 Sampling lowers opacity. Inside a habitat, where the sampling density $\mu_S$ is high, the agent has learned which local signals correlate with which outcomes.
 
@@ -107,9 +109,9 @@ The endpoint of translation is a trajectory $\gamma$, a sequence of actions whos
 - contingency couples each action to a loss of future options,
 - transience makes a correct projection decay.
 
-Error compounds along the trajectory. A small misalignment at one step can amplify into a large deviation later. As a form [open], with $\operatorname{err}_i$ the misalignment after step $i$ and a growth rate $\operatorname{rate} \ge 0$ that increases in each of $o$, $c$ and $\vartheta$,
+Error compounds along the trajectory. A small misalignment at one step can amplify into a large deviation later, and each step can add new error. As a form (post) [open], with $\operatorname{err}_i$ the misalignment after step $i$, an amplification $\operatorname{amp}_i$ and a new disturbance $\xi_i$, both nondecreasing in $o$, $c$ and $\vartheta$,
 
-$$\operatorname{err}_{i+1} = (1 + \operatorname{rate}(o, c, \vartheta))\, \operatorname{err}_i \tag{7}$$
+$$\operatorname{err}_{i+1} \le \operatorname{amp}_i\, \operatorname{err}_i + \xi_i \tag{7}$$
 
 Unsurveyability is a property of paths under bounded representation. Guidance has to remain robust across a chain of dependent actions.
 
@@ -141,6 +143,8 @@ Simon's images of search are combinatorial and his formal tool is Bellman's dyna
 
 ## Cube
 
+Two coordinate sets describe a translation problem (def). One records the presence of structure, the other the degree of obstruction. More structure can lower an obstruction, so the two sets are kept apart.
+
 The presence or absence of each primitive gives a structural signature:
 
 $$\operatorname{sig} = (R, F, D) \in \{0, 1\}^3 \tag{10}$$
@@ -158,13 +162,13 @@ There are $2^3 = 8$ signatures. The coordinates of a translation problem are $(I
 | $(0,1,1)$ | functional-dynamical | dynamical systems, control, reinforcement learning |
 | $(1,1,1)$ | full | job-shop scheduling, protein folding, strategic planning |
 
-The cube is a metaphor [ruled]. Its corners are extreme types, and environments have graded degrees $(o, c, \vartheta)$. Chess presents all three obstructions. It is well-structured, because its rules and roles are unambiguous, and it is not smooth.
+The cube is a metaphor and a taxonomy [ruled]. Its corners are extreme types. The degrees $(o, c, \vartheta)$ are reported beside the signature. Signature $(0,0,0)$ means no formalizable structure. Degrees $(0, 0, 0)$ mean no obstruction. The two statements belong to different coordinate sets and do not conflict. Chess presents all three obstructions. It is well-structured, because its rules and roles are unambiguous, and it is not smooth.
 
 Algorithms assume signatures. Constraint propagation assumes relational structure, gradient descent assumes functional structure with smoothness, and local search assumes dynamical structure. Where the assumption matches the territory, performance is good. Where it does not, pathologies appear.
 
 ## Open
 
-1. The corner $(0,0,0)$. The 2025 paper reads it as a territory with no formalizable structure. Under graded degrees, the point where all three degrees vanish is an environment with no obstruction. The two readings need to be reconciled.
+1. How the signature and the degrees relate in a given environment.
 2. Formal definitions of the three obstructions beyond (4) and (5), and the form of (6) and (7).
 3. A procedure that determines the signature of a territory from samples.
 4. Whether intermediate signatures behave as restrictions of the full signature.
