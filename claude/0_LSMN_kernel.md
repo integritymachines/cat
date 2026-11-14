@@ -1,6 +1,6 @@
 # CAT — Formal Kernel
 
-*Version 0.16 · 14 November 2026 · working kernel on `main`.*  
+*Version 0.17 · 14 November 2026 · working kernel on `main`.*  
 *Basis:* independent formal reconstruction v4.5, reconciled with the current CAT source record (kernel 0.15; CAT 0.5, UNS 0.3, TG 0.4, MC 0.4; disposition and review protocol through round 3). Original 2025 manuscripts were not available for direct inspection during this integration.  
 *Status:* authorial rulings remain controlling; new candidate operations and hypotheses keep their indicated epistemic status. `\rightsquigarrow` denotes candidate functional realization, never identity of objects.
 
@@ -114,6 +114,7 @@ K_M=(V_M,E_M,F_M,G),\quad\pi:V_S\twoheadrightarrow V_M,\quad
 \Delta_0=\partial_1G\partial_1^\top,\quad
 \Delta_1=\widetilde\partial_1^\top\widetilde\partial_1+
 \widetilde\partial_2\widetilde\partial_2^\top,\quad
+\Delta_2=\widetilde\partial_2^\top\widetilde\partial_2,\quad
 \phi=\Delta_0^\dagger\zeta,\quad
 j=-G\partial_1^\top\phi,\quad f_{v,e}=-(\partial_1)_{v,e}j_e,\\
 \lambda_\zeta=\frac{\|\zeta\|^2}{\zeta^\top\Delta_0^\dagger\zeta},\quad
@@ -181,7 +182,7 @@ d_{\mathcal{SM}}=\sum_{z,z'}\mu_S(z)\mu_S(z')
 
 \[
 \operatorname{do}(O,C,T,\zeta,B)\rightsquigarrow
-(\widehat\ell,\widehat\lambda_\zeta,\widehat{\operatorname{reg}},
+(\widehat{\operatorname{lift}},\widehat\lambda_\zeta,\widehat{\operatorname{reg}},
 \widehat{\mathcal W},\widehat a,RT),\quad
 \mathbb E[RT\mid\zeta]=t_0+c_1\lambda_\zeta^{-1}\quad(\mathrm{post});
 \tag{19}
@@ -215,7 +216,7 @@ Claim types. (def) definition. (thm) theorem, with its assumptions. (post) model
 |---|---|
 | $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape (unsurveyable reality), Territory, Map, Navigation |
 | $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, policy trajectory $\mathcal{M} \to \mathcal{N}$ |
-| $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, sampling measure |
+| $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency/transition matrix (not necessarily symmetric), metric, sampling measure |
 | $K_M, V_M, m, E_M, F_M, e, G, \partial_1, \partial_2, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, optional faces, edge, edge weights, boundary operators, metric |
 | $\tilde{\partial}_1, \tilde{\partial}_2$ | weighted boundary operators $\partial_1 G^{1/2}$, $G^{-1/2} \partial_2$ |
 | $\Delta_i, \lambda_2, \beta_1$ | weighted Hodge Laplacian of degree $i$, second eigenvalue of $\Delta_0$, $\dim \ker \Delta_1$ |
