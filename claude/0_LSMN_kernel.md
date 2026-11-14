@@ -1,83 +1,261 @@
-# LSMN Kernel
+# CAT — Formal Kernel
 
-Version 0.15, 14 November 2026. Notation: `0_LSMN_notation.md`. Rulings and history: `0_LSMN_disposition.md`, `0_LSMN_review.md`.
+*Version 0.16 · 14 November 2026 · working kernel on `main`.*  
+*Basis:* independent formal reconstruction v4.5, reconciled with the current CAT source record (kernel 0.15; CAT 0.5, UNS 0.3, TG 0.4, MC 0.4; disposition and review protocol through round 3). Original 2025 manuscripts were not available for direct inspection during this integration.  
+*Status:* authorial rulings remain controlling; new candidate operations and hypotheses keep their indicated epistemic status. `\rightsquigarrow` denotes candidate functional realization, never identity of objects.
 
-To navigate an unsurveyable reality, a cognitive agent maintains, and mediates between, two models of it: a comprehensive territory and a comprehensible map. Consciousness arises out of that mediation and the need to allocate metabolic resources to keep the two aligned. Papers 1 and 2 state this with synecdoches. Papers 3 and 4 realize it in operators and tests.
+## 1. Consciousness as Translation — Claim
 
-## 1. Consciousness as Translation
+Cognitive agents navigating an unsurveyable reality have to manufacture conjectural gradients via two distinct representations: a combinatorial territory and a continuous navigational map. Translation between them is necessarily lossy, creating geometric distortions that vary across the map and require continuous mediation. When the representations become critically unaligned, stabilization requires control effort. Consciousness arises from this metabolically costly stabilization process. The phenomenology of conscious experience, including salience and meaning, reflects the geometric structure of this process.
 
-$$\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xrightarrow{\pi} \mathcal{M} \xrightarrow{\gamma} \mathcal{N}, \qquad \pi \text{ non-injective}, \qquad U = I + N, \quad N = (O, C, T)$$
+\[
+\mathcal L\xrightarrow{\sigma_t}\mathcal S_t\xrightarrow{\pi_t}\mathcal M_t
+\xrightarrow{\gamma_t}\mathcal N_t,
+\qquad\pi_t:\mathcal S_t\to\mathcal M_t\ \text{capacity-bounded};
+\quad\mathcal S_t:\text{relations, no task-given potential}.
+\tag{1}
+\]
 
-$$I \;\to\; \pi \;\to\; O + C + T \;\to\; \kappa \ge \kappa^\ast \;\to\; w \ne 0 \;\to\; \text{consciousness}$$
+\[
+\Phi_t=\operatorname{Manufacture}(\mathcal M_t;q_t),\qquad
+j_t=-\operatorname{grad}_{g_t}\Phi_t,\qquad
+\gamma_t=\operatorname{Route}(j_t).
+\tag{2}
+\]
 
-Stand-in (ill). $\mathcal{M}$ carries $g_F(y) = \mathbb{E}\big[\nabla \log p(\cdot \mid y)\, \nabla \log p(\cdot \mid y)^\top\big]$ and
+\(q_t\) is a locally available navigational criterion, possibly implicit or partial. *Combinatorial–continuous* and Fisher geometry are **(ill)**, with *comprehensive–comprehensible* denoting the representations' complementary jobs:
 
-$$\dot{y} = -g_F^{-1} \nabla \phi(y) + w(y)$$
+\[
+g_F(y)=\mathbb E[\nabla_y\log p(o\mid y)\nabla_y\log p(o\mid y)^\top],\quad
+\kappa=\operatorname{Scal}(g_F),\quad
+\chi_\kappa=\mathbf1\{\kappa\ge\kappa^*\}\quad(\mathrm{ill}).
+\tag{3}
+\]
 
-$\kappa(y)$, the curvature of $g_F$, stands for the divergence of $\mathcal{M}$ from $\mathcal{S}$ together with its consequence for $\gamma$.
+\[
+a(t)=a_{\mathrm{base}}(t)+\sum_e\Delta a_e(t),\qquad
+\Delta a_e>0\iff\kappa_e\ge\kappa^*,\qquad
+\boxed{\operatorname{Conscious}(t)\iff a(t)>0}\quad(\mathrm{post});
+\quad a_{\mathrm{base}}>0\ \text{in wake}.
+\tag{4}
+\]
 
-$$\operatorname{reg} = \begin{cases} \text{drift} & \kappa < \kappa^\ast, \quad w \approx 0 \\ \text{control} & \kappa \ge \kappa^\ast,\ \Gamma_B \ne \emptyset, \quad w \ne 0 \\ \text{remap} & \kappa \ge \kappa^\ast,\ \Gamma_B = \emptyset, \quad g_F \leftarrow g_F + \delta g \ \text{(hyp)} \end{cases}$$
+\[
+\operatorname{Experience}_{\mathrm{within}}\rightsquigarrow
+\operatorname{Geometry}_{\mathrm{stabilization}},\quad
+(a,\mathcal W)\rightsquigarrow\operatorname{Traces}_{\mathrm{without}}.
+\tag{5}
+\]
 
-$\Gamma_B$: acceptable supported routes to the goal, the current one included, found within budget $B$.
+Criticality is **not valence**: drift characterizes the humdrum middle; consequential desirable and undesirable experiences can both require stabilization. No extra trigger or changing objective is presumed.
 
-$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \quad \Delta a_e > 0 \iff \kappa_e \ge \kappa^\ast, \qquad \mathcal{W} = \int_\Theta \lVert w \rVert^2_{g_F}\, dt, \quad \eta = \frac{\mathcal{W}}{\int_\Theta \sum_e \Delta a_e\, dt}$$
+## 2. Unsurveyability — Dependency Order
 
-Postulate. $\text{conscious}(t) \iff a(t) > 0$.
+\[
+U=I+N,\quad N=(O,C,T)\quad\text{(symbolic)},\qquad
+I\iff\lim_{\alpha\to\infty}\frac{\log\nu(\mathcal S_\alpha)}{\dim_{\mathrm{fp}}\mathcal M_\alpha}=\infty.
+\tag{6}
+\]
 
-Consequences. $\neg I \Rightarrow a \equiv 0$: a perfectly rational agent needs zero models. Wake with $\vartheta > 0 \Rightarrow a \ge a_{\mathrm{base}} > 0$. Dreamless sleep, anesthesia $\Rightarrow a = 0$.
+\[
+\boxed{\begin{array}{rllll}
+O\leftrightarrow R:&x\sim y\iff y\sim x
+&\text{relational}&\text{unordered}&\text{identification};\\
+C\leftrightarrow F:&y=f(x),\ f^{-1}\text{ globally exists}\iff f\text{ bijective}
+&\text{functional}&\text{logical, conditionally reversible}&\text{composition};\\
+T\leftrightarrow D:&x_{t+1}=f_t(x_t),\ t+1>t
+&\text{dynamical}&\text{temporal, historically irreversible}&\text{persistence}.
+\end{array}}
+\tag{7}
+\]
 
-Experience (post). Effort $\lVert w \rVert^2_{g_F}$. Salience $\kappa$. Meaning $\kappa \approx \kappa^\ast$. Intensity $\lVert \nabla \kappa \rVert_{g_F}$.
+\[
+\begin{aligned}
+O:&\quad o=\tfrac12\bigl[1-\operatorname{corr}(\nabla_{\rm loc}\operatorname{val},\nabla_{\rm glob}\operatorname{val})\bigr]\in[0,1],\\
+C:&\quad c\in[0,1],\quad \Omega_t\xleftarrow{\text{conditional backtracking}}\Omega_{t'};\\
+T:&\quad\vartheta\ge0,\quad
+x_{t+\tau}=x_t\ \not\Rightarrow\ (x_{t+\tau},t+\tau,B_{t+k},\mathcal I_{t+k})=(x_t,t,B_t,\mathcal I_t).
+\end{aligned}
+\tag{8}
+\]
 
-## 2. Unsurveyability
+Here \(o\) compares agent-local and experimenter-global guidance wherever correlation is defined; \(c\) grades conditional reversibility of logical branches (without defining it through physical expenditure); \(\vartheta\) describes environmental change or map decay, **not** temporal irreversibility itself. Functional backtracking can restore an option set, while elapsed time, expended resources and irrecoverably lost information cannot be restored. Thus \(T\) persists even at \(\vartheta=0\). The source-recorded degree forms and adopted dependency orders are retained; no replacement universal metric is asserted.
 
-$$I \iff \lim_{\alpha \to \infty} \frac{\log \nu(\mathcal{S}_\alpha)}{\dim \mathcal{M}} = \infty \;\Rightarrow\; x_{t+1} \in \operatorname{Nbr}(x_t)$$
+\[
+\ell_C=\ell_C(o\,c),\qquad \ell_T=\ell_T(\vartheta,|\gamma|)
+\quad(\mathrm{post};\ \text{exposure to change, not an exhaustive account of }T);
+\tag{9}
+\]
 
-| | Problem posed | Degree | Ordering | Primitive |
-|---|---|---|---|---|
-| $O$ | identification | $o = \tfrac12\big(1 - \operatorname{corr}(\nabla_{\mathrm{loc}} \operatorname{val}, \nabla_{\mathrm{glob}} \operatorname{val})\big)$ | none | $R$ |
-| $C$ | composition | $c \in [0,1]$, cost of reversion | logical | $F$ |
-| $T$ | persistence | $\vartheta \ge 0$, rate of change | temporal | $D$ |
+\[
+j\to\gamma\to\operatorname{VirtualTest}_{\mathcal S}(\gamma)
+\to\operatorname{Commit}_{D}(\gamma)\to\operatorname{Observe}
+\to(\mathcal S_{t+1},\mathcal M_{t+1}),\qquad
+B=B_R+B_F+B_D+B_w+B_0.
+\tag{10}
+\]
 
-$$\ell_C = \ell_C(o\, c), \qquad \ell_T = \ell_T(\vartheta, \lvert \gamma \rvert), \qquad \operatorname{err}_{i+1} \le \operatorname{amp}_i\, \operatorname{err}_i + \xi_i$$
+Virtual conjectures are evaluated under conditional logical reversibility \(F\); physical enactment incurs irreversible succession \(D\). The eight \(\operatorname{sig}=(R,F,D)\in\{0,1\}^3\) classify structural presence, separately from graded \((o,c,\vartheta)\). Neither the cube nor completeness of OCT requires a universal numerical classifier.
 
-$$j \to \gamma \to \operatorname{lift}(\gamma) \to \text{step} \to \text{update} \quad \text{under} \quad B = B_R + B_F + B_D + B_w + B_0, \qquad \text{stop at } \kappa^\ast$$
+## 3. Translation Geometry — Candidate Realization
 
-$$\pi^\ast = \arg\min_\pi d_{\mathcal{SM}} \ \text{ s.t. } \dim \mathcal{M} \le \text{capacity}, \qquad \operatorname{sig} = (R, F, D) \in \{0,1\}^3$$
+For a finite connected weighted 2-complex (faces optional), \(\partial_1\partial_2=0\), \(G\succ0\), and a declared source–sink specialization \(\zeta\perp\mathbf1\):
 
-## 3. Translation Geometry
+\[
+K_S=(V_S,\Lambda_S,\mu_S),\quad
+K_M=(V_M,E_M,F_M,G),\quad\pi:V_S\twoheadrightarrow V_M,\quad
+\widetilde\partial_1=\partial_1G^{1/2},\quad
+\widetilde\partial_2=G^{-1/2}\partial_2.
+\tag{11}
+\]
 
-$K_S = (V_S, \Lambda_S, \mu_S)$, $K_M = (V_M, E_M, G)$, $\pi: V_S \twoheadrightarrow V_M$.
+\[
+\begin{gathered}
+\Delta_0=\partial_1G\partial_1^\top,\quad
+\Delta_1=\widetilde\partial_1^\top\widetilde\partial_1+
+\widetilde\partial_2\widetilde\partial_2^\top,\quad
+\phi=\Delta_0^\dagger\zeta,\quad
+j=-G\partial_1^\top\phi,\quad f_{v,e}=-(\partial_1)_{v,e}j_e,\\
+\lambda_\zeta=\frac{\|\zeta\|^2}{\zeta^\top\Delta_0^\dagger\zeta},\quad
+\lambda_2=\min_{\xi\perp\mathbf1,\xi\ne0}\lambda_\xi\quad(\mathrm{thm}),\\
+G^{-1/2}r=\widetilde\partial_1^\top u+\widetilde\partial_2v+h,\quad
+h\in\ker\Delta_1,\qquad G^{-1/2}j=-\widetilde\partial_1^\top\phi.
+\end{gathered}
+\tag{12}
+\]
 
-$$\Delta_0 = \partial_1 G\, \partial_1^\top, \quad \Delta_1 = \tilde{\partial}_1^\top \tilde{\partial}_1 + \tilde{\partial}_2 \tilde{\partial}_2^\top, \qquad \Delta_0 \phi = \zeta, \quad j = -G\, \partial_1^\top \phi, \quad f_{v,e} = -(\partial_1)_{v,e}\, j_e$$
+\[
+\operatorname{lift}(\gamma\mid z_0)=\mathbf1_{z_0}^\top P_{m_0}
+\prod_{i=1}^n(\Lambda_SP_{m_i})\mathbf1,\quad
+\Gamma_B=\{\gamma:\operatorname{lift}(\gamma\mid z_0)>0,\ C_{\rm exec}(\gamma)\le B_{\rm rem},\ \gamma\text{ found within }B\}.
+\tag{13}
+\]
 
-$$\lambda_\zeta = \frac{\lVert \zeta \rVert^2}{\zeta^\top \Delta_0^\dagger \zeta}, \qquad \lambda_2 = \min_{\zeta \perp \mathbf{1}} \lambda_\zeta, \qquad \lambda_\zeta^{-1} = \int_0^\infty \frac{\zeta^\top e^{-t \Delta_0} \zeta}{\lVert \zeta \rVert^2}\, dt \quad \text{(thm)}$$
+\[
+\chi_{\rm TG}=\mathbf1\{\operatorname{lift}(\gamma_j\mid z_0)=0\ \lor\ \lambda_\zeta\le\epsilon^*\},\qquad
+\operatorname{reg}=
+\begin{cases}
+\mathrm{drift},&\chi_{\rm TG}=0,\\
+\mathrm{control},&\chi_{\rm TG}=1,\ \Gamma_B\ne\varnothing,\\
+\mathrm{remap},&\chi_{\rm TG}=1,\ \Gamma_B=\varnothing.
+\end{cases}
+\quad(\mathrm{post}).
+\tag{14}
+\]
 
-$$\operatorname{lift}(\gamma \mid z_0) = \mathbf{1}_{z_0}^\top P_{m_0} \prod_{i \ge 1} \big(\Lambda_S P_{m_i}\big) \mathbf{1}, \qquad \Gamma_B \subseteq \Gamma_{\mathcal{S}} \subseteq \Gamma_{\mathcal{L}}$$
+The current route belongs to \(\Gamma_B\) when acceptable; low \(\lambda_\zeta\) alone does not imply translation failure. At fixed source and sink, a **candidate** corrective flow is \(j^w=j+w\), \(\partial_1w=0\); verification and map revision may also consume resources. \(\chi_\kappa\rightsquigarrow\chi_{\rm TG}\) is functional correspondence, not geometrical identity. The policy's criticality and three regimes are unchanged.
 
-$$\text{trigger} \iff \operatorname{lift}(\gamma_j \mid z_0) = 0 \ \lor\ \lambda_\zeta \le \epsilon^\ast; \qquad \text{control} \iff \text{trigger} \land \Gamma_B \ne \emptyset; \qquad \text{remap} \iff \text{trigger} \land \Gamma_B = \emptyset$$
+\[
+d_{\mathcal{SM}}=\sum_{z,z'}\mu_S(z)\mu_S(z')
+[\operatorname{dist}_S(z,z')-\operatorname{dist}_M(\pi z,\pi z')]^2;
+\quad d_{\rm GW}(X,Y)=\tfrac12\inf_{\rho\in\Pi(\mu_X,\mu_Y)}
+\sum_{x,x',y,y'}[d_X(x,x')-d_Y(y,y')]^2\rho_{xy}\rho_{x'y'}.
+\tag{15}
+\]
 
-$$d_{\mathcal{SM}} = \sum_{z, z'} \mu_S(z) \mu_S(z') \big\lvert \operatorname{dist}_S(z, z') - \operatorname{dist}_M(\pi z, \pi z') \big\rvert^2, \qquad \frac{d}{dt} \log \operatorname{Tor} = \tfrac12 \sum_i (-1)^{i+1}\, i\, \operatorname{Tr}\big(\Delta_i^\dagger \dot{\Delta}_i\big)$$
+\[
+\log\operatorname{Tor}=\tfrac12\sum_{q=0}^{2}(-1)^{q+1}q\log\det{}'\Delta_q,\quad
+\frac{d}{dt}\log\operatorname{Tor}=\tfrac12\sum_{q=0}^{2}(-1)^{q+1}q
+\operatorname{Tr}(\Delta_q^\dagger\dot\Delta_q)
+\quad(\mathrm{thm};\ \dim\ker\Delta_q\text{ constant}).
+\tag{16}
+\]
 
-Lemma (thm). $\operatorname{lift}(\gamma_j \mid z_0) = 0 \Rightarrow w \not\equiv 0 \lor \dot{G} \not\equiv 0$.
+## 4. Measuring Consciousness — Empirical Qualification
 
-Perspective asymmetry. $d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{int}}, \mathcal{M}_{\mathrm{ext}}) = 0$ iff isomorphic (thm). Distinct parochial samplings give $d_{\mathrm{GW}} > 0$ (post).
+\[
+\mathcal W_\Theta=\int_\Theta\!\bigl[\alpha\|w_t\|_{G_t^{-1}}^2+
+\dot C_{\rm verify}(t)\bigr]dt+
+\sum_{u\in\operatorname{Updates}(\Theta)}C_{\rm update}(u),\qquad
+\eta_\Theta=\frac{\mathcal W_\Theta}{\int_\Theta\sum_e\Delta a_e(t)\,dt}
+\quad(\text{positive denominator}).
+\tag{17}
+\]
 
-Correspondence, partial and lossy. $g_F \leftrightarrow D_{\mathrm{sym}}$. $\nabla \phi \leftrightarrow j$. $\kappa \ge \kappa^\ast \leftrightarrow$ trigger. $\delta g \leftrightarrow (\dot{G}, \Delta K_M, \Delta \pi)$.
+\[
+\mathcal W_\Theta\ge c_0|\Delta_{\rm ctrl}\log\operatorname{Tor}|
+\quad(\mathrm{post};\ \text{controller-induced changes on a declared cost domain}),\qquad
+\widehat a\uparrow a\quad(\mathrm{post}).
+\tag{18}
+\]
 
-Viability. $\mathbb{E}[\ell \text{ avoided}] > \mathbb{E}[B_F + B_w + B_0]$.
+\[
+\operatorname{do}(O,C,T,\zeta,B)\rightsquigarrow
+(\widehat\ell,\widehat\lambda_\zeta,\widehat{\operatorname{reg}},
+\widehat{\mathcal W},\widehat a,RT),\quad
+\mathbb E[RT\mid\zeta]=t_0+c_1\lambda_\zeta^{-1}\quad(\mathrm{post});
+\tag{19}
+\]
 
-## 4. Measuring Consciousness
+\[
+\mathsf{Falsify}_{\rm operator}\ \Vert\
+\mathsf{Falsify}_{\rm bridge}\ \Vert\
+\mathsf{Falsify}_{\rm mechanism}\ \Vert\
+\mathsf{Falsify}_{\rm consciousness}.
+\tag{20}
+\]
 
-$$\hat{a} \uparrow a, \qquad \mathcal{W} \ge c_0\, \lvert \Delta_{\mathrm{ctrl}} \log \operatorname{Tor} \rvert \quad \text{(post)}$$
+*Open realization work:* explicit verification/control/update cost functions, learning from stochastic execution, affordability versus remap/abandonment, independent estimator qualification, and the torsion bound's admissible cost domain. These are not reopenings of the CAT mechanism, criticality threshold, or the 2025 UNS dependency orders.
 
-| Test (post) | Prediction |
+---
+
+## Appendix A. Notation, provenance and claim types
+
+*Integrated from [`claude/0_LSMN_notation.md`](https://github.com/integritymachines/cat/blob/main/claude/0_LSMN_notation.md), v0.1 (14 November 2026). This appendix is normative for the kernel. The separate source file is retained as a historical reference.*
+
+### Tags
+
+Provenance. [ruled]: decided by the authors. [inference]: proposed in drafting, not ruled. [open]: form not fixed. Numbers taken from the research notes are unchecked.
+
+Claim types. (def) definition. (thm) theorem, with its assumptions. (post) modeling postulate: an element of the model, subject to empirical test. (hyp) empirical hypothesis, to be confirmed. (ill) illustration: a synecdoche or picture that explains a concept and makes no general claim.
+
+### Symbols
+
+| Symbol | Meaning |
 |---|---|
-| 4.3 | control policy and cost change at a calibrated threshold located by $\hat{\lambda}_\zeta$ |
-| 4.4 | $\mathbb{E}[\text{response time}] = t_0 + c_1\, \lambda_\zeta^{-1}$ |
-| 4.5 | $\Delta \operatorname{bnd}$ predicted by $[\operatorname{lift} = 0]$ and revision demand, $\Delta \log \operatorname{Tor}$ adds |
-| 4.6 | $\int_\Theta \hat{a}\, dt \propto \eta^{-1} \hat{\mathcal{W}}$ |
-| 4.7 | propofol, dreamless sleep: control channel unresponsive to $\lambda_\zeta$ |
+| $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape (unsurveyable reality), Territory, Map, Navigation |
+| $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, policy trajectory $\mathcal{M} \to \mathcal{N}$ |
+| $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency matrix, metric, sampling measure |
+| $K_M, V_M, m, E_M, F_M, e, G, \partial_1, \partial_2, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, optional faces, edge, edge weights, boundary operators, metric |
+| $\tilde{\partial}_1, \tilde{\partial}_2$ | weighted boundary operators $\partial_1 G^{1/2}$, $G^{-1/2} \partial_2$ |
+| $\Delta_i, \lambda_2, \beta_1$ | weighted Hodge Laplacian of degree $i$, second eigenvalue of $\Delta_0$, $\dim \ker \Delta_1$ |
+| $\lambda_\zeta$ | task-conditioned gap $\lVert \zeta \rVert^2 / (\zeta^\top \Delta_0^\dagger \zeta)$ |
+| $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector, all-ones vector |
+| $\zeta, \phi, j, \gamma_j$ | goal vector in the TG specialization, potential, manufactured flow, route extracted from $j$ |
+| $\Phi_t, q_t$ | conceptual manufactured potential and locally available navigational criterion; neither requires a fixed, fully specified goal |
+| $f_{v,e}$ | outward flux at vertex $v$ along incident edge $e$ |
+| $u, v, h$ | Hodge components of an edge chain: gradient, rotational, harmonic |
+| $\operatorname{lift}$ | lift functional |
+| $\Gamma_{\mathcal{L}}, \Gamma_{\mathcal{S}}, \Gamma_B$ | routes from $z_0$ to $\zeta$, the current one included: supported by $\mathcal{L}$, supported by $\mathcal{S}$, acceptable and found within budget |
+| $U, I, N$ | Unsurveyability, Intractability, Intransigence |
+| $O, C, T$ | Opacity, Contingency, Transience |
+| $R, F, D$ | relations, functions, dynamics |
+| $\operatorname{sig}$ | structural signature in $\{0,1\}^3$ |
+| $o, c, \vartheta$ | opacity proxy, conditional logical reversibility degree, and environmental-change/map-decay proxy; $\vartheta$ does not exhaust temporal transience |
+| $\nu, \alpha$ | count of relevant distinctions, scale |
+| $y, g_F, p(\cdot \mid y), \operatorname{Ric}$ | smooth stand-in: point of $\mathcal{M}$, Fisher metric, predicted observation distribution, Ricci curvature |
+| $D_{\mathrm{sym}}(m, n)$ | symmetrized divergence between $p(\cdot \mid m)$ and $p(\cdot \mid n)$ |
+| $\kappa, \kappa^\ast$ | curvature, its critical level (Papers 1 and 2) |
+| $\epsilon^\ast, t_{\mathrm{rel}}$ | critical level of the gap (Papers 3 and 4), relaxation time |
+| $w, \mathcal{W}, \Theta$ | control field, controller expenditure over an interval, matched interval |
+| $a, a_{\mathrm{base}}, \Delta a_e, B$ | metabolic power allocated to mediation, its waking baseline, its surge at instance $e$, budget |
+| $\eta, \eta_\Theta$ | conversion efficiency; efficiency measured over interval $\Theta$ |
+| $\operatorname{reg}$ | regime: drift, control or remap |
+| $\chi_\kappa, \chi_{\rm TG}$ | conceptual criticality indicator; candidate TG trigger. Functional correspondence, not geometrical identity |
+| $C_{\rm exec}, B_{\rm rem}$ | execution cost of a route; remaining budget |
+| $\mathcal{E}$ | envelope of assured navigation, certified within budget |
+| $\operatorname{Tor}$ | combinatorial torsion of $K_M$ |
+| $d_{\mathcal{SM}}, d_{\mathrm{GW}}$ | anchored squared distortion, squared transport discrepancy |
+| $X, x_t, k, \operatorname{val}, \operatorname{Nbr}, \Omega_t$ | search space, state, number of options, objective, neighborhood, options reachable |
+| $B_R, B_F, B_D, B_w, B_0$ | budgets: guidance, virtual search, physical execution, reconciliation, maintenance |
+| $\ell, \ell_C, \ell_T$ | loss from a failed physical test, expected loss from $C$, from $T$ |
+| $\operatorname{err}_i, \operatorname{amp}_i, \xi_i$ | misalignment after step $i$, its amplification, new disturbance |
+| $\kappa_e, L_{\mathrm{decay}}, \delta g$ | curvature at instance $e$, external change, metric shift |
+| $c_0, c_1, t_0$ | positive constants |
+| $\delta_{\mathrm{lo}}, \delta_{\mathrm{hi}}, \delta^\ast$ | band of offline deformation (separate paper), critical discrepancy between agents |
+| $\operatorname{bnd}, \operatorname{PR}$ | decision boundary, participation ratio |
+| $\hat{\ }$, $t$ | estimator, time |
 
-Contrasts. Flow against overload: $\eta$. Propofol against ketamine: internal $\mathcal{W}$. Meditation against psychedelics: baseline against variance of $\lambda_\zeta$. Two agents coordinate under drift iff $d_{\mathrm{GW}}(\mathcal{M}_A, \mathcal{M}_B) < \delta^\ast$ (post).
+### Against the sources
 
-Refutation. Each failure is recorded at its layer: operator, bridge, mechanism, or the postulate of §1.
+$\pi$ for the 2025 $\phi$, $\phi$ for $V$, $w$ for $U$, $\mathcal{W}$ for $\mathcal{C}_U$, $\kappa$ for $K$, $y$ for $x$, $G$ for $W$, $\partial_1$ for $B_1$, $\zeta$ for $b$, $\Lambda_S$ for $A_S$, $B_w$ for $B_C$, $\epsilon^\ast$ for $\epsilon_c$, $\kappa^\ast$ for $\kappa_c$, $\delta^\ast$ for $\delta_c$. The changes remove collisions.
