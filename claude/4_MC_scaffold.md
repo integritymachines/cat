@@ -1,6 +1,6 @@
 # Measuring Consciousness: Scaffold
 
-Version 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4. Content from the research note for Paper 4. Structure from rounds 1 and 2 of the review protocol, as adopted by the authors. Each bullet is marked **note** (content kept) or **R** (a ruled change). Numbers from the note are unchecked and are not carried as established values.
+Version 0.6, 15 November 2026. Kernel: `0_LSMN_kernel.md` §4, version 0.18. Content from the research note for Paper 4. Structure from rounds 1 and 2 of the review protocol, as adopted by the authors. Each bullet is marked **note** (content kept) or **R** (a ruled change). Numbers from the note are unchecked and are not carried as established values.
 
 Scope [ruled]: making CAT measurable, predictive and falsifiable. Motility, the lower bound and dreaming as offline conjecturing are the subject of a separate paper and do not appear here.
 
@@ -15,7 +15,7 @@ Headline (note). Scientific observation is a second lossy translation of first-p
 
 ## 2. Constructs
 
-- R: table of constructs with definitions and units. Allocation as power excluding background metabolism. Control work over a matched interval. Efficiency dimensionless after calibration.
+- R: table of constructs with definitions and units. Allocation as power excluding background metabolism. Controller expenditure over a matched interval: weighted flow correction, verification, updates. Efficiency dimensionless after calibration.
 - Note: candidate observables for each.
 - Assumption 4.1 (post).
 - Note, Postulate 4.2 (post): controller expenditure bounded below by the torsion shift the controller induces. R: passive change excluded. Not derived from Paper 3. Reserve options: total update expenditure, or torsion as a predictor only.
@@ -48,7 +48,7 @@ Headline (note). Scientific observation is a second lossy translation of first-p
 
 ## 7. Design
 
-- R: artificial navigation task with known territory graph. Opacity, contingency, transience and task location manipulated independently.
+- R: artificial navigation task with known territory graph. Each run an intervention on opacity, contingency, transience, goal and budget, read out as lift, task gap, regime, expenditure, allocation and response time.
 - R: Fisher-informed model against graph-only model on the same trials. Predictive contribution and explanatory sufficiency kept apart.
 - R: negative controls from the Paper 3 bench, cases A to E and H to J, plus passive change of the map.
 

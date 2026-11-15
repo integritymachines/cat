@@ -1,6 +1,6 @@
 # Unsurveyability
 
-Report, draft 0.3, 13 November 2026. Kernel: `0_LSMN_kernel.md` §2. The 2025 paper is the yardstick, and its order is kept. Corrections from the review of 13 November are adopted under the authors' rulings. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
+Report, draft 0.4, 15 November 2026. Kernel: `0_LSMN_kernel.md` §2, version 0.18. The 2025 paper is the yardstick, and its order is kept. Corrections from the review protocol are adopted under the authors' rulings, and the definitions of contingency and transience follow the kernel. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
 
 This report is conceptual. It characterizes what makes the translation from territory to map unstable. It can be read before or after Paper 1.
 
@@ -67,25 +67,29 @@ Opacity is resolved only by establishing that the local signal correlates with t
 
 Sampling lowers opacity. Inside a habitat, where the sampling density $\mu_S$ is high, the agent has learned which local signals correlate with which outcomes.
 
-**Contingency.** Transitions between states are not freely reversible. The problem posed is composition: how the available options connect to the overall objective.
+**Contingency.** Options follow from one another logically. A choice selects a branch, and the branch fixes what can follow. The problem posed is composition: how the available options connect to the overall objective.
 
-Let $\Omega_t$ be the options reachable at $t$ and $c \in [0, 1]$ the cost of reversion, with both ends included. At $c = 1$ a step forecloses. At $c < 1$ the agent can return from $t$ to an earlier $t'$:
+Let $\Omega_t$ be the options reachable at $t$ and $c \in [0, 1]$ the degree to which logical branches resist reversal, with both ends included. Reversibility here is logical and conditional. At $c = 0$ every branch can be revisited. At $c = 1$ a branch, once taken, closes the others. For $c < 1$, functional backtracking from $t$ to an earlier $t'$ restores the option set:
 
-$$\Omega_t \leftarrow \Omega_{t'}, \qquad \text{budget spent between } t' \text{ and } t \text{ is not restored} \tag{5}$$
+$$\Omega_t \leftarrow \Omega_{t'} \tag{5}$$
 
-A cul-de-sac shows the point. Walking back recovers the options and does not recover the time. The map offers virtual backtracking: a route is simulated before commitment, at the cost of computation. Virtual backtracking is as good as the map's fidelity.
+$c$ is not defined through physical expenditure. What backtracking costs belongs to transience. A cul-de-sac shows the division. Walking back restores the options, which is contingency. It does not restore the time and the budget spent, which is transience. The map offers virtual backtracking: a route is tested against the territory before commitment, at the cost of computation. Virtual backtracking is as good as the map's fidelity.
 
-**Transience.** The structure of the territory changes over time at a rate $\vartheta \ge 0$, or the map decays absent maintenance. The problem posed is persistence: how long the options will be available. A map that was accurate becomes inaccurate. Stability is available only as equilibrium under continuous maintenance.
+**Transience.** Events follow one another in time, and the succession cannot be undone. The problem posed is persistence: how long the options will be available. A state that recurs later is a different situation, because elapsed time, spent resources and lost information $\mathcal{I}$ are not restored:
+
+$$x_{t+\tau} = x_t \;\not\Rightarrow\; (x_{t+\tau},\, t+\tau,\, B_{t+\tau},\, \mathcal{I}_{t+\tau}) = (x_t,\, t,\, B_t,\, \mathcal{I}_t) \tag{6}$$
+
+Transience therefore holds even in a world that stands still. On top of it, the structure of the territory can change, and a map decays absent maintenance. The degree $\vartheta \ge 0$ measures this change and decay. It is a proxy for exposure to change and does not measure temporal irreversibility itself. A map that was accurate becomes inaccurate, and stability is available only as equilibrium under continuous maintenance.
 
 **Structure.** The causal order of the 2025 paper stands:
 
 $$I \to \text{compression} \to N = \{O, C, T\}$$
 
-The degrees $(o, c, \vartheta)$ vary between environments and inside one environment, and each can be near zero [ruled]. The three modes are not independent [ruled]. Contingency binds in proportion to opacity: an agent that can see which branch is right loses nothing to irreversibility. Transience binds given a committed trajectory: change hurts an agent in proportion to what it has planned. As a form [inference], the expected losses are
+The degrees $(o, c, \vartheta)$ vary between environments and inside one environment, and each can be near zero [ruled]. The three modes are not independent [ruled]. Contingency binds in proportion to opacity: an agent that can see which branch is right loses nothing to irreversibility. Transience binds given a committed trajectory: change hurts an agent in proportion to what it has planned. As a form (post), the expected losses are
 
-$$\ell_C = \ell_C(o \cdot c), \qquad \ell_T = \ell_T(\vartheta, \lvert \gamma \rvert), \qquad \ell_C(0) = \ell_T(0, \cdot) = \ell_T(\cdot, 0) = 0 \tag{6}$$
+$$\ell_C = \ell_C(o \cdot c), \qquad \ell_T = \ell_T(\vartheta, \lvert \gamma \rvert), \qquad \ell_C(0) = \ell_T(0, \cdot) = \ell_T(\cdot, 0) = 0 \tag{7}$$
 
-both increasing. That $I$, $O$, $C$ and $T$ exhaust unsurveyability is conjectured and not proved.
+both increasing. $\ell_T$ covers exposure to change. It does not exhaust transience, which holds at $\vartheta = 0$ by (6). That $I$, $O$, $C$ and $T$ exhaust unsurveyability is conjectured and not proved.
 
 ## Orderings
 
@@ -93,11 +97,11 @@ Each obstruction corresponds to an ordering that the options have or lack, and e
 
 | Obstruction | Problem | Ordering | Primitive |
 |---|---|---|---|
-| $O$ | identification | comes with: none | $R$: adjacency, compatibility, constraint |
-| $C$ | composition | follows from: logical, negotiable | $F$: maps that can collapse distinctions |
-| $T$ | persistence | follows after: temporal, non-negotiable | $D$: iterated transformations |
+| $O$ | identification | comes with: none | $R$: $x \sim y \iff y \sim x$. Adjacency, compatibility, constraint |
+| $C$ | composition | follows from: logical, conditionally reversible | $F$: $y = f(x)$, globally invertible iff $f$ is bijective |
+| $T$ | persistence | follows after: temporal, historically irreversible | $D$: $x_{t+1} = f_t(x_t)$, $t + 1 > t$ |
 
-Under opacity, what remains is relational structure without direction or distance. Under contingency, a choice maps a set of options to a smaller set, and non-injective maps cannot be undone. Under transience, the structure is carried forward by a transformation that does not wait.
+Under opacity, what remains is symmetric relational structure without direction or distance. Under contingency, a choice is a map $y = f(x)$. It can be undone globally only if $f$ is bijective, so a choice that collapses distinctions is reversible at most conditionally. Under transience, the structure is carried forward by a transformation that does not wait.
 
 The agent assigns orderings to what it meets. Relations, functions and dynamics are the primitives in which mathematics captures these orderings. The paper makes no claim that a conscious agent makes up mathematics [ruled]. "Directional" is an alternative name for the third primitive.
 
@@ -107,11 +111,9 @@ The endpoint of translation is a trajectory $\gamma$, a sequence of actions whos
 
 - opacity makes local gradients unreliable predictors of distant consequences,
 - contingency couples each action to a loss of future options,
-- transience makes a correct projection decay.
+- transience makes each commitment irreversible and lets a correct projection go stale.
 
-Error compounds along the trajectory. A small misalignment at one step can amplify into a large deviation later, and each step can add new error. As a form (post) [open], with $\operatorname{err}_i$ the misalignment after step $i$, an amplification $\operatorname{amp}_i$ and a new disturbance $\xi_i$, both nondecreasing in $o$, $c$ and $\vartheta$,
-
-$$\operatorname{err}_{i+1} \le \operatorname{amp}_i\, \operatorname{err}_i + \xi_i \tag{7}$$
+Error compounds along the trajectory. A small misalignment at one step can amplify into a large deviation later, and each step can add new error.
 
 Unsurveyability is a property of paths under bounded representation. Guidance has to remain robust across a chain of dependent actions.
 
@@ -121,9 +123,9 @@ This section is an addition to the 2025 paper [ruled]. It describes the route fr
 
 Under opacity the map's direction $j$ is a guess. Under contingency a wrong guess is costly to take back. Under transience a right guess expires. A route is therefore a conjecture, and the agent benefits from testing it before it commits. Popper's phrase applies: we send our conjectures to their deaths in our stead. This is the virtual backtracking of the 2025 paper, run as a cycle:
 
-$$j \;\to\; \gamma \;\to\; \text{virtual test of } \gamma \text{ against } \mathcal{S} \;\to\; \text{step} \;\to\; \text{update} \tag{8}$$
+$$j \to \gamma \to \operatorname{VirtualTest}_{\mathcal S}(\gamma) \to \operatorname{Commit}_D(\gamma) \to \operatorname{Observe} \to (\mathcal{S}_{t+1}, \mathcal{M}_{t+1}) \tag{8}$$
 
-The ranking $j$ answers opacity, the virtual test answers contingency, and the update answers transience. Paper 3 gives the test an exact form.
+The ranking $j$ answers opacity. The virtual test runs under conditional logical reversibility, the primitive $F$, and answers contingency. Commitment enacts the route physically under irreversible succession, the primitive $D$. Observation updates both models and answers transience. Paper 3 gives the virtual test an exact form.
 
 The cycle runs under a budget. Following the note for Paper 3, we split it:
 
@@ -169,7 +171,7 @@ Algorithms assume signatures. Constraint propagation assumes relational structur
 ## Open
 
 1. How the signature and the degrees relate in a given environment.
-2. Formal definitions of the three obstructions beyond (4) and (5), and the form of (6) and (7).
+2. Formal definitions of the three obstructions beyond (4) to (6), the form of (7), and a form for error compounding along the trajectory.
 3. A procedure that determines the signature of a territory from samples.
 4. Whether intermediate signatures behave as restrictions of the full signature.
 5. Completeness of the four dimensions.

@@ -1,6 +1,6 @@
 # Consciousness as Translation
 
-Report, draft 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates listed in the disposition ledger, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in `0_LSMN_notation.md`.
+Report, draft 0.6, 15 November 2026. Kernel: `0_LSMN_kernel.md` §1, version 0.18. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates listed in the disposition ledger, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in Appendix A of the kernel.
 
 *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
@@ -28,9 +28,9 @@ Structure proliferates faster than any representation can encode, and translatio
 
 Opacity $O$. The territory provides no task-given gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures a gradient by building a map with smooth geometry. Manufactured gradients need not align with the external objective. In satisfiability problems, flipping a variable to reduce violations locally often raises them globally.
 
-Contingency $C$. Choices alter the topology of the reachable states. Some options are foreclosed and others become costly to recover. In the map, branch points appear as singularities.
+Contingency $C$. Options follow from one another logically. A choice selects a branch and fixes what can follow. Branches can be revisited only conditionally, so some options are foreclosed. In the map, branch points appear as singularities.
 
-Transience $T$. The world is non-stationary, and a map that was valid decays. The 2025 paper pictures the decay with a chosen dynamical model (ill). With $g_F$ the metric of the map defined below, $\operatorname{Ric}$ its Ricci curvature and $L_{\mathrm{decay}}$ the external change,
+Transience $T$. Events follow one another in time, and the succession cannot be undone. Elapsed time, spent resources and lost information are not restored, even where the world stands still. On top of this, the world is non-stationary, and a map that was valid decays. The 2025 paper pictures the decay with a chosen dynamical model (ill). With $g_F$ the metric of the map defined below, $\operatorname{Ric}$ its Ricci curvature and $L_{\mathrm{decay}}$ the external change,
 
 $$\partial_t g_F = -2 \operatorname{Ric} + L_{\mathrm{decay}} \tag{4}$$
 
@@ -46,7 +46,7 @@ The agent holds two models (U1, U2).
 
 The territory $\mathcal{S}$ is the comprehensive model. It is the agent's accumulated record of the landscape, not globally ranked. Sampling has density $\mu_S$, concentrated around the habitats in which the agent lives and sparse elsewhere.
 
-The map $\mathcal{M} = \pi(\mathcal{S})$ is the comprehensible model, with $\pi$ non-injective and $\dim \mathcal{M} \ll \log \lvert \mathcal{S} \rvert$. It presents the available choices ranked by their connection to the objective, as a chess engine ranks moves. Distinct states of the territory can lie close together in the map, and some states of the map correspond to nothing in the territory.
+The map $\mathcal{M} = \pi(\mathcal{S})$ is the comprehensible model, with $\pi$ non-injective and $\dim \mathcal{M} \ll \log \lvert \mathcal{S} \rvert$. It presents the available choices ranked by their connection to the objective, as a chess engine ranks moves. The ranking is manufactured from a criterion available locally to the agent, which need not be a fixed or fully specified goal. Distinct states of the territory can lie close together in the map, and some states of the map correspond to nothing in the territory.
 
 All models are wrong and some are useful (Box). The map is a lossy translation, and its loss is negligible in some instances and decisive in others.
 
@@ -135,7 +135,7 @@ The geometric reading of experience stands as an identification.
 | meaning | criticality, $\kappa$ near $\kappa^\ast$ |
 | intensity | the instability (10) along trajectories with $w \ne 0$ |
 
-Meaning here is felt significance and has no propositional content. Experiences differ in quality because embeddings differ: the geometry of color differs from the geometry of pain.
+Meaning here is felt significance and has no propositional content. Criticality is not valence. Drift characterizes the humdrum middle, and desirable as well as undesirable experiences of consequence can require stabilization. Experiences differ in quality because embeddings differ: the geometry of color differs from the geometry of pain.
 
 The hard problem is right that science, which regularizes observations from without, can only triangulate subjective experience within. The same stimuli meet maps with different histories. The same lamp trained on the same object casts different shadows on surfaces of different texture.
 

@@ -1,6 +1,6 @@
 # Translation Geometry: Scaffold
 
-Version 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §3. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt rounds 1 and 2 of the review protocol under the authors' rulings. Each bullet carries a claim type: (def), (thm), (post), (hyp), (ill).
+Version 0.5, 15 November 2026. Kernel: `0_LSMN_kernel.md` §3, version 0.18. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt rounds 1 and 2 of the review protocol under the authors' rulings. Each bullet carries a claim type: (def), (thm), (post), (hyp), (ill).
 
 Headline. Papers 1 and 2 explain the theory with synecdoches. This paper constructs computable candidates for the mechanisms they explain: manufactured direction, task sensitivity, the virtual test of a route, distortion and deformation. The correspondence is partial and lossy, and the paper states what is lost.
 
@@ -23,7 +23,7 @@ Status. Scientific. Definitions, theorems, postulates, one computed example and 
 - Compression (def): surjective, non-injective. Quotienting can create map edges with no territory transition.
 - Metrics (def): symmetrized shortest path on $K_S$, edge length $G_e^{-1}$ on $K_M$.
 - Bridge to Fisher (def, optional): symmetrized divergence between predicted observation distributions. Setting weights from it is a modeling choice (post).
-- Weighted convention (def): one edge inner product for all degrees.
+- Weighted convention (def): one edge inner product for all degrees. Laplacians of degree 0, 1 and 2, with optional faces.
 
 ## 3. Identification
 
@@ -56,7 +56,7 @@ Status. Scientific. Definitions, theorems, postulates, one computed example and 
 - Control when an acceptable supported route is found within budget, the current one included: careful execution or a switch. Remap when none is (hyp). Abandonment of the goal if no revision succeeds [open].
 - No regime rests on $\lambda_2$ alone [ruled].
 - The threshold is a policy rule (post). No spectral bifurcation is claimed.
-- Controller expenditure, candidate (post) [inference]: flow correction plus the controller's own updates. Maintenance and passive change excluded.
+- Corrective flow $j + w$ with $\partial_1 w = 0$, which keeps source and sink (post) [inference]. Controller expenditure over an interval: weighted flow correction, verification and updates. Maintenance and passive change excluded.
 - Confidence (note).
 
 ## 7. Envelope

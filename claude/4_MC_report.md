@@ -1,6 +1,6 @@
 # Measuring Consciousness
 
-Report, draft 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §4. The research note for Paper 4 is the source of content. The structure follows rounds 1 and 2 of the review protocol, as adopted by the authors. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Numbers from the note are unchecked and are not carried as established values.
+Report, draft 0.5, 15 November 2026. Kernel: `0_LSMN_kernel.md` §4, version 0.18. The research note for Paper 4 is the source of content. The structure follows rounds 1 and 2 of the review protocol, as adopted by the authors. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Numbers from the note are unchecked and are not carried as established values.
 
 This paper makes the theory measurable, predictive and falsifiable [ruled]. It states what is measured, how the estimators are qualified, which tests the model elements face, and which failure refutes which claim.
 
@@ -22,8 +22,8 @@ Tests of a mathematical realization ask whether its mechanisms describe agents. 
 |---|---|---|---|
 | $a(t)$ | metabolic power allocated to mediation, excluding background metabolism | power | regional hemodynamics, pupil diameter, autonomic balance |
 | $a_{\mathrm{base}}$, $\Delta a_e$ | waking baseline, surge at instance $e$ | power | contrast of task against matched rest |
-| $\mathcal{W}$ | controller expenditure over a matched interval $\Theta$: flow correction plus the controller's own updates | energy, after calibration | behavioral correction, model fits, decision boundary |
-| $\eta$ | $\mathcal{W} / \int_\Theta \sum_e \Delta a_e\, dt$ | dimensionless | ratio of the two above |
+| $\mathcal{W}_\Theta$ | controller expenditure over a matched interval $\Theta$: weighted flow correction, verification and updates (Paper 3) | energy, after calibration | behavioral correction, model fits, decision boundary |
+| $\eta_\Theta$ | $\mathcal{W}_\Theta / \int_\Theta \sum_e \Delta a_e\, dt$, on intervals with a positive denominator | dimensionless | ratio of the two above |
 | $\lambda_\zeta$, $\lambda_2$ | task-conditioned and global gap of $K_M$ | inverse time, under a time scale | graph reconstructed from recording channels |
 | $\operatorname{lift}$ | support of a route by the record | count | task design with known territory |
 | $d_{\mathcal{SM}}$, $d_{\mathrm{GW}}$ | squared distortion, squared transport discrepancy | squared distance | dissimilarity matrices across epochs or agents |
@@ -108,7 +108,7 @@ and build a shared representation as the discrepancy falls (post). At or above $
 
 ## Design
 
-The first test bed is artificial. The investigator knows the territory graph and its changes, while participants see only local observations. Four factors are manipulated independently:
+The first test bed is artificial. The investigator knows the territory graph and its changes, while participants see only local observations. Each run is an intervention $\operatorname{do}(O, C, T, \zeta, B)$, and its outcome is read as $(\widehat{\operatorname{lift}}, \hat{\lambda}_\zeta, \widehat{\operatorname{reg}}, \hat{\mathcal{W}}, \hat{a}, \text{response time})$. Five factors are manipulated independently:
 
 | Factor | Manipulation |
 |---|---|
@@ -116,6 +116,7 @@ The first test bed is artificial. The investigator knows the territory graph and
 | contingency | cost or irreversibility of a wrong branch |
 | transience | frequency and location of changes to edges |
 | task location | inside a well-connected cluster, or across a weak bridge |
+| budget | time and resources available for search and correction |
 
 Measures: choice, virtual backtracking, latency, error, revision of policy, model fits, metabolic markers, and independently estimated neural statistics. A Fisher-informed model and a graph-only model are fitted to the same trials and predict held-out perturbations. Two questions are kept apart. Predictive contribution asks whether the Fisher-informed model predicts better. Explanatory sufficiency asks whether the graph-only model keeps the distinctions the theory requires. A null result on the first does not settle the second, since weak observations, weak perturbations or misspecification can hide a difference. The Fisher bench of Paper 3 runs before any biological data.
 

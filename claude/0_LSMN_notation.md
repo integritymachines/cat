@@ -1,5 +1,7 @@
 # LSMN Notation
 
+Superseded by Appendix A of `0_LSMN_kernel.md` (version 0.16 onward). Kept as a historical reference.
+
 Version 0.1, 14 November 2026. Symbols, tags and claim types for Papers 1 to 4 and the kernel. One meaning per symbol. Regimes, results and tests carry words or section numbers, never single letters.
 
 ## Tags

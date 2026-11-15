@@ -1,6 +1,6 @@
 # Translation Geometry
 
-Report, draft 0.4, 13 November 2026. Kernel: `0_LSMN_kernel.md` §3. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt rounds 1 and 2 of the review protocol under the authors' rulings. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
+Report, draft 0.5, 15 November 2026. Kernel: `0_LSMN_kernel.md` §3, version 0.18. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt rounds 1 and 2 of the review protocol under the authors' rulings. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
 
 Papers 1 and 2 explain the theory with synecdoches: a combinatorial territory, a smooth map with the Fisher metric, and curvature against a critical level. This report constructs and tests mechanisms that perform the explanatory work the Riemannian picture of Paper 1 made accessible. Each operator is assigned a functional obligation, its assumptions, the information lost in the realization, and consequences that can be checked independently. The correspondence between the conceptual and the operational exposition is partial. Adequacy is established by structural, causal, interventional and explanatory tests. Similarity of terminology carries no weight. The report contains definitions, theorems, postulates, one computed example and a bench of test cases. It contains no empirical claims.
 
@@ -49,7 +49,7 @@ The chain of the series is $\mathcal{L} \xrightarrow{\sigma} \mathcal{S} \xright
 
 Territory (def). A relational complex $K_S$ with vertex set $V_S$, vertices $z$, adjacency matrix $\Lambda_S$ and normalized sampling measure $\mu_S$. It is a parochially sampled record of encounters. $\Lambda_S$ may be asymmetric. $K_S$ carries no task-given potential. It is not globally ranked, although adjacency already records some order.
 
-Map (def). A simplicial complex $K_M$ with vertex set $V_M$, vertices $m$, oriented edge set $E_M$, positive diagonal edge weights $G$ and boundary operators $\partial_1$ (edges to vertices) and $\partial_2$ (faces to edges). The map does not create options. It orders them.
+Map (def). A simplicial complex $K_M$ with vertex set $V_M$, vertices $m$, oriented edge set $E_M$, positive diagonal edge weights $G$, optional faces $K_M^{(2)}$, and boundary operators $\partial_1$ (edges to vertices) and $\partial_2$ (faces to edges), with $\partial_1 \partial_2 = 0$. The map does not create options. It orders them.
 
 Compression (def). A surjection $\pi: V_S \twoheadrightarrow V_M$ that is not injective. $P_m$ is the diagonal projector onto the fiber $\pi^{-1}(m)$. Quotienting can create map edges that correspond to no territory transition.
 
@@ -63,7 +63,7 @@ for neighboring states in a regular family. Hellinger distance, Jensen-Shannon d
 
 Weighted convention (def). All operators use one edge inner product:
 
-$$\tilde{\partial}_1 = \partial_1 G^{1/2}, \qquad \tilde{\partial}_2 = G^{-1/2} \partial_2, \qquad \Delta_0 = \tilde{\partial}_1 \tilde{\partial}_1^\top = \partial_1 G\, \partial_1^\top, \qquad \Delta_1 = \tilde{\partial}_1^\top \tilde{\partial}_1 + \tilde{\partial}_2 \tilde{\partial}_2^\top \tag{2}$$
+$$\tilde{\partial}_1 = \partial_1 G^{1/2}, \qquad \tilde{\partial}_2 = G^{-1/2} \partial_2, \qquad \Delta_0 = \tilde{\partial}_1 \tilde{\partial}_1^\top = \partial_1 G\, \partial_1^\top, \qquad \Delta_1 = \tilde{\partial}_1^\top \tilde{\partial}_1 + \tilde{\partial}_2 \tilde{\partial}_2^\top, \qquad \Delta_2 = \tilde{\partial}_2^\top \tilde{\partial}_2 \tag{2}$$
 
 with $\tilde{\partial}_1 \tilde{\partial}_2 = 0$.
 
@@ -167,7 +167,15 @@ The threshold $\epsilon^\ast$ is a policy rule (post). A smooth change of weight
 
 Remap on $\Gamma_B = \emptyset$ is a decision under budget (hyp). It does not establish that no route exists in $\mathcal{S}$ or in $\mathcal{L}$. Control covers both senses of the term: stabilizing the current route, as in the 2025 paper, and switching after a virtual test. A faithful but fragile route stays in control, since the current route belongs to $\Gamma_B$. Low sensitivity alone therefore never leads to remap.
 
-Controller expenditure. A candidate [inference] (post) over an interval $\Theta$: the flow correction $\sum_t w_t^\top G^{-1} w_t$, with $w_t \in \mathbb{R}^{E_M}$, plus the cost of the controller's own updates of $G$, $K_M$ or $\pi$ [open form]. Maintenance and passive change of the map are excluded.
+Correction. At fixed source and sink, a candidate corrective flow (post) [inference] is
+
+$$j^w = j + w, \qquad \partial_1 w = 0 \tag{11a}$$
+
+Since $\partial_1 j = -\zeta$, the condition keeps the goal vector: a correction redistributes flow among routes and moves neither source nor sink. Verification and revision of the map also consume resources. Over an interval $\Theta$ the controller's expenditure is
+
+$$\mathcal{W}_\Theta = \int_\Theta \big[\omega \lVert w_t \rVert^2_{G_t^{-1}} + \dot{C}_{\mathrm{verify}}(t)\big]\, dt + \sum_{u \in \operatorname{Updates}(\Theta)} C_{\mathrm{update}}(u) \tag{11b}$$
+
+with weight $\omega$ on flow correction, a verification cost, and a cost for each update of $G$, $K_M$ or $\pi$ made by the controller [open forms]. Maintenance and passive change of the map are excluded.
 
 ## Envelope
 

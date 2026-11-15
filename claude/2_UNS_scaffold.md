@@ -1,8 +1,8 @@
 # Unsurveyability: Scaffold
 
-Version 0.5, 13 November 2026. Kernel: `0_LSMN_kernel.md` §2.
+Version 0.6, 15 November 2026. Kernel: `0_LSMN_kernel.md` §2, version 0.18.
 
-The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **R** (a ruled update or addition) or **Rev** (a correction adopted from the review of 13 November). Nothing else is added. Claim types as in `0_LSMN_notation.md`.
+The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **R** (a ruled update or addition) or **Rev** (a correction adopted from the review of 13 November). Nothing else is added. Claim types as in Appendix A of the kernel.
 
 Headline (2025). Unsurveyability is the property that forces translation from a comprehensive territory to a searchable map. It decomposes into intractability, which forces compression, and three sources of instability: opacity, contingency and transience. These correspond to three mathematical primitives whose presence or absence defines a cube of eight structural signatures.
 
@@ -26,20 +26,20 @@ Headline (2025). Unsurveyability is the property that forces translation from a 
 
 - 2.1 Intractability (2025): definition. The scale dimension and the boundary condition. R: unsurveyable is meant literally, with no view from above. Intractability forces local search and acts at sampling, at compression and at navigation. Rev: the factorial count is an example. Capacity is counted at finite precision. Local search follows given limited access per step (post).
 - 2.2 Opacity (2025): definition. The territory has no gradients and the map manufactures them. R: the problem posed is identification. The maze: a bare wall, and an arrow with no assurance. Opacity is resolved by establishing that the local signal correlates with the global path. Rev: degree rescaled to $[0, 1]$, with one half uninformative. The global gradient is known to the experimenter, not the agent. Hill climbing works only where local and global gradients are aligned. Dense sampling inside a habitat reduces opacity.
-- 2.3 Contingency (2025): definition. Graded reversibility. Virtual backtracking on the map. R: the problem posed is composition. Cost of reversion in $[0, 1]$ with both ends included. The cul-de-sac.
-- 2.4 Transience (2025): definition. The territory changes or the map decays. R: the problem posed is persistence.
+- 2.3 Contingency (2025): definition. Graded reversibility. Virtual backtracking on the map. R: the problem posed is composition. Degree of conditional, logical reversibility of branches in $[0, 1]$, both ends included, not defined through expenditure. The cul-de-sac: walking back restores the options, which is contingency, and does not restore the time and budget, which is transience.
+- 2.4 Transience (2025): definition. The territory changes or the map decays. R: the problem posed is persistence. Rev (kernel): transience is the temporal, historically irreversible ordering. A recurring state is a new situation, since time, resources and information are not restored. Transience holds even when nothing changes. The degree $\vartheta$ measures change and map decay only.
 - 2.5 Causal structure (2025): intractability, compression, intransigence. Completeness conjecture. The paper as a design guide for parsimony in formal modeling. R: the three degrees vary and each can be near zero. Contingency binds in proportion to opacity, and transience binds given a committed trajectory.
 
 ## 3. The Structure of Territory
 
 - 2025: the correspondence principle. Opacity with relations, contingency with functions, transience with dynamics.
-- R: the three orderings. Comes with (none), follows from (logical, negotiable), follows after (temporal, non-negotiable). The agent assigns orderings, and the primitives are how mathematics captures them. Footnote: "directional" for the third.
+- R: the three orderings. Comes with (none), follows from (logical, conditionally reversible), follows after (temporal, historically irreversible). Primitive forms: symmetric relation, map invertible iff bijective, iterated transformation. The agent assigns orderings, and the primitives are how mathematics captures them. Footnote: "directional" for the third.
 
 ## 4. Activity as Trajectory
 
 - 2025: the endpoint of translation is a trajectory. The three forms of intransigence act along it. Error compounds. Unsurveyability is a property of paths under bounded representation.
-- Rev: compounding with amplification and new disturbance, so that error can arise from zero (post).
-- R, addition: the dynamic heuristic. Virtual backtracking run as a cycle of ranking, virtual test, step and update, in which conjectures die in the agent's stead (Popper). Budgets. Satisficing as the best approximation under budget. Simon's combinatorial images, Bellman's dynamic optimization as his formal tool, and his limited engagement with combinatorial optimization.
+- Rev: error compounding stated qualitatively. The recursion form is withdrawn.
+- R, addition: the dynamic heuristic. Virtual backtracking run as a cycle of ranking, virtual test against the territory under $F$, physical commitment under $D$, observation and update of both models, in which conjectures die in the agent's stead (Popper). Budgets. Satisficing as the best approximation under budget. Simon's combinatorial images, Bellman's dynamic optimization as his formal tool, and his limited engagement with combinatorial optimization.
 
 ## 5. The Signature Cube
 

@@ -1,8 +1,8 @@
 # Consciousness as Translation: Scaffold
 
-Version 0.6, 13 November 2026. Kernel: `0_LSMN_kernel.md` §0.1 and §1.
+Version 0.7, 15 November 2026. Kernel: `0_LSMN_kernel.md` §1, version 0.18.
 
-The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the disposition ledger), or **Rev** (a correction adopted from rounds 1 and 2 of the review protocol). Nothing else is added. Claim types as in `0_LSMN_notation.md`: (def), (thm), (post), (hyp), (ill).
+The 2025 paper is the yardstick. This scaffold keeps its sections, their order and their claims. Each bullet is marked **2025** (kept), **U1** to **U8** (one of the eight ruled updates listed in the disposition ledger), or **Rev** (a correction adopted from rounds 1 and 2 of the review protocol). Nothing else is added. Claim types as in Appendix A of the kernel: (def), (thm), (post), (hyp), (ill).
 
 Epigraph (2025, original punctuation): *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
@@ -31,15 +31,15 @@ Headline (U2). To navigate an unsurveyable reality, a cognitive agent has to mai
 - 2025: translation fails in four characteristic ways, which together constitute unsurveyability. The statement is self-sufficient and does not presuppose Paper 2.
 - 2.1 Intractability, the boundary condition (2025): sizes, the limit condition, forced loss of fidelity.
 - 2.2 Opacity (2025): the territory provides no task-given gradients. Combinatorial state spaces differ in kind and support no differentiable structure. The agent manufactures gradients. Satisfiability as the example.
-- 2.3 Contingency (2025): choices alter the topology of reachable states. Branch points appear in the map as singularities. Foreclosure or costly backtracking.
-- 2.4 Transience (2025): the world is non-stationary and the map decays. Decay equation of the metric. Rev: one chosen picture of decay (ill), not implied by transience.
+- 2.3 Contingency (2025): choices alter the topology of reachable states. Branch points appear in the map as singularities. Foreclosure or costly backtracking. Rev (kernel): contingency is logical and conditionally reversible. The cost of backtracking belongs to transience.
+- 2.4 Transience (2025): the world is non-stationary and the map decays. Decay equation of the metric. Rev: one chosen picture of decay (ill), not implied by transience. Rev (kernel): transience is the temporal, historically irreversible ordering and holds even where nothing changes. Change and decay come on top.
 - 2.5 Causal hierarchy (2025): intractability, compression, opacity with contingency and transience, high curvature, control regime, consciousness.
 
 ## 3. Translation Geometry
 
 - 3.1 Basic architecture (2025): territory, map, compression. Fisher metric as discriminability. Natural gradient plus control field.
 - Rev in 3.1: the distribution behind the Fisher metric is stated: observations the map predicts at a state, given goal and habitat. Fisher measures local discriminability. It does not by itself measure distortion or the need for control.
-- U1, U2 in 3.1: the territory is the comprehensive model, sampled densely around habitats. The map is the comprehensible model, a rank offering of the available choices by their connection to the objective. All models are wrong and some are useful (Box): the map's loss is negligible in some instances.
+- U1, U2 in 3.1: the territory is the comprehensive model, sampled densely around habitats. The map is the comprehensible model, a rank offering of the available choices by their connection to the objective. All models are wrong and some are useful (Box): the map's loss is negligible in some instances. Rev (kernel): the ranking is manufactured from a locally available criterion, not necessarily a fixed goal.
 - 3.2 The role of curvature (2025): curvature measures how abruptly discriminability changes. It is the geometric signature of the translation problem.
 - Rev in 3.2: curvature is a synecdoche (ill). It stands for discriminability, distortion, aliasing and navigational sensitivity, which Paper 3 separates. The Bernoulli family shows varying discriminability at zero curvature. The just-noticeable difference is tied to the metric, not to curvature. The 2025 relation to curvature is withdrawn.
 - 3.3 Three regimes (2025): drift below the critical level, control near it, remap beyond what control can stabilize. Examples kept.
@@ -56,7 +56,7 @@ Headline (U2). To navigate an unsurveyable reality, a cognitive agent has to mai
 
 - U5: replaces the 2025 title "The Hard Problem Dissolved".
 - 4.1 The gap (2025): Chalmers' question, stated.
-- 4.2 Geometry and phenomenology (2025): effort as control cost, salience as information density, meaning as criticality. Footnote on meaning as felt significance.
+- 4.2 Geometry and phenomenology (2025): effort as control cost, salience as information density, meaning as criticality. Footnote on meaning as felt significance. Rev (kernel): criticality is not valence.
 - U5 in 4.2: the hard problem is right that science, as regularization of observations from without, can only triangulate experience within. The paper claims that consciousness is a work effort, and that work leaves physical traces.
 - 4.3 Why qualia differ (2025): embeddings differ. U5: the same lamp trained on the same object casts different shadows on surfaces of different texture.
 - 4.4 No separate substance (2025): no new physics. Temperature and pressure as analogies. Distributed cognition (Hutchins).

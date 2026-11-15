@@ -1,6 +1,6 @@
 # CAT — Formal Kernel
 
-*Version 0.17 · 14 November 2026 · working kernel on `main`.*  
+*Version 0.18 · 15 November 2026 · working kernel on `main`.* 0.18 fixes symbol collisions, the claim type of the remap condition, and the statement of $\Gamma_B$.  
 *Basis:* independent formal reconstruction v4.5, reconciled with the current CAT source record (kernel 0.15; CAT 0.5, UNS 0.3, TG 0.4, MC 0.4; disposition and review protocol through round 3). Original 2025 manuscripts were not available for direct inspection during this integration.  
 *Status:* authorial rulings remain controlling; new candidate operations and hypotheses keep their indicated epistemic status. `\rightsquigarrow` denotes candidate functional realization, never identity of objects.
 
@@ -74,7 +74,7 @@ T\leftrightarrow D:&x_{t+1}=f_t(x_t),\ t+1>t
 O:&\quad o=\tfrac12\bigl[1-\operatorname{corr}(\nabla_{\rm loc}\operatorname{val},\nabla_{\rm glob}\operatorname{val})\bigr]\in[0,1],\\
 C:&\quad c\in[0,1],\quad \Omega_t\xleftarrow{\text{conditional backtracking}}\Omega_{t'};\\
 T:&\quad\vartheta\ge0,\quad
-x_{t+\tau}=x_t\ \not\Rightarrow\ (x_{t+\tau},t+\tau,B_{t+k},\mathcal I_{t+k})=(x_t,t,B_t,\mathcal I_t).
+x_{t+\tau}=x_t\ \not\Rightarrow\ (x_{t+\tau},t+\tau,B_{t+\tau},\mathcal I_{t+\tau})=(x_t,t,B_t,\mathcal I_t).
 \end{aligned}
 \tag{8}
 \]
@@ -103,7 +103,7 @@ For a finite connected weighted 2-complex (faces optional), \(\partial_1\partial
 
 \[
 K_S=(V_S,\Lambda_S,\mu_S),\quad
-K_M=(V_M,E_M,F_M,G),\quad\pi:V_S\twoheadrightarrow V_M,\quad
+K_M=(V_M,E_M,K_M^{(2)},G),\quad\pi:V_S\twoheadrightarrow V_M,\quad
 \widetilde\partial_1=\partial_1G^{1/2},\quad
 \widetilde\partial_2=G^{-1/2}\partial_2.
 \tag{11}
@@ -128,7 +128,7 @@ h\in\ker\Delta_1,\qquad G^{-1/2}j=-\widetilde\partial_1^\top\phi.
 \[
 \operatorname{lift}(\gamma\mid z_0)=\mathbf1_{z_0}^\top P_{m_0}
 \prod_{i=1}^n(\Lambda_SP_{m_i})\mathbf1,\quad
-\Gamma_B=\{\gamma:\operatorname{lift}(\gamma\mid z_0)>0,\ C_{\rm exec}(\gamma)\le B_{\rm rem},\ \gamma\text{ found within }B\}.
+\Gamma_B=\{\gamma:\operatorname{lift}(\gamma\mid z_0)>0,\ C_{\rm exec}(\gamma)\le B_{\rm rem},\ \gamma\text{ found within }B\},\quad\gamma_j\in\Gamma_B\text{ when acceptable}.
 \tag{13}
 \]
 
@@ -140,7 +140,7 @@ h\in\ker\Delta_1,\qquad G^{-1/2}j=-\widetilde\partial_1^\top\phi.
 \mathrm{control},&\chi_{\rm TG}=1,\ \Gamma_B\ne\varnothing,\\
 \mathrm{remap},&\chi_{\rm TG}=1,\ \Gamma_B=\varnothing.
 \end{cases}
-\quad(\mathrm{post}).
+\quad(\mathrm{post};\ \text{remap condition }\Gamma_B=\varnothing\ \mathrm{hyp}).
 \tag{14}
 \]
 
@@ -165,7 +165,7 @@ d_{\mathcal{SM}}=\sum_{z,z'}\mu_S(z)\mu_S(z')
 ## 4. Measuring Consciousness — Empirical Qualification
 
 \[
-\mathcal W_\Theta=\int_\Theta\!\bigl[\alpha\|w_t\|_{G_t^{-1}}^2+
+\mathcal W_\Theta=\int_\Theta\!\bigl[\omega\|w_t\|_{G_t^{-1}}^2+
 \dot C_{\rm verify}(t)\bigr]dt+
 \sum_{u\in\operatorname{Updates}(\Theta)}C_{\rm update}(u),\qquad
 \eta_\Theta=\frac{\mathcal W_\Theta}{\int_\Theta\sum_e\Delta a_e(t)\,dt}
@@ -217,13 +217,15 @@ Claim types. (def) definition. (thm) theorem, with its assumptions. (post) model
 | $\mathcal{L}, \mathcal{S}, \mathcal{M}, \mathcal{N}$ | Landscape (unsurveyable reality), Territory, Map, Navigation |
 | $\sigma, \pi, \gamma$ | sampling $\mathcal{L} \to \mathcal{S}$, compression $\mathcal{S} \to \mathcal{M}$, policy trajectory $\mathcal{M} \to \mathcal{N}$ |
 | $K_S, V_S, z, \Lambda_S, \operatorname{dist}_S, \mu_S$ | Territory: complex, vertex set, vertex, adjacency/transition matrix (not necessarily symmetric), metric, sampling measure |
-| $K_M, V_M, m, E_M, F_M, e, G, \partial_1, \partial_2, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, optional faces, edge, edge weights, boundary operators, metric |
+| $K_M, V_M, m, E_M, K_M^{(2)}, e, G, \partial_1, \partial_2, \operatorname{dist}_M$ | Map: complex, vertex set, vertex, edge set, optional faces (2-simplices), edge, edge weights, boundary operators, metric |
 | $\tilde{\partial}_1, \tilde{\partial}_2$ | weighted boundary operators $\partial_1 G^{1/2}$, $G^{-1/2} \partial_2$ |
 | $\Delta_i, \lambda_2, \beta_1$ | weighted Hodge Laplacian of degree $i$, second eigenvalue of $\Delta_0$, $\dim \ker \Delta_1$ |
 | $\lambda_\zeta$ | task-conditioned gap $\lVert \zeta \rVert^2 / (\zeta^\top \Delta_0^\dagger \zeta)$ |
 | $P_m, \mathbf{1}_m, \mathbf{1}$ | projector onto $\pi^{-1}(m)$, indicator vector, all-ones vector |
 | $\zeta, \phi, j, \gamma_j$ | goal vector in the TG specialization, potential, manufactured flow, route extracted from $j$ |
 | $\Phi_t, q_t$ | conceptual manufactured potential and locally available navigational criterion; neither requires a fixed, fully specified goal |
+| $\operatorname{Manufacture}, \operatorname{Route}$ | construction of $\Phi_t$ from $\mathcal{M}_t$ and $q_t$; extraction of a route from a flow |
+| $\operatorname{VirtualTest}_{\mathcal S}, \operatorname{Commit}_D, \operatorname{Observe}$ | stages of the navigation cycle: test against the territory under $F$, physical enactment under $D$, observation |
 | $f_{v,e}$ | outward flux at vertex $v$ along incident edge $e$ |
 | $u, v, h$ | Hodge components of an edge chain: gradient, rotational, harmonic |
 | $\operatorname{lift}$ | lift functional |
@@ -234,11 +236,14 @@ Claim types. (def) definition. (thm) theorem, with its assumptions. (post) model
 | $\operatorname{sig}$ | structural signature in $\{0,1\}^3$ |
 | $o, c, \vartheta$ | opacity proxy, conditional logical reversibility degree, and environmental-change/map-decay proxy; $\vartheta$ does not exhaust temporal transience |
 | $\nu, \alpha$ | count of relevant distinctions, scale |
+| $\tau, \mathcal{I}_t$ | elapsed interval, information held at $t$ |
 | $y, g_F, p(\cdot \mid y), \operatorname{Ric}$ | smooth stand-in: point of $\mathcal{M}$, Fisher metric, predicted observation distribution, Ricci curvature |
 | $D_{\mathrm{sym}}(m, n)$ | symmetrized divergence between $p(\cdot \mid m)$ and $p(\cdot \mid n)$ |
 | $\kappa, \kappa^\ast$ | curvature, its critical level (Papers 1 and 2) |
 | $\epsilon^\ast, t_{\mathrm{rel}}$ | critical level of the gap (Papers 3 and 4), relaxation time |
-| $w, \mathcal{W}, \Theta$ | control field, controller expenditure over an interval, matched interval |
+| $w, \mathcal{W}, \mathcal{W}_\Theta, \Theta$ | control field, controller expenditure, its value over an interval, matched interval |
+| $\omega, C_{\rm verify}, C_{\rm update}, \operatorname{Updates}(\Theta)$ | weight of flow correction in $\mathcal{W}_\Theta$, verification cost, update cost, updates made in $\Theta$ |
+| $\operatorname{do}(\cdot), \mathsf{Falsify}$ | intervention on the listed factors, refutation at a named layer |
 | $a, a_{\mathrm{base}}, \Delta a_e, B$ | metabolic power allocated to mediation, its waking baseline, its surge at instance $e$, budget |
 | $\eta, \eta_\Theta$ | conversion efficiency; efficiency measured over interval $\Theta$ |
 | $\operatorname{reg}$ | regime: drift, control or remap |

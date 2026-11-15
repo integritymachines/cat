@@ -165,3 +165,24 @@ A conjecturing engine pays only under the viability criterion of Paper 3. Motili
 ## Kernel 0.15, 14 November 2026
 
 The kernel is reduced to the contribution in its densest form. Symbols, tags and claim types moved to `0_LSMN_notation.md`. The update list and the parked material moved to this ledger. Bench, adequacy tests, design, worked case and the translation-loss register remain in the Paper 3 and Paper 4 reports. No content was dropped.
+
+## Kernel 0.16 to 0.18, 14 and 15 November 2026
+
+Kernel 0.16 and 0.17 are author revisions. They supersede kernel 0.15 and the separate notation file, which is kept as a historical reference. Kernel 0.18 fixes three points within them. The drafts are aligned to 0.18: Paper 1 report 0.6 and scaffold 0.7, Paper 2 report 0.4 and scaffold 0.6, Paper 3 report 0.5 and scaffold 0.5, Paper 4 report 0.5 and scaffold 0.6.
+
+| Element | Status | Now |
+|---|---|---|
+| Transience | corrected by the authors | The temporal, historically irreversible ordering. A recurring state is a new situation. Holds at $\vartheta = 0$. $\vartheta$ measures change and map decay only. The drafts had defined transience through $\vartheta$ |
+| Contingency | corrected by the authors | Degree of conditional, logical reversibility of branches, not defined through expenditure. The cost of backtracking belongs to transience. The drafts had graded $c$ as a cost of reversion and put the unrestored budget under contingency |
+| Primitive forms | added by the authors | Symmetric relation, map invertible iff bijective, iterated transformation |
+| Navigation cycle | revised by the authors | Virtual test under $F$, commitment under $D$, observation updates both models |
+| Curvature | revised by the authors | $\kappa = \operatorname{Scal}(g_F)$ and indicator $\chi_\kappa$, both illustrations. Correspondence to the Paper 3 trigger is functional |
+| Manufactured potential | added by the authors | $\Phi_t$ from the map and a locally available criterion $q_t$, no fixed goal required |
+| Criticality and valence | added by the authors | Criticality is not valence |
+| Corrective flow, expenditure | revised by the authors | $j + w$ with $\partial_1 w = 0$. Expenditure includes weighted flow correction, verification and updates |
+| Degree-two Laplacian, faces | added by the authors | Paper 3 |
+| Intervention form of the design | added by the authors | Paper 4 design, with budget as a fifth factor |
+| Parsimony, error recursion, stopping at $\kappa^\ast$ | removed from the kernel by the authors | Parsimony stays in Paper 2 as 2025 content. The error recursion, a drafting form, is withdrawn and compounding stated qualitatively. The stopping point stays as a 2025 cross-reference in Papers 1 and 2 |
+| Symbol collisions | fixed in 0.18 | Cost weight $\omega$, face set $K_M^{(2)}$, uniform interval $\tau$ in the irreversibility statement. Missing symbols entered in Appendix A |
+| Claim type of the remap condition | fixed in 0.18 | Regime rule (post), remap condition (hyp), as ruled on 13 November |
+| Current route in $\Gamma_B$ | fixed in 0.18 | Stated in the formula |
