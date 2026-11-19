@@ -184,7 +184,7 @@ The envelope of assured navigation is certified by the agent within its budget (
 
 $$\mathcal{E} = \{(z_0, \zeta) : \Gamma_B(z_0, \zeta) \ne \emptyset\} \tag{12}$$
 
-It contains everything reached under drift or control [ruled]. The note restricts the envelope to drift. The definition here follows the ruling. Remap lies outside $\mathcal{E}$ and can enlarge it as a consequence. "Assured" means certified by the agent's own search against its own record. It does not mean robust in the landscape. The proposed **drift envelope** $\mathcal D$ of Paper 1 is narrower: engaged translation with ordinary mediation below $K\approx\kappa_c$. $\mathcal D$ is conceptual here and is not silently identified with $\mathcal E$ or a set defined solely by $\lambda_\zeta$.
+It contains everything reached under drift or control [ruled]. The note restricts the envelope to drift. The definition here follows the ruling. Remap lies outside $\mathcal{E}$ and can enlarge it as a consequence. "Assured" means certified by the agent's own search against its own record. It does not mean robust in the landscape. The proposed **drift envelope** $\mathcal D$ of Paper 1 concerns engaged translation with ordinary mediation below $K\approx\kappa_c$. For an explicitly task-guided route certified by $\Gamma_B$, drift lies within $\mathcal E$; without a specified route (e.g., quiet sensory absorption), the inclusion relation is not defined. $\mathcal D$ is conceptual here and is not identified with $\mathcal E$ or a set defined solely by $\lambda_\zeta$.
 
 ## Viability
 
@@ -200,7 +200,7 @@ This is an ex ante decision criterion and not a theorem about consciousness. The
 
 *Proof.* With $w \equiv 0$ and $G$ fixed, the agent executes $\gamma_j$. By (6) no path in $K_S$ from $z_0$ projects onto $\gamma_j$, so execution fails at the first edge at which the partial product vanishes. $\square$
 
-Reaching the goal therefore requires $w \ne 0$ or a change of $G$. The lemma says nothing about metabolic expenditure or conscious engagement. Their identification with this mode of operation is Postulate 1.0 of Paper 1.
+Reaching the goal therefore requires $w \ne 0$ or a change of $G$. The lemma says nothing about metabolic expenditure or conscious engagement. Revised Postulate 1.0 of Paper 1 links consciousness to active territory–map mediation, including drift, rather than identifying it with this control or revision requirement.
 
 **Proposition 3.3 (perspective asymmetry).** Let $\mathcal{M}_{\mathrm{int}}$ be the map of an agent and $\mathcal{M}_{\mathrm{ext}}$ the map that an observer forms of the same landscape, each obtained by its own sampling and its own non-injective compression.
 
