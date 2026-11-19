@@ -1,6 +1,6 @@
 # Translation Geometry
 
-Report, draft 0.5, 15 November 2026. Kernel: `0_LSMN_kernel.md` §3, version 0.18. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt rounds 1 and 2 of the review protocol under the authors' rulings. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
+Report, draft 0.6, 19 November 2026. Kernel: `0_LSMN_kernel.md` §3, proposed version 0.19. The research note for Paper 3 is the yardstick. Changes since 0.2 adopt rounds 1 and 2 of the review protocol under the authors' rulings. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
 
 Papers 1 and 2 explain the theory with synecdoches: a combinatorial territory, a smooth map with the Fisher metric, and curvature against a critical level. This report constructs and tests mechanisms that perform the explanatory work the Riemannian picture of Paper 1 made accessible. Each operator is assigned a functional obligation, its assumptions, the information lost in the realization, and consequences that can be checked independently. The correspondence between the conceptual and the operational exposition is partial. Adequacy is established by structural, causal, interventional and explanatory tests. Similarity of terminology carries no weight. The report contains definitions, theorems, postulates, one computed example and a bench of test cases. It contains no empirical claims.
 
@@ -18,6 +18,7 @@ Each candidate is assigned one explanatory obligation and a condition that shows
 | test before irreversible action | $w$, virtual backtracking | budgeted search in $\mathcal{S}$ | avoidable costly commitments are prevented |
 | correct or rebuild | control against remap | correction of flow or weights, revision of $K_M$ or $\pi$ | navigational reliability is restored |
 | measure correction burden | integrated control cost | controller expenditure, metabolic estimates | resource predictions hold prospectively |
+| distinguish active translation from stored representations and local correction [open] | conscious drift without extraordinary control | candidates A (coupling), B (horizon), C (active maintenance), separately tested | predicts engagement contrasts independently of the criticality classifier; no candidate is qualified yet |
 
 Adequacy (def). Four tests qualify a realization on known finite systems, with ground truth fixed independently of the classifier.
 
@@ -149,7 +150,7 @@ integrated against the coupling twice. Both (10) and (11) are squared. The corre
 
 ## Regimes
 
-The regime rule is fixed before any data are seen (def).
+The regime rule is fixed before any data are seen (def). It classifies **engaged map-guided navigation**; it does not decide whether arbitrary neural or local corrective processing is conscious. An independently established engagement operator is still [open].
 
 | Regime | Condition | Action |
 |---|---|---|
@@ -159,7 +160,7 @@ The regime rule is fixed before any data are seen (def).
 
 Trigger: $\operatorname{lift}(\gamma_j \mid z_0) = 0$ or $\lambda_\zeta \le \epsilon^\ast$.
 
-Under drift, $d_{\mathcal{SM}} > 0$ in general and the loss is benign. The note adds confidence, the low-cost correction of minor divergence that does not halt progress.
+Under drift, $d_{\mathcal{SM}} > 0$ in general and the loss is benign. The note adds confidence, the low-cost correction of minor divergence that does not halt progress. This *navigational* drift classifier does not yet prove active conscious presence: an agent can also absorb and evaluate a largely static scene without overt policy execution or controller work. Null processing is outside the classifier rather than an extra TG regime [open].
 
 $\lambda_2$ remains a global diagnostic. No regime rests on it alone [ruled]. By Theorem 3.0, $\lambda_2 > \epsilon^\ast$ rules out a trigger by sensitivity for every task.
 
@@ -183,7 +184,7 @@ The envelope of assured navigation is certified by the agent within its budget (
 
 $$\mathcal{E} = \{(z_0, \zeta) : \Gamma_B(z_0, \zeta) \ne \emptyset\} \tag{12}$$
 
-It contains everything reached under drift or control [ruled]. The note restricts the envelope to drift. The definition here follows the ruling. Remap lies outside $\mathcal{E}$ and can enlarge it as a consequence. "Assured" means certified by the agent's own search against its own record. It does not mean robust in the landscape.
+It contains everything reached under drift or control [ruled]. The note restricts the envelope to drift. The definition here follows the ruling. Remap lies outside $\mathcal{E}$ and can enlarge it as a consequence. "Assured" means certified by the agent's own search against its own record. It does not mean robust in the landscape. The proposed **drift envelope** $\mathcal D$ of Paper 1 is narrower: engaged translation with ordinary mediation below $K\approx\kappa_c$. $\mathcal D$ is conceptual here and is not silently identified with $\mathcal E$ or a set defined solely by $\lambda_\zeta$.
 
 ## Viability
 
@@ -281,3 +282,4 @@ Predictive contribution and explanatory sufficiency are separate questions. A nu
 6. Confidence in relation to the envelope (12).
 7. Conditions on the samplings under which the postulate in Proposition 3.3 becomes a theorem.
 8. Exploratory: determinant-line geometry as a unifying structure. The note keeps it as a candidate.
+9. Candidate engagement operators: A must define coupling on combinatorial $K_S$ rather than assume $d\phi$; B must distinguish prospective valuation from explicit route lookahead and unconscious replay; C must distinguish active information exchange from stored mutual information and avoid requiring low distortion during conscious control or remap. Test independently against quiet conscious presence, local unconscious inhibition, sleep-onset disengagement, and map maintenance without observable update. No new TG consciousness classifier is adopted [open].
