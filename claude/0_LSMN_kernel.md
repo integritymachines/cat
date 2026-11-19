@@ -6,7 +6,7 @@
 
 ## 1. Consciousness as Translation — Claim
 
-Cognitive agents navigating an unsurveyable reality have to manufacture conjectural gradients via two distinct representations: a combinatorial territory and a continuous navigational map. Translation between them is necessarily lossy, creating geometric distortions that vary across the map and require continuous mediation. When the representations become critically unaligned, stabilization requires control effort. Consciousness is postulated to arise from this metabolically costly mediation process, including during uncontested drift; critical misalignment recruits additional stabilization effort. The phenomenology of conscious experience, including salience and meaning, reflects the geometric structure of mediation.
+Cognitive agents navigating an unsurveyable reality have to manufacture conjectural gradients via two distinct representations: a combinatorial territory and a continuous navigational map. Translation between them is necessarily lossy, creating geometric distortions that vary across the map and require continuous mediation. Consciousness is postulated to arise from this metabolically costly mediation process, including during uncontested drift; when the representations become critically unaligned, additional control effort is recruited. The phenomenology of conscious experience, including salience and meaning, reflects the geometric structure of mediation.
 
 \[
 \mathcal L\xrightarrow{\sigma_t}\mathcal S_t\xrightarrow{\pi_t}\mathcal M_t
@@ -54,7 +54,7 @@ Criticality is **not valence**: drift includes pleasurable, absorbing and ordina
 
 The postulate in (4) distinguishes active territory–map mediation from the extra control recruited at criticality. \(\chi_{\rm eng}\) is **not** defined by an arbitrary positive neural power, by the existence of a stored map, or by phenomenal report. It denotes a hypothesized actively operating translation process that keeps experienced territorial distinctions available for reconciliation with the map and for prospective evaluation; its independent operator and the empirical consciousness link remain [open]. A stable sensory scene, unchanged preferences, no physical movement, and \(w\simeq0\) are compatible with engagement. A local reflex or masked inhibitory correction may occur without engaging that process, even while the organism is conscious in other respects.
 
-The **drift envelope** \(\mathcal D\) is the conceptual domain of engaged translation below criticality: \(\chi_{\rm eng}=1,\ \chi_\kappa=0\) in the Paper 1 picture. Its low-demand boundary is *possible disengagement*, not a second curvature threshold or a requirement that stimulation vanish. Its upper boundary is \(K\approx\kappa_c\), where ordinary mediation no longer suffices and extra control is recruited. A criticality trigger may reflect correction scope, cumulative cost, or expected failure frequency [inference]; numerical thresholds and the transition profile belong to Papers 3 and 4. This is distinct from the larger envelope of **assured navigation** \(\mathcal E\), which includes both drift and control under the current budget and representation.
+The **drift envelope** \(\mathcal D\) is the conceptual domain of engaged translation below criticality: \(\chi_{\rm eng}=1,\ \chi_\kappa=0\) in the Paper 1 picture. Its low-demand boundary is *possible disengagement*, not a second curvature threshold or a requirement that stimulation vanish. Its upper boundary is \(K\approx\kappa_c\), where ordinary mediation no longer suffices and extra control is recruited. A criticality trigger may reflect correction scope, cumulative cost, or expected failure frequency [inference]; numerical thresholds and the transition profile belong to Papers 3 and 4. This is distinct from the envelope of **assured navigation** \(\mathcal E\), which includes both drift and control under the current budget and representation. Their inclusion relation is meaningful only when a task and admissible route are specified; quiet phenomenal absorption need not involve physical execution.
 
 Three alternatives from *On Phenomenal Presence* remain under development, not jointly stipulated criteria:
 
@@ -259,9 +259,10 @@ Claim types. (def) definition. (thm) theorem, with its assumptions. (post) model
 | $w, \mathcal{W}, \mathcal{W}_\Theta, \Theta$ | control field, controller expenditure, its value over an interval, matched interval |
 | $\omega, C_{\rm verify}, C_{\rm update}, \operatorname{Updates}(\Theta)$ | weight of flow correction in $\mathcal{W}_\Theta$, verification cost, update cost, updates made in $\Theta$ |
 | $\operatorname{do}(\cdot), \mathsf{Falsify}$ | intervention on the listed factors, refutation at a named layer |
-| $a, a_{\mathrm{base}}, \Delta a_e, B$ | metabolic power allocated to mediation, its waking baseline, its surge at instance $e$, budget |
+| $a, a_{\mathrm{base}}, \Delta a_e, B$ | mediation-specific metabolic power, its proposed engaged baseline, critical surcharge at instance $e$, budget |
 | $\eta, \eta_\Theta$ | conversion efficiency; efficiency measured over interval $\Theta$ |
 | $\operatorname{reg}$ | engaged map-navigation regime: drift, control or remap |
+| $\chi_{\rm eng}$ | proposed active territory–map mediation indicator; independent operator [open], not determined by curvature, generic energy or report |
 | $\chi_\kappa, \chi_{\rm TG}$ | conceptual criticality indicator; candidate TG trigger. Functional correspondence, not geometrical identity |
 | $C_{\rm exec}, B_{\rm rem}$ | execution cost of a route; remaining budget |
 | $\mathcal{D}, \mathcal{E}$ | conceptual drift envelope (engaged, below criticality); envelope of assured navigation, certified within budget |
