@@ -1,6 +1,6 @@
 # Consciousness as Translation
 
-Report, draft 0.6, 15 November 2026. Kernel: `0_LSMN_kernel.md` §1, version 0.18. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates listed in the disposition ledger, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in Appendix A of the kernel.
+Report, draft 0.7, 19 November 2026. Kernel: `0_LSMN_kernel.md` §1, proposed version 0.19. The 2025 paper is the yardstick. Its argument and order are kept. Departures are the eight ruled updates listed in the disposition ledger, marked U1 to U8 where they enter, and the corrections adopted from rounds 1 and 2 of the review protocol. [inference] marks a proposal of this draft and [open] a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Symbols are listed in Appendix A of the kernel.
 
 *The territory is combinatorial; the map is continuous. Out of this friction, consciousness arises.*
 
@@ -38,7 +38,7 @@ Transience does not imply this form. It is one picture of decay among several.
 
 The four form a causal hierarchy:
 
-$$I \to \text{compression} \to O + C + T \to \text{high curvature} \to \text{control} \to \text{consciousness} \tag{5}$$
+$I \to \text{compression} \to O + C + T \to \text{ongoing mediation} \to \begin{cases}\text{drift},&K<\kappa_c\\ \text{control/remap},&K\approx\kappa_c\end{cases} \tag{5}$
 
 ## Architecture
 
@@ -58,7 +58,7 @@ measures discriminability: how reliably nearby states can be told apart. It aris
 
 $$\dot{y} = -g_F^{-1} \nabla \phi(y) + w(y) \tag{7}$$
 
-With $w \approx 0$ the agent follows natural gradient descent. This is the backbone of automatic and habitual processing.
+With $w \approx 0$ the agent follows nominal gradient descent. Absence of supervisory correction does not distinguish unconscious automatic processing from conscious drift: that distinction concerns whether territory–map mediation remains actively engaged [open realization].
 
 ## Curvature
 
@@ -76,7 +76,7 @@ High curvature pictures the breakdown of the continuous approximation. Branch po
 
 ## Regimes
 
-Behavior partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma_B$ be the set of routes to the objective, the current one included, that the territory supports, that fit the remaining budget, and that the agent finds within its budget $B$ (def).
+Engaged map-based navigation partitions into three regimes by a critical level of curvature $\kappa^\ast$. Let $\Gamma_B$ be the set of routes to the objective, the current one included, that the territory supports, that fit the remaining budget, and that the agent finds within its budget $B$ (def).
 
 | Regime | Condition | Dynamics |
 |---|---|---|
@@ -84,7 +84,7 @@ Behavior partitions into three regimes by a critical level of curvature $\kappa^
 | control | $\kappa \ge \kappa^\ast$, $\Gamma_B \ne \emptyset$ | $w \ne 0$ |
 | remap | $\kappa \ge \kappa^\ast$, $\Gamma_B = \emptyset$ | $g_F \leftarrow g_F + \delta g$ |
 
-Drift. The map represents the territory faithfully enough, and the agent follows it. Drift includes skilled, abstract and rapid behavior in domains where learning has lowered curvature. A chess master in a standard opening drifts. So does a walker on flat ground.
+Drift. The map represents the territory faithfully enough, and the agent follows it while ordinary mediation remains active. Drift includes skilled, abstract and rapid behavior in domains where learning has lowered curvature. A chess master in a standard opening drifts. So does a walker on flat ground. Quiet sensory absorption can also be conscious drift without overt movement, active route comparison, or measurable changes in preference.
 
 Control. The geometry is fragile and small errors can derail progress. The agent deploys the control field to stabilize its trajectory. Candidate routes are tried virtually before commitment, so that a failed conjecture dies in the agent's stead. Control is effortful and metabolically expensive. A chess player in an unfamiliar position controls.
 
@@ -92,7 +92,9 @@ Remap. Control cannot stabilize the dynamics, and the representation itself chan
 
 The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma_B$ replaces that (U4). Control applies while the agent finds a supported route within its budget. Remap applies when it finds none (hyp). Remap is a decision under budget. It does not prove that no route exists, which no agent facing an unsurveyable reality could establish. A faithful but fragile route stays in control: the current route belongs to $\Gamma_B$ and is executed with care.
 
-$\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error.
+$\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error. As an illustrative decomposition, the approach to criticality can be limited by correction scope, cumulative correction cost, **or** prospective microbacktracking failure rate; their operators and thresholds are empirical questions for Papers 3 and 4 [inference].
+
+The **drift envelope** $\mathcal{D}$ is the conceptual region of active territory–map mediation in which ordinary correction remains sufficient ($K<\kappa_c$). At its lower boundary, demands can become sufficiently slight that engagement may cease, but low stimulus or low curvature does not require unconsciousness. At its upper boundary, $K\approx\kappa_c$ recruits control. Neither boundary is identified here with an empirically verified step function.
 
 The envelope of assured navigation $\mathcal{E}$ is the set of states from which the agent reaches its objective under drift or control, as certified by its own search within budget (U7). A wingsuit flight that ends safely stays inside $\mathcal{E}$ and is far from drift. The envelope answers the dark-room objection to accounts built on minimizing surprise: an agent with an objective leaves the dark room and pays for control to remain assured outside it.
 
@@ -108,19 +110,19 @@ $$\lVert \nabla \kappa(y) \rVert_{g_F} \tag{10}$$
 
 which measures how rapidly the geometric demand changes nearby.
 
-The 2025 paper identifies consciousness with the operation of the control field at $\kappa \approx \kappa^\ast$. Update U3 refines this. Let $a(t)$ be the metabolic power allocated to the mediation between map and territory, excluding background metabolism (def). Let $e$ index the instances on the route, with curvature $\kappa_e$.
+The 2025 paper identifies consciousness with the operation of the control field at $\kappa \approx \kappa^\ast$. The current revision instead postulates consciousness during ongoing territory–map mediation, including uncontested drift; $\kappa \approx \kappa^\ast$ marks escalation to extraordinary control. Let $\chi_{\mathrm{eng}}$ mark the hypothesized active mediation process, with an independent operator still [open]. Let $a(t)$ be metabolic power allocated specifically to that process, excluding unrelated background metabolism, and let $e$ index instances on the route.
 
-$$a(t) = a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t), \qquad \eta = \frac{\mathcal{W}}{\int_\Theta \sum_e \Delta a_e\, dt} \tag{11}$$
+$a(t) = \chi_{\mathrm{eng}}(t)\left[a_{\mathrm{base}}(t) + \sum_e \Delta a_e(t)\right], \qquad \eta = \frac{\mathcal{W}}{\int_\Theta \sum_e \Delta a_e\, dt} \tag{11}$
 
 Work and power differ in kind, so $\eta$ compares work with allocated energy over the same interval, and it is dimensionless once both are in energy units.
 
-Postulate 1.0. $\text{conscious}(t) \iff a(t) > 0$.
+Postulate 1.0 (revised, operator open). $\operatorname{Conscious}(t)\iff\chi_{\mathrm{eng}}(t)=1$. Metabolic expenditure is a proposed physical consequence of active mediation, not the independent definition of its engagement.
 
-The baseline $a_{\mathrm{base}}$ maintains the live map against transience and is positive throughout wake. It is not part of $w$. The surge $\Delta a_e$ is positive when $\kappa_e \ge \kappa^\ast$ and grows with $\kappa_e$. Consciousness is graded, and its degree at an instance is $\Delta a_e$. It is absent in dreamless sleep and under anesthesia, where mediation stops. Boredom and stimulus deprivation are low surge on a positive baseline [open].
+The baseline $a_{\mathrm{base}}$ is hypothesized to sustain active territory–map correspondence and prospective valuation, even if the scene and current preference are unchanged. It is not part of $w$ and cannot be equated with all resting cortical energy. The surge $\Delta a_e$ is positive when $\kappa_e \ge \kappa^\ast$ and grows with $\kappa_e$ [post]. A graded control surcharge is not by itself a measure of the degree of phenomenal experience. Disengagement in dreamless sleep or anesthesia, and the lower drift boundary during drowsiness, require independent empirical qualification. Boredom and stimulus deprivation are [open].
 
 Two forms are proposed here [inference]. The budget is finite, so surges are served in descending order of $\kappa_e$. Curvature $\kappa_e$ is decreasing in the sampling density $\mu_S(e)$, so that habitats drift and the frontier draws allocation.
 
-Why consciousness here. Three reasons of the 2025 paper stand. Phenomenology aligns: conscious experience is marked by effort, deliberation and active engagement, which is the signature of costly control. Neural and behavioral signatures align: tasks of high curvature produce longer reaction times, more errors and reports of difficulty. Functional necessity aligns: the agent intervenes when the cost of error exceeds the cost of control. One clarification is added. A thermostat and the stomata of a tree also control, against a fixed reference. Control in the sense used here decides between candidate routes before commitment and can revise the map itself.
+Why consciousness here. Phenomenal presence during quiet absorption motivates the extension below criticality; conflict-induced effort motivates the separate control surcharge. Neural and behavioral signatures of high curvature—longer response times, errors and reported difficulty—concern the **upper drift boundary**, not the onset of consciousness. Functionally, live translation keeps experience available to inform valuation and later navigation while the agent can intervene when the cost of error warrants it [post]. Local control, including masked inhibition, is not sufficient evidence of engagement; an independent operator is required. The note *On Phenomenal Presence* proposes three candidates: instantaneous metric coupling (A), prospective horizon (B), and active rate–distortion maintenance (C). The first fails as a sufficient gate during low-input absorption; explicit route lookahead is not necessary for valuational presence; static mutual information and bounded distortion are not identical with active mediation. C is the leading **functional** candidate, with B's temporal relevance and A's coupling as subsidiary dimensions [inference, open].
 
 ## Experience
 
@@ -130,7 +132,7 @@ The geometric reading of experience stands as an identification.
 
 | Experience | Geometric reading |
 |---|---|
-| effort | the rate of control cost in (9) |
+| effort | subjective exertion associated with control; expenditure in (9) is a mechanism, not itself a phenomenal dimension |
 | salience | information density, high where $\kappa$ is high |
 | meaning | criticality, $\kappa$ near $\kappa^\ast$ |
 | intensity | the instability (10) along trajectories with $w \ne 0$ |
@@ -139,7 +141,7 @@ Meaning here is felt significance and has no propositional content. Criticality 
 
 The hard problem is right that science, which regularizes observations from without, can only triangulate subjective experience within. The same stimuli meet maps with different histories. The same lamp trained on the same object casts different shadows on surfaces of different texture.
 
-The claim of the series is that consciousness is a work effort and no inherent property. Work consumes resources and leaves physical traces, and those traces can be observed from without. No new physics is required. Consciousness stands to the underlying dynamics as temperature stands to kinetic energy.
+The claim of the series is that consciousness concerns active translation mediation, not an inherent property or solely an episode of control. The associated maintenance and extraordinary correction consume resources and leave physical traces that can be investigated from without. No new physics is required. Consciousness stands to the underlying dynamics as temperature stands to kinetic energy.
 
 ## Neighbors
 
@@ -170,7 +172,7 @@ Altered states are systematic changes of the same geometry. The survey is qualit
 
 ## Implications
 
-The predictions of the 2025 paper stand.
+The criticality-dependent predictions of the 2025 paper stand. Additional engagement predictions concern conscious sensory absorption under low conflict and the dissociation between unconscious local correction and active territory–map mediation [inference].
 
 Behavior. Reaction time rises with curvature. Errors cluster in regions of high curvature and differ in kind between drift and control. Strategy shifts from heuristic to systematic as curvature rises.
 
@@ -188,6 +190,6 @@ The combinatorial territory, continuous map, Fisher information geometry and cur
 
 ## Open
 
-1. The forms of $\Delta a_e$, and the two [inference] items under (11).
+1. The independent engagement operator and comparison of metric coupling (A), prospective integration (B), and active rate–distortion maintenance (C); mediation-specific baseline cost and the forms of $\Delta a_e$; and the two [inference] items under (11).
 2. Relation (4) is carried from the 2025 paper as an illustration. The 2025 relation of the just-noticeable difference to curvature is withdrawn in favor of (8).
 3. Boredom and stimulus deprivation under (11).
