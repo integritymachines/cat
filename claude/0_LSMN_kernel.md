@@ -1,12 +1,12 @@
 # CAT — Formal Kernel
 
-*Version 0.18 · 15 November 2026 · working kernel on `main`.* 0.18 fixes symbol collisions, the claim type of the remap condition, and the statement of $\Gamma_B$.  
+*Version 0.19 · 19 November 2026 · proposed drift-engagement revision.* 0.19 revises the consciousness postulate and records open engagement realizations without changing the criticality classifier; 0.18 fixed symbol collisions, the remap claim type, and $\Gamma_B$.  
 *Basis:* independent formal reconstruction v4.5, reconciled with the current CAT source record (kernel 0.15; CAT 0.5, UNS 0.3, TG 0.4, MC 0.4; disposition and review protocol through round 3). Original 2025 manuscripts were not available for direct inspection during this integration.  
 *Status:* authorial rulings remain controlling; new candidate operations and hypotheses keep their indicated epistemic status. `\rightsquigarrow` denotes candidate functional realization, never identity of objects.
 
 ## 1. Consciousness as Translation — Claim
 
-Cognitive agents navigating an unsurveyable reality have to manufacture conjectural gradients via two distinct representations: a combinatorial territory and a continuous navigational map. Translation between them is necessarily lossy, creating geometric distortions that vary across the map and require continuous mediation. When the representations become critically unaligned, stabilization requires control effort. Consciousness arises from this metabolically costly stabilization process. The phenomenology of conscious experience, including salience and meaning, reflects the geometric structure of this process.
+Cognitive agents navigating an unsurveyable reality have to manufacture conjectural gradients via two distinct representations: a combinatorial territory and a continuous navigational map. Translation between them is necessarily lossy, creating geometric distortions that vary across the map and require continuous mediation. Consciousness is postulated to arise from this metabolically costly mediation process, including during uncontested drift; when the representations become critically unaligned, additional control effort is recruited. The phenomenology of conscious experience, including salience and meaning, reflects the geometric structure of mediation.
 
 \[
 \mathcal L\xrightarrow{\sigma_t}\mathcal S_t\xrightarrow{\pi_t}\mathcal M_t
@@ -33,21 +33,36 @@ g_F(y)=\mathbb E[\nabla_y\log p(o\mid y)\nabla_y\log p(o\mid y)^\top],\quad
 \]
 
 \[
-a(t)=a_{\mathrm{base}}(t)+\sum_e\Delta a_e(t),\qquad
-\Delta a_e>0\iff\kappa_e\ge\kappa^*,\qquad
-\boxed{\operatorname{Conscious}(t)\iff a(t)>0}\quad(\mathrm{post});
-\quad a_{\mathrm{base}}>0\ \text{in wake}.
+a(t)=\chi_{\rm eng}(t)\Bigl[a_{\mathrm{base}}(t)+\sum_e\Delta a_e(t)\Bigr],
+\qquad \Delta a_e>0\iff\kappa_e\ge\kappa^*\ \text{within engaged navigation},
+\qquad
+\boxed{\operatorname{Conscious}(t)\iff\chi_{\rm eng}(t)=1}
+\quad(\mathrm{post};\ \chi_{\rm eng}\ \text{operationally open}).
 \tag{4}
 \]
 
 \[
 \operatorname{Experience}_{\mathrm{within}}\rightsquigarrow
-\operatorname{Geometry}_{\mathrm{stabilization}},\quad
+\operatorname{Geometry}_{\mathrm{mediation}},\quad
 (a,\mathcal W)\rightsquigarrow\operatorname{Traces}_{\mathrm{without}}.
 \tag{5}
 \]
 
-Criticality is **not valence**: drift characterizes the humdrum middle; consequential desirable and undesirable experiences can both require stabilization. No extra trigger or changing objective is presumed.
+Criticality is **not valence**: drift includes pleasurable, absorbing and ordinary conscious presence; consequential desirable and undesirable experiences can require stabilization. No extra trigger or changing objective is presumed.
+
+### Engagement, drift envelope, and candidate realizations (proposed)
+
+The postulate in (4) distinguishes active territory–map mediation from the extra control recruited at criticality. \(\chi_{\rm eng}\) is **not** defined by an arbitrary positive neural power, by the existence of a stored map, or by phenomenal report. It denotes a hypothesized actively operating translation process that keeps experienced territorial distinctions available for reconciliation with the map and for prospective evaluation; its independent operator and the empirical consciousness link remain [open]. A stable sensory scene, unchanged preferences, no physical movement, and \(w\simeq0\) are compatible with engagement. A local reflex or masked inhibitory correction may occur without engaging that process, even while the organism is conscious in other respects.
+
+The **drift envelope** \(\mathcal D\) is the conceptual domain of engaged translation below criticality: \(\chi_{\rm eng}=1,\ \chi_\kappa=0\) in the Paper 1 picture. Its low-demand boundary is *possible disengagement*, not a second curvature threshold or a requirement that stimulation vanish. Its upper boundary is \(K\approx\kappa_c\), where ordinary mediation no longer suffices and extra control is recruited. A criticality trigger may reflect correction scope, cumulative cost, or expected failure frequency [inference]; numerical thresholds and the transition profile belong to Papers 3 and 4. This is distinct from the envelope of **assured navigation** \(\mathcal E\), which includes both drift and control under the current budget and representation. Their inclusion relation is meaningful only when a task and admissible route are specified; quiet phenomenal absorption need not involve physical execution.
+
+Three alternatives from *On Phenomenal Presence* remain under development, not jointly stipulated criteria:
+
+- **A — metric coupling:** \(\lVert d\phi(\delta s)\rVert_{g_F}\) characterizes the impact of a territorial perturbation on the map. A large instantaneous impact is neither necessary during quiet absorption nor sufficient for consciousness; the tangent pushforward needs assumptions because \(\mathcal S\) is combinatorial. Its discrete energy analogue is candidate-only.
+- **B — prospective horizon:** \(\tau_H\) characterizes temporally extended evaluation. Prospective valuation need not be an explicit multi-step action rollout, while offline or unconscious prediction need not establish experience. A minimum horizon by itself is not an engagement criterion.
+- **C — active rate–distortion maintenance:** sustained, revisable territory–map coupling is the leading candidate function. Static \(I(\mathcal S;\mathcal M)\) does not measure an active information rate, and a universal \(d_{\mathcal{SM}}\le\delta^*\) cannot be necessary across conscious critical control or remap. An independent measure of active mediation, and its metabolic allocation, remain to be constructed.
+
+\(a(t)\) in (4) is *mediation-specific* power, not total resting neural expenditure. \(a_{\mathrm{base}}>0\) **conditional on engaged mediation** and the incremental expenditure \(\Delta a_e\) are proposed energetic consequences, not an independent definition or established partition of metabolism. Drift is a conscious navigation regime under the postulate; \(\chi_{\rm eng}=0\) denotes a null processing condition **outside** the three-regime Translation Geometry classifier, not a fourth geometric regime or the absence of all neural activity. Processes with different engagement status may coexist in one agent. Successful ongoing mediation may produce no measurable change in \(\mathcal M_t\) or the local criterion \(q_t\).
 
 ## 2. Unsurveyability — Dependency Order
 
@@ -144,7 +159,7 @@ h\in\ker\Delta_1,\qquad G^{-1/2}j=-\widetilde\partial_1^\top\phi.
 \tag{14}
 \]
 
-The current route belongs to \(\Gamma_B\) when acceptable; low \(\lambda_\zeta\) alone does not imply translation failure. At fixed source and sink, a **candidate** corrective flow is \(j^w=j+w\), \(\partial_1w=0\); verification and map revision may also consume resources. \(\chi_\kappa\rightsquigarrow\chi_{\rm TG}\) is functional correspondence, not geometrical identity. The policy's criticality and three regimes are unchanged.
+The current route belongs to \(\Gamma_B\) when acceptable; low \(\lambda_\zeta\) alone does not imply translation failure. At fixed source and sink, a **candidate** corrective flow is \(j^w=j+w\), \(\partial_1w=0\); verification and map revision may also consume resources. \(\chi_\kappa\rightsquigarrow\chi_{\rm TG}\) is functional correspondence, not geometrical identity. The policy's criticality and three map-navigation regimes are unchanged. Equation (14) classifies engaged map-based navigation, not consciousness or local reflexes. The null processing condition is outside its domain; the engagement operator remains [open].
 
 \[
 d_{\mathcal{SM}}=\sum_{z,z'}\mu_S(z)\mu_S(z')
@@ -196,7 +211,7 @@ d_{\mathcal{SM}}=\sum_{z,z'}\mu_S(z)\mu_S(z')
 \tag{20}
 \]
 
-*Open realization work:* explicit verification/control/update cost functions, learning from stochastic execution, affordability versus remap/abandonment, independent estimator qualification, and the torsion bound's admissible cost domain. These are not reopenings of the CAT mechanism, criticality threshold, or the 2025 UNS dependency orders.
+*Open realization work:* an independent engagement operator distinguishing active from stored or local unconscious processing (candidates A–C); mediation-specific baseline allocation; explicit verification/control/update cost functions; learning from stochastic execution; affordability versus remap/abandonment; independent estimator qualification; and the torsion bound's admissible cost domain. These are not reopenings of the CAT mechanism, criticality threshold, or the 2025 UNS dependency orders.
 
 ---
 
@@ -244,12 +259,13 @@ Claim types. (def) definition. (thm) theorem, with its assumptions. (post) model
 | $w, \mathcal{W}, \mathcal{W}_\Theta, \Theta$ | control field, controller expenditure, its value over an interval, matched interval |
 | $\omega, C_{\rm verify}, C_{\rm update}, \operatorname{Updates}(\Theta)$ | weight of flow correction in $\mathcal{W}_\Theta$, verification cost, update cost, updates made in $\Theta$ |
 | $\operatorname{do}(\cdot), \mathsf{Falsify}$ | intervention on the listed factors, refutation at a named layer |
-| $a, a_{\mathrm{base}}, \Delta a_e, B$ | metabolic power allocated to mediation, its waking baseline, its surge at instance $e$, budget |
+| $a, a_{\mathrm{base}}, \Delta a_e, B$ | mediation-specific metabolic power, its proposed engaged baseline, critical surcharge at instance $e$, budget |
 | $\eta, \eta_\Theta$ | conversion efficiency; efficiency measured over interval $\Theta$ |
-| $\operatorname{reg}$ | regime: drift, control or remap |
+| $\operatorname{reg}$ | engaged map-navigation regime: drift, control or remap |
+| $\chi_{\rm eng}$ | proposed active territory–map mediation indicator; independent operator [open], not determined by curvature, generic energy or report |
 | $\chi_\kappa, \chi_{\rm TG}$ | conceptual criticality indicator; candidate TG trigger. Functional correspondence, not geometrical identity |
 | $C_{\rm exec}, B_{\rm rem}$ | execution cost of a route; remaining budget |
-| $\mathcal{E}$ | envelope of assured navigation, certified within budget |
+| $\mathcal{D}, \mathcal{E}$ | conceptual drift envelope (engaged, below criticality); envelope of assured navigation, certified within budget |
 | $\operatorname{Tor}$ | combinatorial torsion of $K_M$ |
 | $d_{\mathcal{SM}}, d_{\mathrm{GW}}$ | anchored squared distortion, squared transport discrepancy |
 | $X, x_t, k, \operatorname{val}, \operatorname{Nbr}, \Omega_t$ | search space, state, number of options, objective, neighborhood, options reachable |

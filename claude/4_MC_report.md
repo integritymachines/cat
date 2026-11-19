@@ -1,6 +1,6 @@
 # Measuring Consciousness
 
-Report, draft 0.5, 15 November 2026. Kernel: `0_LSMN_kernel.md` §4, version 0.18. The research note for Paper 4 is the source of content. The structure follows rounds 1 and 2 of the review protocol, as adopted by the authors. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Numbers from the note are unchecked and are not carried as established values.
+Report, draft 0.6, 19 November 2026. Kernel: `0_LSMN_kernel.md` §4, proposed version 0.19. The research note for Paper 4 is the source of content. The structure follows rounds 1 and 2 of the review protocol, as adopted by the authors. Provenance: [ruled], [inference], [open]. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration. Numbers from the note are unchecked and are not carried as established values.
 
 This paper makes the theory measurable, predictive and falsifiable [ruled]. It states what is measured, how the estimators are qualified, which tests the model elements face, and which failure refutes which claim.
 
@@ -12,7 +12,7 @@ Thesis. An agent forms its map $\mathcal{M}_{\mathrm{int}}$ from its own samplin
 
 $$d_{\mathrm{GW}}(\mathcal{M}_{\mathrm{int}}, \mathcal{M}_{\mathrm{ext}}) > 0 \tag{1}$$
 
-Scientific observation is a second lossy translation of first-person experience. It observes behavior and physiology from without and regularizes them across instances. Lemma 3.2 gives the complement. When the route that the map offers fails the lift test, the agent reaches its goal only with a nonzero control field $w$ or a change of the map. By Postulate 1.0 of Paper 1, control at a critical limit consumes a metabolic allocation and produces control work. Both are physical, and both leave traces. The tests below concern those traces. They make no claim to measure experience itself.
+Scientific observation is a second lossy translation of first-person experience. It observes behavior and physiology from without and regularizes them across instances. Lemma 3.2 gives the complement. When the route that the map offers fails the lift test, the agent reaches its goal only with a nonzero control field $w$ or a change of the map. Under the revised Postulate 1.0 of Paper 1, active territory–map mediation is the proposed consciousness-linked mechanism even during drift. Critical control adds expenditure to its baseline; whether either allocation is specifically attributable to mediation must be independently estimated. These processes may leave physical traces, which the tests below investigate. They make no claim to measure experience itself.
 
 Tests of a mathematical realization ask whether its mechanisms describe agents. Tests of the consciousness postulate ask a further question, whether mediation and resource allocation go with experience. Each failure is recorded at the level where it occurs. The illustrative status of Paper 1 does not shield a committed operational model from refutation. Each test names the claims it puts at risk and the freedom that remains after a failure.
 
@@ -20,8 +20,9 @@ Tests of a mathematical realization ask whether its mechanisms describe agents. 
 
 | Construct | Definition | Units | Candidate observables (note) |
 |---|---|---|---|
-| $a(t)$ | metabolic power allocated to mediation, excluding background metabolism | power | regional hemodynamics, pupil diameter, autonomic balance |
-| $a_{\mathrm{base}}$, $\Delta a_e$ | waking baseline, surge at instance $e$ | power | contrast of task against matched rest |
+| $\chi_{\mathrm{eng}}$ [open] | independently qualified active territory–map engagement; not defined by report, generic neural activity, or task conflict | dimensionless candidate classifier | recurrent coupling, controlled perturbations, information renewal, and held-out contrasts (none qualified yet) |
+| $a(t)$ | metabolic power allocated specifically to mediation, excluding unrelated background metabolism | power | regional hemodynamics, pupil diameter, autonomic balance |
+| $a_{\mathrm{base}}$, $\Delta a_e$ | hypothesized active mediation baseline and critical surcharge, not all resting brain power | power | independently calibrated matched engagement/control contrasts |
 | $\mathcal{W}_\Theta$ | controller expenditure over a matched interval $\Theta$: weighted flow correction, verification and updates (Paper 3) | energy, after calibration | behavioral correction, model fits, decision boundary |
 | $\eta_\Theta$ | $\mathcal{W}_\Theta / \int_\Theta \sum_e \Delta a_e\, dt$, on intervals with a positive denominator | dimensionless | ratio of the two above |
 | $\lambda_\zeta$, $\lambda_2$ | task-conditioned and global gap of $K_M$ | inverse time, under a time scale | graph reconstructed from recording channels |
@@ -59,10 +60,11 @@ Qualification rules (def):
 2. A reconstructed neural connectivity graph is not assumed to be the agent's map. The relation is itself tested.
 3. Threshold calibration and confirmation use separate data. If the same control marker both sets $\epsilon^\ast$ and confirms the transition, the test is circular.
 4. Each test is compared against simpler accounts: difficulty, uncertainty, response conflict, standard sequential sampling.
+5. Engagement operators A, B and C are specified before looking at experience-related outcome measures; neither reported consciousness, no-report visibility markers, neural energy nor the control classifier may be used to define a gate and then confirm it on the same observations. Distinguish unconscious processing of a stimulus from unconsciousness of the whole organism.
 
 ## Waking Tests
 
-The tests follow the transition from drift to control. Their forms are elements of the model, subject to empirical test (post) [ruled].
+The following tests retain the transition from drift to control. Their forms are elements of the model, subject to empirical test (post) [ruled]. Engagement during drift is separately tested below.
 
 Test 4.3 (threshold). At an independently calibrated task threshold, control policy and control cost change. The estimated $\hat{\lambda}_\zeta$ predicts where the threshold lies. The note predicted a step drop of $\hat{\lambda}_2$. A smooth change of weights moves the spectrum smoothly, so the step belongs to the policy and not to the eigenvalue.
 
@@ -84,7 +86,7 @@ Paper 1 describes altered states qualitatively. Here they are experimental contr
 
 | State | Paper 1 | Contrast |
 |---|---|---|
-| drift | $\kappa < \kappa^\ast$ | $\lambda_\zeta > \epsilon^\ast$, $a = a_{\mathrm{base}}$ |
+| drift | engaged mediation, $\kappa < \kappa^\ast$ | when active, $\lambda_\zeta > \epsilon^\ast$ for map-guided tasks; $a = a_{\mathrm{base}}$ absent surcharge |
 | overload | $\kappa \ge \kappa^\ast$, sustained | $\lambda_\zeta \le \epsilon^\ast$ sustained, $\eta$ low |
 | flow | $\kappa$ just below $\kappa^\ast$ | $\lambda_\zeta$ just above $\epsilon^\ast$, $\eta$ maximal |
 | meditation | lower $\kappa$, higher $\kappa^\ast$ | baseline $\lambda_\zeta$ raised, larger $\mathcal{E}$ |
@@ -96,7 +98,19 @@ The cycle count $\beta_1$ is not used to classify states. A harmonic cycle is no
 
 The table makes three commitments that can fail separately. Flow and overload differ in $\eta$ at comparable work. Propofol and ketamine differ in internal $\mathcal{W}$ at comparable unresponsiveness. Meditation moves the baseline, and psychedelics move the variance.
 
-Test 4.7 (absence). State, task and recording sensitivity are fixed in advance. Under propofol and in dreamless sleep, the control channel does not respond to a manipulated $\lambda_\zeta$. Local responses to input can persist. Positive controls (wake, ketamine) and negative controls (stimulation that does not change $\lambda_\zeta$) are required. Lack of external response is separated from absence of internal processing.
+Test 4.7 (absence). State, task and recording sensitivity are fixed in advance. Under propofol and in dreamless sleep, the control channel does not respond to a manipulated $\lambda_\zeta$. Local responses to input can persist. Positive controls (wake, ketamine) and negative controls (stimulation that does not change $\lambda_\zeta$) are required. Lack of external response is separated from absence of internal processing. This control-channel test alone does **not** test the revised engagement postulate.
+
+## Engagement Contrasts [inference, open]
+
+These tests extend Paper 4 to evaluate engagement *independently* of the drift-to-control transition. The three source proposals are competitors or partially complementary dimensions, not an adopted conjunctive gate. A high metric perturbation (A), long prospective action rollout (B), or large static mutual information (C) must not be treated as synonymous with consciousness.
+
+**Test 4.8 (hammock / uncontested presence).** Contrast conscious low-stimulus sensory absorption, conscious rest with little new learning, and matched drowsy disengagement, with low conflict and no physical commitment. Independently measure sensory experience or no-report visibility and held-out candidate coupling/renewal signals. Require the model to permit presence with a negligible instantaneous \(d\phi(\delta s)\), no explicit multistep plan and no detectable change in \(q_t\). Failure of A or B's original threshold is not automatically failure of ongoing translation.
+
+**Test 4.9 (local unconscious correction).** Use masked inhibition, implicit error compensation and matched conscious control, separating awareness of the masked information from the organism's concurrent conscious state. Test whether candidate engagement operators distinguish local unconscious correction from active map-level reconciliation, without defining either by the correction's complexity or magnitude.
+
+**Test 4.10 (active versus stored correspondence).** Compare actively maintained territory–map availability with preserved offline structure, unattended processing and sleep-onset disengagement. Static \(I(\mathcal S;\mathcal M)\), geometry, or overall metabolic baseline alone cannot qualify an active information-rate operator. Test prospective relevance, including changes in valuation after sensory absorption, but do not require measurable updating on every conscious interval.
+
+The candidate engagement mechanism must be independently identified and prospectively predict experience-related contrasts beyond a matched difficulty, attention, arousal, and task-performance baseline. These are designs, not claims that present measurements already identify conscious translation.
 
 ## Agents
 
@@ -131,7 +145,7 @@ Each failure refutes one layer. A failure is not reassigned to the estimator by 
 | operator | under known graphs, the identities of Paper 3 or the fixed classifier fail on the bench. This is an internal test of the realization |
 | bridge | Fisher-informed and graph quantities disagree beyond their stated domain |
 | mechanism | qualified quantities fail to predict route failures, corrections or expenditure prospectively. In particular: control markers scale linearly through the threshold of Test 4.3, or the control channel responds to $\lambda_\zeta$ under the conditions of Test 4.7 as it does in wake |
-| consciousness link | the mechanism is present where experience-related evidence is absent, or absent where it is present, under a stated measurement theory |
+| consciousness link | an independently specified engagement mechanism is present where experience-related evidence is absent, or absent where it is present, under a stated measurement theory; control without experience by itself is not decisive |
 
 The last layer tests Postulate 1.0 of Paper 1. It is tested last, and it remains a postulate. No effect size is asserted before the fact check.
 
@@ -142,3 +156,5 @@ The last layer tests Postulate 1.0 of Paper 1. It is tested last, and it remains
 3. Calibration of $\mathcal{W}$ in energy units.
 4. The constant $c_0$ in (2), the form of the controller's update cost, and the level $\delta^\ast$ in (4).
 5. The alternative latency form with exponent $-\tfrac12$.
+6. Predeclared independent operational definition of $\chi_{\mathrm{eng}}$ and empirical discrimination of A/B/C, including valuation without measurable updating, unconscious local correction, and continued experience without active control.
+7. Isolation of mediation-specific baseline power from general resting cortical expenditure.
