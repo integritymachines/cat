@@ -92,7 +92,9 @@ Remap. Control cannot stabilize the dynamics, and the representation itself chan
 
 The 2025 paper separates control from remap by degree: curvature near $\kappa^\ast$ against curvature far above it. The condition on $\Gamma_B$ replaces that (U4). Control applies while the agent finds a supported route within its budget. Remap applies when it finds none (hyp). Remap is a decision under budget. It does not prove that no route exists, which no agent facing an unsurveyable reality could establish. A faithful but fragile route stays in control: the current route belongs to $\Gamma_B$ and is executed with care.
 
-$\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error. As an illustrative decomposition, the approach to criticality can be limited by correction scope, cumulative correction cost, **or** prospective microbacktracking failure rate; their operators and thresholds are empirical questions for Papers 3 and 4 [inference].
+$\kappa^\ast$ is specific to the agent and metabolically constrained. It sits where the cost of intervening equals the cost of error.[^criticality-operationalization]
+
+[^criticality-operationalization]: Candidate operational contributions to criticality are correction scope, cumulative correction cost, **or** expected microbacktracking failure rate. Their operators, thresholds and transition profiles are empirical questions for Papers 3 and 4 [inference].
 
 The **drift envelope** $\mathcal{D}$ is the conceptual region of active territory–map mediation in which ordinary correction remains sufficient ($K<\kappa_c$). At its lower boundary, demands can become sufficiently slight that engagement may cease, but low stimulus or low curvature does not require unconsciousness. At its upper boundary, $K\approx\kappa_c$ recruits control. Neither boundary is identified here with an empirically verified step function.
 
