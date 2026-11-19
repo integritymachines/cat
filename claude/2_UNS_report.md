@@ -1,6 +1,6 @@
 # Unsurveyability
 
-Report, draft 0.4, 15 November 2026. Kernel: `0_LSMN_kernel.md` §2, version 0.18. The 2025 paper is the yardstick, and its order is kept. Corrections from the review protocol are adopted under the authors' rulings, and the definitions of contingency and transience follow the kernel. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
+Report, draft 0.5, 19 November 2026. Kernel: `0_LSMN_kernel.md` §2, proposed version 0.19. The 2025 paper is the yardstick, and its order is kept. Corrections from the review protocol are adopted under the authors' rulings, and the definitions of contingency and transience follow the kernel. Tags: [ruled] marks an update decided by the authors, [inference] marks a proposal of this draft, [open] marks a form not fixed. Claim types: (def), (thm), (post) modeling postulate subject to empirical test, (hyp) hypothesis to be confirmed, (ill) illustration.
 
 This report is conceptual. It characterizes what makes the translation from territory to map unstable. It can be read before or after Paper 1.
 
@@ -125,7 +125,7 @@ Under opacity the map's direction $j$ is a guess. Under contingency a wrong gues
 
 $$j \to \gamma \to \operatorname{VirtualTest}_{\mathcal S}(\gamma) \to \operatorname{Commit}_D(\gamma) \to \operatorname{Observe} \to (\mathcal{S}_{t+1}, \mathcal{M}_{t+1}) \tag{8}$$
 
-The ranking $j$ answers opacity. The virtual test runs under conditional logical reversibility, the primitive $F$, and answers contingency. Commitment enacts the route physically under irreversible succession, the primitive $D$. Observation updates both models and answers transience. Paper 3 gives the virtual test an exact form.
+The ranking $j$ answers opacity. The virtual test runs under conditional logical reversibility, the primitive $F$, and answers contingency. Commitment enacts the route physically under irreversible succession, the primitive $D$. Observation can update both models and answers transience. Paper 3 gives the virtual test an exact form. Active territory–map mediation can also continue during quiet sensory absorption without physical commitment, explicit alternative-route testing, or an observable change to either representation [inference]; this is the conscious-drift question developed in Paper 1, not a new UNS dependency order.
 
 The cycle runs under a budget. Following the note for Paper 3, we split it:
 
