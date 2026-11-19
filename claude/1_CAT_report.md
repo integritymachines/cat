@@ -128,16 +128,16 @@ Why consciousness here. Phenomenal presence during quiet absorption motivates th
 
 The 2025 paper claimed to dissolve the hard problem. This report does not (U5).
 
-The geometric reading of experience stands as an identification.
+The geometric reading of experience stands as the paper's proposed identification, but control-related features cannot be treated as necessary for the phenomenology of drift.
 
 | Experience | Geometric reading |
 |---|---|
 | effort | subjective exertion associated with control; expenditure in (9) is a mechanism, not itself a phenomenal dimension |
-| salience | information density, high where $\kappa$ is high |
-| meaning | criticality, $\kappa$ near $\kappa^\ast$ |
-| intensity | the instability (10) along trajectories with $w \ne 0$ |
+| salience | experienced weighting of distinctions in the active map, potentially heightened near criticality [inference] |
+| meaning | felt significance under the agent's navigational criterion $q_t$, including in noncritical drift [inference] |
+| intensity | sensory or affective magnitude; its geometric expression beyond critical control is [open] |
 
-Meaning here is felt significance and has no propositional content. Criticality is not valence. Drift characterizes the humdrum middle, and desirable as well as undesirable experiences of consequence can require stabilization. Experiences differ in quality because embeddings differ: the geometry of color differs from the geometry of pain.
+Meaning here is felt significance and has no propositional content. Criticality is not valence. Drift encompasses effortless presence and pleasure as well as the humdrum middle; desirable and undesirable experiences of consequence can also require stabilization. Experiences differ in quality because embeddings differ: the geometry of color differs from the geometry of pain.
 
 The hard problem is right that science, which regularizes observations from without, can only triangulate subjective experience within. The same stimuli meet maps with different histories. The same lamp trained on the same object casts different shadows on surfaces of different texture.
 
